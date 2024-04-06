@@ -1,0 +1,83 @@
+site_name: Webhook.site Docs
+site_url: https://docs.webhook.site
+
+theme:
+  name: material
+  logo: images/icon.png
+  favicon: images/favicon.ico
+  features:
+    - navigation.expand
+  font: false
+  
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/webhooksite/webhook.site
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/webhooksite
+  
+use_directory_urls: false
+
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        'webhookscript.md': webhookscript/index.markdown
+        'api.md': api/about.md
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  
+extra_css:
+  - stylesheets/extra.css
+  
+nav:
+  - ← Back to Webhook.site: https://webhook.site  
+
+  - About: index.markdown
+  - Jobs: jobs.md
+  - News: news.markdown
+  - FAQ: faq.markdown
+  - Open Source: open-source.markdown
+  - Basic, Pro & Enterprise: pro.markdown
+  - CLI: cli.md
+  - API:
+    - Usage & Authentication: api/about.md
+    - Examples: api/examples.md
+    - Tokens: api/tokens.md
+    - Requests: api/requests.md
+    - Groups: api/groups.md
+    - Custom Actions: api/custom-actions.md
+    - Templates: api/templates.md
+    - Schedules: api/schedules.md
+  - Schedules: schedules.md
+  - Custom Actions:
+    - About Custom Actions: custom-actions.markdown
+    - Variables: custom-actions/variables.md
+    - Action Types: custom-actions/action-types.md
+    - Examples: custom-actions/examples.markdown
+  - WebhookScript:
+    - About WebhookScript: webhookscript/index.markdown
+    - Examples: webhookscript/examples.markdown
+    - Reference: webhookscript/reference.markdown
+    - Built-in Functions:
+      - General: webhookscript/functions/general.md
+      - Arrays: webhookscript/functions/array.md
+      - Booleans: webhookscript/functions/bool.md
+      - Dates: webhookscript/functions/date.md
+      - File handling: webhookscript/functions/files.md
+      - Flow Control and Responses: webhookscript/functions/flow.md
+      - Math and Numbers: webhookscript/functions/math.md
+      - Network and HTTP: webhookscript/functions/network.md
+      - Strings: webhookscript/functions/string.md
+      - Custom Action Variables: webhookscript/functions/variables.md
+  - DNSHook: dnshook.md
