@@ -11,6 +11,8 @@ Webhook.site DNSHook is a type of *hook*, like webhooks and emailhooks, that on 
 
 DNSHooks can be used to send data solely via DNS. DNSHooks can also be used as a canary token as DNS can be useful in cases where it can bypass firewalls, for example.
 
+![](/images/dnshook.png)
+
 ## Create DNS workflows with Custom Actions
 
 You can even create workflows from DNSHook requests with [Custom Actions](/custom-actions.html). 

@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://docs.webhook.site/custom-actions/action-types.html">
       
+      
+        <link rel="prev" href="variables.html">
+      
+      
+        <link rel="next" href="examples.html">
+      
       <link rel="icon" href="../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -19,44 +25,33 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
       
       
+
     
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,7 +71,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
       
@@ -119,7 +116,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -131,7 +128,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -211,6 +208,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../news.html" class="md-nav__link">
         News
       </a>
@@ -257,7 +269,7 @@
   
     <li class="md-nav__item">
       <a href="../pro.html" class="md-nav__link">
-        Pro & Enterprise
+        Basic, Pro & Enterprise
       </a>
     </li>
   
@@ -289,18 +301,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API
         </label>
@@ -327,7 +342,7 @@
   
     <li class="md-nav__item">
       <a href="../api/examples.html" class="md-nav__link">
-        Script Examples
+        Examples
       </a>
     </li>
   
@@ -341,7 +356,35 @@
   
     <li class="md-nav__item">
       <a href="../api/tokens.html" class="md-nav__link">
-        Tokens (URLs/Email addresses)
+        Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/groups.html" class="md-nav__link">
+        Groups
       </a>
     </li>
   
@@ -356,6 +399,20 @@
     <li class="md-nav__item">
       <a href="../api/custom-actions.html" class="md-nav__link">
         Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/templates.html" class="md-nav__link">
+        Templates
       </a>
     </li>
   
@@ -410,18 +467,19 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Custom Actions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Custom Actions
         </label>
@@ -464,7 +522,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
@@ -533,6 +591,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#auto-json" class="md-nav__link">
+    Auto JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-json-example" class="md-nav__link">
+    Auto JSON Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#extract-regex" class="md-nav__link">
     Extract Regex
   </a>
@@ -566,6 +644,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#split-text" class="md-nav__link">
+    Split Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-text" class="md-nav__link">
+    Map Text
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -580,8 +672,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#send-request" class="md-nav__link">
-    Send Request
+  <a href="#http-request" class="md-nav__link">
+    HTTP Request
   </a>
   
 </li>
@@ -594,8 +686,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#send-email-smtp" class="md-nav__link">
+    Send Email (SMTP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Send Email (SMTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gmail-and-google-workspace" class="md-nav__link">
+    Gmail and Google Workspace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#run-ssh-command" class="md-nav__link">
     Run SSH Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sftp-upload" class="md-nav__link">
+    SFTP Upload
   </a>
   
 </li>
@@ -655,6 +774,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#dont-save" class="md-nav__link">
+    Don't Save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    Log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#modify-response" class="md-nav__link">
     Modify Response
   </a>
@@ -664,13 +797,6 @@
           <li class="md-nav__item">
   <a href="#rate-limit" class="md-nav__link">
     Rate Limit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dont-save" class="md-nav__link">
-    Don't Save
   </a>
   
 </li>
@@ -698,6 +824,61 @@
           <li class="md-nav__item">
   <a href="#condition" class="md-nav__link">
     Condition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-beta" class="md-nav__link">
+    JavaScript (Beta)
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript (Beta)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-functions" class="md-nav__link">
+    General Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-modules" class="md-nav__link">
+    Utility Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookscript_1" class="md-nav__link">
+    WebhookScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-variable" class="md-nav__link">
+    Set Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-global-variable" class="md-nav__link">
+    Store Global Variable
   </a>
   
 </li>
@@ -776,6 +957,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#microsoft" class="md-nav__link">
+    Microsoft
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onedrive" class="md-nav__link">
+    OneDrive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    Excel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#amazon-web-services-aws" class="md-nav__link">
     Amazon Web Services (AWS)
   </a>
@@ -824,8 +1032,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#twitter" class="md-nav__link">
-    Twitter
+  <a href="#x-formerly-known-as-twitter" class="md-nav__link">
+    X (formerly known as Twitter)
   </a>
   
 </li>
@@ -840,6 +1048,13 @@
         <li class="md-nav__item">
   <a href="#pushed" class="md-nav__link">
     Pushed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfysh" class="md-nav__link">
+    ntfy.sh
   </a>
   
 </li>
@@ -884,18 +1099,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
           WebhookScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="WebhookScript" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           WebhookScript
         </label>
@@ -952,18 +1170,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11_4">
+        <label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
           Built-in Functions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12_4">
           <span class="md-nav__icon md-icon"></span>
           Built-in Functions
         </label>
@@ -1122,6 +1343,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1189,6 +1425,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#auto-json" class="md-nav__link">
+    Auto JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-json-example" class="md-nav__link">
+    Auto JSON Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#extract-regex" class="md-nav__link">
     Extract Regex
   </a>
@@ -1222,6 +1478,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#split-text" class="md-nav__link">
+    Split Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-text" class="md-nav__link">
+    Map Text
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1236,8 +1506,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#send-request" class="md-nav__link">
-    Send Request
+  <a href="#http-request" class="md-nav__link">
+    HTTP Request
   </a>
   
 </li>
@@ -1250,8 +1520,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#send-email-smtp" class="md-nav__link">
+    Send Email (SMTP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Send Email (SMTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gmail-and-google-workspace" class="md-nav__link">
+    Gmail and Google Workspace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#run-ssh-command" class="md-nav__link">
     Run SSH Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sftp-upload" class="md-nav__link">
+    SFTP Upload
   </a>
   
 </li>
@@ -1311,6 +1608,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#dont-save" class="md-nav__link">
+    Don't Save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    Log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#modify-response" class="md-nav__link">
     Modify Response
   </a>
@@ -1320,13 +1631,6 @@
           <li class="md-nav__item">
   <a href="#rate-limit" class="md-nav__link">
     Rate Limit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dont-save" class="md-nav__link">
-    Don't Save
   </a>
   
 </li>
@@ -1354,6 +1658,61 @@
           <li class="md-nav__item">
   <a href="#condition" class="md-nav__link">
     Condition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-beta" class="md-nav__link">
+    JavaScript (Beta)
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript (Beta)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-functions" class="md-nav__link">
+    General Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-modules" class="md-nav__link">
+    Utility Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookscript_1" class="md-nav__link">
+    WebhookScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-variable" class="md-nav__link">
+    Set Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-global-variable" class="md-nav__link">
+    Store Global Variable
   </a>
   
 </li>
@@ -1432,6 +1791,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#microsoft" class="md-nav__link">
+    Microsoft
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onedrive" class="md-nav__link">
+    OneDrive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    Excel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#amazon-web-services-aws" class="md-nav__link">
     Amazon Web Services (AWS)
   </a>
@@ -1480,8 +1866,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#twitter" class="md-nav__link">
-    Twitter
+  <a href="#x-formerly-known-as-twitter" class="md-nav__link">
+    X (formerly known as Twitter)
   </a>
   
 </li>
@@ -1500,6 +1886,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ntfysh" class="md-nav__link">
+    ntfy.sh
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1508,10 +1901,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
   <h1>Action Types</h1>
@@ -1525,26 +1919,26 @@
 <p>JSONPath is very similar to the <code>jq</code> commandline utility.</p>
 <h5 id="jsonpath-examples">JSONPath Examples<a class="headerlink" href="#jsonpath-examples" title="Permanent link">&para;</a></h5>
 <p>Example data:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;store&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cool Books Ltd&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;books&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12 Rules for Life&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jordan B. Peterson&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&quot;author.age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">&quot;isbn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;13123123123&quot;</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;How to Win Friends and Influence People&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dale Carnegie&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">&quot;isbn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;23482394&quot;</span><span class="w"></span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;store&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cool Books Ltd&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;books&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12 Rules for Life&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jordan B. Peterson&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&quot;author.age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">&quot;isbn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;13123123123&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;How to Win Friends and Influence People&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dale Carnegie&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">&quot;isbn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;23482394&quot;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span>
 </code></pre></div>
 <table>
 <thead>
@@ -1604,7 +1998,11 @@
 </tr>
 <tr>
 <td><code>$..books[?(@.isbn)]</code></td>
-<td>filter all books with isbn number</td>
+<td>filter all books with isbn number property</td>
+</tr>
+<tr>
+<td><code>$..books[?(@.isbn != '')]</code></td>
+<td>filter all books with isbn that isn't null or <code>""</code> (empty string.) (Bracket syntax can also be used here, e.g. <code>.values[?(@['my value'] != '')]</code>)</td>
 </tr>
 <tr>
 <td><code>$..books[?(@.price&lt;10)]</code></td>
@@ -1665,6 +2063,113 @@
 </table>
 <p>For more details on what's possible with JSONPath, <a href="https://github.com/FlowCommunications/JSONPath#jsonpath-examples">take a look at the docs</a>.</p>
 <p>As you start entering a JSONPath, the results are validated and shown next to the input field.</p>
+<h3 id="auto-json">Auto JSON<a class="headerlink" href="#auto-json" title="Permanent link">&para;</a></h3>
+<p>This action automatically converts JSON data to Webhook.site Variables, and can be used as an alternative for Extract JSONPath when there's a large amount of variables that need to be extracted.</p>
+<p>Per default, the action works on the JSON found in the <code>$request.content$</code> variable, e.g. the request body data. </p>
+<p>If the JSONPath parameter is specified, this can be used to limit the variable creation to only the subset of data specified by the JSONPath query.</p>
+<h5 id="auto-json-example">Auto JSON Example<a class="headerlink" href="#auto-json-example" title="Permanent link">&para;</a></h5>
+<p>If the following data is specified in the Source parameter:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;Actors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tom Cruise&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&quot;Born At&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Syracuse, NY&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">&quot;Birthdate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;July 3, 1962&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">&quot;photo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://jsonformatter.org/img/tom-cruise.jpg&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Robert Downey Jr.&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">53</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">&quot;Born At&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New York City, NY&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">&quot;Birthdate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;April 4, 1965&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nt">&quot;photo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://jsonformatter.org/img/Robert-Downey-Jr.jpg&quot;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
+</code></pre></div>
+<p>If the JSONPath parameter is empty, the following 10 variables will be created:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$json.Actors.0.name$</code></td>
+<td>Tom Cruise</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.age$</code></td>
+<td>56</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.Born At$</code></td>
+<td>Syracuse, NY</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.Birthdate$</code></td>
+<td>July 3, 1962</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.photo$</code></td>
+<td>https://example.com/tom-cruise.jpg</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.name$</code></td>
+<td>Robert Downey Jr.</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.age$</code></td>
+<td>53</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.Born At$</code></td>
+<td>New York City, NY</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.Birthdate$</code></td>
+<td>April 4, 1965</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.photo$</code></td>
+<td>https://example.com/Robert-Downey-Jr.jpg</td>
+</tr>
+</tbody>
+</table>
+<p>If the JSONPath parameter is set to <code>.Actors.0</code>, only the following 5 variables are created:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$json.0.name$</code></td>
+<td>Tom Cruise</td>
+</tr>
+<tr>
+<td><code>$json.0.age$</code></td>
+<td>56</td>
+</tr>
+<tr>
+<td><code>$json.0.Born At$</code></td>
+<td>Syracuse, NY</td>
+</tr>
+<tr>
+<td><code>$json.0.Birthdate$</code></td>
+<td>July 3, 1962</td>
+</tr>
+<tr>
+<td><code>$json.0.photo$</code></td>
+<td>https://example.com/tom-cruise.jpg</td>
+</tr>
+</tbody>
+</table>
 <h3 id="extract-regex">Extract Regex<a class="headerlink" href="#extract-regex" title="Permanent link">&para;</a></h3>
 <p>This action runs a Regex (regular expression) query on the contents of a request. With it, you can extract any data from a text document and store it in a variable, which can then be used in a downstream action.</p>
 <p>As you start entering a Regex, the results are validated and shown next to the input field.</p>
@@ -1672,13 +2177,13 @@
 <p>Similar to the Extract JSONPath Custom Action, Extract XPath lets you extract values from an XML or HTML document and save the result as a variable.</p>
 <h5 id="xpath-examples">XPath Examples<a class="headerlink" href="#xpath-examples" title="Permanent link">&para;</a></h5>
 <p>The following examples are based on this XML document:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&lt;organization</span> <span class="na">name=</span><span class="s">&quot;ExampleCo&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="nt">&lt;employees&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Jack<span class="nt">&lt;/employee&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Ann<span class="nt">&lt;/employee&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="nt">&lt;/employees&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nt">&lt;/organization&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;organization</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ExampleCo&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;employees&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Jack<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Ann<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&lt;/employees&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">&lt;/organization&gt;</span>
 </code></pre></div>
 <table>
 <thead>
@@ -1734,19 +2239,43 @@
 <p>For more examples, see <a href="https://www.w3schools.com/xml/xml_xpath.asp">W3CSchools</a> or <a href="https://devhints.io/xpath">XPath Cheatsheet</a></p>
 <h3 id="replace-text">Replace Text<a class="headerlink" href="#replace-text" title="Permanent link">&para;</a></h3>
 <p>An action that allows replacing multiple inputs to a string with specified replacements. Additionally, Webhook.site will replace all variables in the source text as well as the text being replaced, and the replacement.</p>
+<h3 id="split-text">Split Text<a class="headerlink" href="#split-text" title="Permanent link">&para;</a></h3>
+<p>Split text into multiple variables. Using <code>hello,world</code> as Source, and <code>,</code> as Delimiter, 2 variables will be created: <code>$variable.1$</code> is "hello" and <code>$variable.2$</code> is "world".</p>
+<h3 id="map-text">Map Text<a class="headerlink" href="#map-text" title="Permanent link">&para;</a></h3>
+<p>Sets a variable depending on what maps to the source value and operator.</p>
+<p>If we set Source to <code>John</code>, Operator to <code>ends with</code>, Variable Name to <code>$user_id$</code>, Default to <code>unknown</code>, and add a mapping of From: <code>John</code> -&gt; To: <code>123</code>, then the variable name <code>$user_id$</code> would be set to <code>123</code>. </p>
+<p>If the Source had been <code>Jack</code>, <code>$user_id$</code> would have been set to <code>unknown.</code></p>
 <h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h2>
-<h3 id="send-request">Send Request<a class="headerlink" href="#send-request" title="Permanent link">&para;</a></h3>
-<p>This will send a request with variable contents from the Webhook.site cloud. Per default, the request contents will be identical to what was sent to the URL originally.</p>
-<p>Variables extracted previously can be used.</p>
+<h3 id="http-request">HTTP Request<a class="headerlink" href="#http-request" title="Permanent link">&para;</a></h3>
+<p>This will send a HTTP/HTTPS request from the Webhook.site cloud. </p>
+<p>The HTTP Request action has several modes:</p>
+<ul>
+<li><strong>Text</strong>: In the default text mode, this allows sending plain-text content, but also data like JSON and XML.</li>
+<li><strong>Multipart</strong>: With Multipart selected, it is possble to build a form/multipart request and send form data and files. Note that the Filename and Content-Type fields are not required.</li>
+<li><strong>URL Encoded</strong>: In URL Encoded mode, the keys and values are sent using URL Encoding.</li>
+<li><strong>Forward</strong>: In forward mode, all data sent to the Webhook.site URL is forwarded here, including the HTTP method, query strings, headers and body data. It is possible to overwrite the method and append headers. To forward the HTTP method, set the Method dropdown to the blank option.</li>
+</ul>
 <p>The response of the request is stored in a series of variable names prefixed with a value of your choosing. The following variables are set after the request has been fired:</p>
 <ul>
 <li><code>$your_prefix.content$</code> - response body content</li>
 <li><code>$your_prefix.status$</code> - response status code</li>
 <li><code>$your_prefix.headers$</code> - response headers</li>
 <li><code>$your_prefix.url$</code> - the URL the request was sent to</li>
+<li><code>$your_prefix.error$</code> - if the request resulted in an error, it's stored in this variable.</li>
 </ul>
 <h3 id="send-email">Send Email<a class="headerlink" href="#send-email" title="Permanent link">&para;</a></h3>
 <p>This will send a email with variable contents from the Webhook.site cloud. Variables extracted previously can be used.</p>
+<h3 id="send-email-smtp">Send Email (SMTP)<a class="headerlink" href="#send-email-smtp" title="Permanent link">&para;</a></h3>
+<p>This will send a email with variable contents from your own email provider. Variables extracted previously can be used.</p>
+<h4 id="gmail-and-google-workspace">Gmail and Google Workspace<a class="headerlink" href="#gmail-and-google-workspace" title="Permanent link">&para;</a></h4>
+<p>For Gmail, the following specific setup is required:</p>
+<ul>
+<li>Hostname: <code>smtp.gmail.com</code></li>
+<li>Port:<code>587</code></li>
+<li>Username: youraccount@gmail.com or youraccount@example.com (replace with your Gmail address)</li>
+<li>Password: You must <a href="https://myaccount.google.com/u/1/apppasswords">create a Mail App Password</a></li>
+<li>Encryption: <code>TLS</code></li>
+</ul>
 <h3 id="run-ssh-command">Run SSH Command<a class="headerlink" href="#run-ssh-command" title="Permanent link">&para;</a></h3>
 <p>Allows you to run one or more SSH command on a server. Webhook.site captures the output (stdout), stderr and the command exit code as Variables that can be used in downstream actions:</p>
 <ul>
@@ -1754,6 +2283,10 @@
 <li><code>$ssh.stderr$</code></li>
 <li><code>$ssh.exit$</code></li>
 </ul>
+<p>We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -&gt; Providers.</p>
+<h3 id="sftp-upload">SFTP Upload<a class="headerlink" href="#sftp-upload" title="Permanent link">&para;</a></h3>
+<p>Allows uploading a file to a SFTP (SSH) server, specifying a hostname, port, username, password, relative path to the file. The file content can be specified, in which Variables are replaced.</p>
+<p>We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -&gt; Providers.</p>
 <h3 id="ftps-upload">FTP(S) Upload<a class="headerlink" href="#ftps-upload" title="Permanent link">&para;</a></h3>
 <p>Allows uploading a file to a FTP or FTPS (FTP with TLS/SSL) server, specifying a hostname, port, username, password, relative path to the file, whether to use SSL and whether to use passive mode. Finally, the file content can be specified, in which Variables are replaced.</p>
 <p>We recommend storing the password as a Global Variable.</p>
@@ -1775,7 +2308,7 @@
 <p>For example, when fetching rows from the following table:</p>
 <p><img alt="" src="/images/database-example-table.png" /></p>
 <p>Using the following statement:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span>
 </code></pre></div>
 <p>If the variable name prefix would be set to <code>output</code>, the following variables would be created containing specific values:</p>
 <table>
@@ -1821,29 +2354,31 @@
 </tbody>
 </table>
 <p>Additionally, a variable would be created with the name <code>$output.json$</code> containing the data in JSON format:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">[</span><span class="w">                              </span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&quot;fname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simon&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">&quot;lname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fredsted&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Founder&quot;</span><span class="w"></span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nt">&quot;fname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jack&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">&quot;lname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Daniels&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Assistant&quot;</span><span class="w"></span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span><span class="w">                              </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;fname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simon&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&quot;lname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fredsted&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Founder&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">&quot;fname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jack&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nt">&quot;lname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Daniels&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Assistant&quot;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">]</span>
 </code></pre></div>
 <h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h2>
+<h3 id="dont-save">Don't Save<a class="headerlink" href="#dont-save" title="Permanent link">&para;</a></h3>
+<p>Marks the request so it is not saved in Webhook.site, which is useful (especially in combination with Conditions) when receiving a large amount of requests.</p>
+<h3 id="log">Log<a class="headerlink" href="#log" title="Permanent link">&para;</a></h3>
+<p>Adds a custom log entry to the Request's action output.</p>
 <h3 id="modify-response">Modify Response<a class="headerlink" href="#modify-response" title="Permanent link">&para;</a></h3>
 <p>This action can be used to modify the response of the Webhook.site URL based on the input.</p>
 <h3 id="rate-limit">Rate Limit<a class="headerlink" href="#rate-limit" title="Permanent link">&para;</a></h3>
 <p>This action can be used to allow a specific amount of requests in a specific amount of time per a given IP.</p>
 <p>If the IP is rate limited, the URL will respond with a <code>HTTP 429</code>, action execution is stopped, and the request is not saved in Webhook.site.</p>
-<h3 id="dont-save">Don't Save<a class="headerlink" href="#dont-save" title="Permanent link">&para;</a></h3>
-<p>Marks the request so it is not saved in Webhook.site, which is useful when receiving a large amount of requests.</p>
 <h3 id="stop">Stop<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h3>
 <p>Immediately stops Custom Action execution and returns the default response.</p>
 <h2 id="logic">Logic<a class="headerlink" href="#logic" title="Permanent link">&para;</a></h2>
@@ -1866,12 +2401,107 @@
 <li>is less than or equal to</li>
 </ul>
 <p>The "result" of the condition will be logged below the request details, so you can see what happened.</p>
+<h3 id="javascript-beta">JavaScript (Beta)<a class="headerlink" href="#javascript-beta" title="Permanent link">&para;</a></h3>
+<p>With the JavaScript action, you can execute most kinds of JavaScript/Node.js code using a Node.js 20.10.0 sandbox. </p>
+<p><img alt="" src="/images/javascript.png" /></p>
+<h4 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h4>
+<p>This feature is still in beta as of late 2023, and we expect to add more features in the coming months.</p>
+<p>Currently identified limitations include:</p>
+<ul>
+<li>Global Variables not supported</li>
+</ul>
+<h4 id="general-functions">General Functions<a class="headerlink" href="#general-functions" title="Permanent link">&para;</a></h4>
+<p><code>console.log(<em>line</em>)</code> / <code>echo(<em>line</em>)</code> - log a string to Action output</p>
+<p><code>set(<em>variable_name</em>, <em>line</em>)</code> - sets a Webhook.site variable for use in downstream actions</p>
+<p><code>get(<em>variable_name</em>, <em>line</em>)</code> - gets a Webhook.site variable (except Global Variables; see below)</p>
+<p><code>variables[]</code> - global array variable containing Webhook.site variables</p>
+<p><code>stop()</code> - stops action execution and return response</p>
+<p><code>dont_save()</code> - marks current requests as <a href="#dont-save"><em>Don't Save</em></a>, so it won't be stored or shown in the Webhook.site requests list</p>
+<p><code>respond(<em>content</em>, <em>status</em>, <em>headers</em>)</code> - stops action execution and return response</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">respond</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Content-Type: text/plain&#39;</span><span class="p">])</span>
+</code></pre></div>
+<p><code>set_response(<em>content</em>, <em>status</em>, <em>headers</em>)</code> - sets response, but doesn't stop action execution</p>
+<h4 id="utility-modules">Utility Modules<a class="headerlink" href="#utility-modules" title="Permanent link">&para;</a></h4>
+<p>Code executed with the Webhook.site JavaScript action runs in a sandbox where the following utility libraries are available by using the <code>require()</code> function:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/axios"><code>axios</code></a> - HTTP Client
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">axios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;axios&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">await</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;https://webhook.site&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">   </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">   </span><span class="p">});</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">// 200</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/lodash"><code>lodash</code></a> - General utility library
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lodash&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">last</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]))</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1">// 3</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/dayjs"><code>dayjs</code></a> - Date and time manipulation
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">dayjs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dayjs&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dayjs</span><span class="p">(</span><span class="mf">1318781876406</span><span class="p">))</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">// &quot;2011-10-16T16:17:56.406Z&quot;</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/cheerio"><code>cheerio</code></a> - JQuery-like HTML selector library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">cheerio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cheerio&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cheerio</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;&lt;ul id=&quot;fruits&quot;&gt;banana&lt;/ul&gt;&#39;</span><span class="p">);</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#fruits&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">// banana</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/jsonpath"><code>jsonpath</code></a> - JSONPath query library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">jsonpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonpath&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;London&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;population&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8615246</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Berlin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;population&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">3517424</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">];</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonpath</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">cities</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$..name&#39;</span><span class="p">);</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">names</span><span class="p">)</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1">// [&quot;London&quot;,&quot;Berlin&quot;]</span>
+</code></pre></div></li>
+<li><code>crypto</code> – Node.js built-in crypto library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;abcdefg&#39;</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="p">)</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">               </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="s1">&#39;I love Webhook.site&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">               </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">);</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">);</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1">// 1745c764246c2782ebf97e25b89547a92571f19d41846b42880d3815480f098e</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/@faker-js/faker"><code>faker</code></a> - Seed data generator
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">faker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;faker&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">faker</span><span class="p">.</span><span class="nx">internet</span><span class="p">.</span><span class="nx">email</span><span class="p">())</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1">// Ila_Gutkowski9@yahoo.com</span>
+</code></pre></div></li>
+</ul>
+<p>Do you need a library that isn't listed here? Please <a href="https://support.webhook.site">contact support</a>!</p>
+<h3 id="webhookscript_1">WebhookScript<a class="headerlink" href="#webhookscript_1" title="Permanent link">&para;</a></h3>
+<p>For more information about WebhookScript, see the <a href="/webhookscript/index.html">dedicated page</a>.</p>
+<h3 id="set-variable">Set Variable<a class="headerlink" href="#set-variable" title="Permanent link">&para;</a></h3>
+<p>Defines (or overwrites) a variable that's available to downstream actions. The variable is not saved permanently as a Global Variable.</p>
+<p>There are three modes:</p>
+<ul>
+<li><strong>Text</strong>: Using the default "Text" mode, the variable is simply set to what's entered in the Text field.</li>
+<li><strong>Random</strong>: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.</li>
+<li><strong>Date</strong>: Generate date strings specifying a custom input date and an output format - defaults to ISO-8601 format.</li>
+</ul>
+<h3 id="store-global-variable">Store Global Variable<a class="headerlink" href="#store-global-variable" title="Permanent link">&para;</a></h3>
+<p>Saves (or overwrites) a Global Variable that's saved permanently and available to all URLs in your account. If you don't need to save the variable permanently, you should use the <em>Set Runtime Variable</em> instead.</p>
 <h2 id="image-handling">Image Handling<a class="headerlink" href="#image-handling" title="Permanent link">&para;</a></h2>
 <h3 id="resize-image">Resize Image<a class="headerlink" href="#resize-image" title="Permanent link">&para;</a></h3>
 <p>Takes an image from either a URL or raw image data from e.g. a file upload, email attachment, request response or another action such as Dropbox.</p>
 <p>You can enter both width and height to contrain the image in both dimensions, or enter a single dimension.</p>
 <p>Check "Keep Aspect Ratio" so that the image keeps the aspect ratio, but doesn't exceed the height and width constraints.</p>
 <h2 id="google-sheets">Google Sheets<a class="headerlink" href="#google-sheets" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Google Sheets should not be used as a database, and have low usage limits. If you need to import on the order of thousands
+of rows or make thousands of calls a day, Google Sheets cannot be used. We recommend using a database like Postgres in conjunction with the <em>Database Query</em> action.</p>
+</div>
 <p>Google Sheets Custom Actions lets you manipulate and retrieve values from a Google Sheet.</p>
 <p>The following Google Sheets Custom Actions are available:</p>
 <ul>
@@ -1882,10 +2512,11 @@
 <p>To start, you need to make sure that you have connected a Google account in the Control Panel, <a href="https://webhook.site/providers">available here</a>.</p>
 <p>After that, you can select the account in the dropdown when creating the Custom Action.</p>
 <h3 id="usage-limits">Usage Limits<a class="headerlink" href="#usage-limits" title="Permanent link">&para;</a></h3>
-<p>It is important to note that Google will block Write requests (i.e. adding or updating rows) at <strong>60 requests per minute</strong>. After that, the action will temporarilyfail with the following error message:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Quota exceeded for quota metric &#39;Write requests&#39; and limit &#39;Write requests per minute per user&#39; of service &#39;sheets.googleapis.com&#39; for consumer
+<p>It is important to note that Google will block Write requests (i.e. adding or updating rows) at <strong>60 requests per minute</strong>. After that, the action will temporarily fail with the following error message:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Quota exceeded for quota metric &#39;Write requests&#39; and limit &#39;Write requests per minute per user&#39; of service &#39;sheets.googleapis.com&#39; for consumer
 </code></pre></div>
 <p>Therefore, for importing mass amounts of data in a short timespan, Google Sheets is not recommended. Instead, we recommend using the Database Query action.</p>
+<p>Additionally, Webhook.site will automatically disable Google Sheets actions that continously fail due to e.g. quota errors.</p>
 <h3 id="specifying-the-spreadsheet">Specifying the spreadsheet<a class="headerlink" href="#specifying-the-spreadsheet" title="Permanent link">&para;</a></h3>
 <p>When specifying the spreadsheet, you can either just copy/paste the spreadsheet URL or enter the spreadsheet ID. Variables can be used to specify the spreadsheet.</p>
 <h3 id="ranges">Ranges<a class="headerlink" href="#ranges" title="Permanent link">&para;</a></h3>
@@ -1903,11 +2534,16 @@
 <li><code>variable_name.1.1</code> = value of B2</li>
 </ol>
 <p>Additionally, the data is available in JSON, with the <code>variable_name.json</code> variable being defined, and continuing with the example above, would contain the following JSON:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">[</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;A1&quot;</span><span class="p">,</span><span class="s2">&quot;A2&quot;</span><span class="p">],</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;B1&quot;</span><span class="p">,</span><span class="s2">&quot;B2&quot;</span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">[</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;A1&quot;</span><span class="p">,</span><span class="s2">&quot;A2&quot;</span><span class="p">],</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;B1&quot;</span><span class="p">,</span><span class="s2">&quot;B2&quot;</span><span class="p">]</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">]</span>
 </code></pre></div>
+<h2 id="microsoft">Microsoft<a class="headerlink" href="#microsoft" title="Permanent link">&para;</a></h2>
+<h3 id="onedrive">OneDrive<a class="headerlink" href="#onedrive" title="Permanent link">&para;</a></h3>
+<p>With Webhook.site, you can now use your Microsoft account to upload and download files in your OneDrive account using the Upload and Download Custom Actions.</p>
+<h3 id="excel">Excel<a class="headerlink" href="#excel" title="Permanent link">&para;</a></h3>
+<p>Using the Add Rows and Get Values actions, Webhook.site now allows using your Microsoft account to append and retrieve data from Excel worksheets in your OneDrive account.</p>
 <h2 id="amazon-web-services-aws">Amazon Web Services (AWS)<a class="headerlink" href="#amazon-web-services-aws" title="Permanent link">&para;</a></h2>
 <h3 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h3>
 <p>The following actions are available for AWS S3:</p>
@@ -1935,8 +2571,8 @@
 <li>Delete Folder</li>
 <li>Get Link - creates a temporary download link for any file in your Dropbox, and saves it in a variable.</li>
 </ul>
-<h2 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">&para;</a></h2>
-<p>The Twitter Integration supports the following actions using Twitter's API:</p>
+<h2 id="x-formerly-known-as-twitter">X (formerly known as Twitter)<a class="headerlink" href="#x-formerly-known-as-twitter" title="Permanent link">&para;</a></h2>
+<p>The X Integration supports the following actions using X's API:</p>
 <ul>
 <li>Post Tweet</li>
 </ul>
@@ -1946,52 +2582,29 @@
 <p>With the Send Push Notification action, you can easily send push notifications to your mobile devices using your Pushed.co account.</p>
 <p><img alt="&quot;Pushed&quot; Custom Action screenshot" src="/images/pushed.png" /></p>
 <p>With a <a href="https://pushed.co/pricing">free Pushed.co account</a>, you can send up to 1000 push notifications a month.</p>
+<h2 id="ntfysh">ntfy.sh<a class="headerlink" href="#ntfysh" title="Permanent link">&para;</a></h2>
+<p>Allows you to easily send push notifications to your browser, phone, watch, etc. Simply download the ntfy.sh app, subscribe to your topic name and send a message to the topic name via this Custom Action. No account required.</p>
+<p>App download links: </p>
+<ul>
+<li><a href="https://apps.apple.com/us/app/ntfy/id1625396347" target="_blank">App Store</a> </li>
+<li><a href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank">Google Play</a></li>
+<li><a href="https://ntfy.sh/app">Browser</a></li>
+</ul>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="variables.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Variables" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Variables
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="examples.html" class="md-footer__link md-footer__link--next" aria-label="Next: Examples" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Examples
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2009,20 +2622,24 @@
   
     
     
+    
+    
       
       
     
     <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
 </div>
@@ -2035,10 +2652,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>

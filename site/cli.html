@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://docs.webhook.site/cli.html">
       
+      
+        <link rel="prev" href="pro.html">
+      
+      
+        <link rel="next" href="api/about.html">
+      
       <link rel="icon" href="images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -19,44 +25,33 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
-        
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
       
       
+
     
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,7 +71,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
       
@@ -119,7 +116,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -131,7 +128,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -211,6 +208,21 @@
   
   
     <li class="md-nav__item">
+      <a href="jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="news.html" class="md-nav__link">
         News
       </a>
@@ -257,7 +269,7 @@
   
     <li class="md-nav__item">
       <a href="pro.html" class="md-nav__link">
-        Pro & Enterprise
+        Basic, Pro & Enterprise
       </a>
     </li>
   
@@ -274,7 +286,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -332,11 +344,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-replacement" class="md-nav__link">
+    Variable replacement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -355,14 +381,41 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accessing-localhost127001-when-using-docker" class="md-nav__link">
-    Accessing localhost/127.0.0.1 when using Docker
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#docker-and-localhost" class="md-nav__link">
+    Docker and Localhost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-signed-certificates" class="md-nav__link">
+    Self-signed certificates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec-execute-commands" class="md-nav__link">
+    exec: Execute commands
+  </a>
+  
+    <nav class="md-nav" aria-label="exec: Execute commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
     Example
   </a>
   
@@ -397,18 +450,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           API
         </label>
@@ -435,7 +491,7 @@
   
     <li class="md-nav__item">
       <a href="api/examples.html" class="md-nav__link">
-        Script Examples
+        Examples
       </a>
     </li>
   
@@ -449,7 +505,35 @@
   
     <li class="md-nav__item">
       <a href="api/tokens.html" class="md-nav__link">
-        Tokens (URLs/Email addresses)
+        Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/groups.html" class="md-nav__link">
+        Groups
       </a>
     </li>
   
@@ -464,6 +548,20 @@
     <li class="md-nav__item">
       <a href="api/custom-actions.html" class="md-nav__link">
         Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/templates.html" class="md-nav__link">
+        Templates
       </a>
     </li>
   
@@ -516,18 +614,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Custom Actions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Custom Actions
         </label>
@@ -606,18 +707,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
           WebhookScript
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="WebhookScript" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           WebhookScript
         </label>
@@ -674,18 +778,21 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" checked>
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11_4">
+        <label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
           Built-in Functions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="2">
-        <label class="md-nav__title" for="__nav_11_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12_4">
           <span class="md-nav__icon md-icon"></span>
           Built-in Functions
         </label>
@@ -844,6 +951,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -898,11 +1020,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-replacement" class="md-nav__link">
+    Variable replacement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -921,14 +1057,41 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accessing-localhost127001-when-using-docker" class="md-nav__link">
-    Accessing localhost/127.0.0.1 when using Docker
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#docker-and-localhost" class="md-nav__link">
+    Docker and Localhost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-signed-certificates" class="md-nav__link">
+    Self-signed certificates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec-execute-commands" class="md-nav__link">
+    exec: Execute commands
+  </a>
+  
+    <nav class="md-nav" aria-label="exec: Execute commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
     Example
   </a>
   
@@ -952,90 +1115,87 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="webhooksite-cli">Webhook.site CLI<a class="headerlink" href="#webhooksite-cli" title="Permanent link">&para;</a></h1>
-<p>The Webhook.site Command Line Interface allows you to interact with your Webhook.site URLs using a terminal on your computer or a server, or programmatically in scripts.</p>
-<p>The CLI is still in its infancy, and currently it's main functionality is to redirect traffic from your Webhook.site URL to the machine where the CLI is being run. You then specify a URL for where the requests should be sent, allowing you to redirect traffic to machines that are not able receive connections directly from the Internet.</p>
-<p>For development information, please see the <a href="https://github.com/webhooksite/cli/tree/master#how-to-use">Github Page</a>.</p>
+<p>The Webhook.site Command Line Interface listens for requests to a Webhook.site URL and forwards/redirects them to your local computer or server.</p>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Place this tag where you want the button to render. -->
+<p><a class="github-button" href="https://github.com/webhooksite/cli" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star webhooksite/cli on GitHub">Star</a></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
-<p>If you have installed Docker, you can simply run Webhook.site CLI via <code>docker run</code>, like this:</p>
-<p><code>docker run webhooksite/cli -- index.js help</code></p>
+<p>After installing <a href="https://docs.docker.com/get-docker/">Docker</a>, you can run Webhook.site CLI via <code>docker run</code>:</p>
+<p><code>docker run -ti webhooksite/cli -- whcli help</code></p>
 <h3 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h3>
-<p>Node version 14 or greater required.</p>
+<p><a href="https://nodejs.org/en/download">Node</a> version 14 or greater required.</p>
 <p>To install: <code>npm install -g @webhooksite/cli</code></p>
-<p>Then, <code>whcli help</code></p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>Then you can run e.g. <code>whcli help</code></p>
+<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<p>Some command arguments can be specified via environment variables:</p>
+<div class="codehilite"><pre><span></span><code>    --token         WH_TOKEN
+    --api-key       WH_API_KEY
+    --target        WH_TARGET
+    --command       WH_COMMAND
+</code></pre></div>
+
+<p>General environment variables:</p>
+<p><code>WH_LOG_LEVEL</code> Sets log level (silent, trace, debug, info, warn, error, fatal.) Defaults to info.</p>
+<h2 id="variable-replacement">Variable replacement<a class="headerlink" href="#variable-replacement" title="Permanent link">&para;</a></h2>
+<p>For some commands and arguments, runtime variables can be replaced with the standard Webhook.site Custom Actions syntax (e.g. $variable$). Global Variables are not replaced.</p>
+<p>The variables that are available are the <a href="/custom-actions/variables.html#base-variables">default base variables</a> and any variables defined in a Custom Action that was run during the request.</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <h3 id="help-list-commands"><code>help</code>: List commands<a class="headerlink" href="#help-list-commands" title="Permanent link">&para;</a></h3>
 <p>Lists commands available to the CLI.</p>
 <h3 id="forward-forward-requests"><code>forward</code>: Forward requests<a class="headerlink" href="#forward-forward-requests" title="Permanent link">&para;</a></h3>
 <p>The <code>forward</code> command listens for new incoming requests sent to your Webhook.site URL and immediately relays them to any URL you specify, or simply <code>localhost</code> (so it can be used as an ngrok alternative). This URL can be any URL that the machine running Webhook.site CLI can access.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>whcli<span class="w"> </span>forward<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--token<span class="o">=</span>1e25c1cb-e4d4-4399-a267-cd2cf1a6c864<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--api-key<span class="o">=</span>ef6ef2f8-3e48-4f77-a54c-3891dc11c05c<span class="w"> </span><span class="se">\ </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>--target<span class="o">=</span>https://example.com
+</code></pre></div>
+<p>Custom Action variables are replaced in the <code>--target</code> argument.</p>
 <p>The request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is <code>https://example.com</code>, sending a POST request to <code>https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value</code>, the target URL will also receive a POST request on <code>https://example.com/example?query=value</code>.</p>
 <ul>
 <li>The token ID (<code>--token</code>) parameter must specify the token ID. The token ID is the long 36-character ID at the end of your Webhook.site URL.</li>
-<li>An API key (<code>--api-key</code>) must also be specified, and can be generated from the Webhook.site <a href="https://webhook.site/control-panel">Control Panel</a>.</li>
+<li>An API key (<code>--api-key</code>) must also be specified when the token belongs to a Webhook.site account, and can be generated from the Webhook.site <a href="https://webhook.site/control-panel">Control Panel</a>.</li>
 <li>Finally, the target (<code>--target</code>) specifies where traffic should be redirected. </li>
 </ul>
-<h4 id="accessing-localhost127001-when-using-docker">Accessing localhost/127.0.0.1 when using Docker<a class="headerlink" href="#accessing-localhost127001-when-using-docker" title="Permanent link">&para;</a></h4>
-<p>Note that per default, the host machine running the Docker command won't be available as <code>localhost</code> or <code>127.0.0.1</code> inside the Docker container, as the container has its own network space. This will cause errors like <code>FetchError: request to http://127.0.0.1:8080/ failed, reason: connect ECONNREFUSED 127.0.0.1:8080</code>.</p>
-<p>If you wish to forward requests to the host machine, you either use host-mode networking (with the <code>--network=host</code> option to the <code>docker run</code> command), or use your host machine's LAN IP (usually in the ranges 10.x.x.x, 192.168.x.x or 172.16.x.x.) For more information, please see this <a href="https://stackoverflow.com/questions/30109037/how-can-i-forward-localhost-port-on-my-container-to-localhost-on-my-host">Stackoverflow thread</a>.</p>
-<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>whcli forward <span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  --token<span class="o">=</span>1e25c1cb-e4d4-4399-a267-cd2cf1a6c864 <span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  --api-key<span class="o">=</span>ef6ef2f8-3e48-4f77-a54c-3891dc11c05c <span class="se">\ </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  --target<span class="o">=</span>https://example.com
+<h4 id="docker-and-localhost">Docker and Localhost<a class="headerlink" href="#docker-and-localhost" title="Permanent link">&para;</a></h4>
+<p>When running Webhook.site CLI in Docker, to access the host machine, you can't use <code>localhost</code> or 127.0.0.1. Instead, use the special hostname <code>host.docker.internal</code>. <a href="https://stackoverflow.com/a/67781603">More info here</a>.</p>
+<h4 id="self-signed-certificates">Self-signed certificates<a class="headerlink" href="#self-signed-certificates" title="Permanent link">&para;</a></h4>
+<p>If the target uses a self-signed certificate, you could get an error message about this. To allow self-signed certs, run <code>whcli</code> with the following environment variable and value:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">NODE_TLS_REJECT_UNAUTHORIZED</span><span class="o">=</span><span class="s2">&quot;0&quot;</span>
+</code></pre></div>
+<h3 id="exec-execute-commands"><code>exec</code>: Execute commands<a class="headerlink" href="#exec-execute-commands" title="Permanent link">&para;</a></h3>
+<p>Allows executing terminal commands for new incoming requests sent to your Webhook.site URL. Custom Action variables are replaced in the <code>--command</code> argument.</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>whcli<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>--token<span class="o">=</span>1e25c1cb-e4d4-4399-a267-cd2cf1a6c864<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>--api-key<span class="o">=</span>ef6ef2f8-3e48-4f77-a54c-3891dc11c05c<span class="w"> </span><span class="se">\ </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>--command<span class="o">=</span><span class="s1">&#39;ping $request.ip$&#39;</span>
 </code></pre></div>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="pro.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pro &amp; Enterprise" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Pro & Enterprise
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="api/about.html" class="md-footer__link md-footer__link--next" aria-label="Next: Usage &amp; Authentication" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Usage & Authentication
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1053,20 +1213,24 @@
   
     
     
+    
+    
       
       
     
     <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
 </div>
@@ -1079,10 +1243,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>
