@@ -343,7 +343,7 @@ Immediately stops Custom Action execution and returns the default response.
 
 ## Logic
 
-### Condition
+### Conditions
 
 !["Condition" Custom Action screenshot](/images/condition-action.png)
 
@@ -351,7 +351,7 @@ Useful if you need to validate that the request does or does not conform to cert
 
 In both the *input* and the *value* fields, variables will be replaced (including Global Variables from the Control Panel), so you can compare e.g. JSONPath or Regex values - or even values from a previous HTTP request that was sent. 
 
-Currently, two *actions* are provided: stop and continue. *Stop* will stop further action execution of the condition is a match. *Continue* will *only* continue further execution if the condition is a match, and otherwise stop.
+Currently, three *actions* are provided: use result, stop and continue. *Use Result* allows using the Condition result in further actions. *Stop* will stop further action execution of the condition is a match. *Continue* will *only* continue further execution if the condition is a match, and otherwise stop.
 
 The following "operators" are available:
 
@@ -367,6 +367,12 @@ The following "operators" are available:
 * is less than or equal to
 
 The "result" of the condition will be logged below the request details, so you can see what happened.
+
+To use the result of the Condition, select it in the "only run when condition passes" checkbox:
+
+![](/images/EQeP6s783LK1y5hnj6u7ObvO.png)
+
+Tip: To check if a Variable is set (or exists), you must enter the variable name in both input and value fields and use the "is not equal to" operator, since non-existing variables are not replaced.
 
 ### JavaScript (Beta)
 
