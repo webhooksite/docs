@@ -2,202 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.webhook.site/index.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/cli.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/custom-actions.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/dnshook.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/faq.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/jobs.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/news.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/open-source.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/premium.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/pro.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/schedules.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/about.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/action-types.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/custom-actions.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/date-expressions.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/examples.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/groups.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/requests.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/schedules.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/templates.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/api/tokens.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/custom-actions/action-types.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/custom-actions/examples.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/custom-actions/variables.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/index.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/date-format.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/date-locales.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/examples.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/reference.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/array.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/bool.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/date.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/files.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/flow.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/general.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/math.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/network.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/string.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.webhook.site/webhookscript/functions/variables.html</loc>
-         <lastmod>2024-04-06</lastmod>
+         <lastmod>2024-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
