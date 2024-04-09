@@ -7,9 +7,11 @@ jobs:
   build-mkdocs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: checkout
         uses: actions/checkout@v2
-      - name: Deploy MkDocs
+        with:
+           fetch-depth: 0
+      - name: mkdocs
         uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
         env:
            REQUIREMENTS: requirements.txt

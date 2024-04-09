@@ -29,7 +29,8 @@ plugins:
         'webhookscript.md': webhookscript/index.markdown
         'api.md': api/about.md
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
+      type: datetime
 
 markdown_extensions:
   - codehilite
