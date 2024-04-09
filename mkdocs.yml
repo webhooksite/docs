@@ -1,5 +1,7 @@
 site_name: Webhook.site Docs
 site_url: https://docs.webhook.site
+repo_name: 'webhooksite/docs'
+repo_url: 'https://github.com/webhooksite/docs'
 
 theme:
   name: material
