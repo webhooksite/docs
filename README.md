@@ -1,0 +1,1 @@
+Docs are available at https://docs.webhook.site.

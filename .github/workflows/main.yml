@@ -1,0 +1,17 @@
+name: build mkdocs
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+      - name: Deploy MkDocs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+        env:
+           REQUIREMENTS: requirements.txt
+           CUSTOM_DOMAIN: docs.webhook.site
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
