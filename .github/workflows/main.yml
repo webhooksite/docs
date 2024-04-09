@@ -1,8 +1,9 @@
 name: build mkdocs
-on:
-  push:
-    branches:
-      - master
+on: [push]
+#on:
+#  push:
+#    branches:
+#      - master
 jobs:
   build-mkdocs:
     runs-on: ubuntu-latest
@@ -14,3 +15,4 @@ jobs:
         env:
             REQUIREMENTS: requirements.txt
             CUSTOM_DOMAIN: docs.webhook.site
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
