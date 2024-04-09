@@ -40,3 +40,4 @@ Founded and built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
 * The WebhookScript editor is using the [Ace](https://ace.c9.io) editor plugin. 
 * JSONPath extraction provided by [FlowCommunications](https://github.com/FlowCommunications/JSONPath). 
 * This documentation site uses MkDocs with the [Material](https://squidfunk.github.io/mkdocs-material/) theme.
+* Docs hosted by Github
