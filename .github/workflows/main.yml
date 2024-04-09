@@ -1,5 +1,8 @@
 name: build mkdocs
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   build-mkdocs:
     runs-on: ubuntu-latest
@@ -10,3 +13,4 @@ jobs:
         uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
         env:
             REQUIREMENTS: requirements.txt
+            CUSTOM_DOMAIN: docs.webhook.site
