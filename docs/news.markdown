@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 9 April 2024
+
+* Action Editor improvements: drag and drop to change order of actions is now supported, improved renaming of actions, textboxes have been set to proper sizes
+
 ## 18 March 2024
 
 * New Feature: DNSHooks, which will automatically show all DNS requests to your unique DNS name, and all its subdomains. It can be used to send data solely via DNS, or as a canary token. [More info here](/dnshook.html)
