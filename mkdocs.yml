@@ -2,6 +2,7 @@ site_name: Webhook.site Docs
 site_url: https://docs.webhook.site
 repo_name: 'webhooksite/docs'
 repo_url: 'https://github.com/webhooksite/docs'
+edit_uri: edit/master/docs/
 
 theme:
   name: material
@@ -9,6 +10,7 @@ theme:
   favicon: images/favicon.ico
   features:
     - navigation.expand
+    - content.action.edit
   font: false
   
 extra:
