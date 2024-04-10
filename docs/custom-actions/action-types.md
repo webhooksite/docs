@@ -394,6 +394,12 @@ Currently identified limitations include:
 
 <code>set(*variable_name*, *line*)</code> - sets a Webhook.site variable for use in downstream actions
 
+The following code would set the variable $myvar$ to `value`:
+
+``` javascript
+set('myvar', 'value')
+```
+
 <code>get(*variable_name*, *line*)</code> - gets a Webhook.site variable (except Global Variables; see below)
 
 <code>variables[]</code> - global array variable containing Webhook.site variables
