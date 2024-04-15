@@ -16,6 +16,14 @@ This works since Custom Actions are executed synchronously in a chain, sharing d
 
 The format of variables are dollar signs surrounded by a word, for example: `$example$`.
 
+### Global Variables
+
+In Webhook.site Control Panel, you can define Global Variables which can be accessed between all URLs and used in Schedules. Global Variables are permanent.
+
+Global Variables can also be created, modified or deleted using Custom Actions, including in WebhookScript and JavaScript actions.
+
+Additionally, Global Variables can be managed using the [Webhook.site API](/api/global-variables.html).
+
 ### Variable Modifiers
 
 Adding specific suffixes to variable names will let you process the value in the following ways:

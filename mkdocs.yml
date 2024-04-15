@@ -66,6 +66,7 @@ nav:
     - Custom Actions: api/custom-actions.md
     - Templates: api/templates.md
     - Schedules: api/schedules.md
+    - Global Variables: api/global-variables.md
   - Schedules: schedules.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
