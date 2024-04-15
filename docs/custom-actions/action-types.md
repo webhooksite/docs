@@ -374,7 +374,7 @@ To use the result of the Condition, select it in the "only run when condition pa
 
 Tip: To check if a Variable is set (or exists), you must enter the variable name in both input and value fields and use the "is not equal to" operator, since non-existing variables are not replaced.
 
-### JavaScript (Beta)
+### JavaScript
 
 With the JavaScript action, you can execute most kinds of JavaScript/Node.js code using a Node.js 20.10.0 sandbox. 
 
@@ -386,13 +386,11 @@ This feature is still in beta as of late 2023, and we expect to add more feature
 
 Currently identified limitations include:
 
-* Global Variables not supported
-
 #### General Functions
 
 <code>console.log(*line*)</code> / <code>echo(*line*)</code> - log a string to Action output
 
-<code>set(*variable_name*, *line*)</code> - sets a Webhook.site variable for use in downstream actions
+<code>set(*variable_name*, *value*)</code> - sets a Webhook.site variable for use in downstream actions
 
 The following code would set the variable $myvar$ to `value`:
 
@@ -400,9 +398,17 @@ The following code would set the variable $myvar$ to `value`:
 set('myvar', 'value')
 ```
 
-<code>get(*variable_name*, *line*)</code> - gets a Webhook.site variable (except Global Variables; see below)
+<code>get(*variable_name*)</code> - gets a Webhook.site variable (except Global Variables; use the `global()` function for that)
 
-<code>variables[]</code> - global array variable containing Webhook.site variables
+<code>variables</code> - global array variable containing Webhook.site variables
+
+<code>global(*variable_name*)</code> - retrieves the value of a Webhook.site Global Variable. Must be used async. Returns `null` if variable doesn't exist.
+
+```javascript
+echo(await global('my-variable'))
+```
+
+<code>store(*variable_name*, *value*)</code> - stores the value of a Webhook.site Global Variable. Must be used async.
 
 <code>stop()</code> - stops action execution and return response
 

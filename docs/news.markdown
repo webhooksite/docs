@@ -22,6 +22,14 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 15 April 2024
+
+* Webhook.site now uses the domain `emailhook.site` for email receiving and sending. The old domain, `email.webhook.site`, continues to work.
+* JavaScript action now supports Global Variables via the built-in `store()` and `global()` functions. [More info and examples here](/custom-actions/action-types.html#javascript)
+* JavaScript action no longer considered in beta.
+* New API: Global Variables. [More info here](/api/global-variables.html)
+* Webhook.site CLI forward command now defaults to `https://localhost` for the `--target` parameter.
+
 ## 9 April 2024
 
 * Action Editor improvements: drag and drop to change order of actions is now supported, improved renaming of actions, textboxes have been set to proper sizes
