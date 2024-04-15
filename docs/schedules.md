@@ -29,7 +29,7 @@ In addition to be able to use a custom `cron`-style expression string, Schedules
 
 * 1 minute
 * 5 minutes
-* 10 minutes
+* ![beycanpress](https://github.com/webhooksite/docs/assets/139803016/0b883ef7-8fb7-4dde-abd4-f23ba44b713f) minutes
 * 1 hour
 * 24 hours (at 00:00)
 * Every week (mondays at 00:00)
