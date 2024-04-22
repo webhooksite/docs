@@ -5,7 +5,7 @@ nav_order: 395
 
 # Webhook.site Schedules
 
-Included in your Webhook.site Pro subscription is **Webhook.site Schedules**, which enables you to periodically send requests to specified URLs (also including your Webhook.site URLs, so your Custom Actions can be executed periodially) with a custom method, headers, and interval.
+Included in your Webhook.site subscription is **Webhook.site Schedules**, a feature that enables you to periodically send requests to specified URLs (including your Webhook.site URLs, so your Custom Actions can be executed periodially) with a custom method, headers, and interval.
 
 Schedules can be used for a variety of purposes, including cache warming, uptime monitoring, automatic data transfer, etc.
 
