@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 22 April 2024
+
+* If a default Custom Domain is specified and is validated for email, it's now used as the sender address in the Send Email action (applies to new URLs only.)
+* Improved display of text content of incoming emails - links are now clickable and quotes are indented.
+* Fixed "401 Missing Password" error when saving configuration of Tokens that have a password set.
+
 ## 15 April 2024
 
 * Webhook.site now uses the domain `emailhook.site` for email receiving and sending. The old domain, `email.webhook.site`, continues to work.
