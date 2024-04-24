@@ -72,5 +72,6 @@ These variables are automatically available for each request or email. Different
 | request.sender                    | Email         | Sender address                                                                                         |
 | request.message_id                | Email         | Email message ID                                                                                       |
 | request.text_content              | Email         | Parsed plaintext content                                                                               |
+| request.html_content              | Email         | Parsed HTML content                                                                                    |
 | request.destinations              | Email         | Comma separated list of recipients.                                                                    |
 | request.checks.[name]             | Email         | True or false for email checks (DKIM, SPF, etc.)                                                       |

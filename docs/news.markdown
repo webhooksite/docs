@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 24 April 2024
+
+* For incoming emails, in addition to text and raw content, HTML content is now shown separately.
+* New Base Variable for emails: `$request.html_content$` which contains only the HTML content of the e-mail.
+
 ## 22 April 2024
 
 * If a default Custom Domain is specified and is validated for email, it's now used as the sender address in the Send Email action (applies to new URLs only.)
