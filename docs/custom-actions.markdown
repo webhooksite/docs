@@ -49,11 +49,11 @@ Webhook.site allows some action types to be repeating, which makes Webhook.site 
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/PDNSHyhMWcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Currently, repetition is only supported by the Extract JSONPath and Extract Regex action types.
+Repetition is supported by the Extract JSONPath, Extract Regex and Split Text action types.
 
-Currently, the maximum amount of items that are supported is **100** to prevent abuse. This limit may be raised in the future. Items above that are ignored.
+The maximum amount of items that are supported is **100** to prevent abuse. 
 
-The repeating action should be ordered *before* the actions that are to be repeated. The actions that are repeated will run for each item that is extracted, using the same variable name.
+The repeating action must be ordered *before* the actions that are to be repeated.
 
 ## Queued Actions
 
