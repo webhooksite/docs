@@ -69,6 +69,7 @@ Additionally, you can specify an amount of seconds to wait until the action is e
 As the queued action will inherit the execution scope *up until* the action, there are a few things to be aware of when using Queued Actions:
 
 * Variables defined in non-queued actions ordered *before* the queued action will be available to the action.
-* If several consecutive actions are marked as queued, and their delay is identical, they will pass variables and execute in order.
-* Variables defined by a queued action are not available to *non-queued* actions coming *after* it. You cannot, for example, mark a *HTTP Request* action as queued and use the response in a *Modify Response* action.
+* If several consecutive actions are marked as queued, and their delay is identical, they are considered a group and will pass variables and execute in order.
+* Variables defined by a queued action are not available to *non-queued* actions. You cannot, for example, mark a *HTTP Request* action as queued and use the response in a *Modify Response* action.
 * The amount of time until the queued actions are executed can vary by a few seconds.
+* Groups of queued actions have a total timeout of 120 seconds, at which the execution will be terminated.
