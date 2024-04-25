@@ -212,7 +212,7 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
       "request.hostname": "webhook.site",
       "request.size": 0,
       "request.type": "web",
-      "request.ip": "86.52.35.76",
+      "request.ip": "127.0.0.1",
       "request.user_agent": "Paw/3.3.5 (Macintosh; OS X/11.6.2) GCDHTTPRequest",
       "request.url": "https://webhook.site/7fc77812-9efe-41b6-9365-e2c1fb5feb62",
       "request.method": "POST",
@@ -222,26 +222,22 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
 }
 ```
 
-### Delete Custom Action
+### Execute Custom Actions
 
 * Can require authentication.
 
-**DELETE** `/token/:token_id/actions/:action_id`
+**POST** `/token/:token_id/request/:request_id/execute`
 
-### Toggle Custom Actions
-
-* Can require authentication.
-
-***PUT*** `/token/:token_id/actions/toggle`
-
-This endpoint toggles whether actions are enabled on a specific token.
+Runs all Custom Actions for a specific token and request and returns the output. 
 
 #### Response
 
 `200 OK`
 
-```json
-{
-    "enabled": true
-}
-```
+*See [Test Custom Action](#test-custom-action) endpoint.*
+
+### Delete Custom Action
+
+* Can require authentication.
+
+**DELETE** `/token/:token_id/actions/:action_id`
