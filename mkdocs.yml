@@ -31,8 +31,10 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: false
       type: datetime
+  - glightbox
 
 markdown_extensions:
+  - md_in_html
   - codehilite
   - admonition
   - toc:

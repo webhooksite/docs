@@ -214,6 +214,11 @@ The response of the request is stored in a series of variable names prefixed wit
 
 When checked, this option will cause the HTTP to be retried in case of a network error, timeout, or related issue.
 
+<figure markdown="span">
+  ![Retry configuration screenshot](/images/http-retry.png){ width="300" }
+  <figcaption>Retry configuration screenshot</figcaption>
+</figure>
+
 Per default, there are 3 retries (4 requests total) with 1 second delay between each retry.
 
 !!! note
