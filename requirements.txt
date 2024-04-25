@@ -3,3 +3,4 @@ mkdocs-redirects==1.2.0
 mkdocs-git-revision-date-localized-plugin
 pymdown-extensions==10.0.1
 attrs==23.2.0
+mkdocs-glightbox
