@@ -24,7 +24,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 25 April 2024
 
-* Retry functionality has been added to the HTTP Request action. Per default, Webhook.site will retry a HTTP request in case of timeouts. A status code can be specified as a retry condition. [More info here](/custom-actions/action-types.html#retry)
+* Retry functionality has been added to the HTTP Request action. When enabled, Webhook.site will retry a HTTP request in case of timeouts. A status code can be specified as a retry condition. [More info here](/custom-actions/action-types.html#retry)
 * The timeout of Queued actions have been increased to 120 seconds. This means that a series of queued actions have 120 seconds to complete.
 
 ## 24 April 2024
