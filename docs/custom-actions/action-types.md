@@ -609,6 +609,23 @@ With Webhook.site, you can now use your Microsoft account to upload and download
 
 Using the Add Rows and Get Values actions, Webhook.site now allows using your Microsoft account to append and retrieve data from Excel worksheets in your OneDrive account.
 
+#### Add Rows
+
+To use the Add Rows function, the Microsoft API requires that data is inserted into a Table. Therefore, before starting, make sure you have a Table in your workbook, and enter the correct Table name.
+
+<figure markdown="span">
+  ![Finding Table name in Excel](/images/excel-table.png){ width="300" }
+  <figcaption>Finding Table name in Excel</figcaption>
+</figure>
+
+To create a table, select a range and click Insert -> Table.
+
+<figure markdown="span">
+  ![Creating a Table in Excel](/images/excel-create-table.png){ width="300" }
+  <figcaption>Creating a Table in Excel</figcaption>
+</figure>
+
+
 ## Amazon Web Services (AWS)
 
 ### S3
