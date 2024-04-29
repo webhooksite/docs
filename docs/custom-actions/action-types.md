@@ -181,6 +181,10 @@ An action that allows replacing multiple inputs to a string with specified repla
 
 Split text into multiple variables. Using `hello,world` as Source, and `,` as Delimiter, 2 variables will be created: `$variable.1$` is "hello" and `$variable.2$` is "world".
 
+Entering `\n` as Delimiter will split text by each line.
+
+The maximum amount of variables created is 1024.
+
 ### Map Text
 
 Sets a variable depending on what maps to the source value and operator.
