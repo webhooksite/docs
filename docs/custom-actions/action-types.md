@@ -625,6 +625,9 @@ To create a table, select a range and click Insert -> Table.
   <figcaption>Creating a Table in Excel</figcaption>
 </figure>
 
+#### Error: You do not have permissions to open this file in the browser
+
+This error seems to have started happening around Feburary 2024 for some users. All 3rd parties - including Webhook.site - that connect to Microsoft's API are affected. There is no known solution at the moment. We encourage users experiencing this to contact Microsoft Support.
 
 ## Amazon Web Services (AWS)
 
