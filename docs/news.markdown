@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 1 May 2024
+
+* [Webhook.site Newsletter May 2024 has been released](https://www.reddit.com/r/webhooksite/comments/1chik6o/webhooksite_may_2024_update/).
+
 ## 25 April 2024
 
 * Retry functionality has been added to the HTTP Request action. When enabled, Webhook.site will retry a HTTP request in case of timeouts. A status code can be specified as a retry condition. [More info here](/custom-actions/action-types.html#retry)
