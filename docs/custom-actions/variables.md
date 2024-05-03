@@ -4,17 +4,25 @@ nav_order: 200
 parent: Custom Actions
 ---
 
-Variables are the most important part of Custom Actions, and are characterized by a name surrounded by two dollar signs: `$example$`. Variables can be used in any field that has a ⓥ icon in the editor. They act as placeholders that are replaced by dynamic content as the request or email is received.
+### About Variables
 
-Each request or email has a set of Base Variables (see below) that contain information like the request IP, method, headers, query string values, form values and the request content. To see a list of variables, click the Variables button in the editor. Clicking on a variable copies it to the clipboard.
+Variables are a very important part of Custom Actions. A Webhook.site Variable is characterized by a name surrounded by two dollar signs: `$example$`. They act as placeholders that are replaced by dynamic content as the request or email is received.
+
+In the Custom Actions editor, variables can be used in any field that has a ⓥ icon. 
+
+Each request, email or DNSHook has a set of [Base Variables](#base-variables) that are always present and contain information like the request IP, method, headers, query string values, form values and the request content. 
+
+To see a list of Variables in the Custom Actions editor, click the Variables button in the editor. Clicking on a variable copies it to the clipboard. 
 
 ![Variables Menu](/images/variables.png)
 
-Many of the the available Custom Actions can register a variable during the runtime of the actions, so for example you can register the result of a JSONPath query and use it in a "Modify Response" action to make the response dynamic, or even use it to send a request to another HTTP address, and then use the response of that. Files can referred to and be used through Variables.
+After clicking Test on an action, additional variables created by the actions are also shown.
 
-This works since Custom Actions are executed synchronously in a chain, sharing data as they're being executed.
+Many Actions set at least one variable. For example, the result of a JSONPath query can be registered to a variable like `$jsonpath$` and entered in a "Modify Response" action to make the response dynamic, or even use it to send a request to another URL via the HTTP Request action – and then use the response of that!
 
-The format of variables are dollar signs surrounded by a word, for example: `$example$`.
+Files can referred to and incorporated in Custom Action workflows via the `request.file.*` [Base Variables](#base-variables).
+
+Variables work since Custom Actions are executed synchronously in a chain, sharing data as they're being executed.
 
 ### Global Variables
 
@@ -24,21 +32,7 @@ Global Variables can also be created, modified or deleted using Custom Actions, 
 
 Additionally, Global Variables can be managed using the [Webhook.site API](/api/global-variables.html).
 
-### Variable Modifiers
 
-Adding specific suffixes to variable names will let you process the value in the following ways:
-
-| Variable                | Example Input                          | Example Output                         | Description                                                                                                                           |
-|-------------------------|----------------------------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| $example$               | `{"json": "value"}`                    | `{"json": "value"}`                    | *no modifier*                                                                                                                         |
-| $example.json$          | `{"json": "value"}`                    | `{\"json\": \"value\"}`                | Escapes all special JSON characters, allowing to use any string in a JSON object. Escaped characters include \b, \f, \n, \r, \t, ", \ |
-| $example.html_encode$   | `<p>some html</p>`                     | `&lt;p&gt;some html&lt;/p&gt;`         | Escapes all special HTML characters                                                                                                   |
-| $example.html_decode$   | `&lt;p&gt;some html&lt;/p&gt;`         | `<p>some html</p>`                     | Replaces all escaped HTML escapes with normal characters                                                                              |
-| $example.html_strip$    | `<p>some html</p>`                     | `some html`                            | Removes all HTML tags from input string                                                                                               |
-| $example.base64_encode$ | `{"json": "<b>value</b>"}`             | `eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg==` | Encodes the variable to base64                                                                                                        |
-| $example.base64_decode$ | `eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg==` | `{"json": "<b>value</b>"}`             | Decodes a base64 encoded string                                                                                                       |
-| $example.url_encode$    | `{"json": "value"}`                    | `%7B%22json%22%3A+%22value%22%7D`      | Escapes all special HTTP URL characters                                                                                               |
-| $example.url_decode$    | `%7B%22json%22%3A+%22value%22%7D`      | `{"json": "value"}`                    | Replaces all special HTTP URL escapes with normal characters                                                                          |
 
 ### Base Variables
 
@@ -50,7 +44,7 @@ These variables are automatically available for each request or email. Different
 | request.token_id                  | All           | The Token UUID (URL ID) of the request                                                                 |
 | request.content                   | All           | The body content of the request                                                                        |
 | request.date                      | All           | Creation date in Y-m-d H:m:s format                                                                    |
-| request.date                      | All           | Creation date in UNIX timestamp format                                                                 |
+| request.timestamp                 | All           | Creation date in UNIX timestamp format                                                                 |
 | request.hostname                  | All           | Hostname of the request (usually `webhook.site`)                                                       |
 | request.header.[name]             | All           | Created for each HTTP header                                                                           |
 | request.size                      | All           | Request body size in bytes                                                                             |
@@ -75,3 +69,22 @@ These variables are automatically available for each request or email. Different
 | request.html_content              | Email         | Parsed HTML content                                                                                    |
 | request.destinations              | Email         | Comma separated list of recipients.                                                                    |
 | request.checks.[name]             | Email         | True or false for email checks (DKIM, SPF, etc.)                                                       |
+
+### Variable Modifiers
+
+Adding specific suffixes to variable names will let you process the value in the following ways:
+
+| Variable                | Example Input                          | Output                                 | Description                                                                                                                           |
+|-------------------------|----------------------------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| $example$               | `{"json": "value"}`                    | `{"json": "value"}`                    | *no modifier*                                                                                                                         |
+| $example.json$          | `{"json": "value"}`                    | `{\"json\": \"value\"}`                | Escapes all special JSON characters, allowing to use any string in a JSON object. Escaped characters include \b, \f, \n, \r, \t, ", \ |
+| $example.html_encode$   | `<p>some html</p>`                     | `&lt;p&gt;some html&lt;/p&gt;`         | Escapes all special HTML characters                                                                                                   |
+| $example.html_decode$   | `&lt;p&gt;some html&lt;/p&gt;`         | `<p>some html</p>`                     | Replaces all escaped HTML escapes with normal characters                                                                              |
+| $example.html_strip$    | `<p>some html</p>`                     | `some html`                            | Removes all HTML tags from input string                                                                                               |
+| $example.base64_encode$ | `{"json": "<b>value</b>"}`             | `eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg==` | Encodes the variable to base64                                                                                                        |
+| $example.base64_decode$ | `eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg==` | `{"json": "<b>value</b>"}`             | Decodes a base64 encoded string                                                                                                       |
+| $example.url_encode$    | `{"json": "value"}`                    | `%7B%22json%22%3A+%22value%22%7D`      | Escapes all special HTTP URL characters                                                                                               |
+| $example.url_decode$    | `%7B%22json%22%3A+%22value%22%7D`      | `{"json": "value"}`                    | Replaces all special HTTP URL escapes with normal characters                                                                          |
+
+
+
