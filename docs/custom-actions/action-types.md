@@ -363,6 +363,23 @@ If the IP is rate limited, the URL will respond with a `HTTP 429`, action execut
 
 Immediately stops Custom Action execution and returns the default response.
 
+### Basic Auth
+
+With this action, the URL is protected with Basic Authentication. If the username and password combination is wrong, the request is automatically marked as *Don't Save*, action execution is stopped, and the response status is HTTP 401. The action has no effect for emails or DNSHooks.
+
+Basic Auth works with the Authorization HTTP header, where the username and password is encoded in base64, separated by a colon (`:`). For example, a successfull request when the username is `user` and password is `pass123` would have the following header:
+
+```
+Authorization: Basic dXNlcjpwYXNzMTIz
+```
+
+<figure markdown="span">
+  ![Basic Auth in browsers](/images/basic-auth.png){ width="300" }
+  <figcaption>Basic Auth in browsers</figcaption>
+</figure>
+
+When the URL is visited with a Web browser, a username and password form will be shown.
+
 ## Logic
 
 ### Conditions

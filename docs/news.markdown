@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 3 May 2024
+
+* New Action Type: Basic Auth, for easily adding secure authentication to your Webhook.site URL. [More info here](/custom-actions/action-types.html#basic-auth)
+* It's now possible to hide requests marked as *Don't Save* from the UI. Simply click *More* and select *Hide "Don't Save" Requests*.
+
 ## 1 May 2024
 
 * [Webhook.site Newsletter May 2024 has been released](https://www.reddit.com/r/webhooksite/comments/1chik6o/webhooksite_may_2024_update/).

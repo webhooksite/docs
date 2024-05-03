@@ -78,7 +78,9 @@ Note that this may change in the future, so sign up for the [newsletter](news.ma
 
 ## How do I add authentication to my URL?
 
-You can use the Conditions [Custom Action](/custom-actions.html) to add a quick header based authentication mechanism to your URL. You can also add the Don't Save action as a condition if you don't wish to save the unauthenticated request.
+The easiest way to add authentication is by using the Basic Auth action type. [More about the Basic Auth action](/custom-actions/action-types.html#basic-auth).
+
+You can also use the Conditions [Custom Action](/custom-actions.html) to add a quick header based authentication mechanism to your URL. You can also add the Don't Save action as a condition if you don't wish to save the unauthenticated request.
 
 ![Quick Conditions Based Authentication](/images/auth.png)
 
