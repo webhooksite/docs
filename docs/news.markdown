@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 May 2024
+
+* New Feature: Error Log, which lets you see the latest errors for your URLs and Schedules in a single, searchable, list. [Go to Error Log](https://webhook.site/control-panel/error-log)
+
 ## 3 May 2024
 
 * New Action Type: Basic Auth, for easily adding secure authentication to your Webhook.site URL. [More info here](/custom-actions/action-types.html#basic-auth)

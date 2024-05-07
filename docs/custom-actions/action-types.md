@@ -1,9 +1,3 @@
-## WebhookScript
-
-!["WebhookScript" Custom Action screenshot](/images/webhookscript-in-action.png)
-
-Executes custom scripts using a scripting language that's very similar to JavaScript and PHP. [More information here](/webhookscript.html)
-
 ## Text
 
 ### Extract JSONPath
@@ -81,6 +75,11 @@ As you start entering a JSONPath, the results are validated and shown next to th
 ### Auto JSON
 
 This action automatically converts JSON data to Webhook.site Variables, and can be used as an alternative for Extract JSONPath when there's a large amount of variables that need to be extracted.
+
+<figure markdown="span">
+  ![Auto JSON in action](/images/custom-actions.png){ width="300" }
+  <figcaption>Auto JSON in action</figcaption>
+</figure>
 
 Per default, the action works on the JSON found in the `$request.content$` variable, e.g. the request body data. 
 
@@ -529,6 +528,10 @@ Code executed with the Webhook.site JavaScript action runs in a sandbox where th
 Do you need a library that isn't listed here? Please <a href="https://support.webhook.site">contact support</a>!
 
 ### WebhookScript
+
+!["WebhookScript" Custom Action screenshot](/images/webhookscript-in-action.png)
+
+Executes custom scripts using a scripting language that's very similar to JavaScript and PHP.
 
 For more information about WebhookScript, see the [dedicated page](/webhookscript/index.html).
 
