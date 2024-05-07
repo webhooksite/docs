@@ -414,15 +414,9 @@ Tip: To check if a Variable is set (or exists), you must enter the variable name
 
 ### JavaScript
 
-With the JavaScript action, you can execute most kinds of JavaScript/Node.js code using a Node.js 20.10.0 sandbox. 
+With the JavaScript action, you can execute JavaScript code using a Node.js sandbox that runs on the Webhook.site cloud.
 
 ![](/images/javascript.png)
-
-#### Limitations
-
-This feature is still in beta as of late 2023, and we expect to add more features in the coming months.
-
-Currently identified limitations include:
 
 #### General Functions
 
