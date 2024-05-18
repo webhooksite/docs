@@ -539,6 +539,11 @@ There are three modes:
 * **Random**: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.
 * **Date**: Generate date strings specifying a custom input date and an output format - defaults to ISO-8601 format.
 
+<figure markdown="span">
+  ![Set Variable Date Mode example](/images/set-variable-date.png){ width="400" }
+  <figcaption>Using the Set Variable action in the Date mode to create a date string 30 days in the past</figcaption>
+</figure>
+
 ### Store Global Variable
 
 Saves (or overwrites) a Global Variable that's saved permanently and available to all URLs in your account. If you don't need to save the variable permanently, you should use the *Set Runtime Variable* instead.
