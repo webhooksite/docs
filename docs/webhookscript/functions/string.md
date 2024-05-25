@@ -222,7 +222,7 @@ List of available algorithms for functions in the Cryptography section:
 
 Signs `value` using `private_key` and `algo`. Returns signature on success, `false` on failure.
 
-For an example using sign() for JWT authorization, [see here](/examples.html#jwt).
+For an example using sign() for JWT authorization, [see here](/webhookscript/examples.html#jwt).
 
 
 ### digest(***string*** value, ***string*** algo) : false/string
@@ -281,7 +281,7 @@ Per default, the JSON array is formatted with whitespace. To turn it off, set `f
 
 ### json_path(***string*** json, ***string*** jsonpath, ***bool*** return_first = true) : string
 
-Returns the result of a `json` string parsed using the [JSONPath](/custom-actions.html#extract-jsonpath) functionality.
+Returns the result of a `json` string parsed using the [JSONPath](/custom-actions/action-types.html#extract-jsonpath) functionality.
 
 Per default, if there's just one match (e.g. if matching on a property value that's a string), this value is returned. To always return an array, set `return_first` to false. 
 
@@ -434,9 +434,8 @@ Given a request with the following content:
 ```
 
 * `xpath(var('$request.content$'), '//employee[1]') // returns "Jack"`
-* `var('$request.content$').xpath('//employee[1]') // returns "Jack"`
 
-[More information and examples regarding XPath](/custom-actions.html#extract-xpath).
+[More information and examples regarding XPath](/custom-actions/action-types.html#extract-xpath).
 
 ### xpath_all(***string*** xpath, ***string*** input): string/null
 
@@ -455,9 +454,8 @@ Given a request with the following content:
 ```
 
 * `xpath_all(var('$request.content$'), '//employee]') // returns [0: "Jack", 1: "Ann"]`
-* `var('$request.content$').xpath('//employee') // returns [0: "Jack", 1: "Ann"]`
 
-[More information and examples regarding XPath](/custom-actions.html#extract-xpath).
+[More information and examples regarding XPath](/custom-actions/action-types.html#extract-xpath).
 
 ## Special string functions
 
