@@ -14,7 +14,9 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes accessible, and emails can be sent to `{token.uuid}@email.webhook.site`.
 
-* `default_*` parameters sets the response of the URL.
+* `default_status` (int, 200-599, default 200) sets the default response status of the URL
+* `default_content` (string) sets the default response content of the URL
+* `default_content_type` (string, default `text/html`) sets the default response content type of the URL (to set other headers, take a look at the [Modify Response](/custom-actions/action-types.html#modify-response) action.)
 * `timeout` (int) waits an amount of seconds before returning the response, max 30. Intended for testing timeouts, requests to tokens with timeouts are rate limited; a high timeout value will incur a lower rate limit.
 * `expiry` (int) amount of seconds until token auto-expiration. Max value (and default for non-upgraded URLs) is 604800 (one week). Intended for e.g. automated testing pipelines. Leave out or set to `null` to disable.
 * `request_limit` (int) - limits the request history amount from 1 to 10000 (default)
