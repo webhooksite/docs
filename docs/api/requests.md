@@ -139,6 +139,27 @@ If you're in doubt about where these parameters go in an API request, take a loo
 }
 ```
 
+## Export requests to CSV
+
+* Can require authentication.
+* Rate limit: 3 requests per minute.
+
+**GET** `/token/:token_id/requests/export`
+
+Returns a CSV file with all requests (maximum 10000.) The amount of columns of the CSV vary depending on the request data headers, query strings, form fields, files, etc.
+
+#### Query string parameters
+
+* `sorting` (string) - either `newest` or `oldest` (default)
+* `per_page` (int) - amount of requests returned, defaults to 10000 (max 10000)
+* `page` (int) -  page number to retrieve (default 1)
+* `date_from`, `date_to` (date string) - filter requests by date, format `yyyy-MM-dd HH:mm:ss`
+* `query` (string) - filter requests by a query string search (see [here](#search-query-examples) for examples)
+
+#### Response
+
+`200 OK`
+
 ## Get single/latest request
 
 * Can require authentication.
