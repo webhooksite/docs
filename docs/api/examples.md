@@ -83,6 +83,50 @@ r = requests.post('https://webhook.site/token', json=json, headers=headers)
 print('URL Created: https://webhook.site/' + r.json()['uuid'])
 ```
 
+### Download all request data as files
+
+Per default, this script will download files as `<request_id>.json` in the `requests` directory relative to the current folder.
+
+You'll need to install the dependency `requests`, e.g. by running `pip3 install requests`.
+
+```python
+import os
+import json
+import requests
+from time import sleep
+
+directory = os.path.join(os.getcwd(), 'requests')
+
+token_id = '00000000-0000-0000-0000-000000000000'
+# Uncomment if using an API key
+# api_key = '00000000-0000-0000-0000-000000000000'
+
+if not os.path.isdir(directory) or not os.access(directory, os.W_OK):
+    raise Exception(f"{directory} not writable, directory missing or rights issue.")
+
+headers = {'Accept': 'application/json'}
+if 'api_key' in vars():
+     headers['Api-Key'] = api_key
+
+page = 1
+
+while True:
+    url = f"https://webhook.site/token/{token_id}/requests?sorting=newest&page={page}"
+    response = requests.get(url, headers=headers).json()
+    
+    for req in response['data']:
+        file_path = os.path.join(directory, f"{req['uuid']}.json")
+        with open(file_path, 'w') as f:
+            f.write(req['content'])
+        print(f"[Page {page:3}] Downloaded request {req['uuid']} sent at {req['created_at']} ({req['size']} bytes)")
+
+    if response['is_last_page'] or not response['data']:
+        break
+
+    page += 1
+    sleep(1)
+```
+
 ## PHP
 
 ### Create Token (URL/Email address)
@@ -237,4 +281,57 @@ for (const request of requests.data) {
     date: request.created_at,
   });
 }
+```
+
+### Download all request data as files
+
+```javascript
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
+
+const directory = path.join(__dirname, 'requests');
+//const apiKey = '00000000-0000-0000-0000-000000000000';
+const tokenId = '00000000-0000-0000-0000-000000000000';
+
+if (!fs.existsSync(directory) || !fs.lstatSync(directory).isDirectory()) {
+  throw new Error(`${directory} not writable, directory missing or rights issue.`);
+}
+
+const headers = {'Accept': 'application/json'};
+
+if (typeof apiKey !== 'undefined') headers['Api-Key'] = apiKey;
+
+let page = 1;
+
+const fetchAndDownload = () => {
+  const url = `https://webhook.site/token/${tokenId}/requests?sorting=newest&page=${page}`;
+
+  https.get(url, { headers }, (res) => {
+    let data = '';
+
+    res.on('data', (chunk) => {
+      data += chunk;
+    });
+
+    res.on('end', () => {
+      const response = JSON.parse(data);
+
+      for (const req of response.data) {
+        const filePath = path.join(directory, `${req.uuid}.json`);
+        fs.writeFileSync(filePath, req.content);
+        console.log(`[Page ${page.toString().padStart(3)}] Downloaded request ${req.uuid} sent at ${req.created_at} (${req.size} bytes)`);
+      }
+
+      if (!response.is_last_page && response.data.length > 0) {
+        page++;
+        setTimeout(fetchAndDownload, 1000);
+      }
+    });
+  }).on('error', (err) => {
+    console.error('Error:', err.message);
+  });
+};
+
+fetchAndDownload();
 ```
