@@ -22,6 +22,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 10 June 2024
+
+* We've moved Tokens to a new datastore. The switch should have been unnoticable, but if you've started to see bugs in e.g. Control Panel or Tokens API, please contact support.
+* It's now possible to search your URLs in Control Panel by ID and Alias.
+* Fixed an issue where Error Log was not loading when a Token was deleted.
+* Fixed an issue where Global Variables couldn't be edited in Control Panel.
+* Fixed an issue where the correct group wouldn't be selected when editing a Token.
+* A proper error is now returned when an API Key is invalid.
+
 ## 7 May 2024
 
 * New Feature: Error Log, which lets you see the latest errors for your URLs and Schedules in a single, searchable, list. [Go to Error Log](https://webhook.site/control-panel/error-log)
