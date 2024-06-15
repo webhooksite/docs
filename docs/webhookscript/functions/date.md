@@ -72,6 +72,7 @@ If the date is invalid or could not be guessed, `null` is returned.
 
 // Unix timestamp
 '@1215282385'.to_date()
+// 2008-07-05T18:26:25.000000Z
 
 // Custom date format
 '2/4/12 06:03'.to_date('M/D/YY HH:mm')
@@ -106,6 +107,10 @@ date_format('now', 'x')
 // Add 1 hour to an existing date (see Recognized date formats above)
 date_format('2021-10-28 11:28:55 +1 hour', 'YYYY-MM-DD HH:mm:ss')
 // -> 2021-10-28 12:28:55
+
+// Format UNIX timestamp and convert to GMT+10 timzone
+date_format('@1718463517', 'YYYY-MM-DD HH:mm:ss', null, 'GMT+10')
+// 2024-06-16 00:58:37
 ```
 
 ### date_to_array(***string***): ***array***
