@@ -22,6 +22,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 21 June 2024
+
+* In Control Panel, URL list now has ordering capabilities
+* In Custom Actions editor, default variables (e.g. $request.uuid$) are ordered last
+* Fixed copying DNSHook to clipboard
+* Fixed Custom Actions editor layout problems
+
 ## 10 June 2024
 
 * We've moved Tokens to a new datastore. The switch should have been unnoticable, but if you've started to see bugs in e.g. Control Panel or Tokens API, please contact support.
