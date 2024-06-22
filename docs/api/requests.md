@@ -50,6 +50,7 @@ The following fields can be used to filter via the `query` parameter:
 * `created_at`
 * `updated_at`
 * `custom_action_output`
+* `note`
 * `files.[id]`
 * `headers.[header]`
 * `method` - type `web` only
@@ -66,7 +67,7 @@ The following fields can be used to filter via the `query` parameter:
 
 You can filter requests by the following syntax:
 
-* `foobar` - returns requests or emails with body contents containing the word `foobar`
+* `foobar` - if no field is specified, `content` is searched (equivalent to `content:foobar`)
 * `content:foobar` - returns requests or emails with body contents containing the word `foobar`
 * `method:GET` - returns all requests with method GET
 * `headers.user-agent:"Paw/3.3.5 (Macintosh; OS X/11.6.2) GCDHTTPRequest"` - search value of user-agent header
@@ -179,6 +180,7 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
   "method": "POST",
   "user_agent": "Paw\/3.1.8 (Macintosh; OS X\/10.14.6) GCDHTTPRequest",
   "content": "{\"first_name\":\"Arch\",\"last_name\":\"Weber\"}",
+  "note": null,
   "query": {
     "action": "create"
   },
@@ -213,6 +215,26 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 **GET** `/token/:token_id/request/latest/raw` - retrieves the latest request sent to the URL
 
 Returns the request as a response (body, content-type.)
+
+#### Response
+
+`200 OK`
+
+## Update request
+
+* Can require authentication.
+
+**PUT** `/requests/:token_id/requests/:request_id`
+
+Currently only the `note` field can be updated (max 10.000 characeters).
+
+#### Request
+
+```json
+{
+  "note": "Hello world"
+}
+```
 
 #### Response
 

@@ -24,6 +24,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 21 June 2024
 
+* It's now possible to add a note to individual requests both via the app and [the API](/api/requests.html#update-request)
 * In Control Panel, URL list now has ordering capabilities
 * In Custom Actions editor, default variables (e.g. $request.uuid$) are ordered last
 * Fixed copying DNSHook to clipboard
