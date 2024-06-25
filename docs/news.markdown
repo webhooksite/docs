@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 25 June 2024
+
+* JavaScript editor now has autocomplete and snippets for common structures (if, while, etc.)
+* When downloading files (multipart, email attachments, etc.), the original filename is now used when possible
+* In Control Panel, individual URLs are now marked with a unique color so they're easier to find
+
 ## 21 June 2024
 
 * It's now possible to add a note to individual requests both via the app and [the API](/api/requests.html#update-request)
