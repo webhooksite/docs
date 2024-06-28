@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 28 June 2024
+
+* Database Action: Added support for Microsoft SQL Server (`sqlsrv`), in addition to existing support for MySQL/MariaDB and PostgresQL.
+* Fixed an issue in CSV export where lines containing the string `\"` would cause the CSV to be formatted incorrectly.
+* We've been seeing some issues with our CDN provider, Cloudflare. We've added a link to disable CDN at the top of the page in case CDN-hosted resources (scripts and stylesheets) won't load.
+
 ## 25 June 2024
 
 * JavaScript editor now has autocomplete and snippets for common structures (if, while, etc.)

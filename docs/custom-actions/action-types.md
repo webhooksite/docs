@@ -280,7 +280,8 @@ Allows running a database query, with support for fetching out data in a series 
 Currently supported are:
 
 * PostgreSQL
-* MySQL
+* MySQL/MariaDB
+* Microsoft SQL Server
 
 If your database server is not on the list, please [contact support](https://support.webhook.site).
 
