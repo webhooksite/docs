@@ -392,6 +392,8 @@ In both the *input* and the *value* fields, variables will be replaced (includin
 
 Currently, three *actions* are provided: use result, stop and continue. *Use Result* allows using the Condition result in further actions. *Stop* will stop further action execution of the condition is a match. *Continue* will *only* continue further execution if the condition is a match, and otherwise stop.
 
+To make an *is equal to* condition on a boolean value from a JSON structure, you can enter `0` for `false` or `1` for `true`. 
+
 The following "operators" are available:
 
 * is equal to
