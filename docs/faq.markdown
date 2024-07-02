@@ -26,11 +26,22 @@ Webhook.site company stats as of March 2024:
 - 1600+ subscribed customers
 - Handles more than 250 million requests per day
 
+## Why should I pay for a Webhook.site subscription?
+
+* URLs never expire (free URLs expire after 7 days)
+* No limit on the amount requests, emails, DNSHooks a URL can receive (free URLs accept a max of 100)
+* The data sent to your URLs is protected in your account
+* Custom aliases for your URLs (https://webhook.site/my-alias)
+* You can manage your URLs with our Control Panel
+* Unlimited e-mail support
+* Features like Custom Actions, CSV Export and Schedules
+* Higher rate limits on API endpoints
+
 ## Is my data private?
 
-Yes. Per default, all URLs associated with a paid Webhook.site subscription are protected with login. Additionally, users can decide exactly how much (or little) data Webhook.site stores, either by amount of requests/emails or 
+Yes. Per default, all URLs associated with a paid Webhook.site subscription are protected with login. Additionally, users can decide exactly how much (or little) data Webhook.site stores, either by amount of requests/emails, how long a URL stays active or other criteria, like the content of a request or email.
 
-For free users, data is accessible to anyone who knows the ID of the URL.
+For users of the free version of Webhook.site, as the free version operates without a login, data is accessible to anyone who knows the ID of the URL.
 
 ## Can I use Webhook.site for production workloads?
 
@@ -49,6 +60,10 @@ For free users of Webhook.site (URLs not associated with an upgraded account), t
 For Free users, the URL – and its data – is automatically removed after 7 days with no activity.
 
 For Pro and Enterprise URLs, URLs never automatically expire, but data is removed after 365 days.
+
+## What's a Webhook.site Token?
+
+A *token* is how a Webhook.site URL is referred to in our API, essentially the technical name for it. A *token* has a unique UUID, which is also the Web address, email address and DNSHook address. It acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
 
 ## How do I transfer my Webhook.site account and data?
 
@@ -102,7 +117,7 @@ respond('Login OK!');
 
 ## Can I get a push notification on my phone when my URL receives a request?
 
-Via [Custom Actions](/custom-actions.html), Webhook.site [supports](/custom-actions/action-types.html#pushed) the service Pushed, which has a free tier. [More info here.](https://pushed.co)
+Via [Custom Actions](/custom-actions.html), Webhook.site [supports](/custom-actions/action-types.html#ntfy) servies like Pushed and Ntfy, which both has free tiers.
 
 Alternatively, at least on iPhones, you can use the [Send Email](/custom-actions/action-types.html#send-email) custom action and mark the sender address as VIP. This will trigger a push notification when the email is received. 
 
