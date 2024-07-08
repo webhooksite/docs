@@ -12,7 +12,7 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 **POST** `/token`
 
-After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes accessible, and emails can be sent to `{token.uuid}@email.webhook.site`.
+After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes accessible, emails can be sent to `{token.uuid}@emailhook.site`, and DNS queries can be sent to `*.{token.uuid}.dnshook.site`.
 
 * `default_status` (int, 200-599, default 200) sets the default response status of the URL
 * `default_content` (string) sets the default response content of the URL
