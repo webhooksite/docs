@@ -201,6 +201,7 @@ This will send a HTTP/HTTPS request from the Webhook.site cloud.
 The HTTP Request action has several modes:
 
 * **Text**: In the default text mode, this allows sending plain-text content, but also data like JSON and XML.
+* **JSON**: Similar to the Text mode, but also sets the Content-Type header to application/json and allows JSON formatting.
 * **Multipart**: With Multipart selected, it is possble to build a form/multipart request and send form data and files. Note that the Filename and Content-Type fields are not required.
 * **URL Encoded**: In URL Encoded mode, the keys and values are sent using URL Encoding.
 * **Forward**: In forward mode, all data sent to the Webhook.site URL is forwarded here, including the HTTP method, query strings, headers and body data. It is possible to overwrite the method and append headers. To forward the HTTP method, set the Method dropdown to the blank option.
