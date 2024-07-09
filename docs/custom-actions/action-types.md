@@ -695,6 +695,13 @@ The Dropbox integration has access to the entire contents of your dropbox, and c
 * Delete Folder
 * Get Link - creates a temporary download link for any file in your Dropbox, and saves it in a variable.
 
+## HubSpot
+
+With the HubSpot application, you can create Contacts in our HubSpot CRM system.
+
+!["HubSpot" Custom Action screenshot](/images/hubspot_action.png)
+
+
 ## X (formerly known as Twitter)
 
 The X Integration supports the following actions using X's API:

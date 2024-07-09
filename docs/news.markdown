@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 9 July 2024
+
+* New Custom Action: HubSpot Create Contact, which lets you easily create new leads in the HubSpot CRM system. [More info here](/custom-actions/action-types.html#hubspot)
+
 ## 28 June 2024
 
 * Database Action: Added support for Microsoft SQL Server (`sqlsrv`), in addition to existing support for MySQL/MariaDB and PostgresQL.
