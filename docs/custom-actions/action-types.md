@@ -697,7 +697,7 @@ The Dropbox integration has access to the entire contents of your dropbox, and c
 
 ## HubSpot
 
-With the HubSpot application, you can create Contacts in our HubSpot CRM system.
+With the HubSpot application, you can create Contacts in our HubSpot CRM system. (This action is new, and we're still exploring possibilities - if you want more capabilities for the HubSpot action, please [let us know](https://support.webhook.site)!)
 
 !["HubSpot" Custom Action screenshot](/images/hubspot_action.png)
 
