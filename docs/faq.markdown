@@ -22,8 +22,8 @@ With [Webhook.site](https://webhook.site), users instantly get a unique, random 
 Webhook.site company stats as of March 2024:
 
 - [Registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) since August 2020
-- 250.000+ monthly unique users 
-- 1600+ subscribed customers
+- 280.000+ monthly unique users 
+- 1900+ subscribed customers
 - Handles more than 250 million requests per day
 
 ## Why should I pay for a Webhook.site subscription?
@@ -36,6 +36,8 @@ Webhook.site company stats as of March 2024:
 * Unlimited e-mail support
 * Features like Custom Actions, CSV Export and Schedules
 * Higher rate limits on API endpoints
+
+[Click here to create a Webhook.site subscription](https://webhook.site/register).
 
 ## Is my data private?
 
@@ -61,7 +63,7 @@ For Free users, the URL – and its data – is automatically removed after 7 da
 
 For Pro and Enterprise URLs, URLs never automatically expire, but data is removed after 365 days.
 
-## What's a Webhook.site Token?
+## What's a Webhook.site "Token"?
 
 A *token* is how a Webhook.site URL is referred to in our API, essentially the technical name for it. A *token* has a unique UUID, which is also the Web address, email address and DNSHook address. It acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
 
@@ -85,11 +87,11 @@ To hand over your account to a different business or individual you essentially 
 
 After this, you will no longer have access to your account and it is fully handed over.
 
-## I want to whitelist Webhook.site in our firewall, which IP do you use?
+## I want to whitelist Webhook.site in our firewall, which IPs do you use?
 
 You'll need to whitelist the IPs `46.4.105.116` and `88.99.82.58`. 
 
-Both inbound and outbound originate and destinate at this IP address.
+Both inbound and outbound originate and destinate at these IP addresses.
 
 Note that this may change in the future, so sign up for the [newsletter](news.markdown) to be notified of changes.
 
