@@ -55,8 +55,8 @@ These variables are automatically available for each request or email. Different
 | request.file.[name].content_type  | All           | Contains the file content type (e.g. image/png)                                                        |
 | request.file.[name].id            | All           | Contains the Webhook.site file ID                                                                      |
 | request.file.[name].link          | All           | Contains the [direct download link to](/api/tokens.html#download-request-file) the file from Webhook.site's server. |
-| request.query.[name]              | Web           | Created for each query string (e.g. ?name=value)                                                       |
-| request.form.[name]               | Web           | Created for each form field                                                                            |
+| request.query.[name]              | Web           | Created for each query string (e.g. ?name=value). The variable name is normalized.                     |
+| request.form.[name]               | Web           | Created for each form field. The variable name is normalized.                                          |
 | request.ip                        | Web           | IP of the host making the request                                                                      |
 | request.user_agent                | Web           | User agent header                                                                                      |
 | request.url                       | Web           | Full URL of the request (e.g. https://webhook.site/xxx-xxx...)                                         |
