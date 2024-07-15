@@ -240,6 +240,39 @@ Currently only the `note` field can be updated (max 10.000 characeters).
 
 `200 OK`
 
+
+## Set Response
+
+* Can require authentication.
+
+**PUT** `/requests/:token_id/requests/:request_id/response`
+
+Dynamically sets a response for a specific Webhook.site URL request when the Token has a `listen` property greater than `0`. Used for Webhook.site CLI dynamic response forwarding.
+
+The data of the `content` parameter must be base64-encoded.
+
+#### Request
+
+```json
+{
+  "content": "SGVsbG8gd29ybGQK",
+  "status": 200,
+  "headers": {
+     "Content-Type": "text/plain"
+  }
+}
+```
+
+#### Response
+
+`200 OK`
+
+```json
+{
+   "status": true
+}
+```
+
 ## Download request file
 
 * Can require authentication.

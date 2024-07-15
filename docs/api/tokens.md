@@ -12,12 +12,13 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 **POST** `/token`
 
-After creating a token, the URL at `https://webhook.site/{token.uuid}` becomes accessible, emails can be sent to `{token.uuid}@emailhook.site`, and DNS queries can be sent to `*.{token.uuid}.dnshook.site`.
+After creating a token, URLs at `https://webhook.site/{token.uuid}` and `https://{token.uuid}.webhook.site` become accessible, emails can be sent to `{token.uuid}@emailhook.site`, and DNS queries can be sent to `*.{token.uuid}.dnshook.site`.
 
 * `default_status` (int, 200-599, default 200) sets the default response status of the URL
 * `default_content` (string) sets the default response content of the URL
 * `default_content_type` (string, default `text/html`) sets the default response content type of the URL (to set other headers, take a look at the [Modify Response](/custom-actions/action-types.html#modify-response) action.)
-* `timeout` (int) waits an amount of seconds before returning the response, max 30. Intended for testing timeouts, requests to tokens with timeouts are rate limited; a high timeout value will incur a lower rate limit.
+* `timeout` (int) amount of seconds to sleep before returning the response, max 30. Intended for testing timeouts, requests to tokens with timeouts are rate limited; a high timeout value will incur a lower rate limit.
+* `listen` (int) amount of seconds to listen for a response from the Set Response endpoint. `0` to disable, max `10`. Default `0`.
 * `expiry` (int) amount of seconds until token auto-expiration. Max value (and default for non-upgraded URLs) is 604800 (one week). Intended for e.g. automated testing pipelines. Leave out or set to `null` to disable.
 * `request_limit` (int) - limits the request history amount from 1 to 10000 (default)
 * `cors` (bool) set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL

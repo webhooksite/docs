@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 15 July 2024
+
+* As of version 0.2.0, the Webhook CLI `forward` command now works bidirectionally, forwarding the response back to your Webhook.site URL, acting as a proxy. [More info here](/cli.html#bidirectional-forwarding)
+* Webhook.site URLs can now also be used as subdomains. `https://webhook.site/my-url` and `https://my-url.webhook.site` are now equivalent. Custom domains are currently not supported.
+
 ## 9 July 2024
 
 * New Custom Action: HubSpot Create Contact, which lets you easily create new leads in the HubSpot CRM system. [More info here](/custom-actions/action-types.html#hubspot)
