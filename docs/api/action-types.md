@@ -2,10 +2,15 @@ The following is a list of the API names for Action Types, along with a list of 
 
 
 
+
+### `auth_basic`
+- `username`: string
+- `password`: **required**, string
+
 ### `auto_json`
 - `source`: string
 - `jsonpath`: string
-- `variable_name`: **required**, string
+- `variable_name`: string
 
 ### `aws_cf_invalidate`
 - `provider_id`: **required**, int
@@ -51,7 +56,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `action`: **required**, string, in:stop,continue,noop
 
 ### `database`
-- `type`: **required**, in:mysql,pgsql
+- `type`: **required**, in:mysql,pgsql,sqlsrv
 - `host`: **required**, string
 - `port`: number, min:1, max:65535
 - `database`: **required**, string
@@ -89,7 +94,9 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `dropbox_get_link`
 - `provider_id`: string, **required**
 - `path`: string, **required**
-- `variable_name`: string, **required**
+- `variable_name`: string
+- `type`: string, in:share_link,temporary
+- `share_audience`: string, in:public,team,no_one
 
 ### `dropbox_upload_file`
 - `provider_id`: string, **required**
@@ -152,8 +159,8 @@ The following is a list of the API names for Action Types, along with a list of 
 - `content`: nullable, string
 - `method`: nullable, in:POST,GET,OPTIONS,PUT,DELETE,PATCH,TRACE
 - `mode`: nullable, in:text,json,multipart,urlencoded,forward
-- `auth`: nullable, object
-- `auth.mode`: string, in:basic,digest,ntlm
+- `auth`: nullable, array
+- `auth.mode`: nullable, string, in:basic,digest,ntlm
 - `auth.username`: string
 - `auth.password`: string
 - `multipart`: array, **required**_if:mode,multipart
@@ -168,6 +175,15 @@ The following is a list of the API names for Action Types, along with a list of 
 - `skip_ssl_verification`: nullable, bool
 - `variable_name`: string
 - `timeout`: nullable, numeric, max:15
+- `retry`: array
+- `retry.enabled`: nullable, bool
+- `retry.retries`: nullable, numeric, min:1, max:10
+- `retry.delay`: nullable, numeric, min:0, max:10
+- `retry.require_status`: nullable, string
+
+### `hubspot_create_contact`
+- `provider_id`: **required**, string
+- `properties`: **required**, array
 
 ### `image_resize`
 - `source`: string, **required**
@@ -217,7 +233,15 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `ntfy`
 - `topic`: string, **required**
 - `title`: string
+- `icon`: string
 - `message`: string, **required**
+
+### `pdf_generate`
+- `content`: string
+- `mode`: string, in:html,markdown
+- `paper`: string, in:a4,letter
+- `orientation`: string, in:portrait,landscape
+- `variable_name`: string
 
 ### `pushed_send`
 - `app_key`: string, **required**
@@ -288,6 +312,15 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `set_variable`
 - `name`: **required**, string
 - `value`: nullable, string
+- `mode`: nullable, in:text,random,date
+- `random`: array
+- `random.*.length`: int, max:10000, **required**_if:mode,random
+- `random.*.characters`: array, in:lowercase,uppercase,digits,symbols,user
+- `random.*.alphabet`: string
+- `date`: array
+- `date.*.input`: string
+- `date.*.format`: string, in:iso8601,mysql,unix,unixmicro,user
+- `date.*.user_format`: string
 
 ### `sftp_upload`
 - `provider_id`: string
@@ -338,7 +371,7 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `text_split`
 - `delimiter`: **required**, string
 - `source`: **required**, string
-- `variable_name`: **required**, string
+- `variable_name`: string
 - `repeat`: boolean
 
 ### `twitter_tweet`

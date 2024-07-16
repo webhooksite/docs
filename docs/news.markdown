@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 16 July 2024
+
+* New Custom Action: Generate PDF, working with either Markdown or HTML content, can be used in e.g. Send Email, Modify Response actions. [More info here](/custom-actions/action-types.html#generate-pdf)
+
 ## 15 July 2024
 
 * As of version 0.2.0, the Webhook CLI `forward` command now works bidirectionally, forwarding the response back to your Webhook.site URL, acting as a proxy. [More info here](/cli.html#bidirectional-forwarding)

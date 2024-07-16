@@ -552,7 +552,11 @@ There are three modes:
 
 Saves (or overwrites) a Global Variable that's saved permanently and available to all URLs in your account. If you don't need to save the variable permanently, you should use the *Set Runtime Variable* instead.
 
-## Image Handling
+## Multimedia
+
+### Generate PDF
+
+Takes either HTML or markdown input and generates a variable (`$pdf$`) containing the PDF file contents. You can enter this variable in e.g. an Send Email attachment content field, or with the Modify Response action (remember adding a `Content-Type: application/pdf` content type header!)
 
 ### Resize Image
 
