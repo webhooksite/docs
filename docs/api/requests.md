@@ -79,13 +79,13 @@ You can filter requests by the following syntax:
 * `(method:PUT) AND (content:example OR content:test) AND NOT (content:foobar)`
 * `created_at:["2022-01-01 00:00:00" TO "2022-12-31 00:00:00"]` - date range query
 * `created_at:["2022-01-01 00:00:00" TO *]` - date range query (from date until now)
-* `created_at:[now-10m TO now]` - date range query (10 minutes ago until now; [reference for date expressions](/api/date-expressions.html))
+* `created_at:[* TO now-14d]` - date range query (in this example, all requests older than 14 days; [reference for date expressions](/api/date-expressions.html))
 
 #### Full URL Example
 
 If you're in doubt about where these parameters go in an API request, take a look below. This URL combines a search query via the `query` parameter (searching requests containing the word `foobar`), as well as the `sorting` and `per_page` parameters.
 
-`https://webhook.site/token/a94a7294-c4aa-4074-ab77-c4cf86fd53b1/requests?query=content:foobar&sorting=newest&per_page=10`
+`https://webhook.site/token/00000000-0000-0000-0000-000000000000/requests?query=content:foobar&sorting=newest&per_page=10`
 
 #### Response
 
@@ -310,6 +310,15 @@ Deletes all requests associated with the token, or if `query`, `date_from` and/o
 
 * `date_from`, `date_to` - filter requests by date, format `yyyy-MM-dd HH:mm:ss`
 * `query` - filter requests by a query string search. [See here for examples](#search-query-examples).
+
+
+### Full URL Example
+
+A request to the following URL will delete all requests on a Token older than 14 days, due to the `query` parameter being `created_at:[* TO now-14d]`. 
+
+```
+https://webhook.site/token/00000000-0000-0000-0000-000000000000/request?query=created_at:[* TO now-14d]&sorting=newest
+```
 
 ### Response
 
