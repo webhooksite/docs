@@ -316,9 +316,7 @@ Deletes all requests associated with the token, or if `query`, `date_from` and/o
 
 A request to the following URL will delete all requests on a Token older than 14 days, due to the `query` parameter being `created_at:[* TO now-14d]`. 
 
-```
-https://webhook.site/token/00000000-0000-0000-0000-000000000000/request?query=created_at:[* TO now-14d]&sorting=newest
-```
+`https://webhook.site/token/00000000-0000-0000-0000-000000000000/request?query=created_at:[* TO now-14d]&sorting=newest`
 
 ### Response
 
