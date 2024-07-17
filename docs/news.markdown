@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 17 July 2024
+
+* New Feature: Webhook.site Form Builder, a quick way to build HTML forms with custom fields that send data to your Webhook.site URL. Makes it easy to create e.g. a Contact Form in conjunction with Custom Actions. [Go to Form Builder](https://webhook.site/form-builder).
+
 ## 16 July 2024
 
 * New Custom Action: Generate PDF, working with either Markdown or HTML content, can be used in e.g. Send Email, Modify Response actions. [More info here](/custom-actions/action-types.html#generate-pdf)
