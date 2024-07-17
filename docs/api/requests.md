@@ -314,7 +314,7 @@ Deletes all requests associated with the token, or if `query`, `date_from` and/o
 
 ### Full URL Example
 
-A request to the following URL will delete all requests on a Token older than 14 days, due to the `query` parameter being `created_at:[* TO now-14d]`. 
+A request to the following URL will delete all requests on a Token older than 14 days, due to the `query` parameter being `created_at:[* TO now-14d]`. You could use this in a [Webhook.site Schedule](/schedules.html) to delete old requests from a URL periodically.
 
 `https://webhook.site/token/00000000-0000-0000-0000-000000000000/request?query=created_at:[* TO now-14d]`
 
