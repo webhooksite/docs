@@ -57,7 +57,7 @@ nav:
   - News: news.markdown
   - FAQ: faq.markdown
   - Open Source: open-source.markdown
-  - Basic, Pro & Enterprise: pro.markdown
+  - Basic, Pro & Enterprise: pro.markdown  
   - CLI: cli.md
   - API:
     - Usage & Authentication: api/about.md
@@ -70,6 +70,8 @@ nav:
     - Schedules: api/schedules.md
     - Global Variables: api/global-variables.md
   - Schedules: schedules.md
+  - DNSHook: dnshook.md
+  - Form Builder: form-builder.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
     - Variables: custom-actions/variables.md
@@ -90,4 +92,3 @@ nav:
       - Network and HTTP: webhookscript/functions/network.md
       - Strings: webhookscript/functions/string.md
       - Custom Action Variables: webhookscript/functions/variables.md
-  - DNSHook: dnshook.md

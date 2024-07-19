@@ -8,6 +8,10 @@ body, input {
   -webkit-font-smoothing: auto;
 }
 
+.center {
+   text-align: center;
+}
+
 .md-header-nav__topic {
   font-weight: bold;
 }
