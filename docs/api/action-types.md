@@ -1,8 +1,5 @@
 The following is a list of the API names for Action Types, along with a list of parameters, and their validation requirements.
 
-
-
-
 ### `auth_basic`
 - `username`: string
 - `password`: **required**, string
@@ -124,6 +121,16 @@ The following is a list of the API names for Action Types, along with a list of 
 - `source`: string
 - `default`: string
 
+### `ftp_download`
+- `host`: **required**, string
+- `port`: number, min:1, max:65535
+- `password`: **required**, string
+- `username`: **required**, string
+- `path`: **required**, string
+- `ssl`: bool
+- `passive`: bool
+- `variable_name`: string
+
 ### `ftp_upload`
 - `host`: **required**, string
 - `port`: number, min:1, max:65535
@@ -190,7 +197,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `width`: string, **required**_without:height
 - `height`: string, **required**_without:width
 - `aspect_ratio`: bool, **required**
-- `variable_name`: string, **required**
+- `variable_name`: string
 
 ### `javascript`
 - `script`: **required**, string
@@ -321,6 +328,15 @@ The following is a list of the API names for Action Types, along with a list of 
 - `date.*.input`: string
 - `date.*.format`: string, in:iso8601,mysql,unix,unixmicro,user
 - `date.*.user_format`: string
+
+### `sftp_download`
+- `provider_id`: string
+- `host`: **required**, string
+- `port`: number, min:1, max:65535
+- `username`: **required**, string
+- `password`: string
+- `path`: **required**, string
+- `variable_name`: string
 
 ### `sftp_upload`
 - `provider_id`: string
