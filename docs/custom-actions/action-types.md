@@ -266,9 +266,21 @@ Allows uploading a file to a SFTP (SSH) server, specifying a hostname, port, use
 
 We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -> Providers.
 
+### SFTP Download
+
+Allows downloading a file to a SFTP (SSH) server, specifying a hostname, port, username, password and the path to the file. The file content is downloaded to a Variable.
+
+We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -> Providers.
+
 ### FTP(S) Upload
 
 Allows uploading a file to a FTP or FTPS (FTP with TLS/SSL) server, specifying a hostname, port, username, password, relative path to the file, whether to use SSL and whether to use passive mode. Finally, the file content can be specified, in which Variables are replaced.
+
+We recommend storing the password as a Global Variable.
+
+### FTP(S) Download
+
+Allows downloading a file to a FTP or FTPS (FTP with TLS/SSL) server, specifying a hostname, port, username, password, path, whether to use SSL and whether to use passive mode. The file content is downloaded to a Variable.
 
 We recommend storing the password as a Global Variable.
 
