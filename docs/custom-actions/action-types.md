@@ -352,6 +352,10 @@ Additionally, a variable would be created with the name `$output.json$` containi
 ]
 ```
 
+#### Postgres Endpoint ID
+
+If your database host requires an endpoint ID to be specified, you can do so via the Password field, for example: `endpoint=my_endpoint;password`. Replace `my_endpoint` with the endpoint ID, and `password` with the actual password.
+
 ## Behavior
 
 ### Don't Save
