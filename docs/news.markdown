@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 2 August 2024
+
+* As we're planning to add more capacity, the Webhook.site IPs have partially changed. The IP `88.99.82.58` is no longer used by us. The full list of IPs that need to be whitelisted are the following: `178.63.67.106`, `178.63.67.153`, `46.4.105.116`. 
+
 ## 23 July 2024
 
 * New Custom Actions: FTP(S) and SFTP Download, in addition to existing Upload actions.
