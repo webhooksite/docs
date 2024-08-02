@@ -89,7 +89,7 @@ After this, you will no longer have access to your account and it is fully hande
 
 ## I want to whitelist Webhook.site in our firewall, which IPs do you use?
 
-You'll need to whitelist the IPs `46.4.105.116` and `88.99.82.58`. 
+You'll need to whitelist the IPs `46.4.105.116`, `178.63.67.106`, `178.63.67.153`. 
 
 Both inbound and outbound originate and destinate at these IP addresses.
 
