@@ -21,6 +21,7 @@ In addition to automatically recognizing date strings like ISO-8601, WebhookScri
 * `now`
 * `+4 day`, `-2 month` - adds or subtracts to the current date and time, can be suffixed to other dates
     * Other units supported: `second`, `minute`, `hour`, `day`, `fortnight`, `week`, `month`, `year`
+    * Can be combined: `2022-12-15T11:00:00.000000Z +5 minute` adds 5 minutes
 * `next Thursday`
 * `last Monday`
 * `first day of January 2008`
