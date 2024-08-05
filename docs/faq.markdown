@@ -63,6 +63,38 @@ For Free users, the URL – and its data – is automatically removed after 7 da
 
 For Pro and Enterprise URLs, URLs never automatically expire, but data is removed after 365 days.
 
+## How can I automatically remove data from Webhook.site?
+
+**By amount**
+
+You can lower the request history amount of Webhook.site stores on your URL. 
+
+The default request limit is 10.000. Any value lower than that can be used. 
+
+If the value is set to 0, no request history is stored in the Webhook.site Cloud, but Custom Actions will execute, requests are streamed to the Webhook.site interface and Webhook.site CLI forwarding will function. 
+
+To change it, click *Edit* in the upper-right corner, or use the API via the [`request_limit`](/api/tokens.html#create-token) parameter.
+
+**By date**
+
+Using the Webhook.site API (specifically, the [Delete Multiple Requests endpoint](/api/requests.html#delete-multiple-requests)) and [Schedules](/schedules.html), you can easily auto-dete data from Webhook.site URLs with very flexible settings.
+
+To set it up, first, [create an API Key](https://webhook.site/api-keys). 
+
+Then create a Schedule like the following screenshot. 
+
+In this example, Webhook.site will remove data older than 7 days every 24 hours. Remember to click the URL Encode button before saving.
+
+* Schedule Name: Can be anything you want.
+* URL: `https://webhook.site/token/00000000-0000-0000-000000000/request?query=created_at:[* TO now-7d]` - replace `00000000-0000-0000-000000000` with the URL/Token ID.
+* Method: `DELETE`
+* Headers: `Api-Key: 00000000-0000-0000-000000000` - replace `00000000-0000-0000-000000000` with your API key.
+
+<figure markdown="span">
+  ![Auto JSON in action](/images/schedule-autodelete.png){ width="300" }
+  <figcaption>Automatically removing requests using Webhook.site API and Schedules</figcaption>
+</figure>
+
 ## What's a Webhook.site "Token"?
 
 A *token* is how a Webhook.site URL is referred to in our API, essentially the technical name for it. A *token* has a unique UUID, which is also the Web address, email address and DNSHook address. It acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
