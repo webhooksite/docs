@@ -46,11 +46,7 @@ For `laravel-echo-server`, the app expects socket.io to be available at the `/so
 
 ### Kubernetes
 
-A set of Kubernetes configuration files can be found in the [`kubernetes` subfolder](https://github.com/webhooksite/webhook.site/tree/master/kubernetes). 
-
-#### Installation Guide
-
-Configure the resources, and apply with `kubectl apply -f ./`.
+A set of Helm configuration files can be found in the [`helm` subfolder](https://github.com/webhooksite/webhook.site/tree/master/helm). 
 
 ### Web Server
 
