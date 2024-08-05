@@ -83,10 +83,11 @@ To set it up, first, [create an API Key](https://webhook.site/api-keys).
 
 Then create a Schedule like the following screenshot. 
 
-In this example, Webhook.site will remove data older than 7 days every 24 hours. Remember to click the URL Encode button before saving.
+In this example, Webhook.site will remove data older than 7 days every 24 hours. `now-12h` would be 12 hours. [More date format examples](/api/date-expressions.html).
 
-* Schedule Name: Can be anything you want.
-* URL: `https://webhook.site/token/00000000-0000-0000-000000000/request?query=created_at:[* TO now-7d]` - replace `00000000-0000-0000-000000000` with the URL/Token ID.
+Remember to click the URL Encode button before saving.
+
+* URL: `https://webhook.site/token/00000000-0000-0000-000000000/request?date_to=now-7d` - replace `00000000-0000-0000-000000000` with the URL/Token ID.
 * Method: `DELETE`
 * Headers: `Api-Key: 00000000-0000-0000-000000000` - replace `00000000-0000-0000-000000000` with your API key.
 
