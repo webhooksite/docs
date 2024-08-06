@@ -16,10 +16,6 @@ Returns position of ***value*** in ***subject***, or false if not found
 
 Sprintf-like formatting of formatString with ***items***, see PHP sprintf docs.
 
-### string_join(***string*** subject, ***array*** items (number/string/bool/array)) : string
-
-Joins items with string ***subject***
-
 ### string_length(***string*** string) : number
 
 Returns length of string (multibyte-aware)
