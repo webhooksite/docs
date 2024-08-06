@@ -294,3 +294,11 @@ Some systems and packages, like [Python certifi/urllib3](https://github.com/cert
 ## What is a DNSHook?
 
 For more information about DNSHook, please [see here](/dnshook.html).
+
+## What does "This URL has no default content" mean?
+
+When a Webhook.site URL is created, this is simply the default HTTP response of it. On Webhook.site, you can change this by clicking **Edit** in the upper-right corner, or via the [API, using the `default_content` parameter](http://localhost:8001/api/tokens.html#create-token).
+
+With a Webhook.site subscription, you can also use the [Modify Response](/custom-actions/action-types.html#modify-response) action.
+
+![](/images/default-response.png)
