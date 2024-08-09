@@ -75,6 +75,8 @@ Per default, Webhook.site CLI waits for 5 seconds for a response from the target
 
 If you have a Web application that uses absolute paths, you should use your Webhook.site URL as a subdomain rather than a path, e.g. `https://1e25c1cb-e4d4-4399-a267-cd2cf1a6c864.webhook.site` rather than `https://webhook.site/1e25c1cb-e4d4-4399-a267-cd2cf1a6c864`.
 
+To disable bidirectional forwarding, add parameter `--listen-timeout=0`.
+
 #### URL merging
 
 The request method, headers and any additional path or query string parameters added to the Webhook.site URL is forwarded on to the target. For example, if the target URL is `https://example.com`, sending a POST request to `https://webhook.site/c33f3c3e-6018-4634-b406-65338edee460/example?query=value`, the target URL will also receive a POST request on `https://example.com/example?query=value`.
