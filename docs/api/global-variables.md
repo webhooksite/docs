@@ -1,6 +1,6 @@
 # API Endpoints: Global Variables
 
-With Global Variables, you can store data permanently that can be shared between your URLs. Global Variables can be used when creating Custom Actions and in Schedules. [More about Global Variables](/custom-actions/variables.md)
+With Global Variables, you can store data permanently that can be shared between your URLs. Global Variables can be used when creating Custom Actions and in Schedules. [More about Global Variables](/custom-actions/variables.html#global-variables)
 
 ## Create Global Variable
 
