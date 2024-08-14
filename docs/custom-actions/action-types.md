@@ -538,6 +538,16 @@ Code executed with the Webhook.site JavaScript action runs in a sandbox where th
    console.log(faker.internet.email())
    // Ila_Gutkowski9@yahoo.com
    ```
+* [`nats`](https://www.npmjs.com/package/nats) - NATS Client
+   ```javascript
+   const nats = require('nats')
+   const nc =  nats.connect({ servers: ["demo.nats.io:4442", "demo.nats.io:4222"] });
+   ```
+* [`supabase`](https://www.npmjs.com/package/@supabase/supabase-js) - Supabase Client
+   ```javascript
+   const createClient = require('supabase')
+   const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
+   ```
    
 Do you need a library that isn't listed here? Please <a href="https://support.webhook.site">contact support</a>!
 
