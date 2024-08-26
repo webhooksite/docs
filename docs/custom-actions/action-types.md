@@ -440,7 +440,6 @@ To make an *is equal to* condition on a boolean value from a JSON structure, you
 * is domain - e.g. `webhook.site`
 * is URL - e.g. `https://webhook.site?value=xxx`
 
-
 The "result" of the condition will be logged below the request details, so you can see what happened.
 
 To use the result of the Condition, select it in the "only run when condition passes" checkbox:

@@ -85,6 +85,8 @@ Adding specific suffixes to variable names will let you process the value in the
 | $example.base64_decode$ | `eyJqc29uIjogIjxiPnZhbHVlPC9iPiJ9Cg==` | `{"json": "<b>value</b>"}`             | Decodes a base64 encoded string                                                                                                       |
 | $example.url_encode$    | `{"json": "value"}`                    | `%7B%22json%22%3A+%22value%22%7D`      | Escapes all special HTTP URL characters                                                                                               |
 | $example.url_decode$    | `%7B%22json%22%3A+%22value%22%7D`      | `{"json": "value"}`                    | Replaces all special HTTP URL escapes with normal characters                                                                          |
+| $example.upper$         | `Hello World`                          | `HELLO WORLD`                          | Uppercases a string                                                                                                                   |
+| $example.lower$         | `Hello World`                          | `hello world`                          | Lowercases a string                                                                                                                   |
 
 
 

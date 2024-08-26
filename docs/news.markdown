@@ -26,6 +26,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 * New Operators added to *Conditions* action: is variable defined, is int, is json, is email, etc. [Full list here](/custom-actions/action-types.html#operators-with-value-argument).
 * New output variables for *Database* action: `*.rows` and `*.error`, to allow e.g. making conditions actions based in the success of the database query. [More info here](/custom-actions/action-types.html#fetching-data).
+* Added `.upper` and `.lower` Variable Modifiers. [More info here](/custom-actions/variables.html#variable-modifiers).
 
 ## 10 August 2024
 
