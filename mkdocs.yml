@@ -9,7 +9,7 @@ theme:
   logo: images/icon.png
   favicon: images/favicon.ico
   features:
-    - navigation.expand
+    - navigation.sections
     - content.action.edit
   font: false
   
@@ -59,36 +59,37 @@ nav:
   - Open Source: open-source.markdown
   - Basic, Pro & Enterprise: pro.markdown  
   - CLI: cli.md
+  - Schedules: schedules.md
+  - DNSHook: dnshook.md
+  - Form Builder: form-builder.md
   - API:
     - Usage & Authentication: api/about.md
     - Examples: api/examples.md
-    - Tokens: api/tokens.md
+    - Tokens (URLs): api/tokens.md
     - Requests: api/requests.md
     - Groups: api/groups.md
     - Custom Actions: api/custom-actions.md
     - Templates: api/templates.md
     - Schedules: api/schedules.md
     - Global Variables: api/global-variables.md
-  - Schedules: schedules.md
-  - DNSHook: dnshook.md
-  - Form Builder: form-builder.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
     - Variables: custom-actions/variables.md
     - Action Types: custom-actions/action-types.md
+    - WebhookScript:
+      - About WebhookScript: webhookscript/index.markdown
+      - Examples: webhookscript/examples.markdown
+      - Reference: webhookscript/reference.markdown
+      - Built-in Functions:
+        - General: webhookscript/functions/general.md
+        - Arrays: webhookscript/functions/array.md
+        - Booleans: webhookscript/functions/bool.md
+        - Dates: webhookscript/functions/date.md
+        - File handling: webhookscript/functions/files.md
+        - Flow Control and Responses: webhookscript/functions/flow.md
+        - Math and Numbers: webhookscript/functions/math.md
+        - Network and HTTP: webhookscript/functions/network.md
+        - Strings: webhookscript/functions/string.md
+        - Custom Action Variables: webhookscript/functions/variables.md
     - Examples: custom-actions/examples.markdown
-  - WebhookScript:
-    - About WebhookScript: webhookscript/index.markdown
-    - Examples: webhookscript/examples.markdown
-    - Reference: webhookscript/reference.markdown
-    - Built-in Functions:
-      - General: webhookscript/functions/general.md
-      - Arrays: webhookscript/functions/array.md
-      - Booleans: webhookscript/functions/bool.md
-      - Dates: webhookscript/functions/date.md
-      - File handling: webhookscript/functions/files.md
-      - Flow Control and Responses: webhookscript/functions/flow.md
-      - Math and Numbers: webhookscript/functions/math.md
-      - Network and HTTP: webhookscript/functions/network.md
-      - Strings: webhookscript/functions/string.md
-      - Custom Action Variables: webhookscript/functions/variables.md
+
