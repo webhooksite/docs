@@ -286,7 +286,7 @@ We recommend storing the password as a Global Variable.
 
 ### Database Query
 
-Allows running a database query, with support for fetching out data in a series of variables. We recommend storing the password as a Global Variable.
+Allows running a database query, with support for fetching out data in a series of variables. We recommend storing the password as a Global Variable. The query timeout is 10 seconds.
 
 #### Supported Database Servers
 
@@ -300,7 +300,7 @@ If your database server is not on the list, please [contact support](https://sup
 
 #### Using Parameters
 
-When using e.g. INSERT or UPDATE statements, we strongly recommend using *parameters* for each column value. Doing this, you avoid SQL injection attacks and other issues when using user-submitted data (e.g. via Variables), or even just data containing special characters like quotes, that could otherwise break a query.
+When using e.g. INSERT or UPDATE statements, you should use *parameters* for each column value. Doing this, you avoid SQL injection attacks and other issues when using user-submitted data (e.g. via Variables), or even just data containing special characters like quotes, that could otherwise break a query.
 
 Each parameter name should start with a colon (:) and be a single word. You can then reference these parameters inside the query, like in the following example:
 
@@ -333,7 +333,7 @@ If the variable name prefix would be set to `output`, the following variables wo
 | $output.1.lname$    | Daniels                        |
 | $output.1.title$    | Assistant                      |
 
-Additionally, a variable would be created with the name `$output.json$` containing the data in JSON format:
+A variable would be created with the name `$output.json$` containing the data in JSON format:
 
 ```json
 [                              
@@ -351,6 +351,10 @@ Additionally, a variable would be created with the name `$output.json$` containi
   }
 ]
 ```
+
+A variable named `$output.rows$` - containing the number of affected rows - would be set to `2`.
+
+If the action encounters an error, the `$output.error$` variable is set to the error message. You can use this to check that the action was successful in conjunction with the Conditions action, specifically the *variable exists* operator.
 
 #### Postgres Endpoint ID
 
@@ -411,7 +415,7 @@ Currently, three *actions* are provided: use result, stop and continue. *Use Res
 
 To make an *is equal to* condition on a boolean value from a JSON structure, you can enter `0` for `false` or `1` for `true`. 
 
-The following "operators" are available:
+#### Operators with value argument
 
 * is equal to
 * is not equal to
@@ -423,6 +427,19 @@ The following "operators" are available:
 * is greater than or equal to
 * is less than
 * is less than or equal to
+
+#### Operators without value argument
+
+* variable exists - whether a Webhook.site variable is defined
+* is numeric - whether input is numeric; examples include `42`, `123.45`, `0x539`, `02471`,
+    `0b10100111001`
+* is integer - whether input is an integer; `42` is; `123.45` is not. 
+* is float - whether input is a valid float/double (e.g. both `42` and `123.45` are valid)
+* is json - whether input is valid JSON
+* is email
+* is domain - e.g. `webhook.site`
+* is URL - e.g. `https://webhook.site?value=xxx`
+
 
 The "result" of the condition will be logged below the request details, so you can see what happened.
 
