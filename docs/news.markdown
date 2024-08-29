@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 August 2024
+
+* Webhook.site had partial downtime from approx 01:19 to 05:23 UTC. We've identified the fault to be the MariaDB "max connect errors" configuration option, which per default blocks a server IP after very a low number of errors, causing Webhook.site Web servers to lose contact to the DB servers. We've also identified an information leak in an error message which has also been remediated. We apologize.
+
 ## 26 August 2024
 
 * New Operators added to *Conditions* action: is variable defined, is int, is json, is email, etc. [Full list here](/custom-actions/action-types.html#operators-with-value-argument).
