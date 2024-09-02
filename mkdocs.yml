@@ -62,16 +62,6 @@ nav:
   - Schedules: schedules.md
   - DNSHook: dnshook.md
   - Form Builder: form-builder.md
-  - API:
-    - Usage & Authentication: api/about.md
-    - Examples: api/examples.md
-    - Tokens (URLs): api/tokens.md
-    - Requests: api/requests.md
-    - Groups: api/groups.md
-    - Custom Actions: api/custom-actions.md
-    - Templates: api/templates.md
-    - Schedules: api/schedules.md
-    - Global Variables: api/global-variables.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
     - Variables: custom-actions/variables.md
@@ -92,4 +82,14 @@ nav:
         - Strings: webhookscript/functions/string.md
         - Custom Action Variables: webhookscript/functions/variables.md
     - Examples: custom-actions/examples.markdown
+  - API:
+    - Usage & Authentication: api/about.md
+    - Examples: api/examples.md
+    - Tokens (URLs): api/tokens.md
+    - Requests: api/requests.md
+    - Groups: api/groups.md
+    - Custom Actions: api/custom-actions.md
+    - Templates: api/templates.md
+    - Schedules: api/schedules.md
+    - Global Variables: api/global-variables.md
 
