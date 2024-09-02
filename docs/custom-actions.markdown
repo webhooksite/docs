@@ -73,3 +73,22 @@ As the queued action will inherit the execution scope *up until* the action, the
 * Variables defined by a queued action are not available to *non-queued* actions. You cannot, for example, mark a *HTTP Request* action as queued and use the response in a *Modify Response* action.
 * The amount of time until the queued actions are executed can vary by a few seconds.
 * Groups of queued actions have a total timeout of 120 seconds, at which the execution will be terminated.
+
+## Replay
+
+With Replay, you can easily run Custom Actions again for either all or a subset of incoming requests. 
+
+For example, if you've made changes to your flow, want to import data again, fixed an error – there's a lot of reasons you might want to run your flow again for the requests on your Webhook.site URL, and now you can do it in Webhook.site with a few easy clicks. 
+
+If the filter matches more than 50 requests, a warning will be shown.
+
+<a href="/images/replay.png">
+    ![Custom Actions Replay screenshot](/images/replay.png)</a>
+
+In this example above, an invalid port was set for a Database action. After correcting it, it's possible to run the action again. You can use the same [Search Query language](/api/requests.html#search-query-examples) to filter which specific requests should have their actions replay.
+
+Existing action output stored on a request is overwritten by the replay action output.
+
+Actions that are marked as queued will also be run as queued when replayning actions.
+
+While Webhook.site starts processing oldest requests first, actinos are run in batches and execution order is not strictly guaranteed.

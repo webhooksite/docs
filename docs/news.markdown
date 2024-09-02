@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 August 2024
+
+* New Feature: Replay Custom Actions. Replaces the *Run Now* button. Easily run Custom Actions again for either all or a subset of incoming requests. [More info here](/custom-actions.html#replay) 
+* Requests API: It's now possible to see and search for which Custom Actions returned an error using the new `custom_action_errors` field in the API. [More info here](/api/requests.html#search-query-examples)
+* Actions API: The Execute Action endpoint has been changed so that the output and errors are now saved (overwritten) on the specified request. Additionally, error notification emails are disabled when running actions using the endpoint.
+
 ## 29 August 2024
 
 * Webhook.site had partial downtime from approx 01:19 to 05:23 UTC. We've identified the fault to be the MariaDB "max connect errors" configuration option, which per default blocks a server IP after very a low number of errors, causing Webhook.site Web servers to lose contact to the DB servers. We've also identified an information leak in an error message which has also been remediated. We apologize.

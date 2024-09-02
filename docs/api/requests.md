@@ -50,6 +50,7 @@ The following fields can be used to filter via the `query` parameter:
 * `created_at`
 * `updated_at`
 * `custom_action_output`
+* `custom_action_errors`
 * `note`
 * `files.[id]`
 * `headers.[header]`
