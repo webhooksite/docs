@@ -28,6 +28,7 @@ plugins:
       redirect_maps:
         'webhookscript.md': webhookscript/index.markdown
         'api.md': api/about.md
+        'faq.md': index.md
   - git-revision-date-localized:
       enable_creation_date: false
       type: datetime
@@ -52,10 +53,9 @@ extra_css:
 nav:
   - ← Back to Webhook.site: https://webhook.site  
 
-  - About: index.markdown
+  - FAQ: index.markdown
   - Jobs: jobs.md
   - News: news.markdown
-  - FAQ: faq.markdown
   - Open Source: open-source.markdown
   - Basic, Pro & Enterprise: pro.markdown  
   - CLI: cli.md

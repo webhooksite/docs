@@ -5,26 +5,51 @@ nav_order: 50
 
 # Webhook.site Frequently Asked Questions
 
-## What's a webhook?
+## What is a "webhook"?
 
-The term '[webhook](https://en.wikipedia.org/wiki/Webhook)' refers to the general technology of Web-based systems communication. 
+The term '[webhook](https://en.wikipedia.org/wiki/Webhook)' refers to the general technology of how Web-based systems talk to each other. 
 
-In short, many systems (e.g. a payment platform and a customer management system) communicate with each other by sending Web requests back and forth, e.g. from https://paymentsys.example to https://customersys.example/register-payment.
+In short, many systems (for example, a payment platform and a customer management system) communicate with each other by sending Web requests back and forth, for example, from `https://paymentsys.example` to  `https://customersys.example/register-payment` and vice-versa.
 
-We don't offer support or help with general questions or issues with webhooks. [More about webhooks](https://simonfredsted.com/1583).
+[More about webhooks](https://simonfredsted.com/1583).
 
-## What's Webhook.site?
+## What is Webhook.site?
 
-Webhook.site is a tool for building software that use webhooks, either by allowing developers to inspect the data that's being sent via a webhook, but also helps users create workflows that respond to and interact with webhooks from various systems.
+Webhook.site is a tool for building software that not only use webhooks but other types of communication, either by allowing developers to inspect the data that's being sent via a webhook, but also helps users create workflows that respond to and interact with webhooks from various systems.
 
-With [Webhook.site](https://webhook.site), users instantly get a unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this, users can test and debug Webhooks and HTTP requests, as well as create workflows using the [Custom Actions](/custom-actions.html) graphical builder or [WebhookScript](/webhookscript.html), a simple scripting language, to transform, validate and process HTTP requests in a variety of ways – without setting up and maintaining your own infrastructure.
+When visiting [Webhook.site](https://webhook.site), users instantly get a free, unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this, users can test and debug Webhooks and HTTP requests, as well as create workflows using the [Custom Actions](/custom-actions.html) graphical builder or [WebhookScript](/webhookscript.html), a simple scripting language, to transform, validate and process HTTP requests in a variety of ways – without setting up and maintaining your own infrastructure.
+
+Webhook.site has been a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) since August 2020.
+
+### Company information
 
 Webhook.site company stats as of March 2024:
 
-- [Registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) since August 2020
 - 280.000+ monthly unique users 
-- 1900+ subscribed customers
-- Handles more than 250 million requests per day
+- 2000+ subscribed customers
+- 250 million HTTP requests per day
+
+Webhook.site is operated by Webhook ApS (VAT ID: DK41561718).
+
+Address: Damhusvej 95, 3 tv, 5000 Odense, Denmark.
+
+Founded and built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
+
+[Contact information](https://support.webhook.site).
+
+## What are some common uses for Webhook.site?
+
+* Receive Webhooks without needing an internet-facing Web server
+* Use Webhook.site as an intermediary, proxying requests and being able to see what was sent in the past
+* Send Webhooks to a server that's behind a firewall or private subnet
+* Transforming Webhooks into other formats, and re-sending them to different systems
+* Connect different computer systems or APIs that aren't compatible
+* Building contact forms that e.g. send emails
+* Instantly build APIs without needing infrastructure
+
+The following video is a quick demo of Webhook.site Custom Actions is used to set up a workflow to post updates from a news page to an X/Twitter account automatically.
+
+<center><iframe width="100%" height="440" src="https://www.youtube.com/embed/wg08ny5bh9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ## Why should I pay for a Webhook.site subscription?
 
@@ -61,9 +86,11 @@ For free users of Webhook.site (URLs not associated with an upgraded account), t
 
 For Free users, the URL – and its data – is automatically removed after 7 days with no activity.
 
-For Pro and Enterprise URLs, URLs never automatically expire, but data is removed after 365 days.
+For paid customers, URLs never automatically expire, but data is automatically removed after a maximum of 365 days.
 
 ## How can I automatically remove data from Webhook.site?
+
+Many business have strict requirements on the amount of data that can be stored by third-party companies. Webhook.site provides several flexible ways to implement requirements like these.
 
 **By amount**
 
@@ -98,7 +125,7 @@ Remember to click the URL Encode button before saving.
 
 ## What's a Webhook.site "Token"?
 
-A *token* is how a Webhook.site URL is referred to in our API, essentially the technical name for it. A *token* has a unique UUID, which is also the Web address, email address and DNSHook address. It acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
+A *Token* is how a Webhook.site URL is referred to in our API, it's the technical name for it. A *Token* corresponds to a unique UUID, which is also the Web address, email address and DNSHook address. A Token acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
 
 ## How do I transfer my Webhook.site account and data?
 
@@ -130,29 +157,19 @@ Note that this may change in the future, so sign up for the [newsletter](news.ma
 
 ## How do I add authentication to my URL?
 
+**Basic Auth**
+
 The easiest way to add authentication is by using the Basic Auth action type. [More about the Basic Auth action](/custom-actions/action-types.html#basic-auth).
+
+**Conditions**
 
 You can also use the Conditions [Custom Action](/custom-actions.html) to add a quick header based authentication mechanism to your URL. You can also add the Don't Save action as a condition if you don't wish to save the unauthenticated request.
 
 ![Quick Conditions Based Authentication](/images/auth.png)
 
-We also have an example [WebhookScript](/webhookscript/index.html) for adding basic auth:
-
-```javascript
-username = 'john'
-password = '1234'
-
-if (var('request.header.php-auth-user', '') != username and var('request.header.php-auth-pw', '') != password) {
-    respond('', 401, ['WWW-Authenticate: Basic realm="Authentication required"']);
-    dont_save()
-}
-
-respond('Login OK!');
-```
-
 ## Can I get a push notification on my phone when my URL receives a request?
 
-Via [Custom Actions](/custom-actions.html), Webhook.site [supports](/custom-actions/action-types.html#ntfy) servies like Pushed and Ntfy, which both has free tiers.
+Via [Custom Actions](/custom-actions.html), Webhook.site [supports](/custom-actions/action-types.html#ntfy) servies like Pushed and Ntfy, both which have free tiers.
 
 Alternatively, at least on iPhones, you can use the [Send Email](/custom-actions/action-types.html#send-email) custom action and mark the sender address as VIP. This will trigger a push notification when the email is received. 
 
@@ -279,17 +296,6 @@ The HTTP body data (e.g. files or JSON data) submitted to Webhook.site must be b
 If you're requesting the Webhook.site endpoint from another domain via JavaScript, you'll need to enable CORS so the browser allows the request.
 
 To do this, click *Edit* in the upper-right corner, check the *Add CORS headers* checkbox, and click *Save*.
-
-## I'm getting a "Certificate Expired" error
-
-Our SSL certificate is fully working; the issue lies with your system. In september 2021, our SSL provider, LetsEncrypt, [updated their root certificate](https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/). This can mean that if your locally installed trusted root certificates are of an old version, you'll be seeing a certificate error as Webhook.site now runs a certificate that is based on the new root certificate chain.
-
-To remediate this problem, you'll need to update your local certificate trust store:
-
-* Debian-based systems: Use `update-ca-certificates`; [more info here](https://manpages.debian.org/buster/ca-certificates/update-ca-certificates.8.en.html).
-* Red Hat based systems: `yum update ca-certificates`; [more info here](https://access.redhat.com/solutions/1549003)
-
-Some systems and packages, like [Python certifi/urllib3](https://github.com/certifi/python-certifi/pull/162), also come with static certificates. We cannot support updating these.
 
 ## What is a DNSHook?
 
