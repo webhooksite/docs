@@ -53,7 +53,7 @@ extra_css:
 nav:
   - ← Back to Webhook.site: https://webhook.site  
 
-  - FAQ: index.markdown
+  - FAQ: index.md
   - Jobs: jobs.md
   - News: news.markdown
   - Open Source: open-source.markdown
