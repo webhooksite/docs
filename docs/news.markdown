@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 10 September 2024
+
+* When creating a date variable using the Set Variable action, it's now possible to specify an output timezone format.
+* We've had to remove the spreadsheet selector dropdown due to changes in Google's API terms. It's still possible to copy/paste a spreadsheet URL and select it like that.
+
 ## 30 August 2024
 
 * New Feature: Replay Custom Actions. Replaces the *Run Now* button. Easily run Custom Actions again for either all or a subset of incoming requests. [More info here](/custom-actions.html#replay) 
