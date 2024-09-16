@@ -719,8 +719,7 @@ In addition to the "official" Amazon endpoints, Webhook.site also supports S3-co
 
 To use the S3 action with a Google Cloud Storage bucket, do the following:
 
-1. Go to Cloud Storage &rarr; Settings
-2. Click *Interoperability*
+1. Go to Google Cloud Console &rarr; Cloud Storage &rarr; Settings &rarr; [Interoperability](https://console.cloud.google.com/storage/settings;tab=interoperability)
 3. Create keys for either an existing or a new Google Service Account
 4. Copy *Access key* in *AWS IAM Key*
 5. Copy *Secret* in *AWS IAM Secret*
