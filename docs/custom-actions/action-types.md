@@ -713,7 +713,25 @@ The following actions are available for AWS S3:
 * Delete Object
 * Get Object (retrieves object contents to a Variable)
 
-In addition to the "official" Amazon endpoints, Webhook.site also supports S3-compatible storages like DigitalOcean, MinIO, Wasabi and more. The endpoint can be specified when setting up the account in Control Panel.
+In addition to the "official" Amazon endpoints, Webhook.site also supports S3-compatible storages like Google Cloud Storage, DigitalOcean, MinIO, Wasabi and more. The endpoint can be specified when setting up the account in Control Panel.
+
+#### Using with Google Cloud Storage
+
+To use the S3 action with a Google Cloud Storage bucket, do the following:
+
+1. Go to Cloud Storage &rarr; Settings
+2. Click *Interoperability*
+3. Create keys for either an existing or a new Google Service Account
+4. Copy *Access key* in *AWS IAM Key*
+5. Copy *Secret* in *AWS IAM Secret*
+6. Enter `https://storage.googleapis.com` in *Custom Endpoint*
+
+<figure markdown="span">
+  ![Using S3 with Google Cloud Storage credentials](/images/google-cloud-storage-setup.png){ width="300" }
+  <figcaption>Using S3 with Google Cloud Storage credentials</figcaption>
+</figure>
+
+When creating the S3 action, you can leave the *Region* field blank.
 
 ### CloudFront
 
