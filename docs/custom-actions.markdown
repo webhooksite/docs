@@ -60,17 +60,20 @@ The repeating action must be ordered *before* the actions that are to be repeate
 <a href="/images/queue-and-delay.png">
     ![Custom Actions editor screenshot](/images/queue-and-delay.png)</a>
 
-By checking the *Queued* checkbox when creating a Custom Action, Webhook.site will run the action in an asynchronous background queue.
+By checking the *Queued* checkbox when creating a Custom Action, Webhook.site will run the action in an asynchronous background queue. 
 
-This is useful when you need your Webhook.site URL to respond quickly, but your Custom Actions are taking a long time to run. For example, if your Webhook.site URL should respond in 5 seconds, but you need to call an endpoint with a HTTP Request action that responds in 10 seconds, you can queue the HTTP Request action. 
+This is useful when:
+
+* a Webhook.site URL should respond quickly, but a Custom Actions flow takes a long time to run. For example, if a Webhook.site URL should respond in 5 seconds, but an endpoint with a HTTP Request action that responds in 10 seconds is called, you can queue the HTTP Request action so it's run in the background queue.
+* a Custom Actions flow takes longer than 30 seconds to run. As Webhook.site's timeout for Webhook.site URLs is 30 seconds, to run flows longer than that, you can mark the action as Queued to let it run for up to 120 seconds.
 
 Additionally, you can specify an amount of seconds to wait until the action is executed. To do this, enter an amount of seconds in the Seconds textbox next to the Queue checkbox.
 
-As the queued action will inherit the execution scope *up until* the action, there are a few things to be aware of when using Queued Actions:
+As the queued action will inherit the execution scope *up until* the action, there are some things that are important to be aware of when using Queued Actions:
 
+* Variables defined by a queued action are not available to *non-queued* actions. You cannot, for example, mark a *HTTP Request* action as queued and use the response in a *Modify Response* action (which can't be queued.)
 * Variables defined in non-queued actions ordered *before* the queued action will be available to the action.
 * If several consecutive actions are marked as queued, and their delay is identical, they are considered a group and will pass variables and execute in order.
-* Variables defined by a queued action are not available to *non-queued* actions. You cannot, for example, mark a *HTTP Request* action as queued and use the response in a *Modify Response* action.
 * The amount of time until the queued actions are executed can vary by a few seconds.
 * Groups of queued actions have a total timeout of 120 seconds, at which the execution will be terminated.
 
