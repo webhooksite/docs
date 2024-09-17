@@ -285,7 +285,7 @@ First, make sure that you have copied the correct URL, [see here](#im-getting-a-
 
 *For free users:* The URL has met the limit of the amount of requests it can receive. To unlock more requests, the URL must be associated with a Webhook.site Pro or Enterprise account. To associate a URL to your account, click Upgrade in the upper-right corner when logged in.
 
-*For Webhook.site Pro or Enterprise users:* If you're getting this error with a Webhook.site URL, the URL may have been automatically blocked due to an extraordinarly large amount of requests, as per the Fair Use guidelines in our Terms of Service. This is done to prevent a decrease in service level for our other customers. For more info, or to request a whitelisting, please contact [Support](https://support.webhook.site). If you're getting this error with a Webhook.site API endpoint, you have exceeded the API endpoint quota, and should implement e.g. a backoff strategy.
+*For Webhook.site Pro or Enterprise users:* If you're getting this error with a Webhook.site URL, the URL may have been automatically blocked due to an extraordinarily large amount of requests, as per the Fair Use guidelines in our Terms of Service. This is done to prevent a decrease in service level for our other customers. For more info, or to request a whitelisting, please contact [Support](https://support.webhook.site). If you're getting this error with a Webhook.site API endpoint, you have exceeded the API endpoint quota, and should implement e.g. a backoff strategy.
 
 ## I'm getting a 413 Payload Too Large, what's wrong? / What's the request size limit?
 
