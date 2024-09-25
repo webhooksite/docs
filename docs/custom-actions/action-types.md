@@ -564,6 +564,13 @@ Code executed with the Webhook.site JavaScript action runs in a sandbox where th
    const createClient = require('supabase')
    const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
    ```
+* [`moment`](https://momentjs.com/docs) - Date and Time library
+   ```javascript
+   const moment = require('moment')
+   const startOfLastWeek = moment().subtract(1, 'weeks').startOf('isoWeek').startOf('day').format();
+   console.log(startOfLastWeek)
+   // 2024-09-16T00:00:00+02:00
+   ```
    
 Do you need a library that isn't listed here? Please <a href="https://support.webhook.site">contact support</a>!
 

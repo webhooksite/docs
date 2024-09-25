@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 25 September 2024
+
+* `moment` library added to the JavaScript Custom Action. [More info here](/custom-actions/action-types.html#utility-modules)
+
 ## 10 September 2024
 
 * When creating a date variable using the Set Variable action, it's now possible to specify an output timezone format.
