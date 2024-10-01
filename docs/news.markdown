@@ -22,6 +22,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 September 2024
+
+* New Feature: Share Links. We've often had customers asking us about how to share a Webhook.site URL and the data it has received with others. With Share Links, you can now quickly share a view-only, whitelabel access link to a Webhook.site URL. If you're a Webhook.site Enterprise customer with a Custom Domain, the share link will use that domain per default. Share Links can be regenerated as needed to reset access.
+   ![](https://simonfredsted.com/share/GI1mjpv1hb.png)
+* The ability to disable the setting `Require login to view URLs` has been removed. As of 1 November 2024, the setting will be removed so *all* URLs will require login, API key or a Share Link to be viewed. We will send out a newsletter about this to the small number of affected accounts that has disabled this setting.
+* We are also deemphasizing and sunsetting the password functionality for Tokens/URLs (not for user accounts!), as we believe Share Links will replace this function. We expect to remove Token Passwords completely in 2025.
+
 ## 25 September 2024
 
 * `moment` library added to the JavaScript Custom Action. [More info here](/custom-actions/action-types.html#utility-modules)
