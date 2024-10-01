@@ -177,6 +177,7 @@ Returns a list of all Tokens associated with an account.
 
 ## Set password
 
+* ⚠️ This endpoint is deprecated and may be removed.
 * Can require authentication.
 * Requires user with active subscription.
 
@@ -193,42 +194,6 @@ Sets a password to view the requests of a token.
 #### Response
 
 [*See **POST** `/token`*](#11-create-token)
-
-## Set alias
-
-* ⚠️ This endpoint is deprecated and may be removed.
-* Can require authentication.
-* Requires user with active subscription.
-
-**PUT** `/token/:token_id/alias`
-
-Sets the alias for the token, which makes the token available at `https://webhook.site/<alias>` or `<alias>@email.webhook.site` in addition to its 36 character UUID.
-
-Rules for alias format: Length between 3-32 characters. Allowed characters: A-Z, a-z and - (dash.)
-
-#### Request
-
-```json
-{"alias": "my-webhook"}
-```
-
-#### Response
-
-[*See **POST** `/token`*](#11-create-token)
-
-## Toggle CORS
-
-* ⚠️ This endpoint is deprecated and may be removed.
-
-Attaches CORS headers to the response of the Token, allowing browsers to request it from all domains.
-
-**PUT** `/token/:token_id/cors/toggle`
-
-#### Response
-
-```json
-{ "enabled": true}
-```
 
 ## Delete token 
 

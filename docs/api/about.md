@@ -32,6 +32,9 @@ API Keys *must* be specified in the `Api-Key` HTTP header.
 
 ### Password
 
+!!! warning
+    Password authentication is deprecated and will be removed in 2025. We recommend using API Keys.
+
 If you have set a password on a Webhook.site URL/token, to access the API resources for that token, you can use either of the following methods:
 
 1. Specify the password using the `password` query string: `?password=[your password]` 
