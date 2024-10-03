@@ -19,27 +19,28 @@ Webhook.site is a tool for building software that not only use webhooks but othe
 
 When visiting [Webhook.site](https://webhook.site), users instantly get a free, unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this, users can test and debug Webhooks and HTTP requests, as well as create workflows using the [Custom Actions](/custom-actions.html) graphical builder or [WebhookScript](/webhookscript.html), a simple scripting language, to transform, validate and process HTTP requests in a variety of ways – without setting up and maintaining your own infrastructure.
 
-Webhook.site has been a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) since August 2020.
+Webhook.site is a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) in Denmark since August 2020.
 
 ### Company information
 
-Webhook.site company stats as of March 2024:
+Webhook.site company stats as of October 2024:
 
-- 280.000+ monthly unique users 
-- 2000+ subscribed customers
+- 280.000+ monthly unique users
+- 2100+ subscribed customers
 - 250 million HTTP requests per day
 
 Webhook.site is operated by Webhook ApS (VAT ID: DK41561718).
 
 Address: Damhusvej 95, 3 tv, 5000 Odense, Denmark.
 
-Founded and built by Simon Fredsted ([@fredsted](https://twitter.com/fredsted)).
+Company director: [Simon Fredsted](https://simonfredsted.com).
 
 [Contact information](https://support.webhook.site).
 
 ## What are some common uses for Webhook.site?
 
 * Receive Webhooks without needing an internet-facing Web server
+* Creating advanced workflows/automations that run when a URL is requested or an email is received
 * Use Webhook.site as an intermediary, proxying requests and being able to see what was sent in the past
 * Send Webhooks to a server that's behind a firewall or private subnet
 * Transforming Webhooks into other formats, and re-sending them to different systems
