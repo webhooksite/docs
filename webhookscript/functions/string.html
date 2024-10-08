@@ -1,0 +1,2278 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.webhook.site/webhookscript/functions/string.html">
+      
+      
+        <link rel="prev" href="network.html">
+      
+      
+        <link rel="next" href="variables.html">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Strings - Webhook.site Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-772X7QHH0L"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-772X7QHH0L",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-772X7QHH0L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#general-string-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../../images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Webhook.site Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Webhook.site Docs" class="md-nav__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../../images/icon.png" alt="logo">
+
+    </a>
+    Webhook.site Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://webhook.site" class="md-nav__link">
+        ← Back to Webhook.site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news.html" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source.html" class="md-nav__link">
+        Open Source
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pro.html" class="md-nav__link">
+        Basic, Pro & Enterprise
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli.html" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../form-builder.html" class="md-nav__link">
+        Form Builder
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="true">
+          Custom Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions.html" class="md-nav__link">
+        About Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions/variables.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions/action-types.html" class="md-nav__link">
+        Action Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" tabindex="0" aria-expanded="true">
+          WebhookScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebhookScript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          WebhookScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        About WebhookScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference.html" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4_4" type="checkbox" id="__nav_11_4_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4_4" tabindex="0" aria-expanded="true">
+          Built-in Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Built-in Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general.html" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="array.html" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bool.html" class="md-nav__link">
+        Booleans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="date.html" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="files.html" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flow.html" class="md-nav__link">
+        Flow Control and Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        Math and Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="network.html" class="md-nav__link">
+        Network and HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Strings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="string.html" class="md-nav__link md-nav__link--active">
+        Strings
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-string-functions" class="md-nav__link">
+    General string functions
+  </a>
+  
+    <nav class="md-nav" aria-label="General string functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string_containsstring-subject-numberstringregex-value-bool" class="md-nav__link">
+    string_contains(string subject, number/string/regex value) : bool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_find_firststring-subject-numberstring-value-number" class="md-nav__link">
+    string_find_first(string subject, number/string value) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_find_laststring-subject-numberstring-value-number" class="md-nav__link">
+    string_find_last(string subject, number/string value) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_formatstring-formatstring-any-items-string" class="md-nav__link">
+    string_format(string formatString, ...any items) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_lengthstring-string-number" class="md-nav__link">
+    string_length(string string) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_lowerstring-string-string" class="md-nav__link">
+    string_lower(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_number_ofstring-string-number" class="md-nav__link">
+    string_number_of(string string) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_randomnumber-length-string" class="md-nav__link">
+    string_random(number length) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_replacestring-subject-stringregexarray-search-string-replace-string" class="md-nav__link">
+    string_replace(string subject, string/regex/array search, string replace) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_replacestring-subject-array-replace_pairs-string" class="md-nav__link">
+    string_replace(string subject, array replace_pairs) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_reversestring-subject-string" class="md-nav__link">
+    string_reverse(string subject) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_slicestring-subject-number-from-number-to-null-string" class="md-nav__link">
+    string_slice(string subject, number from, number to = null) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_shufflestring-string-string" class="md-nav__link">
+    string_shuffle(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_splitstring-subject-stringregex-delimiter-array" class="md-nav__link">
+    string_split(string subject, string/regex delimiter) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_titlestring-string-string" class="md-nav__link">
+    string_title(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_upperstring-string-string" class="md-nav__link">
+    string_upper(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_regexstring-regex-regex" class="md-nav__link">
+    to_regex(string regex) : regex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_stringstringnumberbool-value-string" class="md-nav__link">
+    to_string(string/number/bool value) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimstring-string-string" class="md-nav__link">
+    trim(string string): string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uuid-string" class="md-nav__link">
+    uuid() : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    CSV
+  </a>
+  
+    <nav class="md-nav" aria-label="CSV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv_to_arraystring-content-string-delimiter-int-header_offset-string-enclosure-string-escape-array" class="md-nav__link">
+    csv_to_array(string content, string delimiter, ?int header_offset, string enclosure, string escape) : array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base64" class="md-nav__link">
+    Base64
+  </a>
+  
+    <nav class="md-nav" aria-label="Base64">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base64_decodestring-string-string" class="md-nav__link">
+    base64_decode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64url_decodestring-string-string" class="md-nav__link">
+    base64url_decode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64_encodestring-string-string" class="md-nav__link">
+    base64_encode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64url_encodestring-string-string" class="md-nav__link">
+    base64url_encode(string string) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hashstringnumber-value-string-algo-string" class="md-nav__link">
+    hash(string/number value, string algo) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmacstring-value-string-algo-string-secret-string" class="md-nav__link">
+    hmac(string value, string algo, string secret) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    Cryptography
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signstring-value-string-private_key-string-algo-falsestring" class="md-nav__link">
+    sign(string value, string private_key, string algo) : false/string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digeststring-value-string-algo-falsestring" class="md-nav__link">
+    digest(string value, string algo) : false/string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifystring-value-string-signature-string-public_key-string-algo-truefalse" class="md-nav__link">
+    verify(string value, string signature, string public_key, string algo) : true/false
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-and-markdown" class="md-nav__link">
+    HTML and Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML and Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_strip_tagsstring-string-string" class="md-nav__link">
+    html_strip_tags(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_to_textstring-string-string" class="md-nav__link">
+    html_to_text(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_decodestring-string-string" class="md-nav__link">
+    html_decode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_encodestring-string-string" class="md-nav__link">
+    html_encode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown_to_htmlstring-string-bool-safe_mode-false-string" class="md-nav__link">
+    markdown_to_html(string string, bool safe_mode = false) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json_decodestring-json-array" class="md-nav__link">
+    json_decode(string json) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_encodearray-array-bool-format-true-string" class="md-nav__link">
+    json_encode(array array, bool format = true) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_pathstring-json-string-jsonpath-bool-return_first-true-string" class="md-nav__link">
+    json_path(string json, string jsonpath, bool return_first = true) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_escapestring-json-string" class="md-nav__link">
+    json_escape(string json) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    Regex
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preg_matchstring-regex-string-subject-arrayfalse" class="md-nav__link">
+    preg_match(string regex, string subject) : array/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_extractregex-regex-string-subject-arrayfalse" class="md-nav__link">
+    regex_extract(regex regex, string subject) : array/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_extract_firstregex-regex-string-subject-any-default-stringfalse" class="md-nav__link">
+    regex_extract_first(regex regex, string subject, any default) : string/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_matchregex-regex-string-subject-stringfalse" class="md-nav__link">
+    regex_match(regex regex, string subject) : string/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_to_stringregex-regex-string" class="md-nav__link">
+    regex_to_string(regex regex) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+    <nav class="md-nav" aria-label="XML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xml2arraystring-xml-array" class="md-nav__link">
+    xml2array(string xml) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpathstring-xpath-string-input-stringnull" class="md-nav__link">
+    xpath(string xpath, string input): string/null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpath_allstring-xpath-string-input-stringnull" class="md-nav__link">
+    xpath_all(string xpath, string input): string/null
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-string-functions" class="md-nav__link">
+    Special string functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Special string functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert_kanastring-mode-string" class="md-nav__link">
+    convert_kana(string, mode) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variables.html" class="md-nav__link">
+        Custom Action Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/about.html" class="md-nav__link">
+        Usage & Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/tokens.html" class="md-nav__link">
+        Tokens (URLs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/custom-actions.html" class="md-nav__link">
+        Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/templates.html" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/global-variables.html" class="md-nav__link">
+        Global Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-string-functions" class="md-nav__link">
+    General string functions
+  </a>
+  
+    <nav class="md-nav" aria-label="General string functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string_containsstring-subject-numberstringregex-value-bool" class="md-nav__link">
+    string_contains(string subject, number/string/regex value) : bool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_find_firststring-subject-numberstring-value-number" class="md-nav__link">
+    string_find_first(string subject, number/string value) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_find_laststring-subject-numberstring-value-number" class="md-nav__link">
+    string_find_last(string subject, number/string value) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_formatstring-formatstring-any-items-string" class="md-nav__link">
+    string_format(string formatString, ...any items) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_lengthstring-string-number" class="md-nav__link">
+    string_length(string string) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_lowerstring-string-string" class="md-nav__link">
+    string_lower(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_number_ofstring-string-number" class="md-nav__link">
+    string_number_of(string string) : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_randomnumber-length-string" class="md-nav__link">
+    string_random(number length) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_replacestring-subject-stringregexarray-search-string-replace-string" class="md-nav__link">
+    string_replace(string subject, string/regex/array search, string replace) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_replacestring-subject-array-replace_pairs-string" class="md-nav__link">
+    string_replace(string subject, array replace_pairs) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_reversestring-subject-string" class="md-nav__link">
+    string_reverse(string subject) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_slicestring-subject-number-from-number-to-null-string" class="md-nav__link">
+    string_slice(string subject, number from, number to = null) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_shufflestring-string-string" class="md-nav__link">
+    string_shuffle(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_splitstring-subject-stringregex-delimiter-array" class="md-nav__link">
+    string_split(string subject, string/regex delimiter) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_titlestring-string-string" class="md-nav__link">
+    string_title(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_upperstring-string-string" class="md-nav__link">
+    string_upper(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_regexstring-regex-regex" class="md-nav__link">
+    to_regex(string regex) : regex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_stringstringnumberbool-value-string" class="md-nav__link">
+    to_string(string/number/bool value) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimstring-string-string" class="md-nav__link">
+    trim(string string): string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uuid-string" class="md-nav__link">
+    uuid() : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    CSV
+  </a>
+  
+    <nav class="md-nav" aria-label="CSV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv_to_arraystring-content-string-delimiter-int-header_offset-string-enclosure-string-escape-array" class="md-nav__link">
+    csv_to_array(string content, string delimiter, ?int header_offset, string enclosure, string escape) : array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base64" class="md-nav__link">
+    Base64
+  </a>
+  
+    <nav class="md-nav" aria-label="Base64">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base64_decodestring-string-string" class="md-nav__link">
+    base64_decode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64url_decodestring-string-string" class="md-nav__link">
+    base64url_decode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64_encodestring-string-string" class="md-nav__link">
+    base64_encode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64url_encodestring-string-string" class="md-nav__link">
+    base64url_encode(string string) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hashstringnumber-value-string-algo-string" class="md-nav__link">
+    hash(string/number value, string algo) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmacstring-value-string-algo-string-secret-string" class="md-nav__link">
+    hmac(string value, string algo, string secret) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    Cryptography
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signstring-value-string-private_key-string-algo-falsestring" class="md-nav__link">
+    sign(string value, string private_key, string algo) : false/string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digeststring-value-string-algo-falsestring" class="md-nav__link">
+    digest(string value, string algo) : false/string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifystring-value-string-signature-string-public_key-string-algo-truefalse" class="md-nav__link">
+    verify(string value, string signature, string public_key, string algo) : true/false
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-and-markdown" class="md-nav__link">
+    HTML and Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML and Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html_strip_tagsstring-string-string" class="md-nav__link">
+    html_strip_tags(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_to_textstring-string-string" class="md-nav__link">
+    html_to_text(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_decodestring-string-string" class="md-nav__link">
+    html_decode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_encodestring-string-string" class="md-nav__link">
+    html_encode(string string) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown_to_htmlstring-string-bool-safe_mode-false-string" class="md-nav__link">
+    markdown_to_html(string string, bool safe_mode = false) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json_decodestring-json-array" class="md-nav__link">
+    json_decode(string json) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_encodearray-array-bool-format-true-string" class="md-nav__link">
+    json_encode(array array, bool format = true) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_pathstring-json-string-jsonpath-bool-return_first-true-string" class="md-nav__link">
+    json_path(string json, string jsonpath, bool return_first = true) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_escapestring-json-string" class="md-nav__link">
+    json_escape(string json) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    Regex
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preg_matchstring-regex-string-subject-arrayfalse" class="md-nav__link">
+    preg_match(string regex, string subject) : array/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_extractregex-regex-string-subject-arrayfalse" class="md-nav__link">
+    regex_extract(regex regex, string subject) : array/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_extract_firstregex-regex-string-subject-any-default-stringfalse" class="md-nav__link">
+    regex_extract_first(regex regex, string subject, any default) : string/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_matchregex-regex-string-subject-stringfalse" class="md-nav__link">
+    regex_match(regex regex, string subject) : string/false
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex_to_stringregex-regex-string" class="md-nav__link">
+    regex_to_string(regex regex) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+    <nav class="md-nav" aria-label="XML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xml2arraystring-xml-array" class="md-nav__link">
+    xml2array(string xml) : array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpathstring-xpath-string-input-stringnull" class="md-nav__link">
+    xpath(string xpath, string input): string/null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpath_allstring-xpath-string-input-stringnull" class="md-nav__link">
+    xpath_all(string xpath, string input): string/null
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-string-functions" class="md-nav__link">
+    Special string functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Special string functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert_kanastring-mode-string" class="md-nav__link">
+    convert_kana(string, mode) : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/webhooksite/docs/edit/master/docs/webhookscript/functions/string.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+  <h1>Strings</h1>
+
+<h2 id="general-string-functions">General string functions<a class="headerlink" href="#general-string-functions" title="Permanent link">&para;</a></h2>
+<h3 id="string_containsstring-subject-numberstringregex-value-bool">string_contains(<strong><em>string</em></strong> subject, <strong><em>number/string/regex</em></strong> value) : bool<a class="headerlink" href="#string_containsstring-subject-numberstringregex-value-bool" title="Permanent link">&para;</a></h3>
+<p>Returns boolean if <strong><em>subject</em></strong> contains <strong><em>value</em></strong></p>
+<h3 id="string_find_firststring-subject-numberstring-value-number">string_find_first(<strong><em>string</em></strong> subject, <strong><em>number/string</em></strong> value) : number<a class="headerlink" href="#string_find_firststring-subject-numberstring-value-number" title="Permanent link">&para;</a></h3>
+<p>Returns position of <strong><em>value</em></strong> in <strong><em>subject</em></strong>, or false if not found</p>
+<h3 id="string_find_laststring-subject-numberstring-value-number">string_find_last(<strong><em>string</em></strong> subject, <strong><em>number/string</em></strong> value) : number<a class="headerlink" href="#string_find_laststring-subject-numberstring-value-number" title="Permanent link">&para;</a></h3>
+<p>Returns position of <strong><em>value</em></strong> in <strong><em>subject</em></strong>, or false if not found</p>
+<h3 id="string_formatstring-formatstring-any-items-string">string_format(<strong><em>string</em></strong> formatString, ...<strong><em>any</em></strong> items) : string<a class="headerlink" href="#string_formatstring-formatstring-any-items-string" title="Permanent link">&para;</a></h3>
+<p>Sprintf-like formatting of formatString with <strong><em>items</em></strong>, see PHP sprintf docs.</p>
+<h3 id="string_lengthstring-string-number">string_length(<strong><em>string</em></strong> string) : number<a class="headerlink" href="#string_lengthstring-string-number" title="Permanent link">&para;</a></h3>
+<p>Returns length of string (multibyte-aware)</p>
+<h3 id="string_lowerstring-string-string">string_lower(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#string_lowerstring-string-string" title="Permanent link">&para;</a></h3>
+<p>Converts <code>string</code> to lowercase (multibyte-aware)</p>
+<h3 id="string_number_ofstring-string-number">string_number_of(<strong><em>string</em></strong> string) : number<a class="headerlink" href="#string_number_ofstring-string-number" title="Permanent link">&para;</a></h3>
+<p>Returns number value of <strong><em>string</em></strong></p>
+<h3 id="string_randomnumber-length-string">string_random(<strong><em>number</em></strong> length) : string<a class="headerlink" href="#string_randomnumber-length-string" title="Permanent link">&para;</a></h3>
+<p>Returns a random string of <em>length</em> using the  <code>A–Z,a–z,0–9</code> alphabet.</p>
+<h3 id="string_replacestring-subject-stringregexarray-search-string-replace-string">string_replace(<strong><em>string</em></strong> subject, <strong><em>string/regex/array</em></strong> search, <strong><em>string</em></strong> replace) : string<a class="headerlink" href="#string_replacestring-subject-stringregexarray-search-string-replace-string" title="Permanent link">&para;</a></h3>
+<p>Replaces string <strong><em>search</em></strong> with <strong><em>replace</em></strong> found in <strong><em>subject</em></strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">string_replace</span><span class="p">(</span><span class="s1">&#39;this is a sentence&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sentence&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// -&gt; this is a string</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">string_replace</span><span class="p">(</span><span class="s1">&#39;this is great&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="s1">&#39;(.*) is (.*)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$1 was $2&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// -&gt; this was great</span>
+</code></pre></div>
+<h3 id="string_replacestring-subject-array-replace_pairs-string">string_replace(<strong><em>string</em></strong> subject, <strong><em>array</em></strong> replace_pairs) : string<a class="headerlink" href="#string_replacestring-subject-array-replace_pairs-string" title="Permanent link">&para;</a></h3>
+<p>Replaces items found in <strong><em>subject</em></strong> using the <strong><em>replace_pairs</em></strong> array:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">string_replace</span><span class="p">(</span><span class="s2">&quot;hello, it&#39;s good&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="s1">&#39;hello&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hi&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="s1">&#39;good&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;great&#39;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">])</span><span class="w"> </span><span class="c1">// -&gt; hi, it&#39;s great</span>
+</code></pre></div>
+<h3 id="string_reversestring-subject-string">string_reverse(<strong><em>string</em></strong> subject) : string<a class="headerlink" href="#string_reversestring-subject-string" title="Permanent link">&para;</a></h3>
+<p>Reverses string <strong><em>subject</em></strong> </p>
+<h3 id="string_slicestring-subject-number-from-number-to-null-string">string_slice(<strong><em>string</em></strong> subject, <strong><em>number</em></strong> from, <strong><em>number</em></strong> to = null) : string<a class="headerlink" href="#string_slicestring-subject-number-from-number-to-null-string" title="Permanent link">&para;</a></h3>
+<p>Extracts a segment of a string. Multibyte-aware.</p>
+<p><code>string_slice('hello world', 0, 5)</code> returns <code>hello</code>.</p>
+<p><code>string_slice('hello world', 6)</code> returns <code>world</code>.</p>
+<h3 id="string_shufflestring-string-string">string_shuffle(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#string_shufflestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns string where the individual characters has been shuffled.</p>
+<h3 id="string_splitstring-subject-stringregex-delimiter-array">string_split(<strong><em>string</em></strong> subject, <strong><em>string/regex</em></strong> delimiter) : array<a class="headerlink" href="#string_splitstring-subject-stringregex-delimiter-array" title="Permanent link">&para;</a></h3>
+<p>Returns array of split string <strong><em>subject</em></strong> with <strong><em>delimiter</em></strong> </p>
+<h3 id="string_titlestring-string-string">string_title(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#string_titlestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns <code>string</code> converted to <em>title case</em>.</p>
+<p><code>string_title('hello world')</code> returns <code>Hello World</code>.</p>
+<h3 id="string_upperstring-string-string">string_upper(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#string_upperstring-string-string" title="Permanent link">&para;</a></h3>
+<p>Converts <code>string</code> to UPPERCASE (multibyte-aware).</p>
+<h3 id="to_regexstring-regex-regex">to_regex(<strong><em>string</em></strong> regex) : regex<a class="headerlink" href="#to_regexstring-regex-regex" title="Permanent link">&para;</a></h3>
+<p>Converts a regex string to a regex type</p>
+<h3 id="to_stringstringnumberbool-value-string">to_string(<strong><em>string/number/bool</em></strong> value) : string<a class="headerlink" href="#to_stringstringnumberbool-value-string" title="Permanent link">&para;</a></h3>
+<p>Returns <strong><em>value</em></strong> as string </p>
+<h3 id="trimstring-string-string">trim(<strong><em>string</em></strong> string): string<a class="headerlink" href="#trimstring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns <code>string</code> with space, tab and newline characters removed from the beginning and end of the string.</p>
+<h3 id="uuid-string">uuid() : string<a class="headerlink" href="#uuid-string" title="Permanent link">&para;</a></h3>
+<p>Returns a random v4 UUID.</p>
+<h2 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h2>
+<h3 id="csv_to_arraystring-content-string-delimiter-int-header_offset-string-enclosure-string-escape-array">csv_to_array(<strong><em>string</em></strong> content, <strong><em>string</em></strong> delimiter, <strong><em>?int</em></strong> header_offset, <strong><em>string</em></strong> enclosure, <strong><em>string</em></strong> escape) : array<a class="headerlink" href="#csv_to_arraystring-content-string-delimiter-int-header_offset-string-enclosure-string-escape-array" title="Permanent link">&para;</a></h3>
+<p>Takes a CSV string and outputs to an array, with each row being an item in the array.</p>
+<ul>
+<li><code>content</code> should be a string containing the CSV document.</li>
+<li><code>delimiter</code> will explicitly set the CSV delimiter the parser will attempt to use (e.g. <code>;</code>). Must be a single character. Defaults to <code>,</code> (comma.)</li>
+<li><code>header_offset</code>, when specified, causes the output array item's keys to be set to the header values. Setting to <code>0</code> will mark the first row as the header row. </li>
+<li><code>enclosure</code> sets the field enclosure character. Must be a single character. Defaults to <code>"</code> (double quote.)</li>
+<li><code>escape</code> sets the field escape character. Must be a single character. Defaults to <code>\</code> (backslash.)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">csv_content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;firstname,lastname,title</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s1">&quot;M. J.&quot;,Plumley,&quot;Sr. Developer&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="s1">Emily,&quot;Jenna Platt&quot;,&quot;Chief Information Officer&quot;&#39;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">csv_to_array</span><span class="p">(</span><span class="nx">csv_content</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">echo</span><span class="p">(</span><span class="nx">json_encode</span><span class="p">(</span><span class="nx">array</span><span class="p">))</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">// [</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">//     {</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">//         &quot;firstname&quot;: &quot;John&quot;,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1">//         &quot;lastname&quot;: &quot;Doe&quot;,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1">//         &quot;title&quot;: &quot;Sr. Developer&quot;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1">//     },</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c1">//     {</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">//         &quot;firstname&quot;: &quot;Emily&quot;,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1">//         &quot;lastname&quot;: &quot;Jenna Platt&quot;,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1">//         &quot;title&quot;: &quot;Chief Information Officer&quot;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1">//     }</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1">// ]</span>
+</code></pre></div>
+<h2 id="base64">Base64<a class="headerlink" href="#base64" title="Permanent link">&para;</a></h2>
+<h3 id="base64_decodestring-string-string">base64_decode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#base64_decodestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns a base64-decoded string.</p>
+<h3 id="base64url_decodestring-string-string">base64url_decode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#base64url_decodestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns a base64url-decoded string.</p>
+<p>If the base64 string was encoded using URL-friendly <code>base64url</code> format, this function should be used rather the regular <code>base64_decode</code> function.</p>
+<h3 id="base64_encodestring-string-string">base64_encode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#base64_encodestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns base64-encoded string.</p>
+<h3 id="base64url_encodestring-string-string">base64url_encode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#base64url_encodestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns a URL-friendly base64url-encoded string, where characters <code>+</code>, <code>/</code> have been replaced by <code>-</code> and <code>_</code>, and any <code>=</code> padding characters have been removed.</p>
+<h2 id="hashing">Hashing<a class="headerlink" href="#hashing" title="Permanent link">&para;</a></h2>
+<h3 id="hashstringnumber-value-string-algo-string">hash(<strong><em>string/number</em></strong> value, <strong><em>string</em></strong> algo) : string<a class="headerlink" href="#hashstringnumber-value-string-algo-string" title="Permanent link">&para;</a></h3>
+<p>Returns a hashed version of <code>value</code> using the <code>algo</code> algorithm.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&#39;hello world&#39;.hash(&#39;md5&#39;)  // 5eb63bbbe01eeed093cb22bb8f5acdc3
+</code></pre></div>
+<br></p>
+<p>The following built-in algorithms are available: <code>md2</code>, <code>md4</code>, <code>md5</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512/224</code>, <code>sha512/256</code>, <code>sha512</code>, <code>sha3-224</code>, <code>sha3-256</code>, <code>sha3-384</code>, <code>sha3-512</code>, <code>ripemd128</code>, <code>ripemd160</code>, <code>ripemd256</code>, <code>ripemd320</code>, <code>whirlpool</code>, <code>tiger128,3</code>, <code>tiger160,3</code>, <code>tiger192,3</code>, <code>tiger128,4</code>, <code>tiger160,4</code>, <code>tiger192,4</code>, <code>snefru</code>, <code>snefru256</code>, <code>gost</code>, <code>gost-crypto</code>, <code>adler32</code>, <code>crc32</code>, <code>crc32b</code>, <code>fnv132</code>, <code>fnv1a32</code>, <code>fnv164</code>, <code>fnv1a64</code>, <code>joaat</code>, <code>haval128,3</code>, <code>haval160,3</code>, <code>haval192,3</code>, <code>haval224,3</code>, <code>haval256,3</code>, <code>haval128,4</code>, <code>haval160,4</code>, <code>haval192,4</code>, <code>haval224,4</code>, <code>haval256,4</code>, <code>haval128,5</code>, <code>haval160,5</code>, <code>haval192,5</code>, <code>haval224,5</code>, <code>haval256,5</code>.</p>
+<h3 id="hmacstring-value-string-algo-string-secret-string">hmac(<strong><em>string</em></strong> value, <strong><em>string</em></strong> algo, <strong><em>string</em></strong> secret) : string<a class="headerlink" href="#hmacstring-value-string-algo-string-secret-string" title="Permanent link">&para;</a></h3>
+<p>Returns the calculated message digest/hash in a hexadecimal formatted as a string.</p>
+<p>For a list of possible values for <code>algo</code>, see <code>hash()</code> above.</p>
+<p>See also <a href="/webhookscript/functions/math.html#hexadecimal-binary">binary and hexadecimal conversion functions</a>.</p>
+<p>In the following example, the hash needs to be converted to binary, and then to base64, to match the signature.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">hmac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hmac</span><span class="p">(</span><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.content&#39;</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;insert_secret_here&#39;</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nx">signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.header.x-signature&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">base64_encode</span><span class="p">(</span><span class="nx">hex2bin</span><span class="p">(</span><span class="nx">hmac</span><span class="p">))</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hash</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">signature</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nx">respond</span><span class="p">(</span><span class="s1">&#39;Unauthorized&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">401</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="cryptography">Cryptography<a class="headerlink" href="#cryptography" title="Permanent link">&para;</a></h2>
+<p>List of available algorithms for functions in the Cryptography section:</p>
+<ul>
+<li><code>blake2b512</code></li>
+<li><code>blake2s256</code></li>
+<li><code>md4</code></li>
+<li><code>md5</code></li>
+<li><code>md5-sha1</code></li>
+<li><code>ripemd160</code></li>
+<li><code>sha1</code></li>
+<li><code>sha224</code></li>
+<li><code>sha256</code></li>
+<li><code>sha3-224</code></li>
+<li><code>sha3-256</code></li>
+<li><code>sha3-384</code></li>
+<li><code>sha3-512</code></li>
+<li><code>sha384</code></li>
+<li><code>sha512</code></li>
+<li><code>sha512-224</code></li>
+<li><code>sha512-256</code></li>
+<li><code>shake128</code></li>
+<li><code>shake256</code></li>
+<li><code>sm3</code></li>
+<li><code>whirlpool</code></li>
+</ul>
+<h3 id="signstring-value-string-private_key-string-algo-falsestring">sign(<strong><em>string</em></strong> value, <strong><em>string</em></strong> private_key, <strong><em>string</em></strong> algo) : false/string<a class="headerlink" href="#signstring-value-string-private_key-string-algo-falsestring" title="Permanent link">&para;</a></h3>
+<p>Signs <code>value</code> using <code>private_key</code> and <code>algo</code>. Returns signature on success, <code>false</code> on failure.</p>
+<p>For an example using sign() for JWT authorization, <a href="/webhookscript/examples.html#jwt">see here</a>.</p>
+<h3 id="digeststring-value-string-algo-falsestring">digest(<strong><em>string</em></strong> value, <strong><em>string</em></strong> algo) : false/string<a class="headerlink" href="#digeststring-value-string-algo-falsestring" title="Permanent link">&para;</a></h3>
+<p>Returns a cryptographic digest of <code>value</code> using <code>algo</code>. Returns <code>false</code> on failure.</p>
+<h3 id="verifystring-value-string-signature-string-public_key-string-algo-truefalse">verify(<strong><em>string</em></strong> value, <strong><em>string</em></strong> signature, <strong><em>string</em></strong> public_key, <strong><em>string</em></strong> algo) : true/false<a class="headerlink" href="#verifystring-value-string-signature-string-public_key-string-algo-truefalse" title="Permanent link">&para;</a></h3>
+<p>Verifies <code>value</code> using <code>signature</code>, <code>public_key</code> and <code>algo</code></p>
+<h2 id="html-and-markdown">HTML and Markdown<a class="headerlink" href="#html-and-markdown" title="Permanent link">&para;</a></h2>
+<h3 id="html_strip_tagsstring-string-string">html_strip_tags(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#html_strip_tagsstring-string-string" title="Permanent link">&para;</a></h3>
+<p>Returns a string with all HTML tags removed.</p>
+<p><code>html_strip_tags('&lt;b&gt;test&lt;/b&gt;')</code> returns <code>test</code>.</p>
+<h3 id="html_to_textstring-string-string">html_to_text(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#html_to_textstring-string-string" title="Permanent link">&para;</a></h3>
+<p>Converts HTML to plaintext. A more aggressive version of <code>html_strip_tags</code>.</p>
+<p><code>html_to_text('&lt;b&gt;test&lt;/b&gt;')</code> returns <code>test</code>.</p>
+<h3 id="html_decodestring-string-string">html_decode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#html_decodestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Decodes all HTML entities (for example, <code>&amp;nbsp;</code>) to normal characters.</p>
+<h3 id="html_encodestring-string-string">html_encode(<strong><em>string</em></strong> string) : string<a class="headerlink" href="#html_encodestring-string-string" title="Permanent link">&para;</a></h3>
+<p>Replaces characters in a string with HTML encoded versions.</p>
+<h3 id="markdown_to_htmlstring-string-bool-safe_mode-false-string">markdown_to_html(<strong><em>string</em></strong> string, <strong><em>bool</em></strong> safe_mode = false) : string<a class="headerlink" href="#markdown_to_htmlstring-string-bool-safe_mode-false-string" title="Permanent link">&para;</a></h3>
+<p>Converts a Markdown string to HTML.</p>
+<p><code>markdown_to_html('# Hello world')</code> returns <code>&lt;h1&gt;Hello world&lt;/h1&gt;</code>.</p>
+<p>If <code>safe_mode</code> is set to true, characters like <code>&lt;</code>, <code>&gt;</code> are HTML-entity encoded.</p>
+<h2 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h2>
+<h3 id="json_decodestring-json-array">json_decode(<strong><em>string</em></strong> json) : array<a class="headerlink" href="#json_decodestring-json-array" title="Permanent link">&para;</a></h3>
+<p>Decodes <code>json</code> and returns an array.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">json_decode</span><span class="p">(</span><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.content&#39;</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="json_encodearray-array-bool-format-true-string">json_encode(<strong><em>array</em></strong> array, <strong><em>bool</em></strong> format = true) : string<a class="headerlink" href="#json_encodearray-array-bool-format-true-string" title="Permanent link">&para;</a></h3>
+<p>Takes an array and encodes it as a JSON string.</p>
+<p>Per default, the JSON array is formatted with whitespace. To turn it off, set <code>format</code> to false.</p>
+<h3 id="json_pathstring-json-string-jsonpath-bool-return_first-true-string">json_path(<strong><em>string</em></strong> json, <strong><em>string</em></strong> jsonpath, <strong><em>bool</em></strong> return_first = true) : string<a class="headerlink" href="#json_pathstring-json-string-jsonpath-bool-return_first-true-string" title="Permanent link">&para;</a></h3>
+<p>Returns the result of a <code>json</code> string parsed using the <a href="/custom-actions/action-types.html#extract-jsonpath">JSONPath</a> functionality.</p>
+<p>Per default, if there's just one match (e.g. if matching on a property value that's a string), this value is returned. To always return an array, set <code>return_first</code> to false. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: []}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v[*]&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">))</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: []}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v[*]&#39;</span><span class="p">))</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">// []</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// &quot;&quot;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: [&quot;item1&quot;]}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v[*]&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">))</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: [&quot;item1&quot;]}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v[*]&#39;</span><span class="p">))</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1">// [0: &quot;item1&quot;]</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">// &quot;item1&quot;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: [&quot;item1&quot;, &quot;item2&quot;]}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v[*]&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">))</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">json_path</span><span class="p">(</span><span class="s1">&#39;{&quot;v&quot;: [&quot;item1&quot;, &quot;item2&quot;]}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v[*]&#39;</span><span class="p">))</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1">// [0: &quot;item1&quot;, 1: &quot;item2&quot;]</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1">// [0: &quot;item1&quot;, 1: &quot;item2&quot;]</span>
+</code></pre></div>
+<h3 id="json_escapestring-json-string">json_escape(<strong><em>string</em></strong> json) : string<a class="headerlink" href="#json_escapestring-json-string" title="Permanent link">&para;</a></h3>
+<p>JSON-escapes all special JSON characters like double quotes, newlines, etc.</p>
+<h2 id="regex">Regex<a class="headerlink" href="#regex" title="Permanent link">&para;</a></h2>
+<h3 id="preg_matchstring-regex-string-subject-arrayfalse">preg_match(<strong><em>string</em></strong> regex, <strong><em>string</em></strong> subject) : array/false<a class="headerlink" href="#preg_matchstring-regex-string-subject-arrayfalse" title="Permanent link">&para;</a></h3>
+<p>Returns the matching values as an array, or <code>false</code> if the regex did not match. Supports regex <a href="https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php">pattern modifiers</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Returns anything enclosed within &lt;html&gt; tags in a string</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nx">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/&lt;html&gt;(.*)&lt;\\/html&gt;/s&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="regex_extractregex-regex-string-subject-arrayfalse">regex_extract(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : array/false<a class="headerlink" href="#regex_extractregex-regex-string-subject-arrayfalse" title="Permanent link">&para;</a></h3>
+<p>Returns the matching string and all match groups as an array, and <code>false</code> on failure.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;You&#39;re a good bot&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">regex_extract</span><span class="p">(</span><span class="nx">r</span><span class="s2">&quot;You&#39;re (\w) (.*)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span><span class="w"> </span><span class="c1">// [0: &quot;You&#39;re a good bot&quot;, 1: &quot;a&quot;, 2: &quot;good bot&quot;]</span>
+</code></pre></div>
+<h3 id="regex_extract_firstregex-regex-string-subject-any-default-stringfalse">regex_extract_first(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject, <strong><em>any</em></strong> default) : string/false<a class="headerlink" href="#regex_extract_firstregex-regex-string-subject-any-default-stringfalse" title="Permanent link">&para;</a></h3>
+<p>Returns the first match group of a regex, and <code>false</code> (or <code>default</code>, if set) on failure.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;You&#39;re a good bot&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">regex_extract</span><span class="p">(</span><span class="nx">r</span><span class="s2">&quot;You&#39;re (.*)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;a good bot&quot;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello world&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">regex_extract</span><span class="p">(</span><span class="nx">r</span><span class="s2">&quot;You&#39;re (.*)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;no value&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;no value&quot;</span>
+</code></pre></div>
+<h3 id="regex_matchregex-regex-string-subject-stringfalse">regex_match(<strong><em>regex</em></strong> regex, <strong><em>string</em></strong> subject) : string/false<a class="headerlink" href="#regex_matchregex-regex-string-subject-stringfalse" title="Permanent link">&para;</a></h3>
+<p>Returns the first matching string, otherwise false.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;You&#39;re a good bot&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">regex_match</span><span class="p">(</span><span class="nx">r</span><span class="s2">&quot;You&#39;re .*&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;You&#39;re a good bot&quot;</span>
+</code></pre></div>
+<h3 id="regex_to_stringregex-regex-string">regex_to_string(<strong><em>regex</em></strong> regex) : string<a class="headerlink" href="#regex_to_stringregex-regex-string" title="Permanent link">&para;</a></h3>
+<p>Returns the regex converted to a string</p>
+<h2 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h2>
+<h3 id="xml2arraystring-xml-array">xml2array(<strong><em>string</em></strong> xml) : array<a class="headerlink" href="#xml2arraystring-xml-array" title="Permanent link">&para;</a></h3>
+<p>Converts XML to a WebhookScript array. This can be useful for parsing XML, or e.g. converting XML to JSON.</p>
+<p>Note that this function is opinionated - there's no one way to convert XML to an array as XML has more features than WebhookScript arrays. Therefore the function attempts to carry over all the data by automatically generating properties like <code>@value</code> and <code>@attributes</code> depending on the input data.</p>
+<p>For example, the following XML:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;orders&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&lt;record&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">&lt;Name</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;full&quot;</span><span class="nt">&gt;</span>John<span class="w"> </span>Doe<span class="nt">&lt;/Name&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">&lt;Reference&gt;</span>49690<span class="nt">&lt;/Reference&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nt">&lt;/record&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="nt">&lt;record&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="nt">&lt;Name</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;username&quot;</span><span class="nt">&gt;</span>someone@example.com<span class="nt">&lt;/Name&gt;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="nt">&lt;Reference&gt;</span>49690<span class="nt">&lt;/Reference&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="nt">&lt;/record&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nt">&lt;/orders&gt;</span>
+</code></pre></div>
+<p>Converts to JSON via the following script:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">json_encode</span><span class="p">(</span><span class="nx">xml2array</span><span class="p">(</span><span class="kd">var</span><span class="p">(</span><span class="s1">&#39;request.content&#39;</span><span class="p">)))</span>
+</code></pre></div>
+<p>Which returns:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&quot;orders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nt">&quot;record&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">          </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">          </span><span class="nt">&quot;@attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">        </span><span class="nt">&quot;Reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">49690</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">          </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;someone@example.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">          </span><span class="nt">&quot;@attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">        </span><span class="nt">&quot;Reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">49690</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="xpathstring-xpath-string-input-stringnull">xpath(<strong><em>string</em></strong> xpath, <strong><em>string</em></strong> input): string/null<a class="headerlink" href="#xpathstring-xpath-string-input-stringnull" title="Permanent link">&para;</a></h3>
+<p>Returns the first result of an XPath query on XML document <code>input</code>.</p>
+<p>Given a request with the following content:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">&lt;organization</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ExampleCo&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&lt;employees&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Jack<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Ann<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="nt">&lt;/employees&gt;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="nt">&lt;/organization&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>xpath(var('$request.content$'), '//employee[1]') // returns "Jack"</code></li>
+</ul>
+<p><a href="/custom-actions/action-types.html#extract-xpath">More information and examples regarding XPath</a>.</p>
+<h3 id="xpath_allstring-xpath-string-input-stringnull">xpath_all(<strong><em>string</em></strong> xpath, <strong><em>string</em></strong> input): string/null<a class="headerlink" href="#xpath_allstring-xpath-string-input-stringnull" title="Permanent link">&para;</a></h3>
+<p>Returns the results of an XPath query on XML document <code>input</code> as an array.</p>
+<p>Given a request with the following content:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nt">&lt;organization</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ExampleCo&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nt">&lt;employees&gt;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Jack<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Ann<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nt">&lt;/employees&gt;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="nt">&lt;/organization&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>xpath_all(var('$request.content$'), '//employee]') // returns [0: "Jack", 1: "Ann"]</code></li>
+</ul>
+<p><a href="/custom-actions/action-types.html#extract-xpath">More information and examples regarding XPath</a>.</p>
+<h2 id="special-string-functions">Special string functions<a class="headerlink" href="#special-string-functions" title="Permanent link">&para;</a></h2>
+<h3 id="convert_kanastring-mode-string">convert_kana(<strong><em>string</em></strong>, <strong><em>mode</em></strong>) : string<a class="headerlink" href="#convert_kanastring-mode-string" title="Permanent link">&para;</a></h3>
+<p>Performs a "han-kaku" - "zen-kaku" conversion for string string. This function is only useful for Japanese. <a href="https://www.php.net/manual/en/function.mb-convert-kana.php">See here</a> for more info.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 6, 2024 11:07:07</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.action.edit"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
