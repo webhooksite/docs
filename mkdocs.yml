@@ -1,5 +1,5 @@
 site_name: Webhook.site Docs
-site_url: https://docs.webhook.site
+site_url: https://docs.webhook.site/
 repo_name: 'webhooksite/docs'
 repo_url: 'https://github.com/webhooksite/docs'
 edit_uri: edit/master/docs/
@@ -19,6 +19,9 @@ extra:
       link: https://github.com/webhooksite/webhook.site
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/webhooksite
+  analytics:
+    provider: google
+    property: G-772X7QHH0L
   
 use_directory_urls: false
 

@@ -77,7 +77,7 @@ Yes. Thousands of our customers use Webhook.site to build workflows that help th
 
 ## How much data does Webhook.site store?
 
-For each URL associated with a Webhook.site Pro account, Webhook.site makes the latest 10.000 requests or emails available. Old requests are automatically rotated/purged periodically. 
+For each URL associated with a subscribed Webhook.site account, Webhook.site makes the latest 10.000 requests or emails available. Old requests are automatically rotated/purged periodically. 
 
 In other words, A URL associated with an upgraded account will keep accepting an unlimited amount of requests and emails, but only the latest 10.000 will be available. (If you want to store data permanently, you can use Custom Actions to transfer data to a storage provider like AWS S3 or Dropbox.)
 
