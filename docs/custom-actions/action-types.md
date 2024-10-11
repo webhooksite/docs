@@ -605,7 +605,14 @@ Saves (or overwrites) a Global Variable that's saved permanently and available t
 
 ### Generate PDF
 
-Takes either HTML or markdown input and generates a variable (`$pdf$`) containing the PDF file contents. You can enter this variable in e.g. an Send Email attachment content field, or with the Modify Response action (remember adding a `Content-Type: application/pdf` content type header!)
+Takes either HTML or markdown input and generates a variable (`$pdf$`) containing the PDF file contents. You can enter this variable in e.g. an Send Email attachment content field, or with the *Modify Response* action (remember adding a `Content-Type: application/pdf` header!)
+
+If you have issues with special characters/scripts rendering as question marks (`?`), make sure you're using a font that supports those characters as the default fonts may not support it. You can import your own fonts using CSS, for example, inserting this HTML snippet in the `<head>` section will import the `Roboto` font from Google Fonts and use it as the default font:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+<style>* { font-family: Roboto }</style>
+```
 
 ### Resize Image
 
