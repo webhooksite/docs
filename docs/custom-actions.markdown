@@ -26,6 +26,11 @@ In the following demo, webshop order details are received in a webhook. We then 
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9Cbuf5T6Tqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+### Forward to multiple endpoints, Looping
+
+A quick demo of how to use the Split Text action to loop over a list of URLs and forward the incoming request to them.
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9LYjKPgO6Gk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ## Templates
 
