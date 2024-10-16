@@ -112,4 +112,4 @@ Use a your own (sub)domain for URLs and emails:
 Additionally, Webhook.site provides an SSL certificate which is included free of charge with your Enterprise subscription.
 
 ### Multi-User Support 
-Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure individual users' access with User Types like Administrator and Viewer, so some users may only view the content.
+Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure individual users' access with User Types like Administrator, Member and Viewer as well as with Roles, giving users access to specific groups of URLs so they can see and interact with exactly the data they need.
