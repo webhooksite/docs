@@ -22,6 +22,14 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 16 October 2024
+
+* New Features in User Management: 
+    * User Roles, allowing administrators of a Webhook.site team account to limit users to URLs associated with specific groups. 
+    * A new user type, Member, is introduced which gives users access to create and modify Webhook.site URLs, but excludes access to User Management, Billing and other settings.
+    * Member users can create API keys, but can only see their own API keys. The Member-generated API keys can only access URLs in the groups they have access to.
+* When creating a URL, it's possible to select a Group to create it in.
+
 ## 30 September 2024
 
 * New Feature: Share Links. We've often had customers asking us about how to share a Webhook.site URL and the data it has received with others. With Share Links, you can now quickly share a view-only, whitelabel access link to a Webhook.site URL. If you're a Webhook.site Enterprise customer with a Custom Domain, the share link will use that domain per default. Share Links can be regenerated as needed to reset access.
