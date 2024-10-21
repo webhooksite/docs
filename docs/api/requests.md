@@ -27,6 +27,8 @@ The default response (or a response set with e.g. the Modify Response Custom Act
 
 Lists all request sent to a token. 
 
+Problems? Make sure you include the `/token/` part of the URL.
+
 #### Query string parameters
 
 * `sorting` (string) - either `newest` or `oldest` (default)
@@ -169,6 +171,8 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 **GET** `/token/:token_id/request/:request_id`
 
 **GET** `/token/:token_id/request/latest` - retrieves the latest request sent to the URL
+
+Problems? Make sure you include the `/token/` part of the URL.
 
 #### Response
 
