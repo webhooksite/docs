@@ -118,8 +118,16 @@ body, input {
 .url-param {
   background-color: #EEE;
   border: 1px solid #DDD;
-  padding: 3px;
+  padding: 2px 0px;
+  margin: 0 3px;
   border-radius: 10px;
   color: rgb(230, 0, 115);
   font-weight: bold;
+}
+
+.url-param:before {
+  content: '【';
+}
+.url-param:after {
+  content: '】';
 }
