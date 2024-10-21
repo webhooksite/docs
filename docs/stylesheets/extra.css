@@ -114,3 +114,12 @@ body, input {
 .md-typeset figure img {
    display: inline;
 }
+
+.url-param {
+  background-color: #EEE;
+  border: 1px solid #DDD;
+  padding: 3px;
+  border-radius: 10px;
+  color: rgb(230, 0, 115);
+  font-weight: bold;
+}

@@ -4,13 +4,17 @@ The Requests API is used to retrieve, manipulate and delete data sent to a given
 
 ## Capture request
 
-***any method*** `/:tokenId` <br>
-***any method*** `/:tokenId/:statusCode` <br>
-***any method*** `/:tokenId/(anything)`
+***any method*** <code>/<span class="url-param">token ID</span></code> <br>
+***any method*** <code>/<span class="url-param">token ID</span>/<span class="url-param">status code</span></code> <br>
+***any method*** <code>/<span class="url-param">token ID</span>/<span class="url-param">anything</span></code> <br>
 
-If `statusCode` is valid, that HTTP status will be used in the response (instead of the default.)
+If `statusCode` is valid (e.g. 404), that HTTP status will be used in the response (instead of the default.)
 
-Instead of `tokenId`, an the alias of the token can also be supplied. Multiple subpaths, e.g. `/:tokenId/api/v1/users`, will also be captured.
+Instead of `tokenId`, the alias of the token can also be supplied. Multiple subpaths, e.g. `/:tokenId/api/v1/users`, will also be captured.
+
+The token ID or alias can also be used as a subdomain, e.g. <br><code>http(s)://<span class="url-param">token ID</span>.webhook.site</code>.
+
+Note: This is the only endpoint on this page that does not begin with `/token/`.
 
 If the Token has a `timeout` value, there is a dynamic rate limit of `100 ÷ timeout` requests per minute, e.g. a timeout of 30 allows for 3 requests per minute, and 1 second allows for 100 requests per minute.
 
@@ -23,11 +27,9 @@ The default response (or a response set with e.g. the Modify Response Custom Act
 * Can require authentication.
 * Rate limit: 120 requests per minute.
 
-**GET** `/token/:token_id/requests`
+**GET** <code>/token/<span class="url-param">token ID</span>/requests</code>
 
 Lists all request sent to a token. 
-
-Problems? Make sure you include the `/token/` part of the URL.
 
 #### Query string parameters
 
@@ -148,7 +150,7 @@ If you're in doubt about where these parameters go in an API request, take a loo
 * Can require authentication.
 * Rate limit: 3 requests per minute.
 
-**GET** `/token/:token_id/requests/export`
+**GET** <code>/token/<span class="url-param">token ID</span>/requests/export</code>
 
 Returns a CSV file with all requests (maximum 10000.) The amount of columns of the CSV vary depending on the request data headers, query strings, form fields, files, etc.
 
@@ -168,11 +170,9 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 
 * Can require authentication.
 
-**GET** `/token/:token_id/request/:request_id`
+**GET** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span></code>
 
-**GET** `/token/:token_id/request/latest` - retrieves the latest request sent to the URL
-
-Problems? Make sure you include the `/token/` part of the URL.
+**GET** <code>/token/<span class="url-param">token ID</span>/request/latest</code> - retrieves the latest request sent to the URL
 
 #### Response
 
@@ -215,9 +215,9 @@ Problems? Make sure you include the `/token/` part of the URL.
 
 * Can require authentication.
 
-**GET** `/token/:token_id/request/:request_id/raw`
+**GET** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span>/raw</code>
 
-**GET** `/token/:token_id/request/latest/raw` - retrieves the latest request sent to the URL
+**GET** <code>/token/<span class="url-param">token ID</span>/request/latest/raw</code> - retrieves the latest request sent to the URL
 
 Returns the request as a response (body, content-type.)
 
@@ -229,7 +229,7 @@ Returns the request as a response (body, content-type.)
 
 * Can require authentication.
 
-**PUT** `/requests/:token_id/requests/:request_id`
+**PUT** <code>/token/<span class="url-param">token ID</span>/requests/<span class="url-param">request ID</span></code>
 
 Currently only the `note` field can be updated (max 10.000 characeters).
 
@@ -250,7 +250,7 @@ Currently only the `note` field can be updated (max 10.000 characeters).
 
 * Can require authentication.
 
-**PUT** `/requests/:token_id/requests/:request_id/response`
+**PUT** <code>/token/<span class="url-param">token ID</span>/requests/<span class="url-param">request ID</span>/response</code>
 
 Dynamically sets a response for a specific Webhook.site URL request when the Token has a `listen` property greater than `0`. Used for Webhook.site CLI dynamic response forwarding.
 
@@ -282,7 +282,7 @@ The data of the `content` parameter must be base64-encoded.
 
 * Can require authentication.
 
-**GET** `/token/:tokenId/request/:requestId/download/:fileId`
+**GET** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span>/download/<span class="url-param">file ID</span></code>
 
 Files that are included in a request or as email attachments are available to download using this endpoint.
 
@@ -294,7 +294,7 @@ Files that are included in a request or as email attachments are available to do
 
 * Can require authentication.
 
-**DELETE** `/token/:token_id/request/:request_id`
+**DELETE** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span></code>
 
 Deletes a request. 
 
@@ -307,7 +307,7 @@ Deletes a request.
 * Can require authentication.
 * Rate limit: 10 requests per minute.
 
-**DELETE** `/token/:token_id/request`
+**DELETE** <code>/token/<span class="url-param">token ID</span>/request</code>
 
 Deletes all requests associated with the token, or if `query`, `date_from` and/or `date_to` is specified, only that subset of requests is deleted.
 
