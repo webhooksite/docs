@@ -1,0 +1,4715 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.webhook.site/news.html">
+      
+      
+        <link rel="prev" href="jobs.html">
+      
+      
+        <link rel="next" href="open-source.html">
+      
+      <link rel="icon" href="images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>News & Changelog - Webhook.site Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-772X7QHH0L"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-772X7QHH0L",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-772X7QHH0L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#news" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Webhook.site Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              News & Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Webhook.site Docs" class="md-nav__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="images/icon.png" alt="logo">
+
+    </a>
+    Webhook.site Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://webhook.site" class="md-nav__link">
+        ← Back to Webhook.site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          News
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="news.html" class="md-nav__link md-nav__link--active">
+        News
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#16-october-2024" class="md-nav__link">
+    16 October 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-september-2024" class="md-nav__link">
+    30 September 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-september-2024" class="md-nav__link">
+    25 September 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-september-2024" class="md-nav__link">
+    10 September 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-august-2024" class="md-nav__link">
+    30 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-august-2024" class="md-nav__link">
+    29 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-august-2024" class="md-nav__link">
+    26 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-august-2024" class="md-nav__link">
+    10 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-august-2024" class="md-nav__link">
+    2 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-july-2024" class="md-nav__link">
+    23 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-july-2024" class="md-nav__link">
+    17 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-july-2024" class="md-nav__link">
+    16 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-july-2024" class="md-nav__link">
+    15 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-july-2024" class="md-nav__link">
+    9 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-june-2024" class="md-nav__link">
+    28 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-june-2024" class="md-nav__link">
+    25 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-june-2024" class="md-nav__link">
+    21 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-june-2024" class="md-nav__link">
+    10 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-may-2024" class="md-nav__link">
+    7 May 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-may-2024" class="md-nav__link">
+    3 May 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-may-2024" class="md-nav__link">
+    1 May 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-april-2024" class="md-nav__link">
+    25 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-april-2024" class="md-nav__link">
+    24 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-april-2024" class="md-nav__link">
+    22 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-april-2024" class="md-nav__link">
+    15 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-april-2024" class="md-nav__link">
+    9 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-march-2024" class="md-nav__link">
+    18 March 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-march-2024" class="md-nav__link">
+    13 March 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-march-2024" class="md-nav__link">
+    1 March 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-feburary-2024" class="md-nav__link">
+    29 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-feburary-2024" class="md-nav__link">
+    26 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-feburary-2024" class="md-nav__link">
+    20 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-feburary-2024" class="md-nav__link">
+    7 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-feburary-2024" class="md-nav__link">
+    6 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-january-2024" class="md-nav__link">
+    29 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-january-2024" class="md-nav__link">
+    15 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-january-2024" class="md-nav__link">
+    11 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-january-2024" class="md-nav__link">
+    10 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-january-2024" class="md-nav__link">
+    9 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-january-2024" class="md-nav__link">
+    3 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-december-2023" class="md-nav__link">
+    27 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-december-2023" class="md-nav__link">
+    22 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-december-2023" class="md-nav__link">
+    7 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-december-2023" class="md-nav__link">
+    6 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-november-2023" class="md-nav__link">
+    28 November 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-november-2023" class="md-nav__link">
+    7 November 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-october-2023" class="md-nav__link">
+    31 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-october-2023" class="md-nav__link">
+    25 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-october-2023" class="md-nav__link">
+    19 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-october-2023" class="md-nav__link">
+    12 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-october-2023" class="md-nav__link">
+    11 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-september-2023" class="md-nav__link">
+    22 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-september-2023" class="md-nav__link">
+    21 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-september-2023" class="md-nav__link">
+    15 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-september-2023" class="md-nav__link">
+    14 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-august-2023" class="md-nav__link">
+    30 August 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-august-2023" class="md-nav__link">
+    11 August 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-august-2023" class="md-nav__link">
+    4 August 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-july-2023" class="md-nav__link">
+    29 July 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-july-2023" class="md-nav__link">
+    20 July 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-june-2023" class="md-nav__link">
+    29 June 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-june-2023" class="md-nav__link">
+    16 June 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-june-2023" class="md-nav__link">
+    7 June 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-may-2023" class="md-nav__link">
+    22 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-may-2023" class="md-nav__link">
+    21 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-may-2023" class="md-nav__link">
+    20 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-may-2023" class="md-nav__link">
+    18 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-april-2023" class="md-nav__link">
+    28 April 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-april-2023" class="md-nav__link">
+    26 April 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-april-2023" class="md-nav__link">
+    16 April 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-march-2023" class="md-nav__link">
+    21 March 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-march-2023" class="md-nav__link">
+    14 March 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-march-2023" class="md-nav__link">
+    3 March 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-febuary-2023" class="md-nav__link">
+    23 Febuary 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-feburary-2023" class="md-nav__link">
+    6 Feburary 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-feburary-2023" class="md-nav__link">
+    1 Feburary 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-january-2023" class="md-nav__link">
+    20 January 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-december-2022" class="md-nav__link">
+    14 December 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-november-2022" class="md-nav__link">
+    30 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-november-2022" class="md-nav__link">
+    28 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-november-2022" class="md-nav__link">
+    10 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-november-2022" class="md-nav__link">
+    6 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-october-2022" class="md-nav__link">
+    31 October 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-october-2022" class="md-nav__link">
+    26 October 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-september-2022" class="md-nav__link">
+    30 September 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-september-2022" class="md-nav__link">
+    21 September 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-september-2022" class="md-nav__link">
+    8 September 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-august-2022" class="md-nav__link">
+    17 August 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-june-2022" class="md-nav__link">
+    28 June 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-june-2022" class="md-nav__link">
+    24 June 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-may-2022" class="md-nav__link">
+    21 May 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-may-2022" class="md-nav__link">
+    20 May 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-april-2022" class="md-nav__link">
+    19 April 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-april-2022" class="md-nav__link">
+    14 April 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-march-2022" class="md-nav__link">
+    30 March 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-march-2022" class="md-nav__link">
+    20 March 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-march-2022" class="md-nav__link">
+    14 March 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-january-2022" class="md-nav__link">
+    19 January 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-december-2021" class="md-nav__link">
+    21 December 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-november-2021" class="md-nav__link">
+    24 November 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-october-2021" class="md-nav__link">
+    30 October 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-october-2021" class="md-nav__link">
+    15 October 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-october-2021" class="md-nav__link">
+    4 October 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-september-2021" class="md-nav__link">
+    29 September 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-september-2021" class="md-nav__link">
+    17 September 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-september-2021" class="md-nav__link">
+    12 September 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-august-2021" class="md-nav__link">
+    18 August 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-august-2021" class="md-nav__link">
+    12 August 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-july-2021" class="md-nav__link">
+    30 July 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-july-2021" class="md-nav__link">
+    14 July 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-july-2021" class="md-nav__link">
+    4 July 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-june-2021" class="md-nav__link">
+    15 June 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-june-2021" class="md-nav__link">
+    10 June 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-june-2021" class="md-nav__link">
+    7 June 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-may-2021" class="md-nav__link">
+    23 May 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-may-2021" class="md-nav__link">
+    13 May 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-may-2021" class="md-nav__link">
+    1 May 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-april-2021" class="md-nav__link">
+    20 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-april-2021" class="md-nav__link">
+    11 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-april-2021" class="md-nav__link">
+    7 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-april-2021" class="md-nav__link">
+    2 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-march-2021" class="md-nav__link">
+    28 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-march-2021" class="md-nav__link">
+    24 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-march-2021" class="md-nav__link">
+    23 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-march-2021" class="md-nav__link">
+    13 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-march-2021" class="md-nav__link">
+    11 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-march-2021" class="md-nav__link">
+    6 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-march-2021" class="md-nav__link">
+    3 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-feburary-2021" class="md-nav__link">
+    17 Feburary 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-feburary-2021" class="md-nav__link">
+    5 Feburary 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-feburary-2021" class="md-nav__link">
+    1 Feburary 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-january-2021" class="md-nav__link">
+    31 January 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-january-2021" class="md-nav__link">
+    19 January 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-december-2020" class="md-nav__link">
+    5 December 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-november-2020" class="md-nav__link">
+    26 November 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-november-2020" class="md-nav__link">
+    25 November 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-november-2020" class="md-nav__link">
+    1 November 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-october-2020" class="md-nav__link">
+    29 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-october-2020" class="md-nav__link">
+    22 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-october-2020" class="md-nav__link">
+    19 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-october-2020" class="md-nav__link">
+    11 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-october-2020" class="md-nav__link">
+    7 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-october-2020" class="md-nav__link">
+    6 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-september-2020" class="md-nav__link">
+    24 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-september-2020" class="md-nav__link">
+    23 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-september-2020" class="md-nav__link">
+    15 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-september-2020" class="md-nav__link">
+    13 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-september-2020" class="md-nav__link">
+    3 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-august-2020" class="md-nav__link">
+    29 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-august-2020" class="md-nav__link">
+    18 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-august-2020" class="md-nav__link">
+    15 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-august-2020" class="md-nav__link">
+    8 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-august-2020" class="md-nav__link">
+    7 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-august-2020" class="md-nav__link">
+    5 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-august-2020" class="md-nav__link">
+    2 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-august-2020" class="md-nav__link">
+    1 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-july-2020" class="md-nav__link">
+    29 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-july-2020" class="md-nav__link">
+    25 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-july-2020" class="md-nav__link">
+    16 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-july-2020" class="md-nav__link">
+    5 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-july-2020" class="md-nav__link">
+    3 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-june-2020" class="md-nav__link">
+    23 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-june-2020" class="md-nav__link">
+    14 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-june-2020" class="md-nav__link">
+    7 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-june-2020" class="md-nav__link">
+    5 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-june-2020" class="md-nav__link">
+    4 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-june-2020" class="md-nav__link">
+    2 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-may-2020" class="md-nav__link">
+    30 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-may-2020" class="md-nav__link">
+    29 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-may-2020" class="md-nav__link">
+    25 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-may-2020" class="md-nav__link">
+    22 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-may-2020" class="md-nav__link">
+    17 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-may-2020" class="md-nav__link">
+    16 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-may-2020" class="md-nav__link">
+    3 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-april-2020" class="md-nav__link">
+    24 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-april-2020" class="md-nav__link">
+    21 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-april-2020" class="md-nav__link">
+    20 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-april-2020" class="md-nav__link">
+    19 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-march-2020" class="md-nav__link">
+    28 March 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-march-2020" class="md-nav__link">
+    24 March 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-march-2020" class="md-nav__link">
+    6 March 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-feburary-2020" class="md-nav__link">
+    29 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-feburary-2020" class="md-nav__link">
+    27 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-feburary-2020" class="md-nav__link">
+    26 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-feburary-2020" class="md-nav__link">
+    25 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-feburary-2020" class="md-nav__link">
+    16 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-feburary-2020" class="md-nav__link">
+    15 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-feburary-2020" class="md-nav__link">
+    14 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-feburary-2020" class="md-nav__link">
+    12 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-febuary-2020" class="md-nav__link">
+    8 Febuary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-january-2020" class="md-nav__link">
+    28 January 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-january-2020" class="md-nav__link">
+    25 January 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-january-2020" class="md-nav__link">
+    23 January 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-january-2020" class="md-nav__link">
+    12 January 2020
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="open-source.html" class="md-nav__link">
+        Open Source
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pro.html" class="md-nav__link">
+        Basic, Pro & Enterprise
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli.html" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="form-builder.html" class="md-nav__link">
+        Form Builder
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Custom Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions.html" class="md-nav__link">
+        About Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions/variables.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions/action-types.html" class="md-nav__link">
+        Action Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" tabindex="0" aria-expanded="false">
+          WebhookScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebhookScript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          WebhookScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/index.html" class="md-nav__link">
+        About WebhookScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/reference.html" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4_4" type="checkbox" id="__nav_11_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4_4" tabindex="0" aria-expanded="false">
+          Built-in Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Built-in Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/general.html" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/array.html" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/bool.html" class="md-nav__link">
+        Booleans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/date.html" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/files.html" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/flow.html" class="md-nav__link">
+        Flow Control and Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/math.html" class="md-nav__link">
+        Math and Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/network.html" class="md-nav__link">
+        Network and HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/string.html" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/variables.html" class="md-nav__link">
+        Custom Action Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/about.html" class="md-nav__link">
+        Usage & Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/tokens.html" class="md-nav__link">
+        Tokens (URLs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/custom-actions.html" class="md-nav__link">
+        Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/templates.html" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/global-variables.html" class="md-nav__link">
+        Global Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#16-october-2024" class="md-nav__link">
+    16 October 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-september-2024" class="md-nav__link">
+    30 September 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-september-2024" class="md-nav__link">
+    25 September 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-september-2024" class="md-nav__link">
+    10 September 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-august-2024" class="md-nav__link">
+    30 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-august-2024" class="md-nav__link">
+    29 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-august-2024" class="md-nav__link">
+    26 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-august-2024" class="md-nav__link">
+    10 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-august-2024" class="md-nav__link">
+    2 August 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-july-2024" class="md-nav__link">
+    23 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-july-2024" class="md-nav__link">
+    17 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-july-2024" class="md-nav__link">
+    16 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-july-2024" class="md-nav__link">
+    15 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-july-2024" class="md-nav__link">
+    9 July 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-june-2024" class="md-nav__link">
+    28 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-june-2024" class="md-nav__link">
+    25 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-june-2024" class="md-nav__link">
+    21 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-june-2024" class="md-nav__link">
+    10 June 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-may-2024" class="md-nav__link">
+    7 May 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-may-2024" class="md-nav__link">
+    3 May 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-may-2024" class="md-nav__link">
+    1 May 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-april-2024" class="md-nav__link">
+    25 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-april-2024" class="md-nav__link">
+    24 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-april-2024" class="md-nav__link">
+    22 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-april-2024" class="md-nav__link">
+    15 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-april-2024" class="md-nav__link">
+    9 April 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-march-2024" class="md-nav__link">
+    18 March 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-march-2024" class="md-nav__link">
+    13 March 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-march-2024" class="md-nav__link">
+    1 March 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-feburary-2024" class="md-nav__link">
+    29 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-feburary-2024" class="md-nav__link">
+    26 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-feburary-2024" class="md-nav__link">
+    20 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-feburary-2024" class="md-nav__link">
+    7 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-feburary-2024" class="md-nav__link">
+    6 Feburary 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-january-2024" class="md-nav__link">
+    29 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-january-2024" class="md-nav__link">
+    15 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-january-2024" class="md-nav__link">
+    11 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-january-2024" class="md-nav__link">
+    10 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-january-2024" class="md-nav__link">
+    9 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-january-2024" class="md-nav__link">
+    3 January 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-december-2023" class="md-nav__link">
+    27 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-december-2023" class="md-nav__link">
+    22 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-december-2023" class="md-nav__link">
+    7 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-december-2023" class="md-nav__link">
+    6 December 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-november-2023" class="md-nav__link">
+    28 November 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-november-2023" class="md-nav__link">
+    7 November 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-october-2023" class="md-nav__link">
+    31 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-october-2023" class="md-nav__link">
+    25 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-october-2023" class="md-nav__link">
+    19 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-october-2023" class="md-nav__link">
+    12 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-october-2023" class="md-nav__link">
+    11 October 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-september-2023" class="md-nav__link">
+    22 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-september-2023" class="md-nav__link">
+    21 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-september-2023" class="md-nav__link">
+    15 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-september-2023" class="md-nav__link">
+    14 September 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-august-2023" class="md-nav__link">
+    30 August 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-august-2023" class="md-nav__link">
+    11 August 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-august-2023" class="md-nav__link">
+    4 August 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-july-2023" class="md-nav__link">
+    29 July 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-july-2023" class="md-nav__link">
+    20 July 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-june-2023" class="md-nav__link">
+    29 June 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-june-2023" class="md-nav__link">
+    16 June 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-june-2023" class="md-nav__link">
+    7 June 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-may-2023" class="md-nav__link">
+    22 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-may-2023" class="md-nav__link">
+    21 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-may-2023" class="md-nav__link">
+    20 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-may-2023" class="md-nav__link">
+    18 May 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-april-2023" class="md-nav__link">
+    28 April 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-april-2023" class="md-nav__link">
+    26 April 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-april-2023" class="md-nav__link">
+    16 April 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-march-2023" class="md-nav__link">
+    21 March 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-march-2023" class="md-nav__link">
+    14 March 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-march-2023" class="md-nav__link">
+    3 March 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-febuary-2023" class="md-nav__link">
+    23 Febuary 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-feburary-2023" class="md-nav__link">
+    6 Feburary 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-feburary-2023" class="md-nav__link">
+    1 Feburary 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-january-2023" class="md-nav__link">
+    20 January 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-december-2022" class="md-nav__link">
+    14 December 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-november-2022" class="md-nav__link">
+    30 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-november-2022" class="md-nav__link">
+    28 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-november-2022" class="md-nav__link">
+    10 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-november-2022" class="md-nav__link">
+    6 November 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-october-2022" class="md-nav__link">
+    31 October 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-october-2022" class="md-nav__link">
+    26 October 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-september-2022" class="md-nav__link">
+    30 September 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-september-2022" class="md-nav__link">
+    21 September 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-september-2022" class="md-nav__link">
+    8 September 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-august-2022" class="md-nav__link">
+    17 August 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-june-2022" class="md-nav__link">
+    28 June 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-june-2022" class="md-nav__link">
+    24 June 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-may-2022" class="md-nav__link">
+    21 May 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-may-2022" class="md-nav__link">
+    20 May 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-april-2022" class="md-nav__link">
+    19 April 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-april-2022" class="md-nav__link">
+    14 April 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-march-2022" class="md-nav__link">
+    30 March 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-march-2022" class="md-nav__link">
+    20 March 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-march-2022" class="md-nav__link">
+    14 March 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-january-2022" class="md-nav__link">
+    19 January 2022
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-december-2021" class="md-nav__link">
+    21 December 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-november-2021" class="md-nav__link">
+    24 November 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-october-2021" class="md-nav__link">
+    30 October 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-october-2021" class="md-nav__link">
+    15 October 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-october-2021" class="md-nav__link">
+    4 October 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-september-2021" class="md-nav__link">
+    29 September 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-september-2021" class="md-nav__link">
+    17 September 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-september-2021" class="md-nav__link">
+    12 September 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-august-2021" class="md-nav__link">
+    18 August 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-august-2021" class="md-nav__link">
+    12 August 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-july-2021" class="md-nav__link">
+    30 July 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-july-2021" class="md-nav__link">
+    14 July 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-july-2021" class="md-nav__link">
+    4 July 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-june-2021" class="md-nav__link">
+    15 June 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-june-2021" class="md-nav__link">
+    10 June 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-june-2021" class="md-nav__link">
+    7 June 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-may-2021" class="md-nav__link">
+    23 May 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-may-2021" class="md-nav__link">
+    13 May 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-may-2021" class="md-nav__link">
+    1 May 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-april-2021" class="md-nav__link">
+    20 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-april-2021" class="md-nav__link">
+    11 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-april-2021" class="md-nav__link">
+    7 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-april-2021" class="md-nav__link">
+    2 April 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-march-2021" class="md-nav__link">
+    28 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-march-2021" class="md-nav__link">
+    24 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-march-2021" class="md-nav__link">
+    23 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-march-2021" class="md-nav__link">
+    13 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-march-2021" class="md-nav__link">
+    11 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-march-2021" class="md-nav__link">
+    6 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-march-2021" class="md-nav__link">
+    3 March 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-feburary-2021" class="md-nav__link">
+    17 Feburary 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-feburary-2021" class="md-nav__link">
+    5 Feburary 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-feburary-2021" class="md-nav__link">
+    1 Feburary 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-january-2021" class="md-nav__link">
+    31 January 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-january-2021" class="md-nav__link">
+    19 January 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-december-2020" class="md-nav__link">
+    5 December 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-november-2020" class="md-nav__link">
+    26 November 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-november-2020" class="md-nav__link">
+    25 November 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-november-2020" class="md-nav__link">
+    1 November 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-october-2020" class="md-nav__link">
+    29 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-october-2020" class="md-nav__link">
+    22 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-october-2020" class="md-nav__link">
+    19 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-october-2020" class="md-nav__link">
+    11 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-october-2020" class="md-nav__link">
+    7 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-october-2020" class="md-nav__link">
+    6 October 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-september-2020" class="md-nav__link">
+    24 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-september-2020" class="md-nav__link">
+    23 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-september-2020" class="md-nav__link">
+    15 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-september-2020" class="md-nav__link">
+    13 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-september-2020" class="md-nav__link">
+    3 September 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-august-2020" class="md-nav__link">
+    29 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-august-2020" class="md-nav__link">
+    18 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-august-2020" class="md-nav__link">
+    15 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-august-2020" class="md-nav__link">
+    8 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-august-2020" class="md-nav__link">
+    7 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-august-2020" class="md-nav__link">
+    5 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-august-2020" class="md-nav__link">
+    2 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-august-2020" class="md-nav__link">
+    1 August 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-july-2020" class="md-nav__link">
+    29 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-july-2020" class="md-nav__link">
+    25 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-july-2020" class="md-nav__link">
+    16 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-july-2020" class="md-nav__link">
+    5 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-july-2020" class="md-nav__link">
+    3 July 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-june-2020" class="md-nav__link">
+    23 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-june-2020" class="md-nav__link">
+    14 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-june-2020" class="md-nav__link">
+    7 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-june-2020" class="md-nav__link">
+    5 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-june-2020" class="md-nav__link">
+    4 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-june-2020" class="md-nav__link">
+    2 June 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-may-2020" class="md-nav__link">
+    30 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-may-2020" class="md-nav__link">
+    29 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-may-2020" class="md-nav__link">
+    25 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-may-2020" class="md-nav__link">
+    22 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-may-2020" class="md-nav__link">
+    17 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-may-2020" class="md-nav__link">
+    16 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-may-2020" class="md-nav__link">
+    3 May 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-april-2020" class="md-nav__link">
+    24 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-april-2020" class="md-nav__link">
+    21 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-april-2020" class="md-nav__link">
+    20 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-april-2020" class="md-nav__link">
+    19 April 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-march-2020" class="md-nav__link">
+    28 March 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-march-2020" class="md-nav__link">
+    24 March 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-march-2020" class="md-nav__link">
+    6 March 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-feburary-2020" class="md-nav__link">
+    29 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-feburary-2020" class="md-nav__link">
+    27 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-feburary-2020" class="md-nav__link">
+    26 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-feburary-2020" class="md-nav__link">
+    25 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-feburary-2020" class="md-nav__link">
+    16 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-feburary-2020" class="md-nav__link">
+    15 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-feburary-2020" class="md-nav__link">
+    14 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-feburary-2020" class="md-nav__link">
+    12 Feburary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-febuary-2020" class="md-nav__link">
+    8 Febuary 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-january-2020" class="md-nav__link">
+    28 January 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-january-2020" class="md-nav__link">
+    25 January 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-january-2020" class="md-nav__link">
+    23 January 2020
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-january-2020" class="md-nav__link">
+    12 January 2020
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/webhooksite/docs/edit/master/docs/news.markdown" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+<h1 id="news">News<a class="headerlink" href="#news" title="Permanent link">&para;</a></h1>
+<p>Subscribe below to receive updates about improvements and new features on Webhook.site as well as infrastructure changes like new IP addresses for e.g. firewall whitelisting. Expect a newsletter a few times a year at most.</p>
+<p><link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css"></p>
+<style type="text/css">
+    #mc_embed_signup form {text-align: left;padding: 0;}
+</style>
+<div id="mc_embed_signup">
+<form action="https://site.us19.list-manage.com/subscribe/post?u=a4698f7ac47cff759ecdcca24&amp;id=6c5386b81d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a4698f7ac47cff759ecdcca24_6c5386b81d" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<h2 id="16-october-2024">16 October 2024<a class="headerlink" href="#16-october-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Features in User Management: <ul>
+<li>User Roles, allowing administrators of a Webhook.site team account to limit users to URLs associated with specific groups. </li>
+<li>A new user type, Member, is introduced which gives users access to create and modify Webhook.site URLs, but excludes access to User Management, Billing and other settings.</li>
+<li>Member users can create API keys, but can only see their own API keys. The Member-generated API keys can only access URLs in the groups they have access to.</li>
+</ul>
+</li>
+<li>When creating a URL, it's possible to select a Group to create it in.</li>
+</ul>
+<h2 id="30-september-2024">30 September 2024<a class="headerlink" href="#30-september-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Feature: Share Links. We've often had customers asking us about how to share a Webhook.site URL and the data it has received with others. With Share Links, you can now quickly share a view-only, whitelabel access link to a Webhook.site URL. If you're a Webhook.site Enterprise customer with a Custom Domain, the share link will use that domain per default. Share Links can be regenerated as needed to reset access.
+   <a class="glightbox" href="https://simonfredsted.com/share/GI1mjpv1hb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://simonfredsted.com/share/GI1mjpv1hb.png" /></a></li>
+<li>The ability to disable the setting <code>Require login to view URLs</code> has been removed. As of 1 November 2024, the setting will be removed so <em>all</em> URLs will require login, API key or a Share Link to be viewed. We will send out a newsletter about this to the small number of affected accounts that has disabled this setting.</li>
+<li>We are also deemphasizing and sunsetting the password functionality for Tokens/URLs (not for user accounts!), as we believe Share Links will replace this function. We expect to remove Token Passwords completely in 2025.</li>
+</ul>
+<h2 id="25-september-2024">25 September 2024<a class="headerlink" href="#25-september-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>moment</code> library added to the JavaScript Custom Action. <a href="/custom-actions/action-types.html#utility-modules">More info here</a></li>
+</ul>
+<h2 id="10-september-2024">10 September 2024<a class="headerlink" href="#10-september-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>When creating a date variable using the Set Variable action, it's now possible to specify an output timezone format.</li>
+<li>We've had to remove the spreadsheet selector dropdown due to changes in Google's API terms. It's still possible to copy/paste a spreadsheet URL and select it like that.</li>
+</ul>
+<h2 id="30-august-2024">30 August 2024<a class="headerlink" href="#30-august-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Feature: Replay Custom Actions. Replaces the <em>Run Now</em> button. Easily run Custom Actions again for either all or a subset of incoming requests. <a href="/custom-actions.html#replay">More info here</a> </li>
+<li>Requests API: It's now possible to see and search for which Custom Actions returned an error using the new <code>custom_action_errors</code> field in the API. <a href="/api/requests.html#search-query-examples">More info here</a></li>
+<li>Actions API: The Execute Action endpoint has been changed so that the output and errors are now saved (overwritten) on the specified request. Additionally, error notification emails are disabled when running actions using the endpoint.</li>
+</ul>
+<h2 id="29-august-2024">29 August 2024<a class="headerlink" href="#29-august-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site had partial downtime from approx 01:19 to 05:23 UTC. We've identified the fault to be the MariaDB "max connect errors" configuration option, which per default blocks a server IP after very a low number of errors, causing Webhook.site Web servers to lose contact to the DB servers. We've also identified an information leak in an error message which has also been remediated. We apologize.</li>
+</ul>
+<h2 id="26-august-2024">26 August 2024<a class="headerlink" href="#26-august-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Operators added to <em>Conditions</em> action: is variable defined, is int, is json, is email, etc. <a href="/custom-actions/action-types.html#operators-with-value-argument">Full list here</a>.</li>
+<li>New output variables for <em>Database</em> action: <code>*.rows</code> and <code>*.error</code>, to allow e.g. making conditions actions based in the success of the database query. <a href="/custom-actions/action-types.html#fetching-data">More info here</a>.</li>
+<li>Added <code>.upper</code> and <code>.lower</code> Variable Modifiers. <a href="/custom-actions/variables.html#variable-modifiers">More info here</a>.</li>
+</ul>
+<h2 id="10-august-2024">10 August 2024<a class="headerlink" href="#10-august-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>NATS and Supabase clients added to JavaScript sandbox. <a href="/custom-actions/action-types.html#utility-modules">More info here</a></li>
+</ul>
+<h2 id="2-august-2024">2 August 2024<a class="headerlink" href="#2-august-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>As we're planning to add more capacity, the Webhook.site IPs have partially changed. The IP <code>88.99.82.58</code> is no longer used by us. The full list of IPs that need to be whitelisted are the following: <code>178.63.67.106</code>, <code>178.63.67.153</code>, <code>46.4.105.116</code>. </li>
+</ul>
+<h2 id="23-july-2024">23 July 2024<a class="headerlink" href="#23-july-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Actions: FTP(S) and SFTP Download, in addition to existing Upload actions.</li>
+</ul>
+<h2 id="17-july-2024">17 July 2024<a class="headerlink" href="#17-july-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Feature: Webhook.site Form Builder, a quick way to build HTML forms with custom fields that send data to your Webhook.site URL. Makes it easy to create e.g. a Contact Form in conjunction with Custom Actions. <a href="https://webhook.site/form-builder">Go to Form Builder</a>.</li>
+</ul>
+<h2 id="16-july-2024">16 July 2024<a class="headerlink" href="#16-july-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Generate PDF, working with either Markdown or HTML content, can be used in e.g. Send Email, Modify Response actions. <a href="/custom-actions/action-types.html#generate-pdf">More info here</a></li>
+</ul>
+<h2 id="15-july-2024">15 July 2024<a class="headerlink" href="#15-july-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>As of version 0.2.0, the Webhook CLI <code>forward</code> command now works bidirectionally, forwarding the response back to your Webhook.site URL, acting as a proxy. <a href="/cli.html#bidirectional-forwarding">More info here</a></li>
+<li>Webhook.site URLs can now also be used as subdomains. <code>https://webhook.site/my-url</code> and <code>https://my-url.webhook.site</code> are now equivalent. Custom domains are currently not supported.</li>
+</ul>
+<h2 id="9-july-2024">9 July 2024<a class="headerlink" href="#9-july-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: HubSpot Create Contact, which lets you easily create new leads in the HubSpot CRM system. <a href="/custom-actions/action-types.html#hubspot">More info here</a></li>
+</ul>
+<h2 id="28-june-2024">28 June 2024<a class="headerlink" href="#28-june-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Database Action: Added support for Microsoft SQL Server (<code>sqlsrv</code>), in addition to existing support for MySQL/MariaDB and PostgresQL.</li>
+<li>Fixed an issue in CSV export where lines containing the string <code>\"</code> would cause the CSV to be formatted incorrectly.</li>
+<li>We've been seeing some issues with our CDN provider, Cloudflare. We've added a link to disable CDN at the top of the page in case CDN-hosted resources (scripts and stylesheets) won't load.</li>
+</ul>
+<h2 id="25-june-2024">25 June 2024<a class="headerlink" href="#25-june-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>JavaScript editor now has autocomplete and snippets for common structures (if, while, etc.)</li>
+<li>When downloading files (multipart, email attachments, etc.), the original filename is now used when possible</li>
+<li>In Control Panel, individual URLs are now marked with a unique color so they're easier to find</li>
+</ul>
+<h2 id="21-june-2024">21 June 2024<a class="headerlink" href="#21-june-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to add a note to individual requests both via the app and <a href="/api/requests.html#update-request">the API</a></li>
+<li>In Control Panel, URL list now has ordering capabilities</li>
+<li>In Custom Actions editor, default variables (e.g. $request.uuid$) are ordered last</li>
+<li>Fixed copying DNSHook to clipboard</li>
+<li>Fixed Custom Actions editor layout problems</li>
+</ul>
+<h2 id="10-june-2024">10 June 2024<a class="headerlink" href="#10-june-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We've moved Tokens to a new datastore. The switch should have been unnoticable, but if you've started to see bugs in e.g. Control Panel or Tokens API, please contact support.</li>
+<li>It's now possible to search your URLs in Control Panel by ID and Alias.</li>
+<li>Fixed an issue where Error Log was not loading when a Token was deleted.</li>
+<li>Fixed an issue where Global Variables couldn't be edited in Control Panel.</li>
+<li>Fixed an issue where the correct group wouldn't be selected when editing a Token.</li>
+<li>A proper error is now returned when an API Key is invalid.</li>
+</ul>
+<h2 id="7-may-2024">7 May 2024<a class="headerlink" href="#7-may-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Feature: Error Log, which lets you see the latest errors for your URLs and Schedules in a single, searchable, list. <a href="https://webhook.site/control-panel/error-log">Go to Error Log</a></li>
+</ul>
+<h2 id="3-may-2024">3 May 2024<a class="headerlink" href="#3-may-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Action Type: Basic Auth, for easily adding secure authentication to your Webhook.site URL. <a href="/custom-actions/action-types.html#basic-auth">More info here</a></li>
+<li>It's now possible to hide requests marked as <em>Don't Save</em> from the UI. Simply click <em>More</em> and select <em>Hide "Don't Save" Requests</em>.</li>
+</ul>
+<h2 id="1-may-2024">1 May 2024<a class="headerlink" href="#1-may-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.reddit.com/r/webhooksite/comments/1chik6o/webhooksite_may_2024_update/">Webhook.site Newsletter May 2024 has been released</a>.</li>
+</ul>
+<h2 id="25-april-2024">25 April 2024<a class="headerlink" href="#25-april-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Retry functionality has been added to the HTTP Request action. When enabled, Webhook.site will retry a HTTP request in case of timeouts. A status code can be specified as a retry condition. <a href="/custom-actions/action-types.html#retry">More info here</a></li>
+<li>The timeout of Queued actions have been increased to 120 seconds. This means that a series of queued actions have 120 seconds to complete.</li>
+</ul>
+<h2 id="24-april-2024">24 April 2024<a class="headerlink" href="#24-april-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>For incoming emails, in addition to text and raw content, HTML content is now shown separately.</li>
+<li>New Base Variable for emails: <code>$request.html_content$</code> which contains only the HTML content of the e-mail.</li>
+</ul>
+<h2 id="22-april-2024">22 April 2024<a class="headerlink" href="#22-april-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If a default Custom Domain is specified and is validated for email, it's now used as the sender address in the Send Email action (applies to new URLs only.)</li>
+<li>Improved display of text content of incoming emails - links are now clickable and quotes are indented.</li>
+<li>Fixed "401 Missing Password" error when saving configuration of Tokens that have a password set.</li>
+</ul>
+<h2 id="15-april-2024">15 April 2024<a class="headerlink" href="#15-april-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site now uses the domain <code>emailhook.site</code> for email receiving and sending. The old domain, <code>email.webhook.site</code>, continues to work.</li>
+<li>JavaScript action now supports Global Variables via the built-in <code>store()</code> and <code>global()</code> functions. <a href="/custom-actions/action-types.html#javascript">More info and examples here</a></li>
+<li>JavaScript action no longer considered in beta.</li>
+<li>New API: Global Variables. <a href="/api/global-variables.html">More info here</a></li>
+<li>Webhook.site CLI forward command now defaults to <code>https://localhost</code> for the <code>--target</code> parameter.</li>
+</ul>
+<h2 id="9-april-2024">9 April 2024<a class="headerlink" href="#9-april-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Action Editor improvements: drag and drop to change order of actions is now supported, improved renaming of actions, textboxes have been set to proper sizes</li>
+</ul>
+<h2 id="18-march-2024">18 March 2024<a class="headerlink" href="#18-march-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Feature: DNSHooks, which will automatically show all DNS requests to your unique DNS name, and all its subdomains. It can be used to send data solely via DNS, or as a canary token. <a href="/dnshook.html">More info here</a></li>
+</ul>
+<h2 id="13-march-2024">13 March 2024<a class="headerlink" href="#13-march-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HTTP headers with underscores are no longer ignored. However, underscores are converted to dashes due to a technical limitation.</li>
+<li>When a search query is set, Webhook.site will now only show incoming requests and emails that match the search query. </li>
+<li>Search queries are now stored in the browser's local storage, so it will be saved even after closing the browser.</li>
+</ul>
+<h2 id="1-march-2024">1 March 2024<a class="headerlink" href="#1-march-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed a bug where the <code>$request.query$</code> Base Variable not being generated.</li>
+</ul>
+<h2 id="29-feburary-2024">29 Feburary 2024<a class="headerlink" href="#29-feburary-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site now automatically decompresses <code>gzip</code> encoded request bodies.</li>
+</ul>
+<h2 id="26-feburary-2024">26 Feburary 2024<a class="headerlink" href="#26-feburary-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New features for "Set Variable" action: The Set Variable action can now generate random strings, date strings and timestamps. <a href="/custom-actions/action-types.html#set-variable">More info here</a></li>
+</ul>
+<h2 id="20-feburary-2024">20 Feburary 2024<a class="headerlink" href="#20-feburary-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Feature: Templates, which are created out of existing Custom Actions, and can be reused via the Import Template Custom Action. <a href="/custom-actions.html#templates">More info here</a>  <a href="/api/templates.html">Template API</a></li>
+<li>Webhook.site CLI: Better logging and can now be used for free users without API key.</li>
+</ul>
+<h2 id="7-feburary-2024">7 Feburary 2024<a class="headerlink" href="#7-feburary-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>faker</code> library added to the JavaScript Custom Action. <a href="/custom-actions/action-types.html#utility-modules">More info here</a></li>
+</ul>
+<h2 id="6-feburary-2024">6 Feburary 2024<a class="headerlink" href="#6-feburary-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tokens now support timeouts up to 30 seconds, from 10 before, which allows more flexibility when testing application timeouts. </li>
+<li>Tokens with timeouts are now have a dynamic rate limit. <a href="/api/requests.html#capture-request">More info here</a></li>
+<li>Updates to our Terms of Service and Privacy Policy. Summary:<ul>
+<li>Adding language specifically prohibiting submitting illegal content to Webhook.site</li>
+<li>Fair Use policy has been updated to a "requests per minute" metric (from 10000 requests per day), and a guideline for 100 Tokens created per day when the "expiry" option is used</li>
+<li>Added language about intellectual property rights, disclaimer of warranties, limitation of liability, indemnification, modification of terms, termination and governing law and jurisdiction.</li>
+</ul>
+</li>
+</ul>
+<h2 id="29-january-2024">29 January 2024<a class="headerlink" href="#29-january-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Split Text action now supports repeating. <a href="https://docs.webhook.site/custom-actions.html#repeating-actions">More info here</a></li>
+<li>Split Text action now recognizes the string <code>\n</code> as a newline, allowing splitting strings by line.</li>
+</ul>
+<h2 id="15-january-2024">15 January 2024<a class="headerlink" href="#15-january-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dynamic Request Limits: Webhook.site URLs/Tokens can now have custom request limits, from 1 to 10000, which is great when you're concerned about the data stored on Webhook.site. With this, you can limit the request history to the amount you choose.</li>
+</ul>
+<h2 id="11-january-2024">11 January 2024<a class="headerlink" href="#11-january-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New <code>$request.path$</code> (contains any subpath after the Webhook.site URL ID) and <code>$request.query$</code> (contains the query string) variables added. <a href="/custom-actions/variables.html#base-variables">More info here</a></li>
+<li>Don't Save, Rate Limit and Modify Response actions can no longer be marked as Queued.</li>
+</ul>
+<h2 id="10-january-2024">10 January 2024<a class="headerlink" href="#10-january-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Requests API: It's now possible to delete a subset of requests using the <code>date_from</code>, <code>date_to</code>, and <code>query</code> parameters. <a href="/api/requests.html#delete-multiple-requests">More info here</a>.</li>
+</ul>
+<h2 id="9-january-2024">9 January 2024<a class="headerlink" href="#9-january-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HTTP Request action: Fixed an issue where headers wouldn't be forwarded when using the <code>Forward</code> mode.</li>
+</ul>
+<h2 id="3-january-2024">3 January 2024<a class="headerlink" href="#3-january-2024" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Happy New Year :-)</li>
+<li>Webhook.site now supports 2-factor authentication via TOTP. To enable, go to Control Panel -&gt; User Profile.</li>
+</ul>
+<h2 id="27-december-2023">27 December 2023<a class="headerlink" href="#27-december-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>http()</code>, which replaces the <code>request()</code> function and allows for more flexibility as well as sending e.g. form/multipart requests as the new HTTP Request Custom Action also allows. <a href="/webhookscript/functions/network.html#httpstring-url-array-options-array">More info here</a></li>
+</ul>
+<h2 id="22-december-2023">22 December 2023<a class="headerlink" href="#22-december-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The new Custom Action <a href="/custom-actions/action-types.html#http-request">HTTP Request</a> has replaced Send Request, which has several benefits:<ul>
+<li>HTTP Request has different modes: text, multipart, etc., which lets you build more forms of HTTP requests that couldn't be done using Send Request.</li>
+<li>The Forward mode is now able to forward Multipart requests.</li>
+<li>Both the request and response are now saved so you can see exactly what was sent to the URL in HTTP Request.</li>
+<li>The HTTP Request has a handy Format JSON button.</li>
+</ul>
+</li>
+<li>It is still possible to make changes to existing Send Request actions, but it is no longer possible to create new Send Request actions.</li>
+</ul>
+<h2 id="7-december-2023">7 December 2023<a class="headerlink" href="#7-december-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Image files are now previewed in the file list, e.g. for email attachments</li>
+<li>Binary requests with content-types including <code>image/*</code>, <code>video/*</code> and <code>application/pdf</code> are now shown as linked files in the file list, not binary data.</li>
+</ul>
+<h2 id="6-december-2023">6 December 2023<a class="headerlink" href="#6-december-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Token (URL) expiry is now configurable with an amount of seconds. <a href="/api/tokens.html#create-token">More info here</a></li>
+</ul>
+<h2 id="28-november-2023">28 November 2023<a class="headerlink" href="#28-november-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: JavaScript. It is now possible to run JavaScript/Node.js code in your Custom Actions. This action is marked as beta as some limitations apply. <a href="/custom-actions/action-types.html#javascript-beta">More info and examples here</a></li>
+</ul>
+<h2 id="7-november-2023">7 November 2023<a class="headerlink" href="#7-november-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Actions: Microsoft Excel. Webhook.site now allows using your Microsoft account to append and retrieve data from Excel worksheets in your OneDrive account.</li>
+<li>New Custom Actions: Microsoft OneDrive. With Webhook.site, you can now use your Microsoft account to upload and download files in your OneDrive account.</li>
+<li>It's now possible to test IPv6-only traffic using the <code>ipv6.webhook.site</code> hostname. <a href="/faq.html#how-can-i-test-an-ipv6-only-request">More info here</a></li>
+</ul>
+<h2 id="31-october-2023">31 October 2023<a class="headerlink" href="#31-october-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature when testing actions: Test Until Here, which allows testing only the actions up until and including the currently selected action. This is useful when, for example, testing a flow that extracts data and sends an email, but you just want to test how data is extracted, and not sending the email (which is usually the last action.)</li>
+</ul>
+<h2 id="25-october-2023">25 October 2023<a class="headerlink" href="#25-october-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Schedules now have support for requirements which will send an error notification emails when they don't pass, making it an easy option for e.g. uptime monitoring. Currently supported requirements are "Response body must contain" and "Response status code must be in range". <a href="/schedules.html">More info here</a></li>
+<li>Webhook.site will now highlight the last viewed URL after logging in.</li>
+</ul>
+<h2 id="19-october-2023">19 October 2023<a class="headerlink" href="#19-october-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Queued Custom Actions that share the same delay are now run in groups, so they can share data and variables. This makes it possible to create more advanced workflows that run in the future.</li>
+</ul>
+<h2 id="12-october-2023">12 October 2023<a class="headerlink" href="#12-october-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Auto JSON. Automatically converts JSON data into Webhook.site Variables. <a href="/custom-actions/action-types.html#auto-json">More info here</a></li>
+</ul>
+<h2 id="11-october-2023">11 October 2023<a class="headerlink" href="#11-october-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Custom Actions editor modal dialog has been changed to an overlay, which allows for more space to edit actions.</li>
+<li>Moved Delete Action button to avoid accidentally deleting actions.</li>
+<li>WebhookScript editor and action output panel can now be resized.</li>
+</ul>
+<h2 id="22-september-2023">22 September 2023<a class="headerlink" href="#22-september-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New update for Webhook.site CLI, a tool for interacting with the Webhook.site API and allows forwarding requests from your Webhook.site URL to your local network. <a href="/cli.html">More info here</a></li>
+</ul>
+<h2 id="21-september-2023">21 September 2023<a class="headerlink" href="#21-september-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Split Text. Takes a source, delimiter and variable name prefix and splits text into X amount of variables.</li>
+<li>New Custom Action: Map Text. Takes a source, an operator (like the Conditions action) and a series of mappings and sets the resulting variable name to whether one of the mappings are a match to the source text.</li>
+</ul>
+<h2 id="15-september-2023">15 September 2023<a class="headerlink" href="#15-september-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to name individual Custom Actions, so you can keep track of which action does what. To change the name of an action, click the dashed name at the top of the action editor when creating or editing an action.</li>
+<li>The Variables dropdown shows all available variables after clicking the Test button.</li>
+<li>Variables section of the Custom Actions editor now allows copying each variable name.</li>
+</ul>
+<h2 id="14-september-2023">14 September 2023<a class="headerlink" href="#14-september-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: SFTP Upload</li>
+<li>The Run SSH Command action now supports regular password authentication in addition to standard keypair authentication.</li>
+</ul>
+<h2 id="30-august-2023">30 August 2023<a class="headerlink" href="#30-august-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Send Email action: It's now possible to add attachments to the email being sent. </li>
+<li>Send Email (SMTP) action: It's now possible to add attachments to the email being sent. </li>
+<li>WebhookScript: The json_encode function now allows disabling JSON formatting.</li>
+</ul>
+<h2 id="11-august-2023">11 August 2023<a class="headerlink" href="#11-august-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: New delete() function added for deleting Global Variables.</li>
+</ul>
+<h2 id="4-august-2023">4 August 2023<a class="headerlink" href="#4-august-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Improvements to Dark Mode.</li>
+</ul>
+<h2 id="29-july-2023">29 July 2023<a class="headerlink" href="#29-july-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Custom Actions: Maintenance was carried out on the underlying database system storing Custom Actions, and this may have resulted in 500 errors for around a minute starting 14:10 UTC.</li>
+</ul>
+<h2 id="20-july-2023">20 July 2023<a class="headerlink" href="#20-july-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>multipart()</code>, for sending HTTP multipart requests. <a href="/webhookscript/functions/network.html#multipartstring-url-array-items-string-method-post-array-headers-num-timeout-array">More info here</a>.</li>
+<li>Webhook.site can now send browser notifications to alert you of new emails or requests.</li>
+<li>Added "Mark all as read" button.</li>
+</ul>
+<h2 id="29-june-2023">29 June 2023<a class="headerlink" href="#29-june-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>For teams using Custom Domains, it's now possible to specify a default domain in Control Panel that will be shown anywhere the Webhook.site URL can be copied, for example.</li>
+</ul>
+<h2 id="16-june-2023">16 June 2023<a class="headerlink" href="#16-june-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dark Mode has been added to the user interface for Webhook.site.</li>
+</ul>
+<h2 id="7-june-2023">7 June 2023<a class="headerlink" href="#7-june-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Send Push Notification via ntfy.sh. Allows you to easily send push notifications to your browser, phone, watch, etc. Simply download the ntfy.sh app, subscribe to your topic name and send a message to the topic name via this Custom Action. No account required.</li>
+</ul>
+<h2 id="22-may-2023">22 May 2023<a class="headerlink" href="#22-may-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site was down from approximately 10:45 to 11:30 UTC. The cause was a customer abusing the Delay Action feature which caused a buildup of data. As a result, we've had to reset the "delayed action" queue, meaning that any delayed actions not executed at 10:00 UTC today have been lost. Any newly created delayed actions will still be run as of 12:00 UTC. We apologize for the inconvenience.</li>
+</ul>
+<h2 id="21-may-2023">21 May 2023<a class="headerlink" href="#21-may-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We've carried out an upgrade of some of the underlying software powering Webhook.site. As a result, Webhook.site should generally perform faster.<br>Beginning 10:45 UTC, there may have been instances of increased error rates. As of 12:00 UTC, these issues have been resolved. We apologize for the inconvenience. As always, if you experience issues with your Webhook.site URLs, Custom Actions, etc., please let us know at <a href="https://support.webhook.site">support.webhook.site</a>.</li>
+</ul>
+<h2 id="20-may-2023">20 May 2023<a class="headerlink" href="#20-may-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Custom Domains now show the exact error reason in Control Panel.</li>
+</ul>
+<h2 id="18-may-2023">18 May 2023<a class="headerlink" href="#18-may-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed an issue where the Custom Domain setup email wouldn't show the correct DNS entries.</li>
+</ul>
+<h2 id="28-april-2023">28 April 2023<a class="headerlink" href="#28-april-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Free URLs now accept a maximum of 500 requests in <em>total</em>. Deleting requests won't allow the URL to accept more requests. We encourage upgrading to Webhook.site Pro or Enterprise to avoid these limitations.</li>
+</ul>
+<h2 id="26-april-2023">26 April 2023<a class="headerlink" href="#26-april-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New API for Groups. <a href="/api/groups.html">More info here</a>.</li>
+<li>It's now possible to use Unicode characters like emojis in user names, group names, etc.</li>
+<li>WebhookScript: <code>xml2array()</code> logs more helpful errors.</li>
+</ul>
+<h2 id="16-april-2023">16 April 2023<a class="headerlink" href="#16-april-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>xml2array()</code>. <a href="/webhookscript/functions/string.html#xml2arraystring-xml-array">More info here</a>.</li>
+<li>Conditions action: It's now possible to delete individual conditions.</li>
+</ul>
+<h2 id="21-march-2023">21 March 2023<a class="headerlink" href="#21-march-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Repeat: Fixed a bug where only the last output of a repeated action would be shown in the action's output. </li>
+<li>Fixed link to Extract JSONPath examples.</li>
+<li>Added example for making queries using fields that contain spaces.</li>
+</ul>
+<h2 id="14-march-2023">14 March 2023<a class="headerlink" href="#14-march-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Fixed issue where floats would be parsed as strings (and not numbers, as they're supposed to), in some instances.</li>
+</ul>
+<h2 id="3-march-2023">3 March 2023<a class="headerlink" href="#3-march-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript string functions: <code>string_random()</code>, <code>uuid()</code>. <a href="/webhookscript/functions/string.html">More info here</a>.</li>
+</ul>
+<h2 id="23-febuary-2023">23 Febuary 2023<a class="headerlink" href="#23-febuary-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>For WebhookScript actions, the first line of the script is now shown in the action list. It allows easily adding a title to the script by making the first line a comment.</li>
+</ul>
+<h2 id="6-feburary-2023">6 Feburary 2023<a class="headerlink" href="#6-feburary-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript cryptography functions: <code>sign()</code>, <code>digest()</code>, <code>verify()</code>. <a href="/webhookscript/functions/string.html#cryptography">More info here</a>. <a href="/webhookscript/examples.html#jwt">JWT example here.</a></li>
+<li>New WebhookScript base64 functions: <code>base64url_encode()</code>, <code>base64url_decode()</code>. <a href="/webhookscript/functions/string.html#base64url_decodestring-string-string">More info here.</a></li>
+</ul>
+<h2 id="1-feburary-2023">1 Feburary 2023<a class="headerlink" href="#1-feburary-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Send Email (SMTP) - send an email using your own email provider.</li>
+</ul>
+<h2 id="20-january-2023">20 January 2023<a class="headerlink" href="#20-january-2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li>XPath: Improvements to the XPath action have been made so that it's now able to parse both XML and HTML-style documents.</li>
+<li>WebhookScript: Fixed a bug in the set_response() function where it wasn't possible to set the response headers.</li>
+<li>WebhookScript: Fixed a bug where internal errors would be returned when using array functions on arrays containing specific strings.</li>
+<li>CSV Export: When exporting to CSV, the search query is now used so you get the same items in the CSV as you see in the request list.</li>
+<li>WebhookScript: Added <code>array_splice</code> and <code>array_range</code> functions. <a href="/webhookscript/functions/array.html#array_splicearray-array-int-offset-int-length-array-replacement-array">More info here</a></li>
+</ul>
+<h2 id="14-december-2022">14 December 2022<a class="headerlink" href="#14-december-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed a bug where Extract XPath and WebhookScript <code>xpath</code> functions would not match correctly in all cases.</li>
+</ul>
+<h2 id="30-november-2022">30 November 2022<a class="headerlink" href="#30-november-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: stop() function now stops entire Custom Action flow and returns respond rather than simply exiting the current script.</li>
+</ul>
+<h2 id="28-november-2022">28 November 2022<a class="headerlink" href="#28-november-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Discord: Added an Embed URL action to Discord Custom Action for attaching videos, images, articles, etc.  to a chat message.</li>
+</ul>
+<h2 id="10-november-2022">10 November 2022<a class="headerlink" href="#10-november-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Schedules: Control Panel now shows Schedule IDs.</li>
+<li>Removed "Amount of requests to keep for Auto Cleanup" (configuring this didn't actually do anything.) As an alternative, you could use the <em>Don't Save</em> Custom Action.</li>
+<li>Send Request: Header Names are replaced with Variables.</li>
+<li>Global Variables: It's now possible to search for Global Variables.</li>
+</ul>
+<h2 id="6-november-2022">6 November 2022<a class="headerlink" href="#6-november-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Schedules/API: It's now possible to fetch Schedule Logs. <a href="/api/schedules.html#get-schedule-logs">More info here</a></li>
+<li>Schedules: Added "Run Now" button to all Schedules.</li>
+</ul>
+<h2 id="31-october-2022">31 October 2022<a class="headerlink" href="#31-october-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Control Panel: Category selector dropdown now sorted by name.</li>
+</ul>
+<h2 id="26-october-2022">26 October 2022<a class="headerlink" href="#26-october-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Improvements to Schedules</li>
+<li>Ability to rename Groups</li>
+<li>Group selection is now automatically remembered</li>
+</ul>
+<h2 id="30-september-2022">30 September 2022<a class="headerlink" href="#30-september-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>is_empty()</code> <a href="/webhookscript/functions/bool.html#is_emptyany-value-bool">More info here</a></li>
+<li>New WebhookScript function: <code>is_null()</code> - handy for checking if a value is null without type checking issues. <a href="/webhookscript/functions/bool.html#is_nullany-value-bool">More info here</a></li>
+</ul>
+<h2 id="21-september-2022">21 September 2022<a class="headerlink" href="#21-september-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>API: It's now possible to sort tokens returned by the Get Tokens endpoint. More info here: <a href="/api/tokens.html#get-tokens">More info here</a></li>
+</ul>
+<h2 id="8-september-2022">8 September 2022<a class="headerlink" href="#8-september-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed a bug in Webhook.site CLI ("TypeError: Echo is not a constructor" error.) - please upgrade the NPM package to 0.1.5.</li>
+<li>Please do not use <a href="https://github.com/AsyncHttpClient/async-http-client">async-http-client</a> (User-Agent AHC/2.1.) It is abandoned and contains bugs that creates too many HTTP requests. We may block users of this package in the future. </li>
+</ul>
+<h2 id="17-august-2022">17 August 2022<a class="headerlink" href="#17-august-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>As a result of customer abuse, we have decided to introduce rate limits on creation of URLs. The rate limit will be initially set to 10 per minute. After reaching this limit, the POST /token endpoint will return a <code>429 Too Many Requests</code> response.</li>
+</ul>
+<h2 id="28-june-2022">28 June 2022<a class="headerlink" href="#28-june-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action Type: Send push messages with Pushed.co. <a href="/custom-actions/action-types.html#pushed">More info here</a>.</li>
+</ul>
+<h2 id="24-june-2022">24 June 2022<a class="headerlink" href="#24-june-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: preg_match() - allows matching regex with custom regex options <a href="/webhookscript/functions/string.html#preg_matchstring-regex-string-subject-arrayfalse">More info here</a></li>
+<li>New WebhookScript function: html_to_text() - converts html to text. A more aggressive version of html_strip_tags() <a href="/webhookscript/functions/string.html#html_to_textstring-string-string">More info here</a></li>
+<li>WebhookScript: regex_extract_first() now has a default parameter that is returned when there's no matches. The function still returns <code>false</code> by default when this third parameter is not set. <a href="/webhookscript/functions/string.html#regex_extract_firstregex-regex-string-subject-any-default-stringfalse">More info here</a></li>
+</ul>
+<h2 id="21-may-2022">21 May 2022<a class="headerlink" href="#21-may-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Actions feature: It is now possible to delay queued actions by a specified amount of seconds. <a href="/custom-actions.html#queued-actions">More info here</a></li>
+</ul>
+<h2 id="20-may-2022">20 May 2022<a class="headerlink" href="#20-may-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: is_numeric(). <a href="/webhookscript/functions/math.html">More info here</a></li>
+<li>Rate Limit Custom Action: It is now possible to specify a key to let you rate limit on a custom parameter. The request IP address (<code>$request.ip$</code>) is still the default key.</li>
+<li>Action and Schedule error reports now specify the name, ID or alias of the Schedule or URL in question.</li>
+<li>Fixed a bug with Webhook.site Enterprise Custom Domain email validation.</li>
+</ul>
+<h2 id="19-april-2022">19 April 2022<a class="headerlink" href="#19-april-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed a bug that prevented action error notifications from being sent to the users.</li>
+</ul>
+<h2 id="14-april-2022">14 April 2022<a class="headerlink" href="#14-april-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It is now possible to search requests and emails, using either the frontend or the API. The data can be filtered by a wide range of fields, queries. <a href="/api/tokens.html#query-string-search-examples">More info here</a>.</li>
+</ul>
+<h2 id="30-march-2022">30 March 2022<a class="headerlink" href="#30-march-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added documentation for the <a href="/api/custom-actions.html#test-custom-action">Test Action endpoint</a>.</li>
+</ul>
+<h2 id="20-march-2022">20 March 2022<a class="headerlink" href="#20-march-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Variables for Files: <code>$request.file.[name].id$</code> and <code>$request.file.[name].link$</code> (which returns direct link to download the file.)</li>
+</ul>
+<h2 id="14-march-2022">14 March 2022<a class="headerlink" href="#14-march-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>num2hex</code>, <code>hex2num</code> and <code>hex2bin</code> functions.</li>
+</ul>
+<h2 id="19-january-2022">19 January 2022<a class="headerlink" href="#19-january-2022" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Actions: RabbitMQ Get &amp; Publish, allows consuming and publishing to RabbitMQ Queues via Webhook.site Custom Actions.</li>
+</ul>
+<h2 id="21-december-2021">21 December 2021<a class="headerlink" href="#21-december-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Improved handling of binary data received from Send Request actions. </li>
+<li>Added a <code>group_id</code> parameter when creating or updating Tokens.</li>
+<li>Fixed an issue with the Twitter Custom Action.</li>
+<li>Requests to <code>/token/:tokenId/requests</code> are now throttled at 60 requests/minute.</li>
+</ul>
+<h2 id="24-november-2021">24 November 2021<a class="headerlink" href="#24-november-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Fixed an issue that would cause strings to be interpreted as integers when encoding JSON.</li>
+</ul>
+<h2 id="30-october-2021">30 October 2021<a class="headerlink" href="#30-october-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site's requests to itself, e.g. via Send Request action or Schedules by Webhook.site, now shows more clearly as coming from Webhook.site in the request list. Outgoing requests are now sent with a User-Agent header of <code>Webhook.site/1.0</code>, which can be overwrited if specifying a User-Agent header manually.</li>
+<li>Error deleting Global Variables fixed.</li>
+<li>It is now possible for Webhook.site Enterprise customers to manage their Custom Domains from the control panel.</li>
+</ul>
+<h2 id="15-october-2021">15 October 2021<a class="headerlink" href="#15-october-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fix invalid charset configurations causing issues saving requests.</li>
+</ul>
+<h2 id="4-october-2021">4 October 2021<a class="headerlink" href="#4-october-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site now supports multiple sub-users on an account, with different access permissions, available to Webhook.site Enterprise users. For more information, please <a href="https://support.webhook.site">contact us</a>.</li>
+</ul>
+<h2 id="29-september-2021">29 September 2021<a class="headerlink" href="#29-september-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site CLI: New minor version, fixes a bug causing <code>Invalid namespace</code> errors.</li>
+</ul>
+<h2 id="17-september-2021">17 September 2021<a class="headerlink" href="#17-september-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action Variable Modifiers: <code>.html_decode</code>, <code>.url_encode</code>, and <code>.url_decode</code>. <a href="/custom-actions.html#variable-modifiers">More info here</a></li>
+</ul>
+<h2 id="12-september-2021">12 September 2021<a class="headerlink" href="#12-september-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: array_merge(), that merges two arrays into one. <a href="/webhookscript/functions/array.html">More info here</a></li>
+<li>New WebhookScript function: array_chunk(), that splits an array into chunks. <a href="/webhookscript/functions/array.html">More info here</a></li>
+<li>Functions dd(), dump() and echo() can now take a variable amount of arguments. <a href="/webhookscript/functions/general.html">More info here</a></li>
+<li>New WebhookScript date function: now(), which returns the current date in ISO format. <a href="/webhookscript/functions/date.html">More info here</a></li>
+<li>The date_interval() and date_interval_human() functions now defaults to "now" if the second parameter isn't specified.</li>
+<li>Script editor now has more space for outputs in full screen mode.</li>
+</ul>
+<h2 id="18-august-2021">18 August 2021<a class="headerlink" href="#18-august-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New API Endpoint: Get tokens, which returns a list of all tokens belonging to the account. <a href="/api/tokens.html#get-tokens">More info here</a></li>
+<li>Fixed a bug that caused logins to be slow on especially older accounts.</li>
+<li>Fixed a bug that caused the FTP Upload action to error when the Port field was missing.</li>
+</ul>
+<h2 id="12-august-2021">12 August 2021<a class="headerlink" href="#12-august-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Google Sheet actions that consistently cause errors are now disabled automatically. Users are sent an email when this occurs.</li>
+</ul>
+<h2 id="30-july-2021">30 July 2021<a class="headerlink" href="#30-july-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: hmac(), which allows easily verifying strings using the HMAC method.  <a href="/webhookscript/functions/string.html#hmacstring-value-string-algo-string-secret-stringfalse">More info here</a></li>
+</ul>
+<h2 id="14-july-2021">14 July 2021<a class="headerlink" href="#14-july-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Replace Text, which allows easily making text replacements from variable input, and either overwrites an existing variable or creates a new one with the replaced content.</li>
+</ul>
+<h2 id="4-july-2021">4 July 2021<a class="headerlink" href="#4-july-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed bug causing the "Use Request Content" checkbox in the Send Email action to not work.</li>
+</ul>
+<h2 id="15-june-2021">15 June 2021<a class="headerlink" href="#15-june-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action: Twitter, so you can easily send tweets using Webhook.site.</li>
+<li>New WebhookScript functions: convert_kana(), string_slice(), string_upper(), string_lower(), string_title() <a href="/webhookscript/functions/string.html">More info here</a>.</li>
+</ul>
+<h2 id="10-june-2021">10 June 2021<a class="headerlink" href="#10-june-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Individual Custom Actions can now be set as <em>queued</em>, which causes them to be run in the background, or asynchronously. <a href="/custom-actions.html#queued">More info here</a></li>
+</ul>
+<h2 id="7-june-2021">7 June 2021<a class="headerlink" href="#7-june-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Raised the limit for the amount of items processed by repeating actions to 100.</li>
+<li>Fixed a bug that would cause an error when updating notification settings in Control Panel.</li>
+<li>Fixed a bug where emails containing attachments would be stored.</li>
+</ul>
+<h2 id="23-may-2021">23 May 2021<a class="headerlink" href="#23-may-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>API: It's now possible to filter requests by date. <a href="/api/tokens.html#query-string-parameters">More info here</a></li>
+</ul>
+<h2 id="13-may-2021">13 May 2021<a class="headerlink" href="#13-may-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Documented <code>clone_from</code> option when using the API to create Tokens (URLs)</li>
+<li>WebhookScript: <code>json_decode</code> / <code>json_encode</code> now output error messages if they fail due to e.g. bad data.</li>
+</ul>
+<h2 id="1-may-2021">1 May 2021<a class="headerlink" href="#1-may-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site Schedules now has an API. <a href="/api/schedules.html">More info here</a></li>
+<li>Fixed a bug where URLs could be in two groups at the same time.</li>
+</ul>
+<h2 id="20-april-2021">20 April 2021<a class="headerlink" href="#20-april-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added base64 encoding and decoding <em>variable modifiers</em>. <a href="/custom-actions.html#variable-modifiers">More info here</a></li>
+</ul>
+<h2 id="11-april-2021">11 April 2021<a class="headerlink" href="#11-april-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action and WebhookScript function: Don't Save, which marks the request so it is not saved in Webhook.site. The request can still be seen when it comes in, but will not be available through through the app later, or through the API. </li>
+<li>New Custom Action: Stop, which immediately stops Custom Action execution and returns the default response.</li>
+<li>The Extract Regex now supports the Repeat function. <a href="/custom-actions.html#repeating-actions-beta">More info here</a>.</li>
+</ul>
+<h2 id="7-april-2021">7 April 2021<a class="headerlink" href="#7-april-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New powerful feature: Repeating actions. Currently supported by the Extract JSONPath action, it is now possible to "loop over" items in a JSON array. <a href="/custom-actions.html#repeating-actions-beta">More info here</a></li>
+</ul>
+<h2 id="2-april-2021">2 April 2021<a class="headerlink" href="#2-april-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It is now possible to enable or disable Custom Actions on a specific Token with the API. <a href="/api/custom-actions.html#toggle-custom-actions">More info here</a> or <a href="/api/tokens.html#create-token">here</a>.</li>
+<li>When exporting CSVs, the sorting selected in the application is now used automatically.</li>
+</ul>
+<h2 id="28-march-2021">28 March 2021<a class="headerlink" href="#28-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Today we've released the first version of the Webhook.site Command-line Interface (CLI), which allows you to forward requests from your Webhook.site URL to your local machine. <a href="/cli.html">More info here</a></li>
+</ul>
+<h2 id="24-march-2021">24 March 2021<a class="headerlink" href="#24-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Added <code>array_sort</code>, <code>array_join</code> and <code>json_escape</code> functions.</li>
+<li>Added <em>modifiers</em> for variables. <a href="/custom-actions.html#variable-modifiers">More info here</a></li>
+</ul>
+<h2 id="23-march-2021">23 March 2021<a class="headerlink" href="#23-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Control Panel: It's now possible to clone URLs, including their Custom Actions and other configuration.</li>
+<li>Control Panel: URLs with a password can be deleted more easily.</li>
+</ul>
+<h2 id="13-march-2021">13 March 2021<a class="headerlink" href="#13-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Control Panel: It's now possible to set a password for a Webhook.site URL in the Control Panel. Additionally, it's now possible to easily select and delete multiple URLs at once.</li>
+</ul>
+<h2 id="11-march-2021">11 March 2021<a class="headerlink" href="#11-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>API: It's now possible to specify an alias when creating a URL via the API. <a href="/api/tokens.html">More info here</a></li>
+</ul>
+<h2 id="6-march-2021">6 March 2021<a class="headerlink" href="#6-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Action: Database Query - allows running database queries on PostgreSQL and MySQL servers, inserting, changing and fetching data in specific variables or JSON format. <a href="/custom-actions.html#database-query">More info here</a></li>
+</ul>
+<h2 id="3-march-2021">3 March 2021<a class="headerlink" href="#3-march-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site Premium has changed name to Webhook.site Pro. Functionality, pricing and everything else remains the same; it's a cosmetic change.</li>
+<li>More currencies are now supported for Webhook.site Pro subscriptions: GBP and EUR. To change the currency of an existing subscription, please contact <a href="https://support.webhook.site">Webhook.site Support</a>.</li>
+<li>Custom Action output is now included in CSV Exports.</li>
+</ul>
+<h2 id="17-feburary-2021">17 Feburary 2021<a class="headerlink" href="#17-feburary-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Action: FTP(S) Upload - allows easy file upload to FTP servers.</li>
+</ul>
+<h2 id="5-feburary-2021">5 Feburary 2021<a class="headerlink" href="#5-feburary-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript functions: html_strip_tags, html_decode, html_encode, markdown_to_html. For more information, <a href="/webhookscript/functions/string.html">see here</a>.</li>
+</ul>
+<h2 id="1-feburary-2021">1 Feburary 2021<a class="headerlink" href="#1-feburary-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site has had intermittent downtime today due abuse from a user. We've identified them and blocked them from our systems. We're very sorry for the inconvenience.</li>
+</ul>
+<h2 id="31-january-2021">31 January 2021<a class="headerlink" href="#31-january-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We have discontinued support for subscriptions via Patreon, who will need to create a new subscription. For more information please contact <a href="https://support.webhook.site">support</a>.</li>
+</ul>
+<h2 id="19-january-2021">19 January 2021<a class="headerlink" href="#19-january-2021" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Happy new year!</li>
+<li>New Action Type: Conditions 2.0. Now supports adding multiple conditions in a single action.</li>
+<li>New Action Type: Set Variable. Working similarly to the Store Global Variable action, this action sets a runtime variable that is not persisted.</li>
+<li>Actions can now individually be executed depending on a previous set of conditions.</li>
+<li>The Debug Output section in the Custom Actions builder now shows the action number and type from where it came.</li>
+<li>The Modify Response action now supports returning the response immediately.</li>
+</ul>
+<h2 id="5-december-2020">5 December 2020<a class="headerlink" href="#5-december-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added new Custom Action: Store Global Variable, which does what it says on the tin.</li>
+<li>Bug fix: In Control Panel, the update date for each Global Variable now actually updates when a Global Variable is updated.</li>
+</ul>
+<h2 id="26-november-2020">26 November 2020<a class="headerlink" href="#26-november-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site had downtime during the night. The problem has been fixed.</li>
+</ul>
+<h2 id="25-november-2020">25 November 2020<a class="headerlink" href="#25-november-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: It's now possible to store non-string values in set(). If the value is an array, however, it is JSON encoded first.</li>
+<li>WebhookScript: Added more examples for the date functions.</li>
+</ul>
+<h2 id="1-november-2020">1 November 2020<a class="headerlink" href="#1-november-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added new Custom Action: Rate Limit, which lets you specify the maximum amount of requests in a given duration per IP to allow to request the Webhook.URL.</li>
+<li>Dates shown in the application now include seconds.</li>
+</ul>
+<h2 id="29-october-2020">29 October 2020<a class="headerlink" href="#29-october-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added new Custom Action: Run SSH Command, which allows you to run SSH commands on your server.</li>
+</ul>
+<h2 id="22-october-2020">22 October 2020<a class="headerlink" href="#22-october-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Added <code>array_keys</code> and <code>array_values</code> functions. For more information, <a href="/webhookscript/functions/array.html">see here</a>.</li>
+</ul>
+<h2 id="19-october-2020">19 October 2020<a class="headerlink" href="#19-october-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to set a timeout for the Send Request action. A new <code>timeout</code> parameter can also be given to the <code>request()</code> function in WebhookScript. Both places accept a value in seconds, with decimals.</li>
+<li>When exporting Custom Actions, if the URL has an alias, this is now used for the resulting filename.</li>
+</ul>
+<h2 id="11-october-2020">11 October 2020<a class="headerlink" href="#11-october-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to export and import Custom Actions to a file using the new Import/Export buttons in the Custom Actions builder.</li>
+</ul>
+<h2 id="7-october-2020">7 October 2020<a class="headerlink" href="#7-october-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added documentation for managing Custom Actions via the API. For more information, <a href="/api/custom-actions.html">see here</a>.</li>
+<li>Fixed a bug causing the Operator of an action to be reset to "is equal to" when testing.</li>
+</ul>
+<h2 id="6-october-2020">6 October 2020<a class="headerlink" href="#6-october-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Action output is no longer displayed twice when testing Condition actions.</li>
+</ul>
+<h2 id="24-september-2020">24 September 2020<a class="headerlink" href="#24-september-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature: Customize Auto-Cleanup threshold. This lets you specify how many requests or emails to keep for your URLs, if you want to keep fewer than the default amount of 10.000 for e.g. data protection reasons. Available from the brand new Settings page in Control Panel. The setting applies to all URLs that have the Auto Cleanup feature enabled - click Edit on a URL to enable it.</li>
+<li>New feature: URL groups, which lets you categorize your URLs into groups. Available from the URLs page in Control Panel. Click Edit on a URL to change its group.</li>
+<li>The URLs page in Control Panel has a new design which is less cluttered and allows you to more quickly change certain settings, URL aliases, and the description of a URL.</li>
+</ul>
+<h2 id="23-september-2020">23 September 2020<a class="headerlink" href="#23-september-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Regrettably, we saw a long period of downtime again from approx 20:00 to 05.40 UTC. The cause of the downtime was a user flooding their Webhook.site URLs with many gigabytes of data, causing the system to be overloaded. The same user was responsible for the downtime at 15 September 2020 and we've now terminated their license to use Webhook.site. We are also going prioritize changes that will automatically limit this kind of abuse, as well as move to another database system that will be more resilient.</li>
+</ul>
+<h2 id="15-september-2020">15 September 2020<a class="headerlink" href="#15-september-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We've seen spurious instances of downtime in the last 24 hours, the longest one lasting from approx. 14:00 to 14:50 UTC. We apologize for the inconvenience.</li>
+</ul>
+<h2 id="13-september-2020">13 September 2020<a class="headerlink" href="#13-september-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Added <code>override</code> parameter to request(), which prevents content from the source request from being included.</li>
+</ul>
+<h2 id="3-september-2020">3 September 2020<a class="headerlink" href="#3-september-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: It is now possible to set a default for the <code>var()</code> function.</li>
+</ul>
+<h2 id="29-august-2020">29 August 2020<a class="headerlink" href="#29-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A bug in the Extract JSONPath action has been fixed so that it is now also possible to filter for keys containing punctuation, e.g. <code>.data[?(@.Employee.FirstName)]</code>.</li>
+</ul>
+<h2 id="18-august-2020">18 August 2020<a class="headerlink" href="#18-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: The <code>to_date</code> and <code>date_format</code> functions have been improved with timezone handling capabilities.</li>
+</ul>
+<h2 id="15-august-2020">15 August 2020<a class="headerlink" href="#15-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to set a custom timeout for Schedules, up to 30 seconds.</li>
+</ul>
+<h2 id="8-august-2020">8 August 2020<a class="headerlink" href="#8-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You can now specify a custom Cron expression for your Webhook.site Schedule, in addition to the predefined intervals. This lets you decide exactly the hour, day and minute, etc., of when the schedule runs (based on UTC time.)</li>
+<li>It's now possible to enable email notifications for whenever a Schedule run fails to execute. To enable this, simply check the checkbox in <a href="https://webhook.site/notifications">Notification Settings.</a>.</li>
+</ul>
+<h2 id="7-august-2020">7 August 2020<a class="headerlink" href="#7-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to change the name of your Provider accounts to e.g. something that's easier to remember.</li>
+</ul>
+<h2 id="5-august-2020">5 August 2020<a class="headerlink" href="#5-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site had an unplanned outage starting at 03.30 UTC. The site was down for around an hour.</li>
+</ul>
+<h2 id="2-august-2020">2 August 2020<a class="headerlink" href="#2-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It is now possible to specify a default value in the Extract JSONPath, Extract Regex and Extract XPath actions, so that if the extraction could not find the item, the variable is set to the default value that is defined. This field also takes variables.</li>
+<li>Request list is now sorted by Newest First per default.</li>
+<li>Custom Action number and type is now shown next to the output in the request details. If the Action was deleted, the UUID is shown instead.</li>
+</ul>
+<h2 id="1-august-2020">1 August 2020<a class="headerlink" href="#1-august-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It is now possible to enable email notifications for whenever a Custom Action encountered an error. To enable this, simply check the checkbox in <a href="https://webhook.site/notifications">Notification Settings.</a>.</li>
+</ul>
+<h2 id="29-july-2020">29 July 2020<a class="headerlink" href="#29-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>trim(string)</code>, which removes space, newline and tab characters from the beginning and end of a string, similar to PHP's own trim() function.</li>
+<li>New Schedule intervals: weekly (every monday), monthly (every 1st day of month)</li>
+</ul>
+<h2 id="25-july-2020">25 July 2020<a class="headerlink" href="#25-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>action(action_type, parameters)</code>, to run Custom Actions inside a WebhookScript. <a href="/webhookscript/functions.html#actionstring-action_type-array-parameters-array">More info here.</a></li>
+<li>It's now possible to download email attachments or uploaded files directly from the Webhook.site app.</li>
+<li>When sending a request using either the Send Request Custom Action or the request() function, the response is now truncated if the response content is over 20KiB. This means the whole contents is not visible in the app, but is still available to Actions.</li>
+</ul>
+<h2 id="16-july-2020">16 July 2020<a class="headerlink" href="#16-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Better file handling for emails: attached files are now also extracted as variables</li>
+<li>New file management functions for WebhookScript: <code>files()</code> retrieves a an array of all files, <code>file_content(fileId)</code> returns the content of a specific file. <a href="/webhookscript/functions.html#files">More info here.</a></li>
+</ul>
+<h2 id="5-july-2020">5 July 2020<a class="headerlink" href="#5-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New "Resize Image" action added for resizing images from either a file upload, email attachment or other Action. </li>
+<li>Better handling of downloaded files: the contents won't be shown in the debug overlay to prevent very large files from crashing the browser.</li>
+<li>Fixed a bug in the Dropbox provider returning creating an empty variable when downloading large files.</li>
+</ul>
+<h2 id="3-july-2020">3 July 2020<a class="headerlink" href="#3-july-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Webhook.site was down for about 30 minutes starting 07:20 UTC due to a memory upgrade.</li>
+<li>Max request size has been increased to 10 MB from 2 MB.</li>
+</ul>
+<h2 id="23-june-2020">23 June 2020<a class="headerlink" href="#23-june-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added new Dropbox Custom Actions: Create Folder, Download, Upload, Delete, Get Link. </li>
+</ul>
+<h2 id="14-june-2020">14 June 2020<a class="headerlink" href="#14-june-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript editor syntax highlighting improved with regards to multiline strings, escape characters and more</li>
+<li>New WebhookScript editor keyboard shortcut for saving (Mac: Cmd-S, Windows: Ctrl-S.)</li>
+<li>Fix WebhookScript fullscreen mode not being disengaged when saving</li>
+<li>URLs can now accept file uploads via multipart. File contents are available via variables: <code>request.file.&lt;formname&gt;.content</code>, <code>request.file.&lt;formname&gt;.size</code>, <code>request.file.&lt;formname&gt;.filename</code></li>
+<li>New WebhookScript function: <code>csv_to_array()</code>, which converts a CSV file from a string to an array that can easily be parsed.</li>
+<li>Added an <a href="/webhookscript/examples#uploading-and-parsing-csv-file">example script</a> demoing file uploads and CSV parsing</li>
+</ul>
+<h2 id="7-june-2020">7 June 2020<a class="headerlink" href="#7-june-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added new Slack Send Message Custom Action, which lets you send Slack messages via a Slack Webhook URL.</li>
+</ul>
+<h2 id="5-june-2020">5 June 2020<a class="headerlink" href="#5-june-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added "Formula Mode" checkbox for Add and Update Row Google Sheets actions, which parses values like entered in a cell, and allows inserting formulas.</li>
+</ul>
+<h2 id="4-june-2020">4 June 2020<a class="headerlink" href="#4-june-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added new endpoints to fetch the content and information about the latest request on a URL. See <a href="/api#get-single-request">here</a> and <a href="/api#get-raw-request-content">here</a>.</li>
+</ul>
+<h2 id="2-june-2020">2 June 2020<a class="headerlink" href="#2-june-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added Amazon Web Services CloudFront Cache Invalidation Custom Action.</li>
+<li>Added ability to toggle Auto Cleanup, which automatically cleans up requests/emails.</li>
+</ul>
+<h2 id="30-may-2020">30 May 2020<a class="headerlink" href="#30-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added Discord Custom Action for sending messages. <a href="/custom-actions#discord">Read more in the docs</a></li>
+</ul>
+<h2 id="29-may-2020">29 May 2020<a class="headerlink" href="#29-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New set of date functions added to WebhookScript, namely: <code>to_date()</code>, <code>date_format()</code>, <code>date_to_array()</code>, <code>date_interval()</code>, <code>date_interval_human()</code>. <a href="webhookscript/functions#date-manipulation">Read more in the docs</a></li>
+</ul>
+<h2 id="25-may-2020">25 May 2020<a class="headerlink" href="#25-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New set of Amazon Web Services S3 actions: Create Bucket, Put Object, Delete Object and Get Object (which retrieves object contents to a Variable.)</li>
+</ul>
+<h2 id="22-may-2020">22 May 2020<a class="headerlink" href="#22-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Schedule intervals: every 1 minute and every 10 minutes, in addition to the already <a href="/schedules">existing ones</a>.</li>
+</ul>
+<h2 id="17-may-2020">17 May 2020<a class="headerlink" href="#17-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: <code>delay()</code>, which lets you delay and execute WebhookScript code a set amount of seconds in the future.</li>
+<li>New WebhookScript function: <code>exec()</code>, which lets you dynamically execute code in a string.</li>
+<li>New WebhookScript function: <code>import()</code>, which downloads and executes code from a URL - great if you want to reuse your code, just put it on Github and import it with the URL!</li>
+</ul>
+<h2 id="16-may-2020">16 May 2020<a class="headerlink" href="#16-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's now possible to set a Token (URL or email address) to expire automatically, even for Premium users. This is useful for creating tokens for automated testing.</li>
+</ul>
+<h2 id="3-may-2020">3 May 2020<a class="headerlink" href="#3-may-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Google Sheets Custom Actions (Beta). 3 initial actions are available: Append Row, Update Row and Get Values, which allow you to manipulate or retrieve the values of a Google Sheet without writing any code.</li>
+</ul>
+<h2 id="24-april-2020">24 April 2020<a class="headerlink" href="#24-april-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New fullscreen mode in WebhookScript editor</li>
+<li>Ability to edit your user profile</li>
+<li>New WebhookScript functions: <code>base64_encode()</code>, <code>base64_decode()</code>.</li>
+</ul>
+<h2 id="21-april-2020">21 April 2020<a class="headerlink" href="#21-april-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript function: store() - creates or updates an existing Global Variable</li>
+</ul>
+<h2 id="20-april-2020">20 April 2020<a class="headerlink" href="#20-april-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Global Variables section in Control Panel.</li>
+</ul>
+<h2 id="19-april-2020">19 April 2020<a class="headerlink" href="#19-april-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New WebhookScript math functions: max(), min(), mod(), pi(), rand() - for more, see the <a href="/webhookscript/reference">Reference</a></li>
+</ul>
+<h2 id="28-march-2020">28 March 2020<a class="headerlink" href="#28-march-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature: Webhook.site Schedules lets you request any URL – including Webhook.site URLs – automatically on an interval, so you can for example run Custom Actions every 5 minutes, or make a health check for your Web site.</li>
+<li>Send Request action request timeout has been raised from 5 to 10 seconds. Applies to both the Custom Action and the WebhookScript request() function.</li>
+</ul>
+<h2 id="24-march-2020">24 March 2020<a class="headerlink" href="#24-march-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature: API Keys can now be created so you can use the API with URLs that have the "Require Authentication" or "Password" options set.</li>
+<li>Fix: It's now possible to test Send Email actions before creating them. Prior to this, the Test button would not do anything for the Send Email action.</li>
+</ul>
+<h2 id="6-march-2020">6 March 2020<a class="headerlink" href="#6-march-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature: Extract XPath Custom Action with accompanying xpath() WebhookScript function. <a href="/custom-actions#extract-xpath">Read more.</a></li>
+</ul>
+<h2 id="29-feburary-2020">29 Feburary 2020<a class="headerlink" href="#29-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Values are no longer required for Condition actions, so it's possible to compare an empty string or missing value.</li>
+<li>Fixed an issue where a tooltip in the Custom Actions modal would not disappear.</li>
+<li>Removed Beta label from WebhookScript.</li>
+</ul>
+<h2 id="27-feburary-2020">27 Feburary 2020<a class="headerlink" href="#27-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed a bug where slashes at the end of Webhook.site Single Page App URLs didn't work.</li>
+<li>Fixed a bug where Copy To CURL sometimes wouldn't return a valid CURL command.</li>
+</ul>
+<h2 id="26-feburary-2020">26 Feburary 2020<a class="headerlink" href="#26-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It's no longer a requirement to specify a variable for the Send Request action.</li>
+</ul>
+<h2 id="25-feburary-2020">25 Feburary 2020<a class="headerlink" href="#25-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature: It's now possible to receive emails, which are treated like Webhooks – so you can automate emails with Custom Actions on Webhook.site. You can also test email deliverability using DKIM, DMARC and SPF validation.</li>
+<li>JSON formatting is now always enabled per default.</li>
+<li>The requests view is cleared after deleting the last request, and the tutorial text is shown.</li>
+</ul>
+<h2 id="16-feburary-2020">16 Feburary 2020<a class="headerlink" href="#16-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Added <code>regex_extract</code> and <code>regex_extract_first</code> functions.</li>
+</ul>
+<h2 id="15-feburary-2020">15 Feburary 2020<a class="headerlink" href="#15-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Added <code>hash</code> function.</li>
+</ul>
+<h2 id="14-feburary-2020">14 Feburary 2020<a class="headerlink" href="#14-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New feature: Export to CSV lets you export all requests on a given URL to a CSV file.</li>
+<li>Fixed a bug where duplicate in-app notifications would appear on new requests.</li>
+</ul>
+<h2 id="12-feburary-2020">12 Feburary 2020<a class="headerlink" href="#12-feburary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript: Added <code>url_encode</code>, <code>url_decode</code>, and <code>query</code> functions.</li>
+</ul>
+<h2 id="8-febuary-2020">8 Febuary 2020<a class="headerlink" href="#8-febuary-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>New Custom Action type: Condition, which lets you conditionally stop a set of actions based on comparisons.</li>
+</ul>
+<h2 id="28-january-2020">28 January 2020<a class="headerlink" href="#28-january-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>WebhookScript now supports newline literals (<code>\\n</code>) in strings, escaped by 2 backslashes.</li>
+</ul>
+<h2 id="25-january-2020">25 January 2020<a class="headerlink" href="#25-january-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Global Variables are now available in the Control Panel, which lets you keep configuration like API keys in a separate place from your Custom Actions and scripts while managing them at a central place.</p>
+</li>
+<li>
+<p>Changed the font of the WebhookScript editor, which resulted in uneven selection of text.</p>
+</li>
+</ul>
+<h2 id="23-january-2020">23 January 2020<a class="headerlink" href="#23-january-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You can now specify a source variable for JSONPath and Regex actions, so you can extract text from not only the request content.</li>
+</ul>
+<h2 id="12-january-2020">12 January 2020<a class="headerlink" href="#12-january-2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Switched to using Ace as editor for WebhookScript.</li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 16, 2024 07:43:46</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "content.action.edit"], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

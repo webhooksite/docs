@@ -1,0 +1,1443 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.webhook.site/pro.html">
+      
+      
+        <link rel="prev" href="open-source.html">
+      
+      
+        <link rel="next" href="cli.html">
+      
+      <link rel="icon" href="images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Webhook.site Pro and Enterprise - Webhook.site Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-772X7QHH0L"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-772X7QHH0L",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-772X7QHH0L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#webhooksite-basic-pro-and-enterprise" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Webhook.site Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Webhook.site Pro and Enterprise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Webhook.site Docs" class="md-nav__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="images/icon.png" alt="logo">
+
+    </a>
+    Webhook.site Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://webhook.site" class="md-nav__link">
+        ← Back to Webhook.site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="news.html" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="open-source.html" class="md-nav__link">
+        Open Source
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Basic, Pro & Enterprise
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pro.html" class="md-nav__link md-nav__link--active">
+        Basic, Pro & Enterprise
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pro-features" class="md-nav__link">
+    Pro features
+  </a>
+  
+    <nav class="md-nav" aria-label="Pro features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-workflows-with-custom-actions" class="md-nav__link">
+    Create workflows with Custom Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    Schedules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-urls-and-emails" class="md-nav__link">
+    Custom URLs and Emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permanent-urls" class="md-nav__link">
+    Permanent URLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-more-than-500-requests-or-emails" class="md-nav__link">
+    Store more than 500 requests or emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlimited-urls" class="md-nav__link">
+    Unlimited URLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-export" class="md-nav__link">
+    CSV Export
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localhost-forwarding" class="md-nav__link">
+    Localhost Forwarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-support" class="md-nav__link">
+    Email Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-features" class="md-nav__link">
+    Enterprise features
+  </a>
+  
+    <nav class="md-nav" aria-label="Enterprise features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-domain" class="md-nav__link">
+    Custom Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-user-support" class="md-nav__link">
+    Multi-User Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli.html" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="form-builder.html" class="md-nav__link">
+        Form Builder
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Custom Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions.html" class="md-nav__link">
+        About Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions/variables.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions/action-types.html" class="md-nav__link">
+        Action Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" tabindex="0" aria-expanded="false">
+          WebhookScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebhookScript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          WebhookScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/index.html" class="md-nav__link">
+        About WebhookScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/reference.html" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4_4" type="checkbox" id="__nav_11_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4_4" tabindex="0" aria-expanded="false">
+          Built-in Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Built-in Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/general.html" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/array.html" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/bool.html" class="md-nav__link">
+        Booleans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/date.html" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/files.html" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/flow.html" class="md-nav__link">
+        Flow Control and Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/math.html" class="md-nav__link">
+        Math and Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/network.html" class="md-nav__link">
+        Network and HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/string.html" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhookscript/functions/variables.html" class="md-nav__link">
+        Custom Action Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/about.html" class="md-nav__link">
+        Usage & Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/tokens.html" class="md-nav__link">
+        Tokens (URLs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/custom-actions.html" class="md-nav__link">
+        Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/templates.html" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/global-variables.html" class="md-nav__link">
+        Global Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pro-features" class="md-nav__link">
+    Pro features
+  </a>
+  
+    <nav class="md-nav" aria-label="Pro features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-workflows-with-custom-actions" class="md-nav__link">
+    Create workflows with Custom Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    Schedules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-urls-and-emails" class="md-nav__link">
+    Custom URLs and Emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permanent-urls" class="md-nav__link">
+    Permanent URLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-more-than-500-requests-or-emails" class="md-nav__link">
+    Store more than 500 requests or emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlimited-urls" class="md-nav__link">
+    Unlimited URLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-export" class="md-nav__link">
+    CSV Export
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localhost-forwarding" class="md-nav__link">
+    Localhost Forwarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-support" class="md-nav__link">
+    Email Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-features" class="md-nav__link">
+    Enterprise features
+  </a>
+  
+    <nav class="md-nav" aria-label="Enterprise features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-domain" class="md-nav__link">
+    Custom Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-user-support" class="md-nav__link">
+    Multi-User Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/webhooksite/docs/edit/master/docs/pro.markdown" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+<h1 id="webhooksite-basic-pro-and-enterprise">Webhook.site Basic, Pro and Enterprise<a class="headerlink" href="#webhooksite-basic-pro-and-enterprise" title="Permanent link">&para;</a></h1>
+<p>With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get more features that allows you to do more with your URL, as well as keep the data contained private and secure.</p>
+<style>
+  table {
+    width:100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+      display:table!important;}
+
+      .center {
+        text-align: center;
+      }
+
+      a.no-underline {
+        text-decoration: none;
+      }
+  </style>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Free</th>
+<th>Basic</th>
+<th>Pro</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URLs</td>
+<td>n/a</td>
+<td>1</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Schedules</td>
+<td>n/a</td>
+<td>1</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td><a href="https://docs.webhook.site/custom-actions.html">Custom Actions</a></td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://docs.webhook.site/schedules.html">Schedules</a></td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Custom Addresses</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Secure Data</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Permanent URLs</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CSV Export</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Free Email Support</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Custom Domain</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Multi-User Support</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Request History</td>
+<td>100 (hard limit)</td>
+<td>10.000<sup>2</sup></td>
+<td>10.000<sup>2</sup></td>
+<td>10.000<sup>2</sup></td>
+</tr>
+<tr>
+<td>URL/Email Address expiry</td>
+<td>7 days<sup>1</sup></td>
+<td>Never expires</td>
+<td>Never expires</td>
+<td>Never expires</td>
+</tr>
+<tr>
+<td>Data storage duration</td>
+<td>7 days<sup>1</sup></td>
+<td>365 days</td>
+<td>365 days</td>
+<td>365 days</td>
+</tr>
+<tr>
+<td>Pricing<sup>3</sup></td>
+<td></td>
+<td>$9/month $90/year (save 20%)</td>
+<td>$18/month $180/year (save 20%)</td>
+<td>$49/month $499/year (save 20%)</td>
+</tr>
+</tbody>
+</table>
+<div class="center">
+<a href="https://webhook.site/register" class="md-button md-button--default no-underline">Subscribe Now</a>
+</div>
+
+<ol>
+<li>Free URLs and email addresses automatically expire and are permanently deleted after 7 days.</li>
+<li>Pro and Enterprise URLs accept an unlimited amount of requests or emails, but only the latest 10.000 are available. Older requests are removed periodically.</li>
+<li>All pricing in USD and excluding VAT. Local currency can be used at checkout.</li>
+</ol>
+<h2 id="pro-features">Pro features<a class="headerlink" href="#pro-features" title="Permanent link">&para;</a></h2>
+<h3 id="create-workflows-with-custom-actions">Create workflows with Custom Actions<a class="headerlink" href="#create-workflows-with-custom-actions" title="Permanent link">&para;</a></h3>
+<p>Extract data, send emails and HTTP requests, upload files, run scripts and much more with Custom Actions that are run on each incoming request or email, with the Webhook.site Custom Actions builder. </p>
+<p>Native integrations for AWS, Google Sheets, Slack, Dropbox, MySQL and others. </p>
+<p><a href="https://docs.webhook.site/custom-actions.html">Read more</a></p>
+<h3 id="schedules">Schedules<a class="headerlink" href="#schedules" title="Permanent link">&para;</a></h3>
+<p>Use Schedules by Webhook.site to send requests any URL or run your Custom Actions automatically on an interval. Use it for monitoring your Web site, clearing caches, and much more. Supports <code>cron</code> syntax, in addition to predefined intervals.</p>
+<p><a href="https://docs.webhook.site/schedules.html">Read more</a></p>
+<h3 id="custom-urls-and-emails">Custom URLs and Emails<a class="headerlink" href="#custom-urls-and-emails" title="Permanent link">&para;</a></h3>
+<p>Get an address that's easy to remember:</p>
+<p><code>webhook.site/my-alias</code></p>
+<p><code>my-alias@email.webhook.site</code></p>
+<p>(With <a href="#enterprise-features">Webhook.site Enterprise</a>, you can even use your own domain name.)</p>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<p>Your data is secured in your account, and can be accessed by API Key or login. With the free version of Webhook.site, others can freely view the requests sent to your URL.</p>
+<h3 id="permanent-urls">Permanent URLs<a class="headerlink" href="#permanent-urls" title="Permanent link">&para;</a></h3>
+<p>The URLs stay in your account forever, the 7-day auto expiration of the free version is removed.</p>
+<h3 id="store-more-than-500-requests-or-emails">Store more than 500 requests or emails<a class="headerlink" href="#store-more-than-500-requests-or-emails" title="Permanent link">&para;</a></h3>
+<p>With the free version, URLs stop taking in new requests or emails after the 500 request limit is reached. With Pro, the limit of max 500 requests or emails per URL is removed and raised to 10.000 requests or emails, which are then rotated automatically.</p>
+<h3 id="unlimited-urls">Unlimited URLs<a class="headerlink" href="#unlimited-urls" title="Permanent link">&para;</a></h3>
+<p>Create as many upgraded URLs or email addresses as you need at no extra cost.</p>
+<h3 id="csv-export">CSV Export<a class="headerlink" href="#csv-export" title="Permanent link">&para;</a></h3>
+<p>Export all requests and emails to a CSV file.</p>
+<h3 id="localhost-forwarding">Localhost Forwarding<a class="headerlink" href="#localhost-forwarding" title="Permanent link">&para;</a></h3>
+<p>Forward requests to your Webhook.site URL to your local network via <a href="/cli.html">Webhook.site CLI</a>.</p>
+<h3 id="email-support">Email Support<a class="headerlink" href="#email-support" title="Permanent link">&para;</a></h3>
+<p>We’ll help you troubleshoot and set up your Custom Actions and workflows.</p>
+<h2 id="enterprise-features">Enterprise features<a class="headerlink" href="#enterprise-features" title="Permanent link">&para;</a></h2>
+<p>In addition to all Pro features, Enterprise also contains the following features:</p>
+<h3 id="custom-domain">Custom Domain<a class="headerlink" href="#custom-domain" title="Permanent link">&para;</a></h3>
+<p>Use a your own (sub)domain for URLs and emails: </p>
+<p><code>mydomain.com/my-alias</code></p>
+<p><code>my-alias@email.mydomain.com</code></p>
+<p>Additionally, Webhook.site provides an SSL certificate which is included free of charge with your Enterprise subscription.</p>
+<h3 id="multi-user-support">Multi-User Support<a class="headerlink" href="#multi-user-support" title="Permanent link">&para;</a></h3>
+<p>Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure individual users' access with User Types like Administrator, Member and Viewer as well as with Roles, giving users access to specific groups of URLs so they can see and interact with exactly the data they need.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 16, 2024 07:45:44</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "content.action.edit"], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

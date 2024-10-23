@@ -1,0 +1,3042 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.webhook.site/custom-actions/action-types.html">
+      
+      
+        <link rel="prev" href="variables.html">
+      
+      
+        <link rel="next" href="../webhookscript/index.html">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Action Types - Webhook.site Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-772X7QHH0L"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-772X7QHH0L",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-772X7QHH0L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#text" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Webhook.site Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action Types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Webhook.site Docs" class="md-nav__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../images/icon.png" alt="logo">
+
+    </a>
+    Webhook.site Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://webhook.site" class="md-nav__link">
+        ← Back to Webhook.site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.html" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-source.html" class="md-nav__link">
+        Open Source
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro.html" class="md-nav__link">
+        Basic, Pro & Enterprise
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli.html" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../form-builder.html" class="md-nav__link">
+        Form Builder
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="true">
+          Custom Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-actions.html" class="md-nav__link">
+        About Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variables.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Action Types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="action-types.html" class="md-nav__link md-nav__link--active">
+        Action Types
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    Text
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-jsonpath" class="md-nav__link">
+    Extract JSONPath
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract JSONPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jsonpath-examples" class="md-nav__link">
+    JSONPath Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonpath-syntax" class="md-nav__link">
+    JSONPath Syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-json" class="md-nav__link">
+    Auto JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-json-example" class="md-nav__link">
+    Auto JSON Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-regex" class="md-nav__link">
+    Extract Regex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-xpath" class="md-nav__link">
+    Extract XPath
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract XPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xpath-examples" class="md-nav__link">
+    XPath Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-text" class="md-nav__link">
+    Replace Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-text" class="md-nav__link">
+    Split Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-text" class="md-nav__link">
+    Map Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retry" class="md-nav__link">
+    Retry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-email" class="md-nav__link">
+    Send Email
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-email-smtp" class="md-nav__link">
+    Send Email (SMTP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Send Email (SMTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gmail-and-google-workspace" class="md-nav__link">
+    Gmail and Google Workspace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-ssh-command" class="md-nav__link">
+    Run SSH Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sftp-upload" class="md-nav__link">
+    SFTP Upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sftp-download" class="md-nav__link">
+    SFTP Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ftps-upload" class="md-nav__link">
+    FTP(S) Upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ftps-download" class="md-nav__link">
+    FTP(S) Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-query" class="md-nav__link">
+    Database Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-database-servers" class="md-nav__link">
+    Supported Database Servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-parameters" class="md-nav__link">
+    Using Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetching-data" class="md-nav__link">
+    Fetching data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgres-endpoint-id" class="md-nav__link">
+    Postgres Endpoint ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    Behavior
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dont-save" class="md-nav__link">
+    Don't Save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    Log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-response" class="md-nav__link">
+    Modify Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit" class="md-nav__link">
+    Rate Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    Stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-auth" class="md-nav__link">
+    Basic Auth
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    Logic
+  </a>
+  
+    <nav class="md-nav" aria-label="Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operators-with-value-argument" class="md-nav__link">
+    Operators with value argument
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators-without-value-argument" class="md-nav__link">
+    Operators without value argument
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-functions" class="md-nav__link">
+    General Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-modules" class="md-nav__link">
+    Utility Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookscript" class="md-nav__link">
+    WebhookScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-variable" class="md-nav__link">
+    Set Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-global-variable" class="md-nav__link">
+    Store Global Variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multimedia" class="md-nav__link">
+    Multimedia
+  </a>
+  
+    <nav class="md-nav" aria-label="Multimedia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-pdf" class="md-nav__link">
+    Generate PDF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resize-image" class="md-nav__link">
+    Resize Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-sheets" class="md-nav__link">
+    Google Sheets
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Sheets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-limits" class="md-nav__link">
+    Usage Limits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-the-spreadsheet" class="md-nav__link">
+    Specifying the spreadsheet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranges" class="md-nav__link">
+    Ranges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft" class="md-nav__link">
+    Microsoft
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onedrive" class="md-nav__link">
+    OneDrive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    Excel
+  </a>
+  
+    <nav class="md-nav" aria-label="Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-rows" class="md-nav__link">
+    Add Rows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-you-do-not-have-permissions-to-open-this-file-in-the-browser" class="md-nav__link">
+    Error: You do not have permissions to open this file in the browser
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-web-services-aws" class="md-nav__link">
+    Amazon Web Services (AWS)
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon Web Services (AWS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3" class="md-nav__link">
+    S3
+  </a>
+  
+    <nav class="md-nav" aria-label="S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-with-google-cloud-storage" class="md-nav__link">
+    Using with Google Cloud Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudfront" class="md-nav__link">
+    CloudFront
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    Discord
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slack" class="md-nav__link">
+    Slack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    Dropbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hubspot" class="md-nav__link">
+    HubSpot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x-formerly-known-as-twitter" class="md-nav__link">
+    X (formerly known as Twitter)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq" class="md-nav__link">
+    RabbitMQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushed" class="md-nav__link">
+    Pushed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfysh" class="md-nav__link">
+    ntfy.sh
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" tabindex="0" aria-expanded="false">
+          WebhookScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebhookScript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          WebhookScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/index.html" class="md-nav__link">
+        About WebhookScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/reference.html" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4_4" type="checkbox" id="__nav_11_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4_4" tabindex="0" aria-expanded="false">
+          Built-in Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Built-in Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/general.html" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/array.html" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/bool.html" class="md-nav__link">
+        Booleans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/date.html" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/files.html" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/flow.html" class="md-nav__link">
+        Flow Control and Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/math.html" class="md-nav__link">
+        Math and Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/network.html" class="md-nav__link">
+        Network and HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/string.html" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/variables.html" class="md-nav__link">
+        Custom Action Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/about.html" class="md-nav__link">
+        Usage & Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/tokens.html" class="md-nav__link">
+        Tokens (URLs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/custom-actions.html" class="md-nav__link">
+        Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/templates.html" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/global-variables.html" class="md-nav__link">
+        Global Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    Text
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-jsonpath" class="md-nav__link">
+    Extract JSONPath
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract JSONPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jsonpath-examples" class="md-nav__link">
+    JSONPath Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonpath-syntax" class="md-nav__link">
+    JSONPath Syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-json" class="md-nav__link">
+    Auto JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-json-example" class="md-nav__link">
+    Auto JSON Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-regex" class="md-nav__link">
+    Extract Regex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-xpath" class="md-nav__link">
+    Extract XPath
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract XPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xpath-examples" class="md-nav__link">
+    XPath Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-text" class="md-nav__link">
+    Replace Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-text" class="md-nav__link">
+    Split Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-text" class="md-nav__link">
+    Map Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retry" class="md-nav__link">
+    Retry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-email" class="md-nav__link">
+    Send Email
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-email-smtp" class="md-nav__link">
+    Send Email (SMTP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Send Email (SMTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gmail-and-google-workspace" class="md-nav__link">
+    Gmail and Google Workspace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-ssh-command" class="md-nav__link">
+    Run SSH Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sftp-upload" class="md-nav__link">
+    SFTP Upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sftp-download" class="md-nav__link">
+    SFTP Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ftps-upload" class="md-nav__link">
+    FTP(S) Upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ftps-download" class="md-nav__link">
+    FTP(S) Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-query" class="md-nav__link">
+    Database Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-database-servers" class="md-nav__link">
+    Supported Database Servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-parameters" class="md-nav__link">
+    Using Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetching-data" class="md-nav__link">
+    Fetching data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgres-endpoint-id" class="md-nav__link">
+    Postgres Endpoint ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    Behavior
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dont-save" class="md-nav__link">
+    Don't Save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    Log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-response" class="md-nav__link">
+    Modify Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit" class="md-nav__link">
+    Rate Limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    Stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-auth" class="md-nav__link">
+    Basic Auth
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic" class="md-nav__link">
+    Logic
+  </a>
+  
+    <nav class="md-nav" aria-label="Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operators-with-value-argument" class="md-nav__link">
+    Operators with value argument
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators-without-value-argument" class="md-nav__link">
+    Operators without value argument
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-functions" class="md-nav__link">
+    General Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-modules" class="md-nav__link">
+    Utility Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookscript" class="md-nav__link">
+    WebhookScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-variable" class="md-nav__link">
+    Set Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-global-variable" class="md-nav__link">
+    Store Global Variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multimedia" class="md-nav__link">
+    Multimedia
+  </a>
+  
+    <nav class="md-nav" aria-label="Multimedia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-pdf" class="md-nav__link">
+    Generate PDF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resize-image" class="md-nav__link">
+    Resize Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-sheets" class="md-nav__link">
+    Google Sheets
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Sheets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-limits" class="md-nav__link">
+    Usage Limits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-the-spreadsheet" class="md-nav__link">
+    Specifying the spreadsheet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranges" class="md-nav__link">
+    Ranges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft" class="md-nav__link">
+    Microsoft
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onedrive" class="md-nav__link">
+    OneDrive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    Excel
+  </a>
+  
+    <nav class="md-nav" aria-label="Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-rows" class="md-nav__link">
+    Add Rows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-you-do-not-have-permissions-to-open-this-file-in-the-browser" class="md-nav__link">
+    Error: You do not have permissions to open this file in the browser
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-web-services-aws" class="md-nav__link">
+    Amazon Web Services (AWS)
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon Web Services (AWS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3" class="md-nav__link">
+    S3
+  </a>
+  
+    <nav class="md-nav" aria-label="S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-with-google-cloud-storage" class="md-nav__link">
+    Using with Google Cloud Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudfront" class="md-nav__link">
+    CloudFront
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    Discord
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slack" class="md-nav__link">
+    Slack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    Dropbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hubspot" class="md-nav__link">
+    HubSpot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x-formerly-known-as-twitter" class="md-nav__link">
+    X (formerly known as Twitter)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq" class="md-nav__link">
+    RabbitMQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushed" class="md-nav__link">
+    Pushed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfysh" class="md-nav__link">
+    ntfy.sh
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/webhooksite/docs/edit/master/docs/custom-actions/action-types.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+  <h1>Action Types</h1>
+
+<h2 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h2>
+<h3 id="extract-jsonpath">Extract JSONPath<a class="headerlink" href="#extract-jsonpath" title="Permanent link">&para;</a></h3>
+<p>This action runs a JSONPath query on the contents of a request. With it, you can extract any data from a JSON document and store it in a variable, which can then be used in a downstream action.</p>
+<p>JSONPath is very similar to the <code>jq</code> commandline utility.</p>
+<h5 id="jsonpath-examples">JSONPath Examples<a class="headerlink" href="#jsonpath-examples" title="Permanent link">&para;</a></h5>
+<p>Example data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;store&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cool Books Ltd&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;books&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12 Rules for Life&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jordan B. Peterson&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&quot;author.age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">&quot;isbn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;13123123123&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;How to Win Friends and Influence People&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dale Carnegie&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">&quot;isbn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;23482394&quot;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>JSONPath</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.store.name</code></td>
+<td><code>name</code> property of <code>store</code> object</td>
+</tr>
+<tr>
+<td><code>.store.books[0]["author.age"]</code></td>
+<td>author age of first book (bracket syntax can be useful for e.g. keys containing periods)</td>
+</tr>
+<tr>
+<td><code>$.store.books[*].author</code></td>
+<td>the authors of all books in the store</td>
+</tr>
+<tr>
+<td><code>$..author</code></td>
+<td>all authors</td>
+</tr>
+<tr>
+<td><code>$.store..price</code></td>
+<td>the price of everything in the store.</td>
+</tr>
+<tr>
+<td><code>$..books[2]</code></td>
+<td>the third book</td>
+</tr>
+<tr>
+<td><code>$..books[(@.length-1)]</code></td>
+<td>the last book in order.</td>
+</tr>
+<tr>
+<td><code>$..books[-1:]</code></td>
+<td>the last book in order.</td>
+</tr>
+<tr>
+<td><code>$..books[0,1]</code></td>
+<td>the first two books</td>
+</tr>
+<tr>
+<td><code>$..books[:2]</code></td>
+<td>the first two books</td>
+</tr>
+<tr>
+<td><code>$..books[::2]</code></td>
+<td>every second book starting from first one</td>
+</tr>
+<tr>
+<td><code>$..books[1:6:3]</code></td>
+<td>every third book starting from 1 till 6</td>
+</tr>
+<tr>
+<td><code>$..books[?(@.isbn)]</code></td>
+<td>filter all books with isbn number property</td>
+</tr>
+<tr>
+<td><code>$..books[?(@.isbn != '')]</code></td>
+<td>filter all books with isbn that isn't null or <code>""</code> (empty string.) (Bracket syntax can also be used here, e.g. <code>.values[?(@['my value'] != '')]</code>)</td>
+</tr>
+<tr>
+<td><code>$..books[?(@.price&lt;10)]</code></td>
+<td>filter all books cheaper than 10</td>
+</tr>
+<tr>
+<td><code>$..*</code></td>
+<td>all elements in the data (recursively extracted)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="jsonpath-syntax">JSONPath Syntax<a class="headerlink" href="#jsonpath-syntax" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$</code></td>
+<td>The root object/element (not strictly necessary)</td>
+</tr>
+<tr>
+<td><code>@</code></td>
+<td>The current object/element</td>
+</tr>
+<tr>
+<td><code>.</code> or <code>[]</code></td>
+<td>Child operator</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>Recursive descent</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Wildcard. All child elements regardless their index.</td>
+</tr>
+<tr>
+<td><code>[,]</code></td>
+<td>Array indices as a set</td>
+</tr>
+<tr>
+<td><code>[start:end:step]</code></td>
+<td>Array slice operator borrowed from ES4/Python.</td>
+</tr>
+<tr>
+<td><code>?()</code></td>
+<td>Filters a result set by a script expression</td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>Uses the result of a "script" expression as the index</td>
+</tr>
+</tbody>
+</table>
+<p>For more details on what's possible with JSONPath, <a href="https://github.com/FlowCommunications/JSONPath#jsonpath-examples">take a look at the docs</a>.</p>
+<p>As you start entering a JSONPath, the results are validated and shown next to the input field.</p>
+<h3 id="auto-json">Auto JSON<a class="headerlink" href="#auto-json" title="Permanent link">&para;</a></h3>
+<p>This action automatically converts JSON data to Webhook.site Variables, and can be used as an alternative for Extract JSONPath when there's a large amount of variables that need to be extracted.</p>
+<figure>
+  <a class="glightbox" href="/images/custom-actions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto JSON in action" src="/images/custom-actions.png" width="300" /></a>
+  <figcaption>Auto JSON in action</figcaption>
+</figure>
+<p>Per default, the action works on the JSON found in the <code>$request.content$</code> variable, e.g. the request body data. </p>
+<p>If the JSONPath parameter is specified, this can be used to limit the variable creation to only the subset of data specified by the JSONPath query.</p>
+<h5 id="auto-json-example">Auto JSON Example<a class="headerlink" href="#auto-json-example" title="Permanent link">&para;</a></h5>
+<p>If the following data is specified in the Source parameter:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;Actors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tom Cruise&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&quot;Born At&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Syracuse, NY&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">&quot;Birthdate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;July 3, 1962&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">&quot;photo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://jsonformatter.org/img/tom-cruise.jpg&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Robert Downey Jr.&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">53</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">&quot;Born At&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New York City, NY&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">&quot;Birthdate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;April 4, 1965&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nt">&quot;photo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://jsonformatter.org/img/Robert-Downey-Jr.jpg&quot;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
+</code></pre></div>
+<p>If the JSONPath parameter is empty, the following 10 variables will be created:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$json.Actors.0.name$</code></td>
+<td>Tom Cruise</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.age$</code></td>
+<td>56</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.Born At$</code></td>
+<td>Syracuse, NY</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.Birthdate$</code></td>
+<td>July 3, 1962</td>
+</tr>
+<tr>
+<td><code>$json.Actors.0.photo$</code></td>
+<td>https://example.com/tom-cruise.jpg</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.name$</code></td>
+<td>Robert Downey Jr.</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.age$</code></td>
+<td>53</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.Born At$</code></td>
+<td>New York City, NY</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.Birthdate$</code></td>
+<td>April 4, 1965</td>
+</tr>
+<tr>
+<td><code>$json.Actors.1.photo$</code></td>
+<td>https://example.com/Robert-Downey-Jr.jpg</td>
+</tr>
+</tbody>
+</table>
+<p>If the JSONPath parameter is set to <code>.Actors.0</code>, only the following 5 variables are created:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$json.0.name$</code></td>
+<td>Tom Cruise</td>
+</tr>
+<tr>
+<td><code>$json.0.age$</code></td>
+<td>56</td>
+</tr>
+<tr>
+<td><code>$json.0.Born At$</code></td>
+<td>Syracuse, NY</td>
+</tr>
+<tr>
+<td><code>$json.0.Birthdate$</code></td>
+<td>July 3, 1962</td>
+</tr>
+<tr>
+<td><code>$json.0.photo$</code></td>
+<td>https://example.com/tom-cruise.jpg</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extract-regex">Extract Regex<a class="headerlink" href="#extract-regex" title="Permanent link">&para;</a></h3>
+<p>This action runs a Regex (regular expression) query on the contents of a request. With it, you can extract any data from a text document and store it in a variable, which can then be used in a downstream action.</p>
+<p>As you start entering a Regex, the results are validated and shown next to the input field.</p>
+<h3 id="extract-xpath">Extract XPath<a class="headerlink" href="#extract-xpath" title="Permanent link">&para;</a></h3>
+<p>Similar to the Extract JSONPath Custom Action, Extract XPath lets you extract values from an XML or HTML document and save the result as a variable.</p>
+<h5 id="xpath-examples">XPath Examples<a class="headerlink" href="#xpath-examples" title="Permanent link">&para;</a></h5>
+<p>The following examples are based on this XML document:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;organization</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ExampleCo&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;employees&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Jack<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Ann<span class="nt">&lt;/employee&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&lt;/employees&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">&lt;/organization&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Example XPath</th>
+<th>Notes</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/organization</code></td>
+<td>Finds all content within the organization element</td>
+<td>Jack<br>Ann</td>
+</tr>
+<tr>
+<td><code>//employee[@id != 1]</code></td>
+<td><code>//</code> traverses all <code>&lt;employee&gt;</code> elements in document, the @id query selects all except those with <code>id</code>=1</td>
+<td>Jack</td>
+</tr>
+<tr>
+<td><code>/organization/@name</code></td>
+<td><code>@name</code> to get the "name" property of the element</td>
+<td>ExampleCo</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[2]</code></td>
+<td><code>[2]</code> specifies 2nd element</td>
+<td>Ann</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[2]/@id</code></td>
+<td>Get the "id" property of second employee element</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[@id=1]</code></td>
+<td>Employee element with id property equal to "1"</td>
+<td>Jack</td>
+</tr>
+<tr>
+<td><code>/organization/employees/employee[last()]</code></td>
+<td>Last employee element</td>
+<td>Ann</td>
+</tr>
+<tr>
+<td><code>//employee[contains(@id, "2")]</code></td>
+<td>Employee within any parent element where id contains "2"</td>
+<td>Ann</td>
+</tr>
+</tbody>
+</table>
+<p>For more examples, see <a href="https://www.w3schools.com/xml/xml_xpath.asp">W3CSchools</a> or <a href="https://devhints.io/xpath">XPath Cheatsheet</a></p>
+<h3 id="replace-text">Replace Text<a class="headerlink" href="#replace-text" title="Permanent link">&para;</a></h3>
+<p>An action that allows replacing multiple inputs to a string with specified replacements. Additionally, Webhook.site will replace all variables in the source text as well as the text being replaced, and the replacement.</p>
+<h3 id="split-text">Split Text<a class="headerlink" href="#split-text" title="Permanent link">&para;</a></h3>
+<p>Split text into multiple variables. Using <code>hello,world</code> as Source, and <code>,</code> as Delimiter, 2 variables will be created: <code>$variable.1$</code> is "hello" and <code>$variable.2$</code> is "world".</p>
+<p>Entering <code>\n</code> as Delimiter will split text by each line.</p>
+<p>The maximum amount of variables created is 1024.</p>
+<h3 id="map-text">Map Text<a class="headerlink" href="#map-text" title="Permanent link">&para;</a></h3>
+<p>Sets a variable depending on what maps to the source value and operator.</p>
+<p>If we set Source to <code>John</code>, Operator to <code>ends with</code>, Variable Name to <code>$user_id$</code>, Default to <code>unknown</code>, and add a mapping of From: <code>John</code> -&gt; To: <code>123</code>, then the variable name <code>$user_id$</code> would be set to <code>123</code>. </p>
+<p>If the Source had been <code>Jack</code>, <code>$user_id$</code> would have been set to <code>unknown.</code></p>
+<h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h2>
+<h3 id="http-request">HTTP Request<a class="headerlink" href="#http-request" title="Permanent link">&para;</a></h3>
+<p>This will send a HTTP/HTTPS request from the Webhook.site cloud. </p>
+<p>The HTTP Request action has several modes:</p>
+<ul>
+<li><strong>Text</strong>: In the default text mode, this allows sending plain-text content, but also data like JSON and XML.</li>
+<li><strong>JSON</strong>: Similar to the Text mode, but also sets the Content-Type header to application/json and allows JSON formatting.</li>
+<li><strong>Multipart</strong>: With Multipart selected, it is possble to build a form/multipart request and send form data and files. Note that the Filename and Content-Type fields are not required.</li>
+<li><strong>URL Encoded</strong>: In URL Encoded mode, the keys and values are sent using URL Encoding.</li>
+<li><strong>Forward</strong>: In forward mode, all data sent to the Webhook.site URL is forwarded here, including the HTTP method, query strings, headers and body data. It is possible to overwrite the method and append headers. To forward the HTTP method, set the Method dropdown to the blank option.</li>
+</ul>
+<p>The response of the request is stored in a series of variable names prefixed with a value of your choosing. The following variables are set after the request has been fired:</p>
+<ul>
+<li><code>$your_prefix.content$</code> - response body content</li>
+<li><code>$your_prefix.status$</code> - response status code</li>
+<li><code>$your_prefix.headers$</code> - response headers</li>
+<li><code>$your_prefix.url$</code> - the URL the request was sent to</li>
+<li><code>$your_prefix.error$</code> - if the request resulted in an error, it's stored in this variable.</li>
+</ul>
+<h4 id="retry">Retry<a class="headerlink" href="#retry" title="Permanent link">&para;</a></h4>
+<p>When checked, this option will cause the HTTP to be retried in case of a network error, timeout, or related issue.</p>
+<figure>
+  <a class="glightbox" href="/images/http-retry.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Retry configuration screenshot" src="/images/http-retry.png" width="300" /></a>
+  <figcaption>Retry configuration screenshot</figcaption>
+</figure>
+<p>Per default, there are 3 retries (4 requests total) with 1 second delay between each retry.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As Webhook.site URLs have a maximum of 30 seconds to respond, it's best to use a low delay and retry number that stays under 30 seconds total. Otherwise there's a risk the actions won't complete. Alternatively, you can mark the HTTP Request action as <a href="/custom-actions.html#queued-actions">Queued</a>, which has a timeout of 120 seconds.</p>
+</div>
+<p>If a status code is specified, the request will also be retried when the response status doesn't match the specified status code. The character <code>*</code> can be used as wildcard, e.g. <code>20*</code> will match any status code in the range 200-209.</p>
+<p>Each retry attempt will add an extra line of output.</p>
+<h3 id="send-email">Send Email<a class="headerlink" href="#send-email" title="Permanent link">&para;</a></h3>
+<p>This will send a email with variable contents from the Webhook.site cloud. Variables extracted previously can be used.</p>
+<h3 id="send-email-smtp">Send Email (SMTP)<a class="headerlink" href="#send-email-smtp" title="Permanent link">&para;</a></h3>
+<p>This will send a email with variable contents from your own email provider. Variables extracted previously can be used.</p>
+<h4 id="gmail-and-google-workspace">Gmail and Google Workspace<a class="headerlink" href="#gmail-and-google-workspace" title="Permanent link">&para;</a></h4>
+<p>For Gmail, the following specific setup is required:</p>
+<ul>
+<li>Hostname: <code>smtp.gmail.com</code></li>
+<li>Port:<code>587</code></li>
+<li>Username: youraccount@gmail.com or youraccount@example.com (replace with your Gmail address)</li>
+<li>Password: You must <a href="https://myaccount.google.com/u/1/apppasswords">create a Mail App Password</a></li>
+<li>Encryption: <code>TLS</code></li>
+</ul>
+<h3 id="run-ssh-command">Run SSH Command<a class="headerlink" href="#run-ssh-command" title="Permanent link">&para;</a></h3>
+<p>Allows you to run one or more SSH command on a server. Webhook.site captures the output (stdout), stderr and the command exit code as Variables that can be used in downstream actions:</p>
+<ul>
+<li><code>$ssh.stdout$</code></li>
+<li><code>$ssh.stderr$</code></li>
+<li><code>$ssh.exit$</code></li>
+</ul>
+<p>We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -&gt; Providers.</p>
+<h3 id="sftp-upload">SFTP Upload<a class="headerlink" href="#sftp-upload" title="Permanent link">&para;</a></h3>
+<p>Allows uploading a file to a SFTP (SSH) server, specifying a hostname, port, username, password, relative path to the file. The file content can be specified, in which Variables are replaced.</p>
+<p>We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -&gt; Providers.</p>
+<h3 id="sftp-download">SFTP Download<a class="headerlink" href="#sftp-download" title="Permanent link">&para;</a></h3>
+<p>Allows downloading a file to a SFTP (SSH) server, specifying a hostname, port, username, password and the path to the file. The file content is downloaded to a Variable.</p>
+<p>We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -&gt; Providers.</p>
+<h3 id="ftps-upload">FTP(S) Upload<a class="headerlink" href="#ftps-upload" title="Permanent link">&para;</a></h3>
+<p>Allows uploading a file to a FTP or FTPS (FTP with TLS/SSL) server, specifying a hostname, port, username, password, relative path to the file, whether to use SSL and whether to use passive mode. Finally, the file content can be specified, in which Variables are replaced.</p>
+<p>We recommend storing the password as a Global Variable.</p>
+<h3 id="ftps-download">FTP(S) Download<a class="headerlink" href="#ftps-download" title="Permanent link">&para;</a></h3>
+<p>Allows downloading a file to a FTP or FTPS (FTP with TLS/SSL) server, specifying a hostname, port, username, password, path, whether to use SSL and whether to use passive mode. The file content is downloaded to a Variable.</p>
+<p>We recommend storing the password as a Global Variable.</p>
+<h3 id="database-query">Database Query<a class="headerlink" href="#database-query" title="Permanent link">&para;</a></h3>
+<p>Allows running a database query, with support for fetching out data in a series of variables. We recommend storing the password as a Global Variable. The query timeout is 10 seconds.</p>
+<h4 id="supported-database-servers">Supported Database Servers<a class="headerlink" href="#supported-database-servers" title="Permanent link">&para;</a></h4>
+<p>Currently supported are:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>MySQL/MariaDB</li>
+<li>Microsoft SQL Server</li>
+</ul>
+<p>If your database server is not on the list, please <a href="https://support.webhook.site">contact support</a>.</p>
+<h4 id="using-parameters">Using Parameters<a class="headerlink" href="#using-parameters" title="Permanent link">&para;</a></h4>
+<p>When using e.g. INSERT or UPDATE statements, you should use <em>parameters</em> for each column value. Doing this, you avoid SQL injection attacks and other issues when using user-submitted data (e.g. via Variables), or even just data containing special characters like quotes, that could otherwise break a query.</p>
+<p>Each parameter name should start with a colon (:) and be a single word. You can then reference these parameters inside the query, like in the following example:</p>
+<p><a class="glightbox" href="/images/database.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/images/database.png" /></a></p>
+<h4 id="fetching-data">Fetching data<a class="headerlink" href="#fetching-data" title="Permanent link">&para;</a></h4>
+<p>When fetching data using e.g. SELECT statements, Webhook.site automatically inserts data in a series of Custom Action Variables, which are then available to downstream actions.</p>
+<p>For example, when fetching rows from the following table:</p>
+<p><a class="glightbox" href="/images/database-example-table.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/images/database-example-table.png" /></a></p>
+<p>Using the following statement:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span>
+</code></pre></div>
+<p>If the variable name prefix would be set to <code>output</code>, the following variables would be created containing specific values:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$output.0.id$</td>
+<td>1</td>
+</tr>
+<tr>
+<td>$output.0.fname$</td>
+<td>Simon</td>
+</tr>
+<tr>
+<td>$output.0.lname$</td>
+<td>Fredsted</td>
+</tr>
+<tr>
+<td>$output.0.title$</td>
+<td>Founder</td>
+</tr>
+<tr>
+<td>$output.1.id$</td>
+<td>2</td>
+</tr>
+<tr>
+<td>$output.1.fname$</td>
+<td>Jack</td>
+</tr>
+<tr>
+<td>$output.1.lname$</td>
+<td>Daniels</td>
+</tr>
+<tr>
+<td>$output.1.title$</td>
+<td>Assistant</td>
+</tr>
+</tbody>
+</table>
+<p>A variable would be created with the name <code>$output.json$</code> containing the data in JSON format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span><span class="w">                              </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;fname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simon&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&quot;lname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fredsted&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Founder&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">&quot;fname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jack&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nt">&quot;lname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Daniels&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Assistant&quot;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">]</span>
+</code></pre></div>
+<p>A variable named <code>$output.rows$</code> - containing the number of affected rows - would be set to <code>2</code>.</p>
+<p>If the action encounters an error, the <code>$output.error$</code> variable is set to the error message. You can use this to check that the action was successful in conjunction with the Conditions action, specifically the <em>variable exists</em> operator.</p>
+<h4 id="postgres-endpoint-id">Postgres Endpoint ID<a class="headerlink" href="#postgres-endpoint-id" title="Permanent link">&para;</a></h4>
+<p>If your database host requires an endpoint ID to be specified, you can do so via the Password field, for example: <code>endpoint=my_endpoint;password</code>. Replace <code>my_endpoint</code> with the endpoint ID, and <code>password</code> with the actual password.</p>
+<h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h2>
+<h3 id="dont-save">Don't Save<a class="headerlink" href="#dont-save" title="Permanent link">&para;</a></h3>
+<p>Marks the request so it is not saved in Webhook.site, which is useful (especially in combination with Conditions) when receiving a large amount of requests.</p>
+<h3 id="log">Log<a class="headerlink" href="#log" title="Permanent link">&para;</a></h3>
+<p>Adds a custom log entry to the Request's action output.</p>
+<h3 id="modify-response">Modify Response<a class="headerlink" href="#modify-response" title="Permanent link">&para;</a></h3>
+<p>This action can be used to modify the response of the Webhook.site URL based on the input.</p>
+<h3 id="rate-limit">Rate Limit<a class="headerlink" href="#rate-limit" title="Permanent link">&para;</a></h3>
+<p>This action can be used to allow a specific amount of requests in a specific amount of time per a given IP.</p>
+<p>If the IP is rate limited, the URL will respond with a <code>HTTP 429</code>, action execution is stopped, and the request is not saved in Webhook.site.</p>
+<h3 id="stop">Stop<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h3>
+<p>Immediately stops Custom Action execution and returns the default response.</p>
+<h3 id="basic-auth">Basic Auth<a class="headerlink" href="#basic-auth" title="Permanent link">&para;</a></h3>
+<p>With this action, the URL is protected with Basic Authentication. If the username and password combination is wrong, the request is automatically marked as <em>Don't Save</em>, action execution is stopped, and the response status is HTTP 401. The action has no effect for emails or DNSHooks.</p>
+<p>Basic Auth works with the Authorization HTTP header, where the username and password is encoded in base64, separated by a colon (<code>:</code>). For example, a successfull request when the username is <code>user</code> and password is <code>pass123</code> would have the following header:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Authorization: Basic dXNlcjpwYXNzMTIz
+</code></pre></div>
+<figure>
+  <a class="glightbox" href="/images/basic-auth.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Basic Auth in browsers" src="/images/basic-auth.png" width="300" /></a>
+  <figcaption>Basic Auth in browsers</figcaption>
+</figure>
+<p>When the URL is visited with a Web browser, a username and password form will be shown.</p>
+<h2 id="logic">Logic<a class="headerlink" href="#logic" title="Permanent link">&para;</a></h2>
+<h3 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="/images/condition-action.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="&quot;Condition&quot; Custom Action screenshot" src="/images/condition-action.png" /></a></p>
+<p>Useful if you need to validate that the request does or does not conform to certain criteria, the Condition action will either stop or continue based on a condition.</p>
+<p>In both the <em>input</em> and the <em>value</em> fields, variables will be replaced (including Global Variables from the Control Panel), so you can compare e.g. JSONPath or Regex values - or even values from a previous HTTP request that was sent. </p>
+<p>Currently, three <em>actions</em> are provided: use result, stop and continue. <em>Use Result</em> allows using the Condition result in further actions. <em>Stop</em> will stop further action execution of the condition is a match. <em>Continue</em> will <em>only</em> continue further execution if the condition is a match, and otherwise stop.</p>
+<p>To make an <em>is equal to</em> condition on a boolean value from a JSON structure, you can enter <code>0</code> for <code>false</code> or <code>1</code> for <code>true</code>. </p>
+<h4 id="operators-with-value-argument">Operators with value argument<a class="headerlink" href="#operators-with-value-argument" title="Permanent link">&para;</a></h4>
+<ul>
+<li>is equal to</li>
+<li>is not equal to</li>
+<li>starts with</li>
+<li>ends with</li>
+<li>contains</li>
+<li>does not contain</li>
+<li>is greater than</li>
+<li>is greater than or equal to</li>
+<li>is less than</li>
+<li>is less than or equal to</li>
+</ul>
+<h4 id="operators-without-value-argument">Operators without value argument<a class="headerlink" href="#operators-without-value-argument" title="Permanent link">&para;</a></h4>
+<ul>
+<li>variable exists - whether a Webhook.site variable is defined</li>
+<li>is numeric - whether input is numeric; examples include <code>42</code>, <code>123.45</code>, <code>0x539</code>, <code>02471</code>,
+    <code>0b10100111001</code></li>
+<li>is integer - whether input is an integer; <code>42</code> is; <code>123.45</code> is not. </li>
+<li>is float - whether input is a valid float/double (e.g. both <code>42</code> and <code>123.45</code> are valid)</li>
+<li>is json - whether input is valid JSON</li>
+<li>is email</li>
+<li>is domain - e.g. <code>webhook.site</code></li>
+<li>is URL - e.g. <code>https://webhook.site?value=xxx</code></li>
+</ul>
+<p>The "result" of the condition will be logged below the request details, so you can see what happened.</p>
+<p>To use the result of the Condition, select it in the "only run when condition passes" checkbox:</p>
+<p><a class="glightbox" href="/images/EQeP6s783LK1y5hnj6u7ObvO.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/images/EQeP6s783LK1y5hnj6u7ObvO.png" /></a></p>
+<p>Tip: To check if a Variable is set (or exists), you must enter the variable name in both input and value fields and use the "is not equal to" operator, since non-existing variables are not replaced.</p>
+<h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h3>
+<p>With the JavaScript action, you can execute JavaScript code using a Node.js sandbox that runs on the Webhook.site cloud.</p>
+<p><a class="glightbox" href="/images/javascript.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/images/javascript.png" /></a></p>
+<h4 id="general-functions">General Functions<a class="headerlink" href="#general-functions" title="Permanent link">&para;</a></h4>
+<p><code>console.log(<em>line</em>)</code> / <code>echo(<em>line</em>)</code> - log a string to Action output</p>
+<p><code>set(<em>variable_name</em>, <em>value</em>)</code> - sets a Webhook.site variable for use in downstream actions</p>
+<p>The following code would set the variable $myvar$ to <code>value</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;myvar&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><code>get(<em>variable_name</em>)</code> - gets a Webhook.site variable (except Global Variables; use the <code>global()</code> function for that)</p>
+<p><code>variables</code> - global array variable containing Webhook.site variables</p>
+<p><code>global(<em>variable_name</em>)</code> - retrieves the value of a Webhook.site Global Variable. Must be used async. Returns <code>null</code> if variable doesn't exist.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">echo</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nb">global</span><span class="p">(</span><span class="s1">&#39;my-variable&#39;</span><span class="p">))</span>
+</code></pre></div>
+<p><code>store(<em>variable_name</em>, <em>value</em>)</code> - stores the value of a Webhook.site Global Variable. Must be used async.</p>
+<p><code>stop()</code> - stops action execution and return response</p>
+<p><code>dont_save()</code> - marks current requests as <a href="#dont-save"><em>Don't Save</em></a>, so it won't be stored or shown in the Webhook.site requests list</p>
+<p><code>respond(<em>content</em>, <em>status</em>, <em>headers</em>)</code> - stops action execution and return response</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">respond</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Content-Type: text/plain&#39;</span><span class="p">])</span>
+</code></pre></div>
+<p><code>set_response(<em>content</em>, <em>status</em>, <em>headers</em>)</code> - sets response, but doesn't stop action execution</p>
+<h4 id="utility-modules">Utility Modules<a class="headerlink" href="#utility-modules" title="Permanent link">&para;</a></h4>
+<p>Code executed with the Webhook.site JavaScript action runs in a sandbox where the following utility libraries are available by using the <code>require()</code> function:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/axios"><code>axios</code></a> - HTTP Client
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">axios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;axios&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">await</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;https://webhook.site&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">   </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">   </span><span class="p">});</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1">// 200</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/lodash"><code>lodash</code></a> - General utility library
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lodash&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">last</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]))</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1">// 3</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/dayjs"><code>dayjs</code></a> - Date and time manipulation
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">dayjs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dayjs&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dayjs</span><span class="p">(</span><span class="mf">1318781876406</span><span class="p">))</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1">// &quot;2011-10-16T16:17:56.406Z&quot;</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/cheerio"><code>cheerio</code></a> - JQuery-like HTML selector library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">cheerio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cheerio&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cheerio</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;&lt;ul id=&quot;fruits&quot;&gt;banana&lt;/ul&gt;&#39;</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#fruits&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1">// banana</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/jsonpath"><code>jsonpath</code></a> - JSONPath query library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">jsonpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonpath&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;London&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;population&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8615246</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Berlin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;population&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">3517424</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">];</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonpath</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">cities</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;$..name&#39;</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">names</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1">// [&quot;London&quot;,&quot;Berlin&quot;]</span>
+</code></pre></div></li>
+<li><code>crypto</code> – Node.js built-in crypto library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;abcdefg&#39;</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="p">)</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">               </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="s1">&#39;I love Webhook.site&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">               </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">);</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hash</span><span class="p">);</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1">// 1745c764246c2782ebf97e25b89547a92571f19d41846b42880d3815480f098e</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/@faker-js/faker"><code>faker</code></a> - Seed data generator
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">faker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;faker&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">faker</span><span class="p">.</span><span class="nx">internet</span><span class="p">.</span><span class="nx">email</span><span class="p">())</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1">// Ila_Gutkowski9@yahoo.com</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/nats"><code>nats</code></a> - NATS Client
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;nats&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nc</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nx">nats</span><span class="p">.</span><span class="nx">connect</span><span class="p">({</span><span class="w"> </span><span class="nx">servers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;demo.nats.io:4442&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;demo.nats.io:4222&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div></li>
+<li><a href="https://www.npmjs.com/package/@supabase/supabase-js"><code>supabase</code></a> - Supabase Client
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">createClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;supabase&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">supabase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createClient</span><span class="p">(</span><span class="s1">&#39;https://xyzcompany.supabase.co&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;public-anon-key&#39;</span><span class="p">)</span>
+</code></pre></div></li>
+<li><a href="https://momentjs.com/docs"><code>moment</code></a> - Date and Time library
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;moment&#39;</span><span class="p">)</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">startOfLastWeek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;weeks&#39;</span><span class="p">).</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;isoWeek&#39;</span><span class="p">).</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">).</span><span class="nx">format</span><span class="p">();</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">startOfLastWeek</span><span class="p">)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1">// 2024-09-16T00:00:00+02:00</span>
+</code></pre></div></li>
+</ul>
+<p>Do you need a library that isn't listed here? Please <a href="https://support.webhook.site">contact support</a>!</p>
+<h3 id="webhookscript">WebhookScript<a class="headerlink" href="#webhookscript" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="/images/webhookscript-in-action.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="&quot;WebhookScript&quot; Custom Action screenshot" src="/images/webhookscript-in-action.png" /></a></p>
+<p>Executes custom scripts using a scripting language that's very similar to JavaScript and PHP.</p>
+<p>For more information about WebhookScript, see the <a href="/webhookscript/index.html">dedicated page</a>.</p>
+<h3 id="set-variable">Set Variable<a class="headerlink" href="#set-variable" title="Permanent link">&para;</a></h3>
+<p>Defines (or overwrites) a variable that's available to downstream actions. The variable is not saved permanently as a Global Variable.</p>
+<p>There are three modes:</p>
+<ul>
+<li><strong>Text</strong>: Using the default "Text" mode, the variable is simply set to what's entered in the Text field.</li>
+<li><strong>Random</strong>: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.</li>
+<li><strong>Date</strong>: Generate date strings specifying a custom input date and an output format - defaults to ISO-8601 format.</li>
+</ul>
+<figure>
+  <a class="glightbox" href="/images/set-variable-date.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set Variable Date Mode example" src="/images/set-variable-date.png" width="400" /></a>
+  <figcaption>Using the Set Variable action in the Date mode to create a date string 30 days in the past</figcaption>
+</figure>
+<h3 id="store-global-variable">Store Global Variable<a class="headerlink" href="#store-global-variable" title="Permanent link">&para;</a></h3>
+<p>Saves (or overwrites) a Global Variable that's saved permanently and available to all URLs in your account. If you don't need to save the variable permanently, you should use the <em>Set Runtime Variable</em> instead.</p>
+<h2 id="multimedia">Multimedia<a class="headerlink" href="#multimedia" title="Permanent link">&para;</a></h2>
+<h3 id="generate-pdf">Generate PDF<a class="headerlink" href="#generate-pdf" title="Permanent link">&para;</a></h3>
+<p>Takes either HTML or markdown input and generates a variable (<code>$pdf$</code>) containing the PDF file contents. You can enter this variable in e.g. an Send Email attachment content field, or with the <em>Modify Response</em> action (remember adding a <code>Content-Type: application/pdf</code> header!)</p>
+<p>If you have issues with special characters/scripts rendering as question marks (<code>?</code>), make sure you're using a font that supports those characters as the default fonts may not support it. You can import your own fonts using CSS, for example, inserting this HTML snippet in the <code>&lt;head&gt;</code> section will import the <code>Roboto</code> font from Google Fonts and use it as the default font:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css2?family=Roboto&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="o">*</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Roboto</span><span class="w"> </span><span class="p">}&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="resize-image">Resize Image<a class="headerlink" href="#resize-image" title="Permanent link">&para;</a></h3>
+<p>Takes an image from either a URL or raw image data from e.g. a file upload, email attachment, request response or another action such as Dropbox.</p>
+<p>You can enter both width and height to contrain the image in both dimensions, or enter a single dimension.</p>
+<p>Check "Keep Aspect Ratio" so that the image keeps the aspect ratio, but doesn't exceed the height and width constraints.</p>
+<h2 id="google-sheets">Google Sheets<a class="headerlink" href="#google-sheets" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Google Sheets should not be used as a database, and have low usage limits. If you need to import on the order of thousands
+of rows or make thousands of calls a day, Google Sheets cannot be used. We recommend using a database like Postgres in conjunction with the <em>Database Query</em> action.</p>
+</div>
+<p>Google Sheets Custom Actions lets you manipulate and retrieve values from a Google Sheet.</p>
+<p>The following Google Sheets Custom Actions are available:</p>
+<ul>
+<li>Add Row - appends one or more new rows to an existing spreadsheet</li>
+<li>Update Row - updates one or more cells in an existing spreadsheet</li>
+<li>Get Values - retrieves one or more cell values from an existing spreadsheet</li>
+</ul>
+<p>To start, you need to make sure that you have connected a Google account in the Control Panel, <a href="https://webhook.site/providers">available here</a>.</p>
+<p>After that, you can select the account in the dropdown when creating the Custom Action.</p>
+<h3 id="usage-limits">Usage Limits<a class="headerlink" href="#usage-limits" title="Permanent link">&para;</a></h3>
+<p>It is important to note that Google will block Write requests (i.e. adding or updating rows) at <strong>60 requests per minute</strong>. After that, the action will temporarily fail with the following error message:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Quota exceeded for quota metric &#39;Write requests&#39; and limit &#39;Write requests per minute per user&#39; of service &#39;sheets.googleapis.com&#39; for consumer
+</code></pre></div>
+<p>Therefore, for importing mass amounts of data in a short timespan, Google Sheets is not recommended. Instead, we recommend using the Database Query action.</p>
+<p>Additionally, Webhook.site will automatically disable Google Sheets actions that continously fail due to e.g. quota errors.</p>
+<h3 id="specifying-the-spreadsheet">Specifying the spreadsheet<a class="headerlink" href="#specifying-the-spreadsheet" title="Permanent link">&para;</a></h3>
+<p>When specifying the spreadsheet, you can either just copy/paste the spreadsheet URL or enter the spreadsheet ID. Variables can be used to specify the spreadsheet.</p>
+<h3 id="ranges">Ranges<a class="headerlink" href="#ranges" title="Permanent link">&para;</a></h3>
+<p>All actions must specify a range, which behaves similar in all actions. For the Add Row action, Google Sheets will automatically find a "table" (e.g. a homogenous mass of data) and add the values at the bottom. </p>
+<p>A range is the same query as in Google Sheets, e.g. to select A1-C3 in Worksheet "Example", enter <code>'Example'!A1:C3</code>.</p>
+<h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
+<p>When inserting or updating values, you can either enter a value in the text field, or supply multiple cells and/or rows using JSON. To insert two rows, the JSON would be <code>["cell 1", "cell 2"]</code>.</p>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<p>The Get Values Action allows you to define variables based on the output. Since this action can return multiple pieces of data, multiple variables are created.</p>
+<p>For example, if you select two columns and two rows, e.g. <code>A1:B2</code>, four variables would be defined:</p>
+<ol>
+<li><code>variable_name.0.0</code> = value of A1</li>
+<li><code>variable_name.0.1</code> = value of A2</li>
+<li><code>variable_name.1.0</code> = value of B1</li>
+<li><code>variable_name.1.1</code> = value of B2</li>
+</ol>
+<p>Additionally, the data is available in JSON, with the <code>variable_name.json</code> variable being defined, and continuing with the example above, would contain the following JSON:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">[</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;A1&quot;</span><span class="p">,</span><span class="s2">&quot;A2&quot;</span><span class="p">],</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;B1&quot;</span><span class="p">,</span><span class="s2">&quot;B2&quot;</span><span class="p">]</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">]</span>
+</code></pre></div>
+<h2 id="microsoft">Microsoft<a class="headerlink" href="#microsoft" title="Permanent link">&para;</a></h2>
+<h3 id="onedrive">OneDrive<a class="headerlink" href="#onedrive" title="Permanent link">&para;</a></h3>
+<p>With Webhook.site, you can now use your Microsoft account to upload and download files in your OneDrive account using the Upload and Download Custom Actions.</p>
+<h3 id="excel">Excel<a class="headerlink" href="#excel" title="Permanent link">&para;</a></h3>
+<p>Using the Add Rows and Get Values actions, Webhook.site now allows using your Microsoft account to append and retrieve data from Excel worksheets in your OneDrive account.</p>
+<h4 id="add-rows">Add Rows<a class="headerlink" href="#add-rows" title="Permanent link">&para;</a></h4>
+<p>To use the Add Rows function, the Microsoft API requires that data is inserted into a Table. Therefore, before starting, make sure you have a Table in your workbook, and enter the correct Table name.</p>
+<figure>
+  <a class="glightbox" href="/images/excel-table.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Finding Table name in Excel" src="/images/excel-table.png" width="300" /></a>
+  <figcaption>Finding Table name in Excel</figcaption>
+</figure>
+<p>To create a table, select a range and click Insert -&gt; Table.</p>
+<figure>
+  <a class="glightbox" href="/images/excel-create-table.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a Table in Excel" src="/images/excel-create-table.png" width="300" /></a>
+  <figcaption>Creating a Table in Excel</figcaption>
+</figure>
+<h4 id="error-you-do-not-have-permissions-to-open-this-file-in-the-browser">Error: You do not have permissions to open this file in the browser<a class="headerlink" href="#error-you-do-not-have-permissions-to-open-this-file-in-the-browser" title="Permanent link">&para;</a></h4>
+<p>This error seems to have started happening around Feburary 2024 for some users. All 3rd parties - including Webhook.site - that connect to Microsoft's API are affected. There is no known solution at the moment. We encourage users experiencing this to contact Microsoft Support.</p>
+<h2 id="amazon-web-services-aws">Amazon Web Services (AWS)<a class="headerlink" href="#amazon-web-services-aws" title="Permanent link">&para;</a></h2>
+<h3 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h3>
+<p>The following actions are available for AWS S3:</p>
+<ul>
+<li>Create Bucket</li>
+<li>Create Object</li>
+<li>Delete Object</li>
+<li>Get Object (retrieves object contents to a Variable)</li>
+</ul>
+<p>In addition to the "official" Amazon endpoints, Webhook.site also supports S3-compatible storages like Google Cloud Storage, DigitalOcean, MinIO, Wasabi and more. The endpoint can be specified when setting up the account in Control Panel.</p>
+<h4 id="using-with-google-cloud-storage">Using with Google Cloud Storage<a class="headerlink" href="#using-with-google-cloud-storage" title="Permanent link">&para;</a></h4>
+<p>To use the S3 action with a Google Cloud Storage bucket, do the following:</p>
+<ol>
+<li>Go to Google Cloud Console &rarr; Cloud Storage &rarr; Settings &rarr; <a href="https://console.cloud.google.com/storage/settings;tab=interoperability">Interoperability</a></li>
+<li>Create keys for either an existing or a new Google Service Account</li>
+<li>Copy <em>Access key</em> in <em>AWS IAM Key</em></li>
+<li>Copy <em>Secret</em> in <em>AWS IAM Secret</em></li>
+<li>Enter <code>https://storage.googleapis.com</code> in <em>Custom Endpoint</em></li>
+</ol>
+<figure>
+  <a class="glightbox" href="/images/google-cloud-storage-setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Using S3 with Google Cloud Storage credentials" src="/images/google-cloud-storage-setup.png" width="300" /></a>
+  <figcaption>Using S3 with Google Cloud Storage credentials</figcaption>
+</figure>
+<p>When creating the S3 action, you can leave the <em>Region</em> field blank.</p>
+<h3 id="cloudfront">CloudFront<a class="headerlink" href="#cloudfront" title="Permanent link">&para;</a></h3>
+<p>The "Create Invalidation" action allows you to dynamically create a CloudFront cache invalidation as a Custom Action. Both the Distribution ID and the paths to be invalidated are replaced with Webhook.site Variables.</p>
+<h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">&para;</a></h2>
+<p>With the Discord Custom Action, you can send messages to a specified channel (Each bot account uses a specific channel, so you can connect more accounts to send to different channels or servers.) In addition, you can choose a custom username and avatar image for the bot user.</p>
+<p><a class="glightbox" href="/images/discord.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="&quot;Discord&quot; Custom Action screenshot" src="/images/discord.png" /></a></p>
+<h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">&para;</a></h2>
+<p>With the Slack Custom Action, you can easily use Slack's Webhook URLs to send messages to a channel.</p>
+<h2 id="dropbox">Dropbox<a class="headerlink" href="#dropbox" title="Permanent link">&para;</a></h2>
+<p>The Dropbox integration has access to the entire contents of your dropbox, and currently the following actions are available:</p>
+<ul>
+<li>Create Folder</li>
+<li>Download File</li>
+<li>Upload File</li>
+<li>Delete File</li>
+<li>Delete Folder</li>
+<li>Get Link - creates a temporary download link for any file in your Dropbox, and saves it in a variable.</li>
+</ul>
+<h2 id="hubspot">HubSpot<a class="headerlink" href="#hubspot" title="Permanent link">&para;</a></h2>
+<p>With the HubSpot application, you can create Contacts in our HubSpot CRM system. (This action is new, and we're still exploring possibilities - if you want more capabilities for the HubSpot action, please <a href="https://support.webhook.site">let us know</a>!)</p>
+<p><a class="glightbox" href="/images/hubspot_action.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="&quot;HubSpot&quot; Custom Action screenshot" src="/images/hubspot_action.png" /></a></p>
+<h2 id="x-formerly-known-as-twitter">X (formerly known as Twitter)<a class="headerlink" href="#x-formerly-known-as-twitter" title="Permanent link">&para;</a></h2>
+<p>The X Integration supports the following actions using X's API:</p>
+<ul>
+<li>Post Tweet</li>
+</ul>
+<h2 id="rabbitmq">RabbitMQ<a class="headerlink" href="#rabbitmq" title="Permanent link">&para;</a></h2>
+<p>The RabbitMQ Integration allows you to publish and consume messages from a RabbitMQ queue by specifying the server connection details.</p>
+<h2 id="pushed">Pushed<a class="headerlink" href="#pushed" title="Permanent link">&para;</a></h2>
+<p>With the Send Push Notification action, you can easily send push notifications to your mobile devices using your Pushed.co account.</p>
+<p><a class="glightbox" href="/images/pushed.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="&quot;Pushed&quot; Custom Action screenshot" src="/images/pushed.png" /></a></p>
+<p>With a <a href="https://pushed.co/pricing">free Pushed.co account</a>, you can send up to 1000 push notifications a month.</p>
+<h2 id="ntfysh">ntfy.sh<a class="headerlink" href="#ntfysh" title="Permanent link">&para;</a></h2>
+<p>Allows you to easily send push notifications to your browser, phone, watch, etc. Simply download the ntfy.sh app, subscribe to your topic name and send a message to the topic name via this Custom Action. No account required.</p>
+<p>App download links: </p>
+<ul>
+<li><a href="https://apps.apple.com/us/app/ntfy/id1625396347" target="_blank">App Store</a> </li>
+<li><a href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank">Google Play</a></li>
+<li><a href="https://ntfy.sh/app">Browser</a></li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 11, 2024 07:55:44</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.action.edit"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
