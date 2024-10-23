@@ -187,6 +187,7 @@ Rate limit: 60 requests per minute.
         ]
       },
       "response_body": "<!doctype html>\n<html>\n<head>...",
+      "time": 0.23,
       "error": null,
       "created_at": "2022-11-06 19:27:09",
       "updated_at": "2022-11-06 19:27:09"
@@ -207,6 +208,7 @@ Rate limit: 60 requests per minute.
         ]
       },
       "response_body": "<!doctype html>\n<html>\n<head>...",
+      "time": 1.23,
       "error": null,
       "created_at": "2022-11-06 19:30:02",
       "updated_at": "2022-11-06 19:30:02"
