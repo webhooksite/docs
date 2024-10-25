@@ -81,8 +81,8 @@ Your data is secured in your account, and can be accessed by API Key or login. W
 ### Permanent URLs 
 The URLs stay in your account forever, the 7-day auto expiration of the free version is removed.
 
-### Store more than 500 requests or emails 
-With the free version, URLs stop taking in new requests or emails after the 500 request limit is reached. With Pro, the limit of max 500 requests or emails per URL is removed and raised to 10.000 requests or emails, which are then rotated automatically.
+### Store more than 100 requests or emails 
+With the free version, URLs stop taking in new requests or emails after the 100 request limit is reached. With Pro, the limit of max 100 requests or emails per URL is removed and raised to 10.000 requests or emails, which are then rotated automatically.
 
 ### Unlimited URLs 
 Create as many upgraded URLs or email addresses as you need at no extra cost.
