@@ -158,13 +158,15 @@ Variables will be replaced in the fields `request_url`, `request_method`, `reque
 
 ## Get Schedule Logs
 
-#### Request
-
 **GET** `/schedules/:scheduleId/logs`
 
 Set `Accept` header to `application/json`.
 
 Rate limit: 60 requests per minute.
+
+#### Query string parameters
+
+* `sorting` (string) - either `newest` or `oldest` (default)
 
 #### Response
 
