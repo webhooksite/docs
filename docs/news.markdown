@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 November 2024
+
+* RabbitMQ Publish action: Added support for header properties like `x-message-ttl`
+* JavaScript action: Added libraries `node-fetch` and `form-data`.
+
 ## 16 October 2024
 
 * New Features in User Management: 

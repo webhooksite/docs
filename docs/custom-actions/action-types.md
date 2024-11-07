@@ -571,6 +571,20 @@ Code executed with the Webhook.site JavaScript action runs in a sandbox where th
    console.log(startOfLastWeek)
    // 2024-09-16T00:00:00+02:00
    ```
+* [`form-data`]() - Form library
+  ```javascript
+  var FormData = require('form-data');
+
+  var form = new FormData();
+  form.append('my_field', 'my value');
+  form.append('my_buffer', new Buffer(10));
+  ```
+* [`fetch`]() - HTTP Client
+  ```javascript
+  var fetch = require('fetch')
+  const response = await fetch('https://webhook.site');
+  console.log(await response.text())
+  ```
    
 Do you need a library that isn't listed here? Please <a href="https://support.webhook.site">contact support</a>!
 
