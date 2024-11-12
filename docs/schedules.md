@@ -17,7 +17,7 @@ A timeout or server error will trigger a Schedule error notification email, if e
 
 Schedules can also be managed using the [Schedules API](/api/schedules.html).
 
-![Schedules editor](/images/schedules-editor.png)
+![Schedules editor](/images/c1hrUfY2Nqp6fn9dFPZsQuW7.png)
 
 ## Uptime monitoring & Requirements
 

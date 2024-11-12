@@ -22,6 +22,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 12 November 2024
+
+* Updates for [Schedules](/schedules.html):
+    * It's now possible to attach Schedules to Groups. With Roles, you can limit which Schedules can be viewed by certain users.
+    * Schedules now supports alerting based on HTTPS certicate expiry, when expiry is less than a selected amount of days. 
+    * Fixed sorting on Schedule Logs page.
+
 ## 7 November 2024
 
 * RabbitMQ Publish action: Added support for header properties like `x-message-ttl`
