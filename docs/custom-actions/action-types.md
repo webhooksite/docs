@@ -448,6 +448,27 @@ To use the result of the Condition, select it in the "only run when condition pa
 
 Tip: To check if a Variable is set (or exists), you must enter the variable name in both input and value fields and use the "is not equal to" operator, since non-existing variables are not replaced.
 
+### Set Variable
+
+Defines (or overwrites) a variable that's available to downstream actions. The variable is not saved permanently as a Global Variable.
+
+There are three modes:
+
+* **Text**: Using the default "Text" mode, the variable is simply set to what's entered in the Text field.
+* **Random**: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.
+* **Date**: Generate date strings specifying a custom input date and an output format - defaults to ISO-8601 format.
+
+<figure markdown="span">
+  ![Set Variable Date Mode example](/images/set-variable-date.png){ width="400" }
+  <figcaption>Using the Set Variable action in the Date mode to create a date string 30 days in the past</figcaption>
+</figure>
+
+### Store Global Variable
+
+Saves (or overwrites) a Global Variable that's saved permanently and available to all URLs in your account. If you don't need to save the variable permanently, you should use the *Set Runtime Variable* instead.
+
+## Scripting
+
 ### JavaScript
 
 With the JavaScript action, you can execute JavaScript code using a Node.js sandbox that runs on the Webhook.site cloud.
@@ -595,25 +616,6 @@ Do you need a library that isn't listed here? Please <a href="https://support.we
 Executes custom scripts using a scripting language that's very similar to JavaScript and PHP.
 
 For more information about WebhookScript, see the [dedicated page](/webhookscript/index.html).
-
-### Set Variable
-
-Defines (or overwrites) a variable that's available to downstream actions. The variable is not saved permanently as a Global Variable.
-
-There are three modes:
-
-* **Text**: Using the default "Text" mode, the variable is simply set to what's entered in the Text field.
-* **Random**: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.
-* **Date**: Generate date strings specifying a custom input date and an output format - defaults to ISO-8601 format.
-
-<figure markdown="span">
-  ![Set Variable Date Mode example](/images/set-variable-date.png){ width="400" }
-  <figcaption>Using the Set Variable action in the Date mode to create a date string 30 days in the past</figcaption>
-</figure>
-
-### Store Global Variable
-
-Saves (or overwrites) a Global Variable that's saved permanently and available to all URLs in your account. If you don't need to save the variable permanently, you should use the *Set Runtime Variable* instead.
 
 ## Multimedia
 
