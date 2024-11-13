@@ -79,19 +79,19 @@ Yes. Thousands of our customers use Webhook.site to build workflows that help th
 
 For each URL associated with a subscribed Webhook.site account, Webhook.site makes the latest 10.000 requests or emails available. Old requests are automatically rotated/purged periodically. 
 
-In other words, A URL associated with an upgraded account will keep accepting an unlimited amount of requests and emails, but only the latest 10.000 will be available. (If you want to store data permanently, you can use Custom Actions to transfer data to a storage provider like AWS S3 or Dropbox.)
+In other words, A URL associated with an account will keep accepting an unlimited amount of requests and emails, but only the latest 10.000 will be available. (If you want to store data permanently, you can use Custom Actions to transfer data to a storage provider like AWS S3 or Dropbox.)
 
 For free users of Webhook.site (URLs not associated with an upgraded account), the URL stops accepting new requests and emails after a limit of 100 requests or emails. However, the limit is automatically removed once the URL is upgraded and associated with a Webhook.site account.
 
 ## How long is data stored on Webhook.site?
 
-For Free users, the URL – and its data – is automatically removed after 7 days with no activity.
+For paid customers, URLs associated with an account never automatically expire, but data is automatically purged after a maximum of 365 days.
 
-For paid customers, URLs never automatically expire, but data is automatically removed after a maximum of 365 days.
+For Free users, the URL – and its data – is automatically removed after 7 days.
 
 ## How can I automatically remove data from Webhook.site?
 
-Many business have strict requirements on the amount of data that can be stored by third-party companies. Webhook.site provides several flexible ways to implement requirements like these.
+Many businesses have strict requirements on the amount of data that can be stored by third-party companies. Webhook.site gives full flexibility with regards to this and provides several flexible ways to implement data protection and security requirements like these.
 
 **By amount**
 
@@ -147,6 +147,8 @@ To hand over your account to a different business or individual you essentially 
 6. The account receiver can then [create a new subscription](https://webhook.site/payment) on the account.
 
 After this, you will no longer have access to your account and it is fully handed over.
+
+Alternatively, contact [Webhook.site Support](https://support.webhook.site) for help with transferring data to another Webhook.site account.
 
 ## I want to whitelist Webhook.site in our firewall, which IPs do you use?
 
