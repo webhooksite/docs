@@ -140,7 +140,7 @@ echo(json_encode(array))
 
 Returns a base64-decoded string.
 
-### base64url_decode(***string*** string) : string
+### base64_urldecode(***string*** string) : string
 
 Returns a base64url-decoded string.
 
@@ -150,7 +150,7 @@ If the base64 string was encoded using URL-friendly `base64url` format, this fun
 
 Returns base64-encoded string.
 
-### base64url_encode(***string*** string) : string
+### base64_urlencode(***string*** string) : string
 
 Returns a URL-friendly base64url-encoded string, where characters `+`, `/` have been replaced by `-` and `_`, and any `=` padding characters have been removed.
 
