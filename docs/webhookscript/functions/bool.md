@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/afb93940-f507-4b26-95f4-a78c7417cfdf
+
 ### bool_and(***bool*** value1, ***bool*** value2): ***bool***
 
 Returns `value1 && value2`
