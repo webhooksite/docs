@@ -20,7 +20,7 @@ After creating a token, URLs at `https://webhook.site/{token.uuid}` and `https:/
 * `timeout` (int) amount of seconds to sleep before returning the response, max 30. Intended for testing timeouts, requests to tokens with timeouts are rate limited; a high timeout value will incur a lower rate limit.
 * `listen` (int) amount of seconds to listen for a response from the Set Response endpoint. `0` to disable, max `10`. Default `0`.
 * `expiry` (int) amount of seconds until token auto-expiration. Max value (and default for non-upgraded URLs) is 604800 (one week). Intended for e.g. automated testing pipelines. Leave out or set to `null` to disable.
-* `request_limit` (int) - limits the request history amount from 1 to 10000 (default)
+* `request_limit` (int) - limits the request history of the Token, from 0 (no data stored on Webhook.site servers) to 10000 (default)
 * `cors` (bool) set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
 * `alias` (string) allows setting the alias of the token.
 * `actions` (bool) specifies if Custom Actions are enabled and executed on every request/email (true), or disabled (false.)

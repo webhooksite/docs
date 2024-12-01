@@ -231,7 +231,7 @@ After, with the JSON Escape Variable Modifier:
 
 ## How do I export the data stored on Webhook.site?
 
-With [Webhook.site Pro](pro.markdown), there's a variety of different ways to export data sent to your URL or email address.
+With a [Webhook.site subscription](pro.markdown), there's a variety of different ways to export data sent to your URL or email address.
 
 1. Custom Actions can be used in a variety of ways to export data. Below are listed a few examples of actions that could be used. [More info here](/custom-actions/action-types.html).
      * [Database Query](/custom-actions/action-types.html#database-query)
