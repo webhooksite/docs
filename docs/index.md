@@ -97,9 +97,9 @@ Many businesses have strict requirements on the amount of data that can be store
 
 It is possible to lower or entirely disable the request limit of a Webhook.site URL. The default request history limit is 10.000 requests, emails or DNSHooks. 
 
-If the value is set to 0, no request history is stored in the Webhook.site Cloud, but Custom Actions will execute, requests are streamed to the Webhook.site interface and Webhook.site CLI forwarding will function. 
+If the value is set to 0, no request history is stored in the Webhook.site Cloud, but Custom Actions will continue to run, requests are streamed to the Webhook.site interface and Webhook.site CLI forwarding will continue to function. 
 
-To change it, click *Edit* in the upper-right corner, or use the API via the [`request_limit`](/api/tokens.html#create-token) parameter.
+To change the request limit, click *Edit* in the upper-right corner, or use the API via the [`request_limit`](/api/tokens.html#create-token) parameter.
 
 **By date**
 
