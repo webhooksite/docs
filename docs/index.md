@@ -91,13 +91,11 @@ For Free users, the URL – and its data – is automatically removed after 7 da
 
 ## How can I automatically remove data from Webhook.site?
 
-Many businesses have strict requirements on the amount of data that can be stored by third-party companies. Webhook.site gives full flexibility with regards to this and provides several flexible ways to implement data protection and security requirements like these.
+Many businesses have strict requirements on the amount of data that can be stored by third-party companies, and Webhook.site provides full flexibility to handle these data protection and security requirements by limiting the amount of data stored on the Webhook.site Cloud.
 
 **By amount**
 
-You can lower the request history amount of Webhook.site stores on your URL. 
-
-The default request limit is 10.000. Any value lower than that can be used. 
+It is possible to lower or entirely disable the request limit of a Webhook.site URL. The default request history limit is 10.000 requests, emails or DNSHooks. 
 
 If the value is set to 0, no request history is stored in the Webhook.site Cloud, but Custom Actions will execute, requests are streamed to the Webhook.site interface and Webhook.site CLI forwarding will function. 
 
