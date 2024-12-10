@@ -78,6 +78,7 @@ You can filter requests by the following syntax:
 * `headers.user-agent:"Paw/3.3.5 (Macintosh; OS X/11.6.2) GCDHTTPRequest"` - search value of user-agent header
 * `query.action:create` - returns requests that have the query string `action` set to `create`.
 * `_exists_:query.action` - returns requests where the action query parameter exists
+* `_exists_:custom_action_errors` - returns requests with at least 1 Custom Actions error
 * `type:web` / `type:email` - returns either Web requests or emails
 * `type:web AND method:POST` - AND query
 * `method:PUT OR method:POST` - OR query

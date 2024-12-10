@@ -22,6 +22,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 10 December 2024
+
+* It's now easier to find requests with Custom Action errors – now they're highlighted in the request sidebar.
+* There's now a button to find recently accessed Webhook.site URLs in far left of the menu bar.
+
 ## 12 November 2024
 
 * Updates for [Schedules](/schedules.html):
