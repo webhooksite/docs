@@ -407,13 +407,18 @@ When the URL is visited with a Web browser, a username and password form will be
 
 !["Condition" Custom Action screenshot](/images/condition-action.png)
 
-Useful if you need to validate that the request does or does not conform to certain criteria, the Condition action will either stop or continue based on a condition.
+Useful for validating if variables conform to a set of certain criteria, this action will either create a condition that can be used in downstream actions, or simply stop or continue the action flow entirely.
 
-In both the *input* and the *value* fields, variables will be replaced (including Global Variables from the Control Panel), so you can compare e.g. JSONPath or Regex values - or even values from a previous HTTP request that was sent. 
+<figure markdown="span">
+  ![Basic Auth in browsers](/images/EQeP6s783LK1y5hnj6u7ObvO.png){ width="300" }
+  <figcaption>Using a defined condition in downstream actions</figcaption>
+</figure>
 
-Currently, three *actions* are provided: use result, stop and continue. *Use Result* allows using the Condition result in further actions. *Stop* will stop further action execution of the condition is a match. *Continue* will *only* continue further execution if the condition is a match, and otherwise stop.
+In both the *input* and the *value* fields, variables can be used (including Global Variables from the Control Panel), so you can compare e.g. JSONPath or Regex values - or even values from a previous HTTP request that was sent. 
 
-To make an *is equal to* condition on a boolean value from a JSON structure, you can enter `0` for `false` or `1` for `true`. 
+Currently, three *actions* are provided: use result, stop and continue. *Use Result* allows using the Condition result in downstream actions. *Stop* will stop further action execution of the condition is a match. *Continue* will *only* continue further execution if the condition is a match, and otherwise stop.
+
+To make an *equal to* condition on a boolean value from a JSON structure, you can enter `0` for `false` or `1` for `true`. 
 
 #### Operators with value argument
 
@@ -440,13 +445,7 @@ To make an *is equal to* condition on a boolean value from a JSON structure, you
 * is domain - e.g. `webhook.site`
 * is URL - e.g. `https://webhook.site?value=xxx`
 
-The "result" of the condition will be logged below the request details, so you can see what happened.
-
-To use the result of the Condition, select it in the "only run when condition passes" checkbox:
-
-![](/images/EQeP6s783LK1y5hnj6u7ObvO.png)
-
-Tip: To check if a Variable is set (or exists), you must enter the variable name in both input and value fields and use the "is not equal to" operator, since non-existing variables are not replaced.
+The "result" of the condition will be logged to the action output, so you can see what happened.
 
 ### Set Variable
 

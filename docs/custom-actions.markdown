@@ -12,6 +12,28 @@ With Custom Actions, it is possible to create a workflow out of a set of actions
 
 Using this functionality, you can connect APIs that aren't compatible, convert a HTTP request to an email or vice versa, build workflows that would otherwise require a developer, and much, much more.
 
+The general principle of Custom Actions is that they are always executed in a chain. As they run, [Variables](/custom-actions/variables.html) are exchanged between them. 
+
+Additionally, the [Conditions](/custom-actions/action-types.html#conditions) action can define certain conditions that are used to decide whether specific actions run or not. 
+
+Even though actions are run in a chain, it's still possible to branch out and run actions in an asynchronous manner via [queued actions](/custom-actions.html#queued-actions), or loop over sets of data using actions that can be [repeated](https://docs.webhook.site/custom-actions.html#repeating-actions).
+
+On each request, the output for all the different actions is collected so you can go back and see what happened. If the action sends HTTP Requests, both the request and response details are shown.
+
+<figure markdown="span">
+  ![Auto JSON in action](/images/kCuUKnGNu1NNGv4j7Y3UXTyV.png){ width="300" }
+  <figcaption>Action output shown on individual requests along with HTTP Request data</figcaption>
+</figure>
+
+If actions fail, the request they ran on is marked. It is possible to set up [notifications](https://webhook.site/notifications) for when actions (and Schedules) fail. In Control Panel, [Error Log](https://webhook.site/control-panel/error-log) provides a convenient way to search for errors occurring across all URLs and Schedules associated with the Webhook.site account. 
+
+With [Replay](/custom-actions.html#replay), it's possible to run the actions again, e.g. for actions that failed previously.
+
+<figure markdown="span">
+  ![Auto JSON in action](/images/ZxJHuOqDle5GG5kzDyc2WyPt.png){ width="300" }
+  <figcaption>Error Log is a convenient way to monitor Schedules and Custom Actions</figcaption>
+</figure>
+
 ## Demos
 
 ### JavaScript, X and Schedules

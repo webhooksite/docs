@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 11 December 2024
+
+* Fixed an issue where a JavaScript Custom Action running from incoming emails with attachments would cause an error.
+
 ## 10 December 2024
 
 * It's now easier to find requests with Custom Action errors – now they're highlighted in the request sidebar.
