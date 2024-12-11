@@ -405,7 +405,7 @@ When the URL is visited with a Web browser, a username and password form will be
 
 ### Conditions
 
-!["Condition" Custom Action screenshot](/images/condition-action.png)
+!["Condition" Custom Action screenshot](/images/zIDnZ3bUfAk1WylYiEJy2VPZ.png)
 
 Useful for validating if variables conform to a set of certain criteria, this action will either create a condition that can be used in downstream actions, or simply stop or continue the action flow entirely.
 
