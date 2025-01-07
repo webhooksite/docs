@@ -449,9 +449,9 @@ The "result" of the condition will be logged to the action output, so you can se
 
 ### Set Variable
 
-Defines (or overwrites) a variable that's available to downstream actions. The variable is not saved permanently as a Global Variable.
+Defines (or overwrites) a variable that's available to downstream actions. The variable is not saved permanently.
 
-There are three modes:
+There are several modes:
 
 * **Text**: Using the default "Text" mode, the variable is simply set to what's entered in the Text field.
 * **Random String**, **Random Number**: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.
