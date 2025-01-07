@@ -454,13 +454,29 @@ Defines (or overwrites) a variable that's available to downstream actions. The v
 There are three modes:
 
 * **Text**: Using the default "Text" mode, the variable is simply set to what's entered in the Text field.
-* **Random**: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.
+* **Random String**, **Random Number**: When using the "Random" mode, you can generate a random string for e.g. one-time identifiers and passwords.
 * **Date**: Generate date strings specifying a custom input date and an output format - defaults to ISO-8601 format.
+* **Math**: Easily execute powerful math expressions like `$myvar$ + 1` (increment a Variable) or `round($myvar$, 2)` (round to 2 decimals), see below for more
 
 <figure markdown="span">
   ![Set Variable Date Mode example](/images/set-variable-date.png){ width="400" }
   <figcaption>Using the Set Variable action in the Date mode to create a date string 30 days in the past</figcaption>
 </figure>
+
+#### Math Mode
+
+Operators supported: `+ - * / % ^` as well as parentheses `()` and arrays `[1, 2, 3]`
+
+Supported functions: `abs`, `acos (arccos)`, `acosh`, `arccos`, `arccosec`, `arccot`, `arccotan`, `arccsc (arccosec)`, `arcctg (arccot`, `arccotan)`, `arcsec`, `arcsin`, `arctan`, `arctg`, `array`, `asin (arcsin)`, `atan (atn`, `arctan`, `arctg)`, `atan2`, `atanh`, `atn`, `avg`, `bindec`, `ceil`, `cos`, `cosec`, `cosec (csc)`, `cosh`, `cot`, `cotan`, `cotg`, `csc`, `ctg (cot`, `cotan`, `cotg`, `ctn)`, `ctn`, `decbin`, `dechex`, `decoct`, `deg2rad`, `exp`, `expm1`, `floor`, `fmod`, `hexdec`, `hypot`, `if`, `intdiv`, `lg`, `ln`, `log (ln)`, `log10 (lg)`, `log1p`, `max`, `median`, `min`, `octdec`, `pi`, `pow`, `rad2deg`, `round`, `sec`, `sin`, `sinh`, `sqrt`, `tan (tn`, `tg)`, `tanh`, `tg`, `tn`
+
+Functions can accept variable arguments: `avg(1, 2, 3)` or arrays: `avg([1, 2, 3])`
+
+Logical operators (`==`, `!=`, `<`, `<`, `>=`, `<=`, `&&`, `||`, `!`) are supported, but logically they can only return true (`1`) or false (`0`). In order to leverage them, use the built in if function: `if($a > $b, $a - $b, $b - $a)`
+
+Default variables:
+
+* `$pi` = 3.14159265359
+* `$e`  = 2.71828182846
 
 ### Store Global Variable
 

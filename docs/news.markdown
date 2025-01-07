@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 January 2025
+
+* Set Variable action now supports [Math Mode](https://docs.webhook.site/custom-actions/action-types.html#math-mode), allowing powerful math expressions without scripting.
+
 ## 11 December 2024
 
 * Fixed an issue where a JavaScript Custom Action running from incoming emails with attachments would cause an error.
