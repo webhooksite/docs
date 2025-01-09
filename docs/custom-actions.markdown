@@ -115,10 +115,8 @@ If the filter matches more than 50 requests, a warning will be shown.
 <a href="/images/replay.png">
     ![Custom Actions Replay screenshot](/images/replay.png)</a>
 
-In this example above, an invalid port was set for a Database action. After correcting it, it's possible to run the action again. You can use the same [Search Query language](/api/requests.html#search-query-examples) to filter which specific requests should have their actions replay.
-
 Existing action output stored on a request is overwritten by the replay action output.
 
-Actions that are marked as queued will also be run as queued when replayning actions.
+Actions that are marked as queued will also be run as queued when replaying actions.
 
-While Webhook.site starts processing oldest requests first, actinos are run in batches and execution order is not strictly guaranteed.
+While Webhook.site starts processing oldest requests first, actions are run in batches and execution order is not guaranteed.
