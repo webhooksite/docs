@@ -74,6 +74,7 @@ You can filter requests by the following syntax:
 
 * `foobar` - if no field is specified, `content` is searched (equivalent to `content:foobar`)
 * `content:foobar` - returns requests or emails with body contents containing the word `foobar`
+* `content:"de673d0a-6d7b-4c88-ae00-bf0c241e810e"` - if query contains word breaker characters like `-` or other special characters, surround with quotes to search for the exact string
 * `method:GET` - returns all requests with method GET
 * `headers.user-agent:"Paw/3.3.5 (Macintosh; OS X/11.6.2) GCDHTTPRequest"` - search value of user-agent header
 * `query.action:create` - returns requests that have the query string `action` set to `create`.
