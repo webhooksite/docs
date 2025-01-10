@@ -31,7 +31,7 @@ Webhook.site company stats as of October 2024:
 
 Webhook.site is operated by Webhook ApS (VAT ID: DK41561718).
 
-Address: Damhusvej 95, 3 tv, 5000 Odense, Denmark.
+Address: Skibsbyggerstræde 20 5. th, 5000 Odense, Denmark.
 
 Company director: [Simon Fredsted](https://simonfredsted.com).
 
@@ -41,7 +41,7 @@ Company director: [Simon Fredsted](https://simonfredsted.com).
 
 * Receive Webhooks without needing an internet-facing Web server
 * Creating advanced workflows/automations that run when a URL is requested or an email is received
-* Use Webhook.site as an intermediary, proxying requests and being able to see what was sent in the past
+* Use Webhook.site as an intermediary or gateway, proxying and forwarding requests and being able to see what was sent in the past
 * Send Webhooks to a server that's behind a firewall or private subnet
 * Transforming Webhooks into other formats, and re-sending them to different systems
 * Connect different computer systems or APIs that aren't compatible
@@ -85,9 +85,9 @@ For free users of Webhook.site (URLs not associated with an upgraded account), t
 
 ## How long is data stored on Webhook.site?
 
-For paid customers, URLs associated with an account never automatically expire, but data is automatically purged after a maximum of 365 days.
+For subscribed customers, URLs associated with an account never automatically expire, but data is automatically purged after a maximum of 365 days.
 
-For Free users, the URL – and its data – is automatically removed after 7 days.
+For free users, the URL – and its data – is automatically removed after 7 days.
 
 ## How can I automatically remove data from Webhook.site?
 
