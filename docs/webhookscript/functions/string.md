@@ -261,6 +261,14 @@ If `safe_mode` is set to true, characters like `<`, `>` are HTML-entity encoded.
 
 ## JSON
 
+### is_json(***any*** value) : bool
+
+Returns true if `value` is a valid JSON string.
+
+```
+is_json('{"test": "test"}').dump() // true
+```
+
 ### json_decode(***string*** json) : array
 
 Decodes `json` and returns an array.
