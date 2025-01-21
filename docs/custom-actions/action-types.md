@@ -407,7 +407,11 @@ When the URL is visited with a Web browser, a username and password form will be
 
 By utilizing the Mock action, you have the ability to upload an OpenAPI or Swagger specification in YAML or JSON, enabling your Webhook.site URL to automatically function as a mock server. This is achieved by dynamically generating responses that align with the paths, endpoints, and data schemas outlined within the uploaded specification, allowing for seamless testing and simulation of API behavior.
 
-If the spec is a URL, Webhook.site will try to download the specification and parse it from JSON or YAML.
+If the spec is a URL, Webhook.site will try to download the specification and parse it from JSON or YAML. 
+
+An example spec that can be used can be found [here](https://gist.github.com/fredsted/dbcae9438d2328e41cd393ebb5cd3883).
+
+If your spec defines a *server*, it's recommended that it's added via the Path field, e.g. `https://example.com$request.path$`
 
 **Video demo**
 
