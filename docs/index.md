@@ -118,7 +118,7 @@ Remember to click the URL Encode button before saving.
 * Headers: `Api-Key: 00000000-0000-0000-000000000` - replace `00000000-0000-0000-000000000` with your API key.
 
 <figure markdown="span">
-  ![Auto JSON in action](/images/schedule-autodelete.png){ width="300" }
+  ![Automatically remove requests with Schedules](/images/schedule-autodelete.png){ width="300" }
   <figcaption>Automatically removing requests using Webhook.site API and Schedules</figcaption>
 </figure>
 

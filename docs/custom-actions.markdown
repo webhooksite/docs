@@ -21,7 +21,7 @@ Even though actions are run in a chain, it's still possible to branch out and ru
 On each request, the output for all the different actions is collected so you can go back and see what happened. If the action sends HTTP Requests, both the request and response details are shown.
 
 <figure markdown="span">
-  ![Auto JSON in action](/images/kCuUKnGNu1NNGv4j7Y3UXTyV.png){ width="300" }
+  ![Extract JSON in action](/images/kCuUKnGNu1NNGv4j7Y3UXTyV.png){ width="300" }
   <figcaption>Action output shown on individual requests along with HTTP Request data</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ If actions fail, the request they ran on is marked. It is possible to set up [no
 With [Replay](/custom-actions.html#replay), it's possible to run the actions again, e.g. for actions that failed previously.
 
 <figure markdown="span">
-  ![Auto JSON in action](/images/ZxJHuOqDle5GG5kzDyc2WyPt.png){ width="300" }
+  ![Extract JSON in action](/images/ZxJHuOqDle5GG5kzDyc2WyPt.png){ width="300" }
   <figcaption>Error Log is a convenient way to monitor Schedules and Custom Actions</figcaption>
 </figure>
 
@@ -53,6 +53,12 @@ In the following demo, webshop order details are received in a webhook. We then 
 A quick demo of how to use the Split Text action to loop over a list of URLs and forward the incoming request to them.
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/9LYjKPgO6Gk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+### Mock OpenAPI and Swagger specifications using Mock action
+
+The [Mock](/custom-actions/action-types.html#mock) action lets you upload an OpenAPI or Swagger specification, and your Webhook.site URL will automatically act as a mock server, creating responses based on the paths and schemas in the specification.
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/QIEzn4i_P-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ## Templates
 

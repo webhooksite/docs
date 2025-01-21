@@ -72,12 +72,12 @@ For more details on what's possible with JSONPath, [take a look at the docs](htt
 
 As you start entering a JSONPath, the results are validated and shown next to the input field.
 
-### Auto JSON
+### Extract JSON
 
-This action automatically converts JSON data to Webhook.site Variables, and can be used as an alternative for Extract JSONPath when there's a large amount of variables that need to be extracted.
+This action automatically converts all JSON properties/fields to Variables.
 
 <figure markdown="span">
-  ![Auto JSON in action](/images/custom-actions.png){ width="300" }
+  ![Extract JSON in action](/images/custom-actions.png){ width="300" }
   <figcaption>Auto JSON in action</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ Per default, the action works on the JSON found in the `$request.content$` varia
 
 If the JSONPath parameter is specified, this can be used to limit the variable creation to only the subset of data specified by the JSONPath query.
 
-##### Auto JSON Example
+##### Extract JSON Example
 
 If the following data is specified in the Source parameter:
 
@@ -400,6 +400,18 @@ Authorization: Basic dXNlcjpwYXNzMTIz
 </figure>
 
 When the URL is visited with a Web browser, a username and password form will be shown.
+
+## Mock
+
+### OpenAPI/Swagger
+
+By utilizing the Mock action, you have the ability to upload an OpenAPI or Swagger specification in YAML or JSON, enabling your Webhook.site URL to automatically function as a mock server. This is achieved by dynamically generating responses that align with the paths, endpoints, and data schemas outlined within the uploaded specification, allowing for seamless testing and simulation of API behavior.
+
+If the spec is a URL, Webhook.site will try to download the specification and parse it from JSON or YAML.
+
+**Video demo**
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/QIEzn4i_P-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ## Logic
 

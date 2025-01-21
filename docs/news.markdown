@@ -22,6 +22,14 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 21 January 2025
+
+* New Action: [OpenAPI/Swagger Mock](/custom-actions/action-types.html#mock), which lets your Webhook.site URL act as a mock server and automatically generates Web responses according to the specification. [More info here](/custom-actions/action-types.html#mock)
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/QIEzn4i_P-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+* Renamed the AutoJSON action to Extract JSON.
+
 ## 7 January 2025
 
 * Set Variable action now supports [Math Mode](https://docs.webhook.site/custom-actions/action-types.html#math-mode), allowing powerful math expressions without scripting.
@@ -93,7 +101,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 2 August 2024
 
-* As we're planning to add more capacity, the Webhook.site IPs have partially changed. The IP `88.99.82.58` is no longer used by us. The full list of IPs that need to be whitelisted are the following: `178.63.67.106`, `178.63.67.153`, `46.4.105.116`. 
+* As we're planning to add more capacity, the Webhook.site IPs have partially changed. The IP `88.99.82.58` is no longer used by us. The full list of IPs that need to be whitelisted are the following: `178.63.67.106`, `178.63.67.153`. 
 
 ## 23 July 2024
 
