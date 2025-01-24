@@ -5,7 +5,9 @@ nav_order: 400
 
 # Webhook.site CLI
 
-The Webhook.site Command Line Interface listens for requests to a Webhook.site URL and forwards/redirects them to your local computer or server.
+The Webhook.site Command Line Interface (`whcli`) listens for requests to a Webhook.site URL and forwards/redirects them to your local computer or server.
+
+For example, when a Webhook.site URL is hit, `whcli` will automatically forward the request to the specified URL, which can be on localhost, the local network or any other URL that can be connected to, and can automatically forward the response back to the Webhook.site URL, acting as a proxy.
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
