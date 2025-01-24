@@ -6,7 +6,7 @@ With Global Variables, you can store data permanently that can be shared between
 
 * Requires authentication.
 
-After creating, the variable `$name$` will be available in Custom Actions.
+After creating, the variable `$content_type$` will be available in Custom Actions.
 
 #### Request
 
