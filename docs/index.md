@@ -307,9 +307,9 @@ To do this, click *Edit* in the upper-right corner, check the *Add CORS headers*
 
 For more information about DNSHook, please [see here](/dnshook.html).
 
-## What does "This URL has no default content" mean?
+## What does "This URL has no default content configured" mean?
 
-When a Webhook.site URL is created, this is simply the default HTTP response of it. On Webhook.site, you can change this by clicking **Edit** in the upper-right corner, or via the [API, using the `default_content` parameter](http://localhost:8001/api/tokens.html#create-token).
+This is not an error - when a Webhook.site URL is created, this is simply the default HTTP response it's configured with. On Webhook.site, you can change this by clicking **Edit** in the upper-right corner, or via the [API, using the `default_content` parameter](http://localhost:8001/api/tokens.html#create-token).
 
 With a Webhook.site subscription, you can also use the [Modify Response](/custom-actions/action-types.html#modify-response) action.
 
