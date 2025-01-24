@@ -1,0 +1,1852 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.webhook.site/api/action-types.html">
+      
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Action types - Webhook.site Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-772X7QHH0L"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-772X7QHH0L",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-772X7QHH0L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#auth_basic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Webhook.site Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Webhook.site Docs" class="md-nav__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../images/icon.png" alt="logo">
+
+    </a>
+    Webhook.site Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://webhook.site" class="md-nav__link">
+        ← Back to Webhook.site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../news.html" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-source.html" class="md-nav__link">
+        Open Source
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro.html" class="md-nav__link">
+        Basic, Pro & Enterprise
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli.html" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../form-builder.html" class="md-nav__link">
+        Form Builder
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Custom Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-actions.html" class="md-nav__link">
+        About Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-actions/variables.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-actions/action-types.html" class="md-nav__link">
+        Action Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" tabindex="0" aria-expanded="false">
+          WebhookScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebhookScript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          WebhookScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/index.html" class="md-nav__link">
+        About WebhookScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/reference.html" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4_4" type="checkbox" id="__nav_11_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4_4" tabindex="0" aria-expanded="false">
+          Built-in Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Built-in Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/general.html" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/array.html" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/bool.html" class="md-nav__link">
+        Booleans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/date.html" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/files.html" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/flow.html" class="md-nav__link">
+        Flow Control and Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/math.html" class="md-nav__link">
+        Math and Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/network.html" class="md-nav__link">
+        Network and HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/string.html" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhookscript/functions/variables.html" class="md-nav__link">
+        Custom Action Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-actions/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        Usage & Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tokens.html" class="md-nav__link">
+        Tokens (URLs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="custom-actions.html" class="md-nav__link">
+        Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="templates.html" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global-variables.html" class="md-nav__link">
+        Global Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#auth_basic" class="md-nav__link">
+    auth_basic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto_json" class="md-nav__link">
+    auto_json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_cf_invalidate" class="md-nav__link">
+    aws_cf_invalidate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_s3_create_bucket" class="md-nav__link">
+    aws_s3_create_bucket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_s3_delete_object" class="md-nav__link">
+    aws_s3_delete_object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_s3_get_object" class="md-nav__link">
+    aws_s3_get_object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_s3_put_object" class="md-nav__link">
+    aws_s3_put_object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    condition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discord_send_message" class="md-nav__link">
+    discord_send_message
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont_save" class="md-nav__link">
+    dont_save
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox_create_folder" class="md-nav__link">
+    dropbox_create_folder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox_delete" class="md-nav__link">
+    dropbox_delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox_download_file" class="md-nav__link">
+    dropbox_download_file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox_get_link" class="md-nav__link">
+    dropbox_get_link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox_upload_file" class="md-nav__link">
+    dropbox_upload_file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract_jsonpath" class="md-nav__link">
+    extract_jsonpath
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract_regex" class="md-nav__link">
+    extract_regex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract_xpath" class="md-nav__link">
+    extract_xpath
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ftp_download" class="md-nav__link">
+    ftp_download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ftp_upload" class="md-nav__link">
+    ftp_upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google_sheets_add_row" class="md-nav__link">
+    google_sheets_add_row
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google_sheets_get_values" class="md-nav__link">
+    google_sheets_get_values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google_sheets_update_row" class="md-nav__link">
+    google_sheets_update_row
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    http
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hubspot_create_contact" class="md-nav__link">
+    hubspot_create_contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image_resize" class="md-nav__link">
+    image_resize
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    javascript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft_drive_download" class="md-nav__link">
+    microsoft_drive_download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft_drive_upload" class="md-nav__link">
+    microsoft_drive_upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft_excel_add_rows" class="md-nav__link">
+    microsoft_excel_add_rows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft_excel_get_values" class="md-nav__link">
+    microsoft_excel_get_values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify_response" class="md-nav__link">
+    modify_response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfy" class="md-nav__link">
+    ntfy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_generate" class="md-nav__link">
+    pdf_generate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushed_send" class="md-nav__link">
+    pushed_send
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq_get" class="md-nav__link">
+    rabbitmq_get
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq_publish" class="md-nav__link">
+    rabbitmq_publish
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate_limit" class="md-nav__link">
+    rate_limit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send_email" class="md-nav__link">
+    send_email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send_email_smtp" class="md-nav__link">
+    send_email_smtp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send_request" class="md-nav__link">
+    send_request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_variable" class="md-nav__link">
+    set_variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sftp_download" class="md-nav__link">
+    sftp_download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sftp_upload" class="md-nav__link">
+    sftp_upload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slack_send_message" class="md-nav__link">
+    slack_send_message
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh_run_command" class="md-nav__link">
+    ssh_run_command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store_global_variable" class="md-nav__link">
+    store_global_variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text_map" class="md-nav__link">
+    text_map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text_replace" class="md-nav__link">
+    text_replace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text_split" class="md-nav__link">
+    text_split
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twitter_tweet" class="md-nav__link">
+    twitter_tweet
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/webhooksite/docs/edit/master/docs/api/action-types.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+  <h1>Action types</h1>
+
+<p>The following is a list of the API names for Action Types, along with a list of parameters, and their validation requirements.</p>
+<h3 id="auth_basic"><code>auth_basic</code><a class="headerlink" href="#auth_basic" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>username</code>: string</li>
+<li><code>password</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="auto_json"><code>auto_json</code><a class="headerlink" href="#auto_json" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>source</code>: string</li>
+<li><code>jsonpath</code>: string</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="aws_cf_invalidate"><code>aws_cf_invalidate</code><a class="headerlink" href="#aws_cf_invalidate" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, int</li>
+<li><code>distribution_id</code>: <strong>required</strong>, string</li>
+<li><code>paths</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="aws_s3_create_bucket"><code>aws_s3_create_bucket</code><a class="headerlink" href="#aws_s3_create_bucket" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>region</code>: string, <strong>required</strong></li>
+<li><code>bucket_name</code>: string, <strong>required</strong></li>
+<li><code>canned_acl</code>: string, in:private,public-read,public-read-write,authenticated-read</li>
+</ul>
+<h3 id="aws_s3_delete_object"><code>aws_s3_delete_object</code><a class="headerlink" href="#aws_s3_delete_object" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>region</code>: string</li>
+<li><code>bucket_name</code>: string, <strong>required</strong></li>
+<li><code>object_key</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="aws_s3_get_object"><code>aws_s3_get_object</code><a class="headerlink" href="#aws_s3_get_object" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>region</code>: string</li>
+<li><code>bucket_name</code>: string, <strong>required</strong></li>
+<li><code>object_key</code>: string, <strong>required</strong></li>
+<li><code>variable_name</code>: string, <strong>required</strong>, min:1</li>
+</ul>
+<h3 id="aws_s3_put_object"><code>aws_s3_put_object</code><a class="headerlink" href="#aws_s3_put_object" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>region</code>: string, <strong>required</strong></li>
+<li><code>bucket_name</code>: string</li>
+<li><code>object_key</code>: string, <strong>required</strong></li>
+<li><code>body</code>: string, <strong>required</strong></li>
+<li><code>canned_acl</code>: string, in:private,public-read,public-read-write,authenticated-read</li>
+</ul>
+<h3 id="condition"><code>condition</code><a class="headerlink" href="#condition" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>input</code>: string</li>
+<li><code>operator</code>: <strong>required</strong>, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte</li>
+<li><code>value</code>: string</li>
+<li><code>action</code>: <strong>required</strong>, string, in:stop,continue,noop</li>
+</ul>
+<h3 id="conditions"><code>conditions</code><a class="headerlink" href="#conditions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>conditions</code>: <strong>required</strong>, array</li>
+<li><code>mode</code>: <strong>required</strong>, string, in:one,all,none</li>
+<li><code>action</code>: <strong>required</strong>, string, in:stop,continue,noop</li>
+</ul>
+<h3 id="database"><code>database</code><a class="headerlink" href="#database" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>type</code>: <strong>required</strong>, in:mysql,pgsql,sqlsrv</li>
+<li><code>host</code>: <strong>required</strong>, string</li>
+<li><code>port</code>: number, min:1, max:65535</li>
+<li><code>database</code>: <strong>required</strong>, string</li>
+<li><code>password</code>: string</li>
+<li><code>username</code>: <strong>required</strong>, string</li>
+<li><code>statement</code>: <strong>required</strong>, string</li>
+<li><code>params</code>: array</li>
+<li><code>variable_name</code>: string</li>
+<li><code>charset</code>: string</li>
+</ul>
+<h3 id="discord_send_message"><code>discord_send_message</code><a class="headerlink" href="#discord_send_message" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: <strong>required</strong>, string</li>
+<li><code>username</code>: string</li>
+<li><code>avatar_url</code>: url</li>
+<li><code>embed_type</code>: string, in:link,image,video</li>
+<li><code>embed_url</code>: url</li>
+</ul>
+<h3 id="dont_save"><code>dont_save</code><a class="headerlink" href="#dont_save" title="Permanent link">&para;</a></h3>
+<p><em>No parameters for <code>dont_save</code>.</em></p>
+<h3 id="dropbox_create_folder"><code>dropbox_create_folder</code><a class="headerlink" href="#dropbox_create_folder" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>path</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="dropbox_delete"><code>dropbox_delete</code><a class="headerlink" href="#dropbox_delete" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>path</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="dropbox_download_file"><code>dropbox_download_file</code><a class="headerlink" href="#dropbox_download_file" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>path</code>: string, <strong>required</strong></li>
+<li><code>variable_name</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="dropbox_get_link"><code>dropbox_get_link</code><a class="headerlink" href="#dropbox_get_link" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>path</code>: string, <strong>required</strong></li>
+<li><code>variable_name</code>: string</li>
+<li><code>type</code>: string, in:share_link,temporary</li>
+<li><code>share_audience</code>: string, in:public,team,no_one</li>
+</ul>
+<h3 id="dropbox_upload_file"><code>dropbox_upload_file</code><a class="headerlink" href="#dropbox_upload_file" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>path</code>: string, <strong>required</strong></li>
+<li><code>body</code>: string, <strong>required</strong></li>
+<li><code>mode</code>: string, <strong>required</strong>, in:add,overwrite,update</li>
+</ul>
+<h3 id="extract_jsonpath"><code>extract_jsonpath</code><a class="headerlink" href="#extract_jsonpath" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>jsonpath</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+<li><code>source</code>: string</li>
+<li><code>default</code>: string</li>
+<li><code>repeat</code>: boolean</li>
+</ul>
+<h3 id="extract_regex"><code>extract_regex</code><a class="headerlink" href="#extract_regex" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>regex</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+<li><code>source</code>: string</li>
+<li><code>default</code>: string</li>
+<li><code>repeat</code>: boolean</li>
+</ul>
+<h3 id="extract_xpath"><code>extract_xpath</code><a class="headerlink" href="#extract_xpath" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>xpath</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+<li><code>source</code>: string</li>
+<li><code>default</code>: string</li>
+</ul>
+<h3 id="ftp_download"><code>ftp_download</code><a class="headerlink" href="#ftp_download" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>host</code>: <strong>required</strong>, string</li>
+<li><code>port</code>: number, min:1, max:65535</li>
+<li><code>password</code>: <strong>required</strong>, string</li>
+<li><code>username</code>: <strong>required</strong>, string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>ssl</code>: bool</li>
+<li><code>passive</code>: bool</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="ftp_upload"><code>ftp_upload</code><a class="headerlink" href="#ftp_upload" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>host</code>: <strong>required</strong>, string</li>
+<li><code>port</code>: number, min:1, max:65535</li>
+<li><code>password</code>: <strong>required</strong>, string</li>
+<li><code>username</code>: <strong>required</strong>, string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: <strong>required</strong>, string</li>
+<li><code>ssl</code>: bool</li>
+<li><code>passive</code>: bool</li>
+</ul>
+<h3 id="google_sheets_add_row"><code>google_sheets_add_row</code><a class="headerlink" href="#google_sheets_add_row" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>spreadsheet_id</code>: string, <strong>required</strong></li>
+<li><code>range</code>: string, <strong>required</strong></li>
+<li><code>values</code>: string, <strong>required</strong></li>
+<li><code>formula_mode</code>: bool</li>
+</ul>
+<h3 id="google_sheets_get_values"><code>google_sheets_get_values</code><a class="headerlink" href="#google_sheets_get_values" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>spreadsheet_id</code>: string, <strong>required</strong></li>
+<li><code>range</code>: string, <strong>required</strong></li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="google_sheets_update_row"><code>google_sheets_update_row</code><a class="headerlink" href="#google_sheets_update_row" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string, <strong>required</strong></li>
+<li><code>spreadsheet_id</code>: string, <strong>required</strong></li>
+<li><code>range</code>: string, <strong>required</strong></li>
+<li><code>values</code>: string, <strong>required</strong></li>
+<li><code>formula_mode</code>: bool</li>
+</ul>
+<h3 id="http"><code>http</code><a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>url</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: nullable, string</li>
+<li><code>method</code>: nullable, in:POST,GET,OPTIONS,PUT,DELETE,PATCH,TRACE</li>
+<li><code>mode</code>: nullable, in:text,json,multipart,urlencoded,forward</li>
+<li><code>auth</code>: nullable, array</li>
+<li><code>auth.mode</code>: nullable, string, in:basic,digest,ntlm</li>
+<li><code>auth.username</code>: string</li>
+<li><code>auth.password</code>: string</li>
+<li><code>multipart</code>: array, <strong>required</strong>_if:mode,multipart</li>
+<li><code>multipart.*.name</code>: string</li>
+<li><code>multipart.*.filename</code>: string</li>
+<li><code>multipart.*.content-type</code>: string</li>
+<li><code>multipart.*.content</code>: string</li>
+<li><code>urlencoded</code>: array</li>
+<li><code>urlencoded.*.name</code>: string, <strong>required</strong>_if:mode,urlencoded</li>
+<li><code>urlencoded.*.value</code>: string, <strong>required</strong>_if:mode,urlencoded</li>
+<li><code>headers</code>: nullable, string</li>
+<li><code>skip_ssl_verification</code>: nullable, bool</li>
+<li><code>variable_name</code>: string</li>
+<li><code>timeout</code>: nullable, numeric, max:15</li>
+<li><code>retry</code>: array</li>
+<li><code>retry.enabled</code>: nullable, bool</li>
+<li><code>retry.retries</code>: nullable, numeric, min:1, max:10</li>
+<li><code>retry.delay</code>: nullable, numeric, min:0, max:10</li>
+<li><code>retry.require_status</code>: nullable, string</li>
+</ul>
+<h3 id="hubspot_create_contact"><code>hubspot_create_contact</code><a class="headerlink" href="#hubspot_create_contact" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>properties</code>: <strong>required</strong>, array</li>
+</ul>
+<h3 id="image_resize"><code>image_resize</code><a class="headerlink" href="#image_resize" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>source</code>: string, <strong>required</strong></li>
+<li><code>width</code>: string, <strong>required</strong>_without:height</li>
+<li><code>height</code>: string, <strong>required</strong>_without:width</li>
+<li><code>aspect_ratio</code>: bool, <strong>required</strong></li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="javascript"><code>javascript</code><a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>script</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="log"><code>log</code><a class="headerlink" href="#log" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>text</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="microsoft_drive_download"><code>microsoft_drive_download</code><a class="headerlink" href="#microsoft_drive_download" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="microsoft_drive_upload"><code>microsoft_drive_upload</code><a class="headerlink" href="#microsoft_drive_upload" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>content_type</code>: string</li>
+<li><code>content</code>: string</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="microsoft_excel_add_rows"><code>microsoft_excel_add_rows</code><a class="headerlink" href="#microsoft_excel_add_rows" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>path</code>: string</li>
+<li><code>table</code>: string</li>
+<li><code>index</code>: int</li>
+<li><code>values</code>: <strong>required</strong>, array</li>
+</ul>
+<h3 id="microsoft_excel_get_values"><code>microsoft_excel_get_values</code><a class="headerlink" href="#microsoft_excel_get_values" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>worksheet</code>: <strong>required</strong>, string</li>
+<li><code>range</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="modify_response"><code>modify_response</code><a class="headerlink" href="#modify_response" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>content</code>: string</li>
+<li><code>status</code>: string</li>
+<li><code>headers</code>: string</li>
+<li><code>stop</code>: bool</li>
+</ul>
+<h3 id="ntfy"><code>ntfy</code><a class="headerlink" href="#ntfy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>topic</code>: string, <strong>required</strong></li>
+<li><code>title</code>: string</li>
+<li><code>icon</code>: string</li>
+<li><code>message</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="pdf_generate"><code>pdf_generate</code><a class="headerlink" href="#pdf_generate" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>content</code>: string</li>
+<li><code>mode</code>: string, in:html,markdown</li>
+<li><code>paper</code>: string, in:a4,letter</li>
+<li><code>orientation</code>: string, in:portrait,landscape</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="pushed_send"><code>pushed_send</code><a class="headerlink" href="#pushed_send" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>app_key</code>: string, <strong>required</strong></li>
+<li><code>app_secret</code>: string, <strong>required</strong></li>
+<li><code>target_type</code>: string, <strong>required</strong></li>
+<li><code>target</code>: string, <strong>required</strong></li>
+<li><code>message</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="rabbitmq_get"><code>rabbitmq_get</code><a class="headerlink" href="#rabbitmq_get" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>host</code>: string, <strong>required</strong></li>
+<li><code>port</code>: int</li>
+<li><code>username</code>: string, <strong>required</strong></li>
+<li><code>password</code>: string, <strong>required</strong></li>
+<li><code>vhost</code>: string</li>
+<li><code>queue</code>: string, <strong>required</strong></li>
+<li><code>ssl</code>: boolean</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="rabbitmq_publish"><code>rabbitmq_publish</code><a class="headerlink" href="#rabbitmq_publish" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>host</code>: string, <strong>required</strong></li>
+<li><code>port</code>: int</li>
+<li><code>username</code>: string, <strong>required</strong></li>
+<li><code>password</code>: string, <strong>required</strong></li>
+<li><code>vhost</code>: string</li>
+<li><code>queue</code>: string, <strong>required</strong></li>
+<li><code>ssl</code>: boolean</li>
+<li><code>message</code>: string, <strong>required</strong></li>
+</ul>
+<h3 id="rate_limit"><code>rate_limit</code><a class="headerlink" href="#rate_limit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>period</code>: <strong>required</strong>, int</li>
+<li><code>count</code>: <strong>required</strong>, int</li>
+<li><code>key</code>: string</li>
+</ul>
+<h3 id="script"><code>script</code><a class="headerlink" href="#script" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>script</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="send_email"><code>send_email</code><a class="headerlink" href="#send_email" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>sender</code>: string</li>
+<li><code>recipient</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: string</li>
+<li><code>is_html</code>: boolean</li>
+<li><code>subject</code>: <strong>required</strong>, string</li>
+<li><code>attachments</code>: array</li>
+</ul>
+<h3 id="send_email_smtp"><code>send_email_smtp</code><a class="headerlink" href="#send_email_smtp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>sender_name</code>: string</li>
+<li><code>sender_email</code>: string</li>
+<li><code>recipient</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: string</li>
+<li><code>is_html</code>: boolean</li>
+<li><code>subject</code>: <strong>required</strong>, string</li>
+<li><code>encryption</code>: string, in:none,ssl,tls</li>
+<li><code>port</code>: int</li>
+<li><code>username</code>: string, <strong>required</strong></li>
+<li><code>password</code>: string, <strong>required</strong></li>
+<li><code>host</code>: string_<strong>required</strong></li>
+<li><code>attachments</code>: array</li>
+</ul>
+<h3 id="send_request"><code>send_request</code><a class="headerlink" href="#send_request" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>url</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: nullable, string</li>
+<li><code>method</code>: nullable, in:POST,GET,OPTIONS,PUT,DELETE</li>
+<li><code>headers</code>: nullable, string</li>
+<li><code>skip_ssl_verification</code>: nullable, bool</li>
+<li><code>variable_name</code>: string</li>
+<li><code>timeout</code>: nullable, numeric, max:30</li>
+</ul>
+<h3 id="set_variable"><code>set_variable</code><a class="headerlink" href="#set_variable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>name</code>: <strong>required</strong>, string</li>
+<li><code>value</code>: nullable, string</li>
+<li><code>mode</code>: nullable, in:text,random,date</li>
+<li><code>random</code>: array</li>
+<li><code>random.*.length</code>: int, max:10000, <strong>required</strong>_if:mode,random</li>
+<li><code>random.*.characters</code>: array, in:lowercase,uppercase,digits,symbols,user</li>
+<li><code>random.*.alphabet</code>: string</li>
+<li><code>date</code>: array</li>
+<li><code>date.*.input</code>: string</li>
+<li><code>date.*.format</code>: string, in:iso8601,mysql,unix,unixmicro,user</li>
+<li><code>date.*.user_format</code>: string</li>
+</ul>
+<h3 id="sftp_download"><code>sftp_download</code><a class="headerlink" href="#sftp_download" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string</li>
+<li><code>host</code>: <strong>required</strong>, string</li>
+<li><code>port</code>: number, min:1, max:65535</li>
+<li><code>username</code>: <strong>required</strong>, string</li>
+<li><code>password</code>: string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="sftp_upload"><code>sftp_upload</code><a class="headerlink" href="#sftp_upload" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string</li>
+<li><code>host</code>: <strong>required</strong>, string</li>
+<li><code>port</code>: number, min:1, max:65535</li>
+<li><code>username</code>: <strong>required</strong>, string</li>
+<li><code>password</code>: string</li>
+<li><code>path</code>: <strong>required</strong>, string</li>
+<li><code>content</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="slack_send_message"><code>slack_send_message</code><a class="headerlink" href="#slack_send_message" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>webhook_url</code>: <strong>required</strong>, url</li>
+<li><code>raw</code>: bool</li>
+<li><code>content</code>: <strong>required</strong>, string</li>
+</ul>
+<h3 id="ssh_run_command"><code>ssh_run_command</code><a class="headerlink" href="#ssh_run_command" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: string</li>
+<li><code>host</code>: <strong>required</strong>, string</li>
+<li><code>port</code>: number, min:1, max:65535</li>
+<li><code>username</code>: <strong>required</strong>, string</li>
+<li><code>password</code>: string</li>
+<li><code>command</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: string</li>
+</ul>
+<h3 id="stop"><code>stop</code><a class="headerlink" href="#stop" title="Permanent link">&para;</a></h3>
+<p><em>No parameters for <code>stop</code>.</em></p>
+<h3 id="store_global_variable"><code>store_global_variable</code><a class="headerlink" href="#store_global_variable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>name</code>: <strong>required</strong>, string</li>
+<li><code>value</code>: nullable, string</li>
+</ul>
+<h3 id="template"><code>template</code><a class="headerlink" href="#template" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>template_id</code>: <strong>required</strong>, int</li>
+<li><code>variables</code>: array</li>
+</ul>
+<h3 id="text_map"><code>text_map</code><a class="headerlink" href="#text_map" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>source</code>: <strong>required</strong>, string</li>
+<li><code>operator</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+<li><code>default</code>: <strong>required</strong>, string</li>
+<li><code>mappings</code>: <strong>required</strong>, array</li>
+</ul>
+<h3 id="text_replace"><code>text_replace</code><a class="headerlink" href="#text_replace" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>source</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: <strong>required</strong>, string</li>
+<li><code>replacements</code>: <strong>required</strong>, array</li>
+</ul>
+<h3 id="text_split"><code>text_split</code><a class="headerlink" href="#text_split" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>delimiter</code>: <strong>required</strong>, string</li>
+<li><code>source</code>: <strong>required</strong>, string</li>
+<li><code>variable_name</code>: string</li>
+<li><code>repeat</code>: boolean</li>
+</ul>
+<h3 id="twitter_tweet"><code>twitter_tweet</code><a class="headerlink" href="#twitter_tweet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>provider_id</code>: <strong>required</strong>, string</li>
+<li><code>tweet</code>: <strong>required</strong>, string</li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 23, 2024 10:45:53</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.action.edit"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
