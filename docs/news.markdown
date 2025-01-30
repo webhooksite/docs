@@ -22,6 +22,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 January 2025
+
+* Database Query action now supports positional parameters and autofilling parameters from the statement.
+
 ## 21 January 2025
 
 * New Action: [OpenAPI/Swagger Mock](/custom-actions/action-types.html#mock), which lets your Webhook.site URL act as a mock server and automatically generates Web responses according to the specification. [More info here](/custom-actions/action-types.html#mock)
