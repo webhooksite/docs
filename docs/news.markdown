@@ -24,7 +24,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 30 January 2025
 
-* Database Query action now supports positional parameters and autofilling parameters from the statement.
+* Database Query action now supports positional parameters and autofilling parameters from the statement. [More info here](/custom-actions/action-types.html#using-parameters)
 
 ## 21 January 2025
 

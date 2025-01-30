@@ -306,6 +306,12 @@ Each parameter name should start with a colon (:) and be a single word. You can 
 
 ![](/images/database.png)
 
+You can auto-create the parameters from the statement by clicking the *Fill in Parameters from Statement* button. This works with both positional `(?, ?)` and named `(:id, :value)` parameters. You cannot mix named and positional parameters.
+
+<center>
+  ![](/images/database-fill-params.gif)
+</center>
+
 #### Fetching data
 
 When fetching data using e.g. SELECT statements, Webhook.site automatically inserts data in a series of Custom Action Variables, which are then available to downstream actions.
