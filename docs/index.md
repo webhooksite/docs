@@ -23,11 +23,11 @@ Webhook.site is a [registered corporation](https://datacvr.virk.dk/enhed/virksom
 
 ### Company information
 
-Webhook.site company stats as of October 2024:
+Webhook.site company stats as of Feburary 2025:
 
-- 280.000+ monthly unique users
-- 2100+ subscribed customers
-- 250 million HTTP requests per day
+- 300.000+ monthly unique users
+- 2300+ subscribed customers
+- 460 million HTTP requests per day
 
 Webhook.site is operated by Webhook ApS (VAT ID: DK41561718).
 
