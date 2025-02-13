@@ -250,7 +250,13 @@ For Gmail, the following specific setup is required:
 * Password: You must [create a Mail App Password](https://myaccount.google.com/u/1/apppasswords)
 * Encryption: `TLS`
 
-### Run SSH Command
+### SSH
+
+We recommend authenticating using a pre-generated keypair, which can be created under *[Control Panel &rarr; Providers](https://webhook.site/providers)*.
+
+All SSH-based actions have a max timeout of 30 seconds.
+
+#### Run SSH Command
 
 Allows you to run one or more SSH command on a server. Webhook.site captures the output (stdout), stderr and the command exit code as Variables that can be used in downstream actions:
 
@@ -258,19 +264,14 @@ Allows you to run one or more SSH command on a server. Webhook.site captures the
 * `$ssh.stderr$`
 * `$ssh.exit$`
 
-We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -> Providers.
-
-### SFTP Upload
+#### SFTP Upload
 
 Allows uploading a file to a SFTP (SSH) server, specifying a hostname, port, username, password, relative path to the file. The file content can be specified, in which Variables are replaced.
 
-We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -> Providers.
-
-### SFTP Download
+#### SFTP Download
 
 Allows downloading a file to a SFTP (SSH) server, specifying a hostname, port, username, password and the path to the file. The file content is downloaded to a Variable.
 
-We recommend authenticating using a pre-generated keypair, which can be created under Control Panel -> Providers.
 
 ### FTP(S) Upload
 

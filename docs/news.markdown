@@ -22,6 +22,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 12 Feburary 2025
+
+* Variables can now be escaped via backslashes.
+* The `upper` and `lower` variable modifiers have been fixed.
+* Added new `json_format` variable modifier.
+* SSH-based actions now have a timeout of 30 seconds.
+
 ## 30 January 2025
 
 * Database Query action now supports positional parameters and autofilling parameters from the statement. [More info here](/custom-actions/action-types.html#using-parameters)

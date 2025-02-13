@@ -24,6 +24,8 @@ Files can referred to and incorporated in Custom Action workflows via the `reque
 
 Variables work since Custom Actions are executed synchronously in a chain, sharing data as they're being executed.
 
+Variables can be escaped using backslashes before the dollar characters: `\$request.content\$`
+
 ### Global Variables
 
 In Webhook.site Control Panel, you can define Global Variables which can be accessed between all URLs and used in Schedules. Global Variables are permanent.
@@ -31,7 +33,6 @@ In Webhook.site Control Panel, you can define Global Variables which can be acce
 Global Variables can also be created, modified or deleted using Custom Actions, including in WebhookScript and JavaScript actions.
 
 Additionally, Global Variables can be managed using the [Webhook.site API](/api/global-variables.html).
-
 
 
 ### Base Variables
@@ -78,6 +79,7 @@ Adding specific suffixes to variable names will let you process the value in the
 |-------------------------|----------------------------------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | $example$               | `{"json": "value"}`                    | `{"json": "value"}`                    | *no modifier*                                                                                                                         |
 | $example.json$          | `{"json": "value"}`                    | `{\"json\": \"value\"}`                | Escapes all special JSON characters, allowing to use any string in a JSON object. Escaped characters include \b, \f, \n, \r, \t, ", \ |
+| $example.json_format$   | `{"json": "value"}`                    | <pre style="font-size:0.85em;color: rgb(205, 0, 103);" class="md-typeset">{<br>  "json": "value"<br>}</pre>               | Indents and formats a JSON string |
 | $example.html_encode$   | `<p>some html</p>`                     | `&lt;p&gt;some html&lt;/p&gt;`         | Escapes all special HTML characters                                                                                                   |
 | $example.html_decode$   | `&lt;p&gt;some html&lt;/p&gt;`         | `<p>some html</p>`                     | Replaces all escaped HTML escapes with normal characters                                                                              |
 | $example.html_strip$    | `<p>some html</p>`                     | `some html`                            | Removes all HTML tags from input string                                                                                               |
