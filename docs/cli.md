@@ -9,6 +9,10 @@ The Webhook.site Command Line Interface (`whcli`) listens for requests to a Webh
 
 For example, when a Webhook.site URL is hit, `whcli` will automatically forward the request to the specified URL, which can be on localhost, the local network or any other URL that can be connected to, and can automatically forward the response back to the Webhook.site URL, acting as a proxy.
 
+Under the hood, to listen for requests, `whcli` uses an automatically reconnecting WebSocket that can stay active indefinitely.
+
+Webhook.site CLI is licensed under MIT and [source code is available on Github](https://github.com/webhooksite/cli).
+
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Place this tag where you want the button to render. -->

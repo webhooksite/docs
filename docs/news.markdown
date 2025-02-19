@@ -22,6 +22,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 19 Feburary 2025
+
+* It's now possible to manage Groups in Control Panel.
+* Added Clone button in Custom Actions editor.
+* Default response now has link to edit response.
+
 ## 12 Feburary 2025
 
 * Variables can now be escaped via backslashes.
