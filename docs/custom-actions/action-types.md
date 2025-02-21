@@ -441,8 +441,6 @@ In both the *input* and the *value* fields, variables can be used (including Glo
 
 Currently, three *actions* are provided: use result, stop and continue. *Use Result* allows using the Condition result in downstream actions. *Stop* will stop further action execution of the condition is a match. *Continue* will *only* continue further execution if the condition is a match, and otherwise stop.
 
-To make an *equal to* condition on a boolean value from a JSON structure, you can enter `0` for `false` or `1` for `true`. 
-
 #### Operators with value argument
 
 * is equal to
@@ -459,6 +457,8 @@ To make an *equal to* condition on a boolean value from a JSON structure, you ca
 #### Operators without value argument
 
 * variable exists - whether a Webhook.site variable is defined
+* is true
+* is false
 * is numeric - whether input is numeric; examples include `42`, `123.45`, `0x539`, `02471`,
     `0b10100111001`
 * is integer - whether input is an integer; `42` is; `123.45` is not. 

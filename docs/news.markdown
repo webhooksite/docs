@@ -22,6 +22,16 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 21 Feburary 2025
+
+* **Action AI** beta released for all Webhook.site customers, letting you generate actions via AI. We plan to run this beta for a limited time and collecting feedback amongst the users who've used it.
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/3GWUE3fcOPw" 
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+   allowfullscreen></iframe></center>
+
+* Added is true/is false operators to Conditions action.
+
 ## 19 Feburary 2025
 
 * It's now possible to manage Groups in Control Panel.
