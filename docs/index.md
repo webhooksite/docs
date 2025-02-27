@@ -180,6 +180,15 @@ After you've paid for and [created a subscription](https://webhook.site/register
 
 If you are an enterprise customer that wishes to buy a subscription via bank transfer, please contact [Support](https://support.webhook.site).
 
+## I'm VAT exempt, how do I add my VAT number during checkout?
+
+Click the "Add VAT Number" button:
+
+<figure markdown="span">
+  ![Adding company information to invoices](/images/checkout-vat.png){ width="300" }
+  <figcaption>Adding VAT number during checkout</figcaption>
+</figure>
+
 ## How do I add my company name and details to my invoice?
 
 Go to [Control Panel -> Billing](https://webhook.site/control-panel), then click View next to an invoice and finally click [the "Add Address & VAT Number" link](https://sf.gl/share/1708090417.png). Once the data is entered, it will automatically be used for all forthcoming invoices.
