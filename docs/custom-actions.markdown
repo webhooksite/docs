@@ -34,6 +34,13 @@ With [Replay](/custom-actions.html#replay), it's possible to run the actions aga
   <figcaption>Error Log is a convenient way to monitor Schedules and Custom Actions</figcaption>
 </figure>
 
+### Shortcut Keys
+
+The following shortcut keys can be used in the Custom Actions editor.
+
+* **Alt-R** - test action
+* **Alt-S** - save/create action
+
 ## Demos
 
 ### JavaScript, X and Schedules
