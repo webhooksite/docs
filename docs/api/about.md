@@ -24,6 +24,8 @@ While many endpoints of the Webhook.site API are public and work without any aut
 
 An API Key can be generated in the Control Panel, and provides access to Tokens that are either a) password protected or b) require login.
 
+API Keys have the same privileges as the user who created them.
+
 API Keys *must* be specified in the `Api-Key` HTTP header.
 
 <div class="center">
