@@ -5,6 +5,8 @@ nav_order: 50
 
 # News
 
+Follow [@webhook.site on X](https://x.com/webhooksite) to receive regular updates.
+
 Subscribe below to receive updates about improvements and new features on Webhook.site as well as infrastructure changes like new IP addresses for e.g. firewall whitelisting. Expect a newsletter a few times a year at most.
 
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
@@ -21,6 +23,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
     </div>
 </form>
 </div>
+
+## 27 Feburary 2025
+
+* **Extract JSON** now supports Repeat, and automatically extracts variables when interating over objects and arrays.
+* Shortcut keys `Alt-R` (test) and `Alt-S` (save/update) now work everywhere in Custom Actions editor.
 
 ## 21 Feburary 2025
 
