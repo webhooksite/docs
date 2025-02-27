@@ -63,3 +63,31 @@ $ curl -X POST -H 'Api-Key: 00000000-0000-0000-0000-000000000000' https://webhoo
 ```
 
 [More info here](/api/tokens.html#create-token).
+
+## WebSocket
+
+You can connect to Webhook.site's WebSocket server (`wss://ws.webhook.site`) and listen for incoming requests, emails and DNSHooks in your own application. If you listen to a token associated with a Webhook.site account, you must specify and API key. Alternatively, you can use [Webhook.site CLI](/cli.html).
+
+You can use the Laravel Echo library to connect, Node.js example below:
+
+```javascript
+import Echo from "laravel-echo";
+import client from "socket.io-client";
+
+let apiKey = '000-000...';
+let tokenId = '111-111...';
+
+const headers = apiKey ? {'Api-Key': apiKey} : {};
+const echo = new Echo.default({
+    host: 'wss://ws.webhook.site',
+    broadcaster: 'socket.io',
+    client,
+    auth: {headers}
+})
+
+let channel = echo.private(`token.${tokenId}`);
+
+channel.listen('.request.created', (data) => {
+    // console.log(data)
+})
+```
