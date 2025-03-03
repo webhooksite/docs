@@ -1,0 +1,1473 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.webhook.site/webhookscript/functions/array.html">
+      
+      
+        <link rel="prev" href="general.html">
+      
+      
+        <link rel="next" href="bool.html">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Arrays - Webhook.site Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-772X7QHH0L"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-772X7QHH0L",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-772X7QHH0L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#array_containsarray-array-stringnumber-needle-bool" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Webhook.site Docs" class="md-header__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../../images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Webhook.site Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arrays
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Webhook.site Docs" class="md-nav__button md-logo" aria-label="Webhook.site Docs" data-md-component="logo">
+      
+  <img src="../../images/icon.png" alt="logo">
+
+    </a>
+    Webhook.site Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/webhooksite/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webhooksite/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://webhook.site" class="md-nav__link">
+        ← Back to Webhook.site
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jobs.html" class="md-nav__link">
+        Jobs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news.html" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-source.html" class="md-nav__link">
+        Open Source
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pro.html" class="md-nav__link">
+        Basic, Pro & Enterprise
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli.html" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dnshook.html" class="md-nav__link">
+        DNSHook
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../form-builder.html" class="md-nav__link">
+        Form Builder
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="true">
+          Custom Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom Actions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions.html" class="md-nav__link">
+        About Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions/variables.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions/action-types.html" class="md-nav__link">
+        Action Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4" type="checkbox" id="__nav_11_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" tabindex="0" aria-expanded="true">
+          WebhookScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebhookScript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          WebhookScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        About WebhookScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference.html" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_4_4" type="checkbox" id="__nav_11_4_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_4_4" tabindex="0" aria-expanded="true">
+          Built-in Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-in Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_11_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Built-in Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general.html" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Arrays
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="array.html" class="md-nav__link md-nav__link--active">
+        Arrays
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array_containsarray-array-stringnumber-needle-bool" class="md-nav__link">
+    array_contains(array array, string/number needle) : bool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_chunkarray-array-number-count-bool-preserve_keys-false-array" class="md-nav__link">
+    array_chunk(array array, number count, bool preserve_keys = false) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_copyarray-array-array" class="md-nav__link">
+    array_copy(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_diffarray-array1-array-array2-array" class="md-nav__link">
+    array_diff(array array1, array array2) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_getarray-array-stringnumber-index-any-default-any" class="md-nav__link">
+    array_get(array array, string/number index, any default) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_hasarray-array-stringnumber-key-bool" class="md-nav__link">
+    array_has(array array, string/number key) : bool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_joinarray-array-string-joiner-string" class="md-nav__link">
+    array_join(array array, string joiner) : string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_keysarray-array-array" class="md-nav__link">
+    array_keys(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_lengtharray-array-number" class="md-nav__link">
+    array_length(array array) : number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_maparray-array-func-function" class="md-nav__link">
+    array_map(array array, func function)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_mergearray-array1-array-array2-array" class="md-nav__link">
+    array_merge(array array1, array array2): array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_number_ofarray-stringnumber-value-number" class="md-nav__link">
+    array_number_of(array, string/number value) : number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_poparray-array-any" class="md-nav__link">
+    array_pop(array array) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_pusharray-array-any-value-any" class="md-nav__link">
+    array_push(array array, any value) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_randomarray-array-any" class="md-nav__link">
+    array_random(array array) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_rangearray-array-int-offset-int-length-0-bool-preserve_keys-false-array" class="md-nav__link">
+    array_range(array array, int offset, ?int length = 0, ?bool preserve_keys = false) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_reversearray-array-array" class="md-nav__link">
+    array_reverse(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_shufflearray-array-array" class="md-nav__link">
+    array_shuffle(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_sortarray-array-array" class="md-nav__link">
+    array_sort(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_splicearray-array-int-offset-int-length-array-replacement-array" class="md-nav__link">
+    array_splice(array array, int offset, ?int length, array replacement) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_valuesarray-array-array" class="md-nav__link">
+    array_values(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to_arrayarray-array-array" class="md-nav__link">
+    to_array(array array) : array
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bool.html" class="md-nav__link">
+        Booleans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="date.html" class="md-nav__link">
+        Dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="files.html" class="md-nav__link">
+        File handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flow.html" class="md-nav__link">
+        Flow Control and Responses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        Math and Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="network.html" class="md-nav__link">
+        Network and HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="string.html" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variables.html" class="md-nav__link">
+        Custom Action Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-actions/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/about.html" class="md-nav__link">
+        Usage & Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/examples.html" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/tokens.html" class="md-nav__link">
+        Tokens (URLs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/requests.html" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/custom-actions.html" class="md-nav__link">
+        Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/templates.html" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/schedules.html" class="md-nav__link">
+        Schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/global-variables.html" class="md-nav__link">
+        Global Variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array_containsarray-array-stringnumber-needle-bool" class="md-nav__link">
+    array_contains(array array, string/number needle) : bool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_chunkarray-array-number-count-bool-preserve_keys-false-array" class="md-nav__link">
+    array_chunk(array array, number count, bool preserve_keys = false) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_copyarray-array-array" class="md-nav__link">
+    array_copy(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_diffarray-array1-array-array2-array" class="md-nav__link">
+    array_diff(array array1, array array2) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_getarray-array-stringnumber-index-any-default-any" class="md-nav__link">
+    array_get(array array, string/number index, any default) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_hasarray-array-stringnumber-key-bool" class="md-nav__link">
+    array_has(array array, string/number key) : bool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_joinarray-array-string-joiner-string" class="md-nav__link">
+    array_join(array array, string joiner) : string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_keysarray-array-array" class="md-nav__link">
+    array_keys(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_lengtharray-array-number" class="md-nav__link">
+    array_length(array array) : number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_maparray-array-func-function" class="md-nav__link">
+    array_map(array array, func function)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_mergearray-array1-array-array2-array" class="md-nav__link">
+    array_merge(array array1, array array2): array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_number_ofarray-stringnumber-value-number" class="md-nav__link">
+    array_number_of(array, string/number value) : number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_poparray-array-any" class="md-nav__link">
+    array_pop(array array) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_pusharray-array-any-value-any" class="md-nav__link">
+    array_push(array array, any value) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_randomarray-array-any" class="md-nav__link">
+    array_random(array array) : any
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_rangearray-array-int-offset-int-length-0-bool-preserve_keys-false-array" class="md-nav__link">
+    array_range(array array, int offset, ?int length = 0, ?bool preserve_keys = false) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_reversearray-array-array" class="md-nav__link">
+    array_reverse(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_shufflearray-array-array" class="md-nav__link">
+    array_shuffle(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_sortarray-array-array" class="md-nav__link">
+    array_sort(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_splicearray-array-int-offset-int-length-array-replacement-array" class="md-nav__link">
+    array_splice(array array, int offset, ?int length, array replacement) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array_valuesarray-array-array" class="md-nav__link">
+    array_values(array array) : array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to_arrayarray-array-array" class="md-nav__link">
+    to_array(array array) : array
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/webhooksite/docs/edit/master/docs/webhookscript/functions/array.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+  <h1>Arrays</h1>
+
+<h3 id="array_containsarray-array-stringnumber-needle-bool">array_contains(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> needle) : bool<a class="headerlink" href="#array_containsarray-array-stringnumber-needle-bool" title="Permanent link">&para;</a></h3>
+<p>Returns true or false depending on whether <strong><em>array</em></strong> contains a value equal to <strong><em>needle</em></strong>.</p>
+<p>To check whether a key exists, use the <code>array_has</code> function.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6547</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Simon&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">235345</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jack&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">4657</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jim&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">dd</span><span class="p">(</span><span class="nx">array_contains</span><span class="p">(</span><span class="nx">employees</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Simon&#39;</span><span class="p">))</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// -&gt; true</span>
+</code></pre></div>
+<h3 id="array_chunkarray-array-number-count-bool-preserve_keys-false-array">array_chunk(<strong><em>array</em></strong> array, <strong><em>number</em></strong> count, <strong><em>bool</em></strong> preserve_keys = false) : array<a class="headerlink" href="#array_chunkarray-array-number-count-bool-preserve_keys-false-array" title="Permanent link">&para;</a></h3>
+<p>Splits a single array into chunks of <code>count</code>. When <code>preserve_keys</code> is set to <code>true</code>, the array keys are preserved.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">test_arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="s1">&#39;a&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">123</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="s1">&#39;b&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">234</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="s1">&#39;c&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">345</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="s1">&#39;d&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">345</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="s1">&#39;e&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">456</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">]</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_chunk</span><span class="p">(</span><span class="nx">test_arr</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">))</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// -&gt; [0: [&quot;a&quot;: 123, &quot;b&quot;: 234], 1: [&quot;c&quot;: 345, &quot;d&quot;: 345], 2: [&quot;e&quot;: 456]]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_chunk</span><span class="p">(</span><span class="nx">test_arr</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">))</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1">// -&gt; [0: [0: 123, 1: 234], 1: [0: 345, 1: 345], 2: [0: 456]]</span>
+</code></pre></div>
+<h3 id="array_copyarray-array-array">array_copy(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_copyarray-array-array" title="Permanent link">&para;</a></h3>
+<p>Returns a copy of <strong><em>array</em></strong></p>
+<h3 id="array_diffarray-array1-array-array2-array">array_diff(<strong><em>array</em></strong> array1, <strong><em>array</em></strong> array2) : array<a class="headerlink" href="#array_diffarray-array1-array-array2-array" title="Permanent link">&para;</a></h3>
+<p>Returns the items of array1 that are not present in array2 while keeping the array indices.</p>
+<h3 id="array_getarray-array-stringnumber-index-any-default-any">array_get(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> index, <strong><em>any</em></strong> default) : any<a class="headerlink" href="#array_getarray-array-stringnumber-index-any-default-any" title="Permanent link">&para;</a></h3>
+<h3 id="array_hasarray-array-stringnumber-key-bool">array_has(<strong><em>array</em></strong> array, <strong><em>string/number</em></strong> key) : bool<a class="headerlink" href="#array_hasarray-array-stringnumber-key-bool" title="Permanent link">&para;</a></h3>
+<p>Returns true if <code>array</code> contains <code>key</code>, and false if it does not.</p>
+<p>To check whether a value exists, use the <code>array_contains</code> function.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6547</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Simon&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">235345</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jack&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">4657</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jim&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">dd</span><span class="p">(</span><span class="nx">array_has</span><span class="p">(</span><span class="nx">employees</span><span class="p">,</span><span class="w"> </span><span class="mf">235345</span><span class="p">))</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// -&gt; true</span>
+</code></pre></div>
+<h3 id="array_joinarray-array-string-joiner-string">array_join(<strong><em>array</em></strong> array, <strong><em>string</em></strong> joiner) : string<a class="headerlink" href="#array_joinarray-array-string-joiner-string" title="Permanent link">&para;</a></h3>
+<p>Returns a string where all the values are joined by <code>joiner</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;world&#39;</span><span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">-&gt;</span><span class="w"> </span><span class="s2">&quot;hello,world&quot;</span>
+</code></pre></div>
+<h3 id="array_keysarray-array-array">array_keys(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_keysarray-array-array" title="Permanent link">&para;</a></h3>
+<p>Returns the keys of an array.</p>
+<h3 id="array_lengtharray-array-number">array_length(<strong><em>array</em></strong> array) : number<a class="headerlink" href="#array_lengtharray-array-number" title="Permanent link">&para;</a></h3>
+<h3 id="array_maparray-array-func-function">array_map(<strong><em>array</em></strong> array, <strong><em>func</em></strong> function)<a class="headerlink" href="#array_maparray-array-func-function" title="Permanent link">&para;</a></h3>
+<p>Runs function with each array value, and returns array with key as result.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Simon&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Jack&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Jim&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">array_map</span><span class="p">(</span><span class="nx">employees</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">employee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;Hello, &#39;</span><span class="o">+</span><span class="nx">employee</span><span class="o">+</span><span class="s1">&#39;!&#39;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">})</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nx">dd</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">// -&gt; [0: &quot;Hello, Simon!&quot;, 1: &quot;Hello, Jack!&quot;, 2: &quot;Hello, Jim!&quot;]</span>
+</code></pre></div>
+<h3 id="array_mergearray-array1-array-array2-array">array_merge(<strong><em>array</em></strong> array1, <strong><em>array</em></strong> array2): array<a class="headerlink" href="#array_mergearray-array1-array-array2-array" title="Permanent link">&para;</a></h3>
+<p>Merges 2 arrays into a single array.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">test1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">123</span><span class="p">,</span><span class="w"> </span><span class="mf">234</span><span class="p">,</span><span class="w"> </span><span class="mf">345</span><span class="p">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">test2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">345</span><span class="p">,</span><span class="w"> </span><span class="mf">456</span><span class="p">]</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_merge</span><span class="p">(</span><span class="nx">test1</span><span class="p">,</span><span class="w"> </span><span class="nx">test2</span><span class="p">))</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1">// -&gt; [0: 123, 1: 234, 2: 345, 3: 345, 4: 456]</span>
+</code></pre></div>
+<h3 id="array_number_ofarray-stringnumber-value-number">array_number_of(<strong><em>array</em></strong>, <strong><em>string/number</em></strong> value) : number<a class="headerlink" href="#array_number_ofarray-stringnumber-value-number" title="Permanent link">&para;</a></h3>
+<p>Returns amount of <strong><em>value</em></strong></p>
+<h3 id="array_poparray-array-any">array_pop(<strong><em>array</em></strong> array) : any<a class="headerlink" href="#array_poparray-array-any" title="Permanent link">&para;</a></h3>
+<p>Pop element off end of array</p>
+<h3 id="array_pusharray-array-any-value-any">array_push(<strong><em>array</em></strong> array, <strong><em>any</em></strong> value) : any<a class="headerlink" href="#array_pusharray-array-any-value-any" title="Permanent link">&para;</a></h3>
+<p>Adds <strong><em>value</em></strong> to end of <strong><em>array</em></strong> and returns <strong><em>value</em></strong></p>
+<h3 id="array_randomarray-array-any">array_random(<strong><em>array</em></strong> array) : any<a class="headerlink" href="#array_randomarray-array-any" title="Permanent link">&para;</a></h3>
+<p>Returns random value of <strong><em>array</em></strong> </p>
+<h3 id="array_rangearray-array-int-offset-int-length-0-bool-preserve_keys-false-array">array_range(<strong><em>array</em></strong> array, <strong><em>int</em></strong> offset, <strong><em>?int</em></strong> length = 0, <strong><em>?bool</em></strong> preserve_keys = false) : array<a class="headerlink" href="#array_rangearray-array-int-offset-int-length-0-bool-preserve_keys-false-array" title="Permanent link">&para;</a></h3>
+<p>Returns a range of <code>array</code>, starting from <code>offset</code>, and returns the amount specified in <code>length</code> if set (otherwise until the end of the array.) </p>
+<p>If <code>preserve_keys</code> is true, the result has the array keys preserved.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;two&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;three&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;four&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_slice</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">))</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// [0: &quot;three&quot;, 1: &quot;four&quot;, 2: &quot;five&quot;]</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_slice</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">))</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">// [0: &quot;three&quot;, 1: &quot;four&quot;]</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_range</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">))</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">// [0: &quot;three&quot;, 1: &quot;four&quot;]</span>
+</code></pre></div>
+<h3 id="array_reversearray-array-array">array_reverse(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_reversearray-array-array" title="Permanent link">&para;</a></h3>
+<p>Returns <strong><em>array</em></strong> in reverse order</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6547</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Simon&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">235345</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jack&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">4657</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jim&#39;</span><span class="p">]</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nx">dd</span><span class="p">(</span><span class="nx">array_reverse</span><span class="p">(</span><span class="nx">employees</span><span class="p">))</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">// -&gt; [0: &quot;Jim&quot;, 1: &quot;Jack&quot;, 2: &quot;Simon&quot;]</span>
+</code></pre></div>
+<h3 id="array_shufflearray-array-array">array_shuffle(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_shufflearray-array-array" title="Permanent link">&para;</a></h3>
+<p>Returns shuffled version of <strong><em>array</em></strong></p>
+<h3 id="array_sortarray-array-array">array_sort(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_sortarray-array-array" title="Permanent link">&para;</a></h3>
+<p>Sorts <strong><em>array</em></strong> by its values. Keys are kept as-is.</p>
+<h3 id="array_splicearray-array-int-offset-int-length-array-replacement-array">array_splice(<strong><em>array</em></strong> array, <strong><em>int</em></strong> offset, <strong><em>?int</em></strong> length, <strong><em>array</em></strong> replacement) : array<a class="headerlink" href="#array_splicearray-array-int-offset-int-length-array-replacement-array" title="Permanent link">&para;</a></h3>
+<p>Removes <code>length</code> amount of values from <code>array</code>, starting from <code>offset</code> (if <code>offset</code> is negative, starts from the end of the array.)</p>
+<p>If <code>replacement</code> is specified, the removed values are replaced with it.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;two&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;three&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;four&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_splice</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">))</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">// [0: &quot;one&quot;, 1: &quot;two&quot;, 2: &quot;five&quot;]</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nx">dump</span><span class="p">(</span><span class="nx">array_splice</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">]))</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">// [0: &quot;one&quot;, 1: &quot;two&quot;, 2: &quot;hello&quot;, 3: &quot;five&quot;]</span>
+</code></pre></div>
+<h3 id="array_valuesarray-array-array">array_values(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#array_valuesarray-array-array" title="Permanent link">&para;</a></h3>
+<p>Returns the values of an array.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6547</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Simon&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">235345</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jack&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">4657</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jim&#39;</span><span class="p">]</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">dd</span><span class="p">(</span><span class="nx">array_values</span><span class="p">(</span><span class="nx">employees</span><span class="p">))</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1">// -&gt; [0: &quot;Simon&quot;, 1: &quot;Jack&quot;, 2: &quot;Jim&quot;]</span>
+</code></pre></div>
+<h3 id="to_arrayarray-array-array">to_array(<strong><em>array</em></strong> array) : array<a class="headerlink" href="#to_arrayarray-array-array" title="Permanent link">&para;</a></h3>
+<p>Returns <strong><em>array</em></strong>.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 6, 2024 10:34:57</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/webhooksite/webhook.site" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/webhooksite" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.action.edit"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
