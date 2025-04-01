@@ -31,6 +31,10 @@ The default response (or a response set with e.g. the Modify Response Custom Act
 
 Lists all request sent to a token. 
 
+!!! note
+
+    Can't get the API to work? Many users forget to add the `/token/` part of the URL, make sure it's there!
+
 #### Query string parameters
 
 * `sorting` (string) - either `newest` or `oldest` (default)

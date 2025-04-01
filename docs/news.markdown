@@ -24,6 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 1 April 2025
+
+* HTTP: Fixed Content-Type parameter not being replaced with Custom Variables.
+* Custom Domains: Verification Success emails are now sent.
+* Webhook.site now shows a warning as a (free) URL is near its expiry date.
+
 ## 27 Feburary 2025
 
 * **Extract JSON** now supports Repeat, and automatically extracts variables when interating over objects and arrays.
