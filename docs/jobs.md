@@ -21,6 +21,6 @@ We want to keep the no-registration, no-bullshit, one-click concept that our use
 
 When we think about user interfaces of technical Web-based tools we like to use, and that we think have a good mix of utility and ease of use, tools like [Sentry](https://youtu.be/4djseRVSan8?t=101) or [Zabbix 7](https://youtu.be/p4MxD66k66A?list=PLCFBm2AvdHoB2ENqpqKCdWY-bfmetjCIt&t=274) come to mind.
 
-We expect the product of this project to be changes and additions to our CSS/HTML/JS code, which is written in Bootstrap 3, SASS and AngularJS. 
+We expect the product of this project to be changes and additions to our CSS/HTML/JS code, which is written in Bootstrap 3, SASS and AngularJS. We expect that you know what Webhook.site is, why users like it and that you have have a lot of experience with SaaS platforms. 
 
-If you're interested in working with us, please reach out to jobs@webhook.site with a portfolio. You can also book a [call](https://scheduler.zoom.us/webhook/meeting) with Simon Fredsted, Webhook.site founder.
+If you're interested in working with us, please reach out to [jobs@webhook.site](mailto:jobs@webhook.site) with a portfolio. You can also book a [call](https://scheduler.zoom.us/webhook/meeting) with Simon Fredsted, Webhook.site founder.

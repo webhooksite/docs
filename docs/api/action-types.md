@@ -43,7 +43,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `condition`
 - `input`: string
-- `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte
+- `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte,ex,false,true,num,int,float,json,email,domain,url
 - `value`: string
 - `action`: **required**, string, in:stop,continue,noop
 
