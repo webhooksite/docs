@@ -1,6 +1,73 @@
 ## Text
 
+### Extract JSON
+
+This action automatically converts all JSON properties/fields to Variables.
+
+<figure markdown="span">
+  ![Extract JSON in action](/images/custom-actions.png){ width="300" }
+  <figcaption>Auto JSON in action</figcaption>
+</figure>
+
+Per default, the action works on the JSON found in the `$request.content$` variable, e.g. the request body data. 
+
+If the JSONPath parameter is specified, this can be used to limit the variable creation to only the subset of data specified by the JSONPath query.
+
+##### Extract JSON Example
+
+If the following data is specified in the Source parameter:
+
+```json
+{
+  "Actors": [
+    {
+      "name": "Tom Cruise",
+      "age": 56,
+      "Born At": "Syracuse, NY",
+      "Birthdate": "July 3, 1962",
+      "photo": "https://jsonformatter.org/img/tom-cruise.jpg"
+    },
+    {
+      "name": "Robert Downey Jr.",
+      "age": 53,
+      "Born At": "New York City, NY",
+      "Birthdate": "April 4, 1965",
+      "photo": "https://jsonformatter.org/img/Robert-Downey-Jr.jpg"
+    }
+  ]
+}
+```
+
+If the JSONPath parameter is empty, the following 10 variables will be created:
+
+| Variable Name               | Value                                              |
+|-----------------------------|----------------------------------------------------|
+| `$json.Actors.0.name$ `     | Tom Cruise                                         |
+| `$json.Actors.0.age$ `      | 56                                                 |
+| `$json.Actors.0.Born At$ `  | Syracuse, NY                                       |
+| `$json.Actors.0.Birthdate$` | July 3, 1962                                       |
+| `$json.Actors.0.photo$ `    | https://example.com/tom-cruise.jpg                 |
+| `$json.Actors.1.name$ `     | Robert Downey Jr.                                  |
+| `$json.Actors.1.age$ `      | 53                                                 |
+| `$json.Actors.1.Born At$ `  | New York City, NY                                  |
+| `$json.Actors.1.Birthdate$` | April 4, 1965                                      |
+| `$json.Actors.1.photo$ `    | https://example.com/Robert-Downey-Jr.jpg           |
+
+If the JSONPath parameter is set to `.Actors.0`, only the following 5 variables are created:
+
+| Variable Name               | Value                                              |
+|-----------------------------|----------------------------------------------------|
+| `$json.0.name$ `            | Tom Cruise                                         |
+| `$json.0.age$ `             | 56                                                 |
+| `$json.0.Born At$ `         | Syracuse, NY                                       |
+| `$json.0.Birthdate$`        | July 3, 1962                                       |
+| `$json.0.photo$ `           | https://example.com/tom-cruise.jpg                 |
+
 ### Extract JSONPath
+
+
+!!! warning
+    We recommend using the *Extract JSON* action as it supports creating multiple variables in one go, saving you from creating duplicate actions.
 
 This action runs a JSONPath query on the contents of a request. With it, you can extract any data from a JSON document and store it in a variable, which can then be used in a downstream action.
 
@@ -71,69 +138,6 @@ Symbol                | Description
 For more details on what's possible with JSONPath, [take a look at the docs](https://github.com/FlowCommunications/JSONPath#jsonpath-examples).
 
 As you start entering a JSONPath, the results are validated and shown next to the input field.
-
-### Extract JSON
-
-This action automatically converts all JSON properties/fields to Variables.
-
-<figure markdown="span">
-  ![Extract JSON in action](/images/custom-actions.png){ width="300" }
-  <figcaption>Auto JSON in action</figcaption>
-</figure>
-
-Per default, the action works on the JSON found in the `$request.content$` variable, e.g. the request body data. 
-
-If the JSONPath parameter is specified, this can be used to limit the variable creation to only the subset of data specified by the JSONPath query.
-
-##### Extract JSON Example
-
-If the following data is specified in the Source parameter:
-
-```json
-{
-  "Actors": [
-    {
-      "name": "Tom Cruise",
-      "age": 56,
-      "Born At": "Syracuse, NY",
-      "Birthdate": "July 3, 1962",
-      "photo": "https://jsonformatter.org/img/tom-cruise.jpg"
-    },
-    {
-      "name": "Robert Downey Jr.",
-      "age": 53,
-      "Born At": "New York City, NY",
-      "Birthdate": "April 4, 1965",
-      "photo": "https://jsonformatter.org/img/Robert-Downey-Jr.jpg"
-    }
-  ]
-}
-```
-
-If the JSONPath parameter is empty, the following 10 variables will be created:
-
-| Variable Name               | Value                                              |
-|-----------------------------|----------------------------------------------------|
-| `$json.Actors.0.name$ `     | Tom Cruise                                         |
-| `$json.Actors.0.age$ `      | 56                                                 |
-| `$json.Actors.0.Born At$ `  | Syracuse, NY                                       |
-| `$json.Actors.0.Birthdate$` | July 3, 1962                                       |
-| `$json.Actors.0.photo$ `    | https://example.com/tom-cruise.jpg                 |
-| `$json.Actors.1.name$ `     | Robert Downey Jr.                                  |
-| `$json.Actors.1.age$ `      | 53                                                 |
-| `$json.Actors.1.Born At$ `  | New York City, NY                                  |
-| `$json.Actors.1.Birthdate$` | April 4, 1965                                      |
-| `$json.Actors.1.photo$ `    | https://example.com/Robert-Downey-Jr.jpg           |
-
-If the JSONPath parameter is set to `.Actors.0`, only the following 5 variables are created:
-
-| Variable Name               | Value                                              |
-|-----------------------------|----------------------------------------------------|
-| `$json.0.name$ `            | Tom Cruise                                         |
-| `$json.0.age$ `             | 56                                                 |
-| `$json.0.Born At$ `         | Syracuse, NY                                       |
-| `$json.0.Birthdate$`        | July 3, 1962                                       |
-| `$json.0.photo$ `           | https://example.com/tom-cruise.jpg                 |
 
 ### Extract Regex
 
