@@ -683,8 +683,7 @@ Check "Keep Aspect Ratio" so that the image keeps the aspect ratio, but doesn't 
 ## Google Sheets
 
 !!! note
-    Google Sheets should not be used as a database, and have low usage limits. If you need to import on the order of thousands
-    of rows or make thousands of calls a day, Google Sheets cannot be used. We recommend using a database like Postgres in conjunction with the *Database Query* action.
+    Google Sheets should not be used as a database, and have low usage limits. Google Sheets does not provide a way to query data efficiently. Additionally, if you need to import on the order of thousands of rows or make thousands of calls a day, Google Sheets cannot be used due to rate limits and race conditions. We recommend using a database in conjunction with the *Database Query* action.
 
 Google Sheets Custom Actions lets you manipulate and retrieve values from a Google Sheet.
 
