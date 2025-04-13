@@ -385,6 +385,8 @@ Adds a custom log entry to the Request's action output.
 
 This action can be used to modify the response of the Webhook.site URL based on the input.
 
+To make a redirect, leave the Response Body field blank, in the Response Headers field enter `Location: https://example.com` and set Status Code to `302`.
+
 ### Rate Limit
 
 This action can be used to allow a specific amount of requests in a specific amount of time per a given IP.
