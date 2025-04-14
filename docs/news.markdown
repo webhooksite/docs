@@ -24,6 +24,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 14 April 2025
+
+* Updates to **Custom Actions editor**
+    * Variables dropdown has been moved to the top now fills the whole screen and shows variable values
+    * Variables dropdown now has a search field to easily find the variable you need – both variable name and value is searched
+    * Since the Variables dropdown has improved, the output section no longer shows Variables
+    * Output section is now a resizable panel, allowing output and action configuration to be shown simultaneously
+    * Removed the bottom part of Custom Actions modal to conserve space for editor
+
 ## 1 April 2025
 
 * HTTP: Fixed Content-Type parameter not being replaced with Custom Variables.
