@@ -24,6 +24,13 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 15 April 2025
+
+* Updates to **Replay** 
+    * Replay will automatically use the query from searching requests
+    * It is now shown how many results the Replay search query returns
+    * Fixed an issue with progress bar going to 100% immediately
+
 ## 14 April 2025
 
 * Updates to **Custom Actions editor**
