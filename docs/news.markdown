@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 22 April 2025
+
+* **HTTP action**: Timeout raised to 60 seconds when action is in Queue mode.
+
 ## 15 April 2025
 
 * Updates to **Replay** 

@@ -218,6 +218,8 @@ The response of the request is stored in a series of variable names prefixed wit
 * `$your_prefix.url$` - the URL the request was sent to
 * `$your_prefix.error$` - if the request resulted in an error, it's stored in this variable.
 
+The maximum timeout for a HTTP request is 15 seconds when the action is run during the request. When the action is in Queue mode, the maximum timeout is raised to 60 seconds.
+
 #### Retry
 
 When checked, this option will cause the HTTP to be retried in case of a network error, timeout, or related issue.
@@ -230,7 +232,7 @@ When checked, this option will cause the HTTP to be retried in case of a network
 Per default, there are 3 retries (4 requests total) with 1 second delay between each retry.
 
 !!! note
-    As Webhook.site URLs have a maximum of 30 seconds to respond, it's best to use a low delay and retry number that stays under 30 seconds total. Otherwise there's a risk the actions won't complete. Alternatively, you can mark the HTTP Request action as [Queued](/custom-actions.html#queued-actions), which has a timeout of 120 seconds.
+    As Webhook.site URLs have a maximum of 30 seconds to respond, it's best to use a low delay and retry number that stays under 30 seconds total. Otherwise there's a risk the actions won't complete. Alternatively, you can mark the HTTP Request action as [Queued](/custom-actions.html#queued-actions), which has a total maximum runtime of 120 seconds.
 
 If a status code is specified, the request will also be retried when the response status doesn't match the specified status code. The character `*` can be used as wildcard, e.g. `20*` will match any status code in the range 200-209.
 
