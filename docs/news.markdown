@@ -24,13 +24,20 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 23 April 2025
+
+* Fixed an issue where queued actions wouldn't run if the request contains e.g. binary form/multipart data.
+* **HTTP action**: Fixed an issue where form/multipart data wouldn't be properly forwarded due to invalid boundary in the content-type header.
+* Fixed an issue where action error notifications wouldn't be sent for queued actions.
+* Fixed an issue where action output wouldn't be saved for queued actions.
+
 ## 22 April 2025
 
 * **HTTP action**: Timeout raised to 60 seconds when action is in Queue mode.
 
 ## 15 April 2025
 
-* Updates to **Replay** 
+* Updates to **Replay**
     * Replay will automatically use the query from searching requests
     * It is now shown how many results the Replay search query returns
     * Fixed an issue with progress bar going to 100% immediately
