@@ -40,7 +40,7 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 | Request History per URL                                         | 100     | 10.000<sup>2</sup>            | 10.000<sup>2</sup>            | 10.000<sup>2</sup>                     |
 | URL/Email Address expiry                                        | 7 days<sup>1</sup> | Never expires                | Never expires       | Never expires                  |
 | Data storage duration                                           | 7 days<sup>1</sup> | 365 days                     | 365 days            | 365 days                       |
-| Pricing<sup>3</sup>                                             |         | $9/month $90/year (save 20%) | $18/month $180/year (save 20%) | $59/month $599/year (save 20%) |
+| Pricing<sup>3</sup>                                             |         | $9/month $90/year (save 20%) | $18/month $180/year (save 20%) | $69/month $699/year (save 20%) |
 
 
 <div class="center">
