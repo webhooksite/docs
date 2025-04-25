@@ -35,7 +35,7 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 | CSV Export                                                      | ❌      | ✅                           | ✅                            | ✅                             |
 | Free Email Support                                              | ❌      | ✅                           | ✅                            | ✅                             |
 | Custom Domain                                                   | ❌      | ❌                           | ❌                            | ✅                             |
-| Multi-User Support                                              | ❌      | ❌                           | ❌                            | ✅                             |
+| Multi-User Support & SAML SSO                                   | ❌      | ❌                           | ❌                            | ✅                             |
 | Max Requests per URL                                            | 100      | Unlimited                    | Unlimited                     | Unlimited                      |
 | Request History per URL                                         | 100     | 10.000<sup>2</sup>            | 10.000<sup>2</sup>            | 10.000<sup>2</sup>                     |
 | URL/Email Address expiry                                        | 7 days<sup>1</sup> | Never expires                | Never expires       | Never expires                  |
@@ -114,3 +114,6 @@ Additionally, Webhook.site provides an SSL certificate which is included free of
 
 ### Multi-User Support 
 Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure individual users' access with User Types like Administrator, Member and Viewer as well as with Roles, giving users access to specific groups of URLs so they can see and interact with exactly the data they need.
+
+### SAML 2.0 Single Sign-On
+Webhook.site supports SSO for providers like Google Workspace, Microsoft Entra and any other provider that supports SAML 2.0 SSO.

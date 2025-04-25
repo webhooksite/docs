@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 25 April 2025
+
+* Webhook.site now supports SAML 2.0 Single Sign-On (SSO) for Enterprise customers. [More info here](https://webhook.site/saml/setup).
+
 ## 23 April 2025
 
 * Fixed an issue where queued actions wouldn't run if the request contains e.g. binary form/multipart data.
