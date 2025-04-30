@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 April 2025
+
+* Custom Domains no longer have a separate `email.` subdomain for email sending and receiving. If you have already created a Custom Domain you'll need to delete and add it again.
+
 ## 25 April 2025
 
 * Webhook.site now supports SAML 2.0 Single Sign-On (SSO) for Enterprise customers. [More info here](https://webhook.site/saml/setup).

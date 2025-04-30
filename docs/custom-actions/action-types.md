@@ -246,7 +246,7 @@ This will send a email with variable contents from the Webhook.site cloud. Varia
 
 This will send a email with variable contents from your own email provider. Variables extracted previously can be used.
 
-#### Gmail and Google Workspace
+#### Gmail
 
 For Gmail, the following specific setup is required:
 
@@ -255,6 +255,8 @@ For Gmail, the following specific setup is required:
 * Username: youraccount@gmail.com or youraccount@example.com (replace with your Gmail address)
 * Password: You must [create a Mail App Password](https://myaccount.google.com/u/1/apppasswords)
 * Encryption: `TLS`
+
+As of 1 May 2025, this method is no longer available to Google Workspace customers. We recommend using the Webhook.site Custom Domain to send emails from your own domain.
 
 ### SSH
 
