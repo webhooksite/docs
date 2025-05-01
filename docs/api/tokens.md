@@ -12,7 +12,19 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 **POST** `/token`
 
-After creating a token, URLs at `https://webhook.site/{token.uuid}` and `https://{token.uuid}.webhook.site` become accessible, emails can be sent to `{token.uuid}@emailhook.site`, and DNS queries can be sent to `*.{token.uuid}.dnshook.site`.
+After creating a token, the following addresses become active. `alias` can be used in place of `uuid`. Both HTTP and HTTPS can be used.
+
+* `https://webhook.site/{uuid}`
+* `https://webhook.site/{uuid}/{anything}`
+* `https://{uuid}.webhook.site` 
+* `https://{uuid}.webhook.site/{anything}` 
+* `{uuid}@emailhook.site` (Email)
+* `{uuid}.dnshook.site` (DNS)
+* `{anything}.{uuid}.dnshook.site` (DNS)
+
+#### Request
+
+##### JSON parameters
 
 * `default_status` (int, 200-599, default 200) sets the default response status of the URL
 * `default_content` (string) sets the default response content of the URL
@@ -26,8 +38,6 @@ After creating a token, URLs at `https://webhook.site/{token.uuid}` and `https:/
 * `actions` (bool) specifies if Custom Actions are enabled and executed on every request/email (true), or disabled (false.)
 * `clone_from` (uuid string) specifies a token UUID (or alias) that will act as a template for the new token. When specified, settingssuch as default content, timeout, password as well as Custom Actions are copied to the new token.
 * `group_id` (int) specifies which group ID the token should be added to.
-
-#### Request
 
 ##### Example 1: JSON
 
@@ -72,11 +82,11 @@ print('URL Created: https://webhook.site/' + r.json()['uuid'])
 
 ```json
 {
+  "uuid": "9981f9f4-657a-4ebf-be7c-1915bedd4775",
   "redirect": false,
   "alias": null,
   "timeout": 0,
   "premium": true,
-  "uuid": "9981f9f4-657a-4ebf-be7c-1915bedd4775",
   "ip": "127.0.0.1",
   "user_agent": "Paw\/3.1.8 (Macintosh; OS X\/10.14.6) GCDHTTPRequest",
   "default_content": "Hello world!",
@@ -84,7 +94,7 @@ print('URL Created: https://webhook.site/' + r.json()['uuid'])
   "default_content_type": "text\/plain",
   "premium_expires_at": "2019-10-22 10:52:20",
   "created_at": "2019-09-22 10:52:20",
-  "updated_at": "2019-09-22 10:52:20"
+  "updated_at": "2019-09-22 10:52:20",
   "expires_at": "2019-09-29 10:52:20"
 }
 ```

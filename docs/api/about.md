@@ -8,6 +8,11 @@ Base URL: `https://webhook.site`.
 
 You must set the `Accept` and `Content-Type` headers to `application/json`.
 
+## Common Uses
+
+* [Create a Webhook.site URL](/api/tokens.html#create-token)
+* [Fetch data sent to a Webhook.site URL](/api/requests.html#get-requests)
+
 ## Things to Note
 
 * In this API documentation, URL parameters are prefixed with `:` (colon) to show which parameters must be changed by the user. You must *not* include this character in the URL.
