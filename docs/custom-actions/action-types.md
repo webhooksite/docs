@@ -463,6 +463,7 @@ Currently, three *actions* are provided: use result, stop and continue. *Use Res
 * is greater than or equal to
 * is less than
 * is less than or equal to
+* matches regex – example regex: `/^[a-zA-Z0-9-_]{3,32}$/`
 
 #### Operators without value argument
 

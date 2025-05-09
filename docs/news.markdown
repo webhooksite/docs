@@ -24,6 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 9 May 2025
+
+* Underscores are now allowed in Token Aliases
+* Re-added Variables list to Custom Actions editor
+* Added new "matches regex" operator to Conditions action
+
 ## 30 April 2025
 
 * Custom Domains no longer have a separate `email.` subdomain for email sending and receiving. If you have already created a Custom Domain you'll need to delete and add it again.

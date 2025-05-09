@@ -34,7 +34,7 @@ After creating a token, the following addresses become active. `alias` can be us
 * `expiry` (int) amount of seconds until token auto-expiration. Max value (and default for non-upgraded URLs) is 604800 (one week). Intended for e.g. automated testing pipelines. Leave out or set to `null` to disable.
 * `request_limit` (int) - limits the request history of the Token, from 0 (no data stored on Webhook.site servers) to 10000 (default)
 * `cors` (bool) set to true will add CORS headers to the request so browsers will send cross-domain requests to the URL
-* `alias` (string) allows setting the alias of the token.
+* `alias` (string, regex:`[a-zA-Z0-9-_]{3,32}`) allows setting the alias of the token.
 * `actions` (bool) specifies if Custom Actions are enabled and executed on every request/email (true), or disabled (false.)
 * `clone_from` (uuid string) specifies a token UUID (or alias) that will act as a template for the new token. When specified, settingssuch as default content, timeout, password as well as Custom Actions are copied to the new token.
 * `group_id` (int) specifies which group ID the token should be added to.
