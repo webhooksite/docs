@@ -4,6 +4,12 @@ If you have a Webhook.site account, before using the API, please first [create a
 
 Don't have an account yet? [Sign up here](https://webhook.site/register).
 
+## Postman
+
+Click below to access our freely available Postman collection, which you can fork for your own use.
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/45321203-694a428b-d10f-4dbb-885c-79ed4441ba2e?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D45321203-694a428b-d10f-4dbb-885c-79ed4441ba2e%26entityType%3Dcollection%26workspaceId%3D0793a22a-b783-4ee3-ba4d-139c851deef2)
+
 ## cURL
 
 ### Send JSON data to URL

@@ -1,6 +1,10 @@
 # Webhook.site API
 
-The Webhook.site API is public, free to use, doesn't require authentication and is relatively easy to use. 
+The Webhook.site API is public, free and easy to use. If you have a Webhook.site Account, you should authorize via an [Api-Key](#api-key).
+
+<div style="height:32px">
+View, fork and modify in Postman: &nbsp;<a href="https://god.gw.postman.com/run-collection/45321203-694a428b-d10f-4dbb-885c-79ed4441ba2e?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D45321203-694a428b-d10f-4dbb-885c-79ed4441ba2e%26entityType%3Dcollection%26workspaceId%3D0793a22a-b783-4ee3-ba4d-139c851deef2"><img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="vertical-align:middle; width: 128px; height: 32px;"></a>
+</div>
 
 ## General Usage
 
