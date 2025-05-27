@@ -83,26 +83,32 @@ You can connect to Webhook.site's WebSocket server (`wss://ws.webhook.site`) and
 
 ### JavaScript
 
+First, install dependencies: `npm install socket.io-client@2`
+
 ```javascript
-import Echo from "laravel-echo";
-import client from "socket.io-client";
+const io = require("socket.io-client");
 
-let apiKey = '000-000...';
-let tokenId = '111-111...';
+// Replace these with your actual API key and token ID
+let apiKey = "000-000...";
+let tokenId = "111-111...";
 
-const headers = apiKey ? {'Api-Key': apiKey} : {};
-const echo = new Echo.default({
-    host: 'wss://ws.webhook.site',
-    broadcaster: 'socket.io',
-    client,
-    auth: {headers}
-})
+const socket = io("https://ws.webhook.site");
 
-let channel = echo.private(`token.${tokenId}`);
+socket.on("connect_error", (e) => console.log('Connection error', e));
+socket.on("error", (e) => console.log('Connection error', e));
 
-channel.listen('.request.created', (data) => {
-    // console.log(data)
-})
+socket.on("connect", () => {
+    socket.emit("subscribe", {
+        channel: `private-token.${tokenId}`,
+        auth: {headers: apiKey ? {"Api-Key": apiKey} : {}}
+    });
+    console.log("Subscribed to channel");
+});
+
+socket.on("request.created", (channel, data) => {
+    console.log(`Received event on channel ${channel}`);
+    console.dir(data, {depth: null});
+});
 ```
 
 ### Python
