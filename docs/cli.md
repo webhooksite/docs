@@ -105,8 +105,9 @@ When the `--query` argument is specified, only past requests are processed, filt
 
 Examples:
 
+  * `*` - all requests
   * `content:"foobar"` - body contents containing the word foobar
-  * `created_at:[now-14d TO *]` - date range query (in this example, all requests 14 days and newer)
+  * `created_at:[now-14d TO *]` - date range query (in this example, all requests 14 days old and newer)
 
 More [query examples](/api/requests.html#search-query-examples).
 
