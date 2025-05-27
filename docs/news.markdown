@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 27 May 2025
+
+* Added `--query` flag to Webhook.site CLI, allowing forwarding of past requests. [More info here](/cli.html)
+
 ## 9 May 2025
 
 * Underscores are now allowed in Token Aliases

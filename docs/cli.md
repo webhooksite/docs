@@ -63,8 +63,10 @@ The `forward` commands acts as a bidirectional proxy, listening to incoming traf
 | `--token=`           | `WH_TOKEN`           | Required. The Webhook.site URL ID (also called [token ID](/api/tokens.html#api-endpointstokens-urls-email-addresses))                                                       |
 | `--api-key=`         | `WH_API_KEY`         | An [API key](/api/about.html#api-key), required when using a Token that belongs to a Webhook.site account                                                                    |
 | `--target=`          | `WH_TARGET`          | Specifies URL where traffic should be forwarded.<br>Default: `https://localhost`                                                                                  |
-| `--listen-timeout=` |                      | Amount of seconds to wait for a response from the Target URL to send back as a response for the Webhook.site URL.<br>Set to `0` to disable bidirectional forwarding.<br>Default `5`. Max `10`. |
+| `--listen-timeout=`  | `WH_LISTEN_TIMEOUT`  | Amount of seconds to wait for a response from the Target URL to send back as a response for the Webhook.site URL.<br>Set to `0` to disable bidirectional forwarding.<br>Default `5`. Max `10`. |
 | `--keep-url`         |                      | When specified, disables URL merging (see below.)                                                                                                                 |
+| `--query   `         | `WH_QUERY`           | Forwards previously sent requests, filtered by a search query. When left blank, only requests sent after the command runs are forwarded.
+
 
 #### Example
 
@@ -96,6 +98,18 @@ When running Webhook.site CLI in Docker, to access the host machine, you can't u
 #### Self-signed certificates
 
 If the target uses a self-signed certificate, you could get an error message about this. To allow self-signed certs, run `whcli` with the following environment variable: `NODE_TLS_REJECT_UNAUTHORIZED="0"`
+
+#### Forwarding past requests
+
+When the `--query` argument is specified, only past requests are processed, filtered by the specified query. Variable Replacement is not available for past requests.
+
+Examples:
+
+  * `content:"foobar"` - body contents containing the word foobar
+  * `created_at:[now-14d TO *]` - date range query (in this example, all requests 14 days and newer)
+
+More [query examples](/api/requests.html#search-query-examples).
+
 
 ### `exec`: Execute commands
 
