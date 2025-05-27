@@ -81,7 +81,7 @@ $ curl -X POST -H 'Api-Key: 00000000-0000-0000-0000-000000000000' https://webhoo
 
 You can connect to Webhook.site's WebSocket server (`wss://ws.webhook.site`) and listen for incoming requests, emails and DNSHooks in your own application. If you listen to a token associated with a Webhook.site account, you must specify and API key. Alternatively, you can use [Webhook.site CLI](/cli.html).
 
-You can use the Laravel Echo library to connect, Node.js example below:
+### JavaScript
 
 ```javascript
 import Echo from "laravel-echo";
@@ -103,4 +103,48 @@ let channel = echo.private(`token.${tokenId}`);
 channel.listen('.request.created', (data) => {
     // console.log(data)
 })
+```
+
+### Python
+
+```python
+import socketio
+import pprint
+
+api_key = '000-000...'
+token_id = '111-111...'
+
+# Create a Socket.IO client
+sio = socketio.Client()
+
+@sio.event
+def disconnect():
+    print("Disconnected from server")
+
+@sio.event
+def connect():
+    sio.emit("subscribe", {
+        "channel": f'private-token.{token_id}',
+        "auth": {
+            "headers": {
+                "Api-Key": api_key
+            }
+        }
+    })
+    print(f"Subscribed to channel")
+
+@sio.on("request.created")
+def on_message(channel, data):
+    print(f"Received event on channel {channel}")
+    pprint.pprint(data)
+
+# Connect with headers for authentication
+sio.connect(
+    'https://ws.webhook.site',
+    transports=['websocket']
+)
+
+# Keep the script running
+sio.wait()
+
 ```
