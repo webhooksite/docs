@@ -82,8 +82,17 @@ body, input {
   margin-top: 1.2rem;
 }
 
+.md-nav__item--section>.md-nav__link[for] {
+  text-transform: uppercase;
+  font-size: 0.55rem;
+  padding-bottom: 4px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  margin-top: 3em;
+}
+
 .md-nav--primary > .md-nav__list > .md-nav__item:first-of-type {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   opacity: .6;
 }
 

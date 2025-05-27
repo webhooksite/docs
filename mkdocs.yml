@@ -56,15 +56,16 @@ extra_css:
 nav:
   - ← Back to Webhook.site: https://webhook.site  
 
-  - FAQ: index.md
-  - Jobs: jobs.md
-  - News: news.markdown
-  - Open Source: open-source.markdown
-  - Basic, Pro & Enterprise: pro.markdown  
-  - CLI: cli.md
-  - Schedules: schedules.md
-  - DNSHook: dnshook.md
-  - Form Builder: form-builder.md
+  - General:
+    - FAQ: index.md
+    - Jobs: jobs.md
+    - News: news.markdown
+    - Open Source: open-source.markdown
+    - Basic, Pro & Enterprise: pro.markdown  
+    - CLI: cli.md
+    - Schedules: schedules.md
+    - DNSHook: dnshook.md
+    - Form Builder: form-builder.md
   - Custom Actions:
     - About Custom Actions: custom-actions.markdown
     - Variables: custom-actions/variables.md
