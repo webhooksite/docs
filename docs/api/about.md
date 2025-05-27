@@ -107,6 +107,8 @@ channel.listen('.request.created', (data) => {
 
 ### Python
 
+First, install dependencies: `pip install "python-socketio[client]"`
+
 ```python
 import socketio
 import pprint
