@@ -89,6 +89,7 @@ nav:
   - API:
     - Usage & Authentication: api/about.md
     - Examples: api/examples.md
+    - WebSocket: api/websocket.md
     - Tokens (URLs): api/tokens.md
     - Requests: api/requests.md
     - Groups: api/groups.md
