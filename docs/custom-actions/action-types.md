@@ -67,7 +67,7 @@ If the JSONPath parameter is set to `.Actors.0`, only the following 5 variables 
 
 
 !!! warning
-    We recommend using the *Extract JSON* action as it supports creating multiple variables in one go, saving you from creating duplicate actions.
+    This action has been deprecated and can no longer be chosen. We recommend using the *Extract JSON* action as it supports creating multiple variables in one go, saving you from creating duplicate actions.
 
 This action runs a JSONPath query on the contents of a request. With it, you can extract any data from a JSON document and store it in a variable, which can then be used in a downstream action.
 
@@ -138,6 +138,94 @@ Symbol                | Description
 For more details on what's possible with JSONPath, [take a look at the docs](https://github.com/FlowCommunications/JSONPath#jsonpath-examples).
 
 As you start entering a JSONPath, the results are validated and shown next to the input field.
+
+### Validate JSON
+
+Allows validating that a given input is valid, parsable JSON – optionally also against a [JSON Schema](https://json-schema.org/learn/miscellaneous-examples).
+
+When the JSON Schema is a URL, the schema is downloaded from the server.
+
+The action generates 2 variables: 
+
+* `$validator.count$` - the count of errors
+* `$validator.errors$` – the errors in JSON format
+
+If the JSON is invalid or does not conform to the schema, an Action error is generated.
+
+<figure markdown="span">
+  ![Validate JSON exmaple](/images/validate-json.png){ width="400" }
+  <figcaption>Validate JSON configuration example</figcaption>
+</figure>
+
+#### Example JSON Schema
+
+```json
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "The person's first name."
+    },
+    "lastName": {
+      "type": "string",
+      "description": "The person's last name."
+    },
+    "age": {
+      "description": "Age in years which must be equal to or greater than zero.",
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}
+```
+
+The following JSON will match and cause `$validator.count$` to be `0`:
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 21
+}
+```
+
+However, if the following JSON is specified:
+
+```json
+{
+  "firstName": [
+    345345345345,
+    1232
+  ],
+  "lastName": "Doe",
+  "age": "21"
+}
+```
+
+Then `$validator.count$` would be set to `2`, and `$validator.errors$` would contain:
+
+```json
+[
+  {
+    "property": "firstName",
+    "pointer": "/firstName",
+    "message": "Array value found, but a string is required",
+    "constraint": "type",
+    "context": 1
+  },
+  {
+    "property": "age",
+    "pointer": "/age",
+    "message": "String value found, but an integer is required",
+    "constraint": "type",
+    "context": 1
+  }
+]
+```
 
 ### Extract Regex
 
