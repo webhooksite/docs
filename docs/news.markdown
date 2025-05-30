@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 May 2025
+
+* New Action: [Validate JSON](/custom-actions/action-types.html#validate-json), a quick way to validate JSON – optionally against a JSON Schema.
+
 ## 27 May 2025
 
 * Added `--query` flag to Webhook.site CLI, allowing forwarding of past requests. [More info here](/cli.html)
