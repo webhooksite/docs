@@ -1,8 +1,8 @@
 # WebSocket
 
-You can connect to Webhook.site's WebSocket server (`https://ws.webhook.site`) and listen for incoming requests, emails and DNSHooks in your own application. 
+You can connect to Webhook.site's WebSocket server (`https://ws.webhook.site`) and listen for incoming requests, emails and DNSHooks in your own application. Alternatively, you can use [Webhook.site CLI](/cli.html).
 
-If you listen to a token associated with a Webhook.site account, you must specify and API key. Alternatively, you can use [Webhook.site CLI](/cli.html).
+If you listen to a token associated with a Webhook.site account, you must specify an API key. 
 
 ## Examples
 
