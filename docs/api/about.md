@@ -27,13 +27,9 @@ You must set the [`Api-Key`](#api-key) header if you have a Webhook.site account
 * Webhook.site API Keys *must* be specified using the `Api-Key` HTTP header.
 * Fair use guidelines, rate limits, and other limitations apply as described by the [Terms of Service](https://webhook.site/terms).
 
-## Authentication
+## API Key
 
-While many endpoints of the Webhook.site API are public and work without any authentication, some endpoints do require authentication, or will return a `401 Unauthorized` status code.
-
-### API Key
-
-An API Key can be generated in the Control Panel, and provides access to Tokens that are either a) password protected or b) require login.
+While many endpoints of the Webhook.site API are public and work without any authentication, some endpoints do require authentication, or will return a `401 Unauthorized` status code. Resources that are associated with a Webhook.site account always require an API Key.
 
 API Keys have the same privileges as the user who created them.
 
@@ -42,16 +38,6 @@ API Keys *must* be specified in the `Api-Key` HTTP header.
 <div class="center">
 <a href="https://webhook.site/api-keys" class="md-button md-button--default no-underline">Create API Key</a>
 </div>
-
-### Password
-
-!!! warning
-    Password authentication is deprecated and will be removed in 2025. We recommend using API Keys.
-
-If you have set a password on a Webhook.site URL/token, to access the API resources for that token, you can use either of the following methods:
-
-1. Specify the password using the `password` query string: `?password=[your password]` 
-2. Set the password using HTTP Basic Auth, using the Authorization header. [More info](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side)
 
 ## Common Usages
 
