@@ -323,3 +323,14 @@ This is not an error - when a Webhook.site URL is created, this is simply the de
 With a Webhook.site subscription, you can also use the [Modify Response](/custom-actions/action-types.html#modify-response) action.
 
 ![](/images/default-response.png)
+
+## What happens when I mark my Custom Domain as default?
+
+When you've added a custom domain as a Webhook.site Enterprise customer, you can use any of your Webhook.site URLs with both the `webhook.site` domain and your custom domain(s). 
+
+When you mark a domain as default, 2 things happen:
+
+1. The custom domain is shown in the Webhook.site interface, e.g. when copying a URL
+2. The custom domain is used for email sending with the Send Email action
+
+Any existing URLs will continue to work with no change.
