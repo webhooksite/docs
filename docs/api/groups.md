@@ -4,11 +4,11 @@ Webhook.site Groups allows you to organize your Tokens. Each Group is a containe
 
 ## Create Group
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**POST** `/groups`
+**POST** `https://webhook.site/groups`
 
 * `name` (string) The name of the group.
 
@@ -32,11 +32,11 @@ Webhook.site Groups allows you to organize your Tokens. Each Group is a containe
 
 ## Get all Groups
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**GET** `/groups`
+**GET** `https://webhook.site/groups`
 
 #### Response
 
@@ -76,7 +76,7 @@ Webhook.site Groups allows you to organize your Tokens. Each Group is a containe
 
 #### Request
 
-**PUT** `/groups/:groupId`
+**PUT** <code>https://webhook.site/groups/<span class="url-param">groupId</span></code>
 
 (See *Create Group* above for request.)
 
@@ -88,7 +88,7 @@ Webhook.site Groups allows you to organize your Tokens. Each Group is a containe
 
 #### Request
 
-**DELETE** `/groups/:groupId`
+**DELETE** <code>https://webhook.site/groups/<span class="url-param">groupId</span></code>
 
 #### Response
 

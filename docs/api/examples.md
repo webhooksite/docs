@@ -1,6 +1,7 @@
 # API Examples
 
-If you have a Webhook.site account, before using the API, please first [create an API key here](https://webhook.site/api-keys). The examples below can also be used without an account, but in that case you should remove the API key header.
+If you have a Webhook.site account, before using the API, please first [create an API key here](https://webhook.site/api-keys). 
+The examples below can also be used without an account, but in that case you should remove the API key header.
 
 Don't have an account yet? [Sign up here](https://webhook.site/register).
 
@@ -12,10 +13,44 @@ Click below to access our freely available Postman collection, which you can for
 
 ## cURL
 
+### Create Token (URL/Email Address)
+
+A Token (also called a URL) is a container for incoming requests. The UUID is used in your Webhook.site URL. [More info](/api/tokens.html)
+
+```bash
+curl -X POST https://webhook.site/token
+```
+
+#### Output
+
+```json
+{
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "redirect": false,
+  "alias": null,
+  "actions": false,
+  "cors": false,
+  "expiry": null,
+  "timeout": 0,
+  "listen": 0,
+  "premium": false,
+  "user_id": null,
+  "ip": "192.168.1.100",
+  "user_agent": "curl/8.7.1",
+  "default_content": "This URL has no default content configured. <a href=\"https://webhook.site/#!/edit/6aa5e195-6e9a-4036-8faf-8ad434857574\">Change response in Webhook.site</a>.",
+  "default_status": 200,
+  "default_content_type": "text/html",
+  "request_limit": null,
+  "description": null,
+  "created_at": "2025-07-04 14:31:21",
+  "updated_at": "2025-07-04 14:31:21"
+}
+```
+
 ### Send JSON data to URL
 
 ```bash
-curl -X POST 'https://webhook.site/00000000-0000-0000-0000-000000000000' \
+curl -X POST https://webhook.site/00000000-0000-0000-0000-000000000000 \
   -H 'content-type: application/json' \
   -d $'{"id": 7, "name": "Jack Daniels", "position": "Assistant"}'
 ```
@@ -28,10 +63,56 @@ curl 'https://webhook.site/token/00000000-0000-0000-0000-000000000000/request/la
   -H 'api-key: 00000000-0000-0000-0000-000000000000'
 ```
 
-Output:
+#### Output
 
 ```json
 {"id": 7, "name": "Jack Daniels", "position": "Assistant"}
+```
+
+### Get all data sent to URL
+
+```bash
+curl 'https://webhook.site/token/00000000-0000-0000-0000-000000000000/requests?sorting=newest'
+```
+
+#### Output
+
+```json
+{
+  "data": [
+    {
+      "uuid": "70174177-a447-4dd5-a569-ddd26b7e90ec",
+      "type": "web",
+      "token_id": "00000000-0000-0000-0000-000000000000",
+      "team_id": null,
+      "ip": "192.168.1.1",
+      "hostname": "webhook.site",
+      "method": "POST",
+      "user_agent": "curl/8.7.1",
+      "content": "{\"id\": 7, \"name\": \"Jack Daniels\", \"position\": \"Assistant\"}",
+      "query": null,
+      "headers": {
+        "user-agent": [
+          "curl/8.7.1"
+        ]
+      },
+      "url": "https://webhook.site/00000000-0000-0000-0000-000000000000",
+      "size": 58,
+      "files": [],
+      "created_at": "2025-07-04 14:27:26",
+      "updated_at": "2025-07-04 14:27:26",
+      "custom_action_output": [],
+      "custom_action_errors": [],
+      "time": 0.001
+    }
+  ],
+  "total": 1,
+  "per_page": 50,
+  "current_page": 1,
+  "is_last_page": true,
+  "from": 1,
+  "to": 1
+}
 ```
 
 ### Send file to URL
@@ -65,7 +146,7 @@ for request in r.json()['data']:
 ```
 
 
-### Create URL/Email address
+### Create Token (URL/Email Address)
 
 Requires the `requests` module, which can be installed using `pip install requests`. 
 
@@ -135,7 +216,7 @@ while True:
 
 ## PHP
 
-### Create Token (URL/Email address)
+### Create Token (URL/Email Address)
 
 Creates a Webhook.site Token and outputs its Web URL. You'll need to replace the API key.
 

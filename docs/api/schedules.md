@@ -4,11 +4,11 @@
 
 ## Create schedule
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**POST** `/schedules`
+**POST** `https://webhook.site/schedules`
 
 * `name` The name of the schedule.
 * `interval` One of the following interval strings: `monthly`, `weekly`, `daily`, `hourly`, `10-minute`, `5-minute`, `1-minute`, `cron`
@@ -57,7 +57,7 @@ Variables will be replaced in the fields `request_url`, `request_method`, `reque
 
 ## Get all schedules
 
-**GET** `/schedules?page=1&per_page=15`
+**GET** `https://webhook.site/schedules?page=1&per_page=15`
 
 #### Response
 
@@ -102,7 +102,7 @@ Variables will be replaced in the fields `request_url`, `request_method`, `reque
 
 #### Request
 
-**GET** `/schedules/:scheduleId`
+**GET** <code>https://webhook.site/schedules/<span class="url-param">scheduleId</span></code>
 
 #### Response
 
@@ -132,7 +132,7 @@ Variables will be replaced in the fields `request_url`, `request_method`, `reque
 
 #### Request
 
-**PUT** `/schedules/:scheduleId`
+**PUT** <code>https://webhook.site/schedules/<span class="url-param">scheduleId</span></code>
 
 (See *Create schedule* above for request.)
 
@@ -144,7 +144,7 @@ Variables will be replaced in the fields `request_url`, `request_method`, `reque
 
 #### Request
 
-**DELETE** `/schedules/:scheduleId`
+**DELETE** <code>https://webhook.site/schedules/<span class="url-param">scheduleId</span></code>
 
 #### Response
 
@@ -154,11 +154,11 @@ Variables will be replaced in the fields `request_url`, `request_method`, `reque
 
 #### Request
 
-**POST** `/schedules/:scheduleId/run-now`
+**POST** <code>https://webhook.site/schedules/<span class="url-param">scheduleId</span>/run-now</code>
 
 ## Get Schedule Logs
 
-**GET** `/schedules/:scheduleId/logs`
+**GET** <code>https://webhook.site/schedules/<span class="url-param">scheduleId</span>/logs</code>
 
 Set `Accept` header to `application/json`.
 

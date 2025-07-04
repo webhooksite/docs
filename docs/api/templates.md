@@ -2,13 +2,15 @@
 
 Webhook.site Templates allows you to create templates of actions, and re-use these templates with the Include Template Custom Action.
 
+To include a Template in a Custom Actions flow, use the [Template Action Type](/api/action-types.html#template).
+
 ## Create Template
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**POST** `/template`
+**POST** `https://webhook.site/templates`
 
 * `name` The name of the template.
 * `actions` An array of objects containing Custom Actions. All parameters of actions except `disabled` can be used. [More info here](/api/custom-actions.html)
@@ -148,11 +150,11 @@ Webhook.site Templates allows you to create templates of actions, and re-use the
 
 ## Get all Templates
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**GET** `/templates`
+**GET** `https://webhook.site/templates`
 
 #### Response
 
@@ -265,7 +267,7 @@ Webhook.site Templates allows you to create templates of actions, and re-use the
 
 #### Request
 
-**PUT** `/templates/:templateId`
+**PUT** <code>https://webhook.site/templates/<span class="url-param">templateId</span></code>
 
 (See *Create Template* above for request.)
 
@@ -277,7 +279,7 @@ Webhook.site Templates allows you to create templates of actions, and re-use the
 
 #### Request
 
-**DELETE** `/templates/:templateId`
+**DELETE** <code>https://webhook.site/templates/<span class="url-param">templateId</span></code>
 
 #### Response
 

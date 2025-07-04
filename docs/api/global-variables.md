@@ -4,13 +4,13 @@ With Global Variables, you can store data permanently that can be shared between
 
 ## Create Global Variable
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 After creating, the variable `$content_type$` will be available in Custom Actions.
 
 #### Request
 
-**POST** `/global-variables`
+**POST** `https://webhook.site/global-variables`
 
 * `name` (string) The name of the variable.
 * `value` (string) The value of the variable.
@@ -37,11 +37,11 @@ After creating, the variable `$content_type$` will be available in Custom Action
 
 ## Get all Global Variables
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**GET** `/global-variables`
+**GET** `https://webhook.site/global-variables`
 
 #### Query string parameters
 
@@ -118,7 +118,7 @@ After creating, the variable `$content_type$` will be available in Custom Action
 
 #### Request
 
-**PUT** `/global-variables/:globalVariableId`
+**PUT** <code>https://webhook.site/global-variables/<span class="url-param">globalVariableId</span></code>
 
 (See *Create Global Variable* above for request.)
 
@@ -130,7 +130,7 @@ After creating, the variable `$content_type$` will be available in Custom Action
 
 #### Request
 
-**DELETE** `/global-variables/:globalVariableId`
+**DELETE** <code>https://webhook.site/global-variables/<span class="url-param">globalVariableId</span></code>
 
 #### Response
 

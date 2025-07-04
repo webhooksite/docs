@@ -7,24 +7,14 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 ## Create token
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 * Rate limit: 10 per minute (free); 60 per minute (Pro and Enterprise)
 
-**POST** `/token`
+**POST** `https://webhook.site/token`
 
-After creating a token, the following addresses become active. `alias` can be used in place of `uuid`. Both HTTP and HTTPS can be used.
-
-* `https://webhook.site/{uuid}`
-* `https://webhook.site/{uuid}/{anything}`
-* `https://{uuid}.webhook.site` 
-* `https://{uuid}.webhook.site/{anything}` 
-* `{uuid}@emailhook.site` (Email)
-* `{uuid}.dnshook.site` (DNS)
-* `{anything}.{uuid}.dnshook.site` (DNS)
+After creating a token, HTTP requests, emails and DNSHooks can be [captured](/api/requests.html#capture-request).
 
 #### Request
-
-##### JSON parameters
 
 * `default_status` (int, 200-599, default 200) sets the default response status of the URL
 * `default_content` (string) sets the default response content of the URL
@@ -39,8 +29,6 @@ After creating a token, the following addresses become active. `alias` can be us
 * `clone_from` (uuid string) specifies a token UUID (or alias) that will act as a template for the new token. When specified, settingssuch as default content, timeout, password as well as Custom Actions are copied to the new token.
 * `group_id` (int) specifies which group ID the token should be added to.
 
-##### Example 1: JSON
-
 ```json
 {
   "default_status": 200,
@@ -52,28 +40,6 @@ After creating a token, the following addresses become active. `alias` can be us
   "alias": "my-webhook",
   "actions": true
 }
-```
-
-##### Example 2: Creating with Python 3
-
-Requires the `requests` module, which can be installed using `pip install requests`. You'll also need to replace the API key. [Create an API key here](https://webhook.site/api-keys).
-
-```python
-import requests
-
-json = {
-  "default_status": 200,
-  "default_content": "Hello world!",
-  "default_content_type": "text/html",
-}
-
-headers = {
-    "api-key": "00000000-0000-0000-0000-000000000000"
-}
-
-r = requests.post('https://webhook.site/token', json=json, headers=headers)
-
-print('URL Created: https://webhook.site/' + r.json()['uuid'])
 ```
 
 #### Response
@@ -101,11 +67,11 @@ print('URL Created: https://webhook.site/' + r.json()['uuid'])
 
 ## Get token list
 
-* Requires authentication.
+* Requires [authentication](/api/about.html#api-key)
 
 #### Request
 
-**GET** `/token`
+**GET** `https://webhook.site/token`
 
 Returns a list of all Tokens associated with an account.
 
@@ -163,9 +129,9 @@ Returns a list of all Tokens associated with an account.
 
 ## Get token
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**GET** `/token/:token_id`
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span></code>
 
 #### Response
 
@@ -173,33 +139,13 @@ Returns a list of all Tokens associated with an account.
 
 ## Update token
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**PUT** `/token/:token_id`
+**PUT** <code>https://webhook.site/token/<span class="url-param">tokenId</span></code>
 
 #### Request
 
 [*See **POST** `/token`*](#11-create-token)
-
-#### Response
-
-[*See **POST** `/token`*](#11-create-token)
-
-## Set password
-
-* ⚠️ This endpoint is deprecated and may be removed.
-* Can require authentication.
-* Requires user with active subscription.
-
-**PUT** `/token/:token_id/password`
-
-Sets a password to view the requests of a token.
-
-#### Request
-
-```json
-{"password": "hunter2", "old_password": "hunter1"}
-```
 
 #### Response
 
@@ -207,9 +153,9 @@ Sets a password to view the requests of a token.
 
 ## Delete token 
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**DELETE** `/token/:token_id`
+**DELETE** <code>https://webhook.site/token/<span class="url-param">tokenId</span></code>
 
 #### Response
 

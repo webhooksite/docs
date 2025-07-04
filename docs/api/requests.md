@@ -4,17 +4,23 @@ The Requests API is used to retrieve, manipulate and delete data sent to a given
 
 ## Capture request
 
-***any method*** <code>/<span class="url-param">token ID</span></code> <br>
-***any method*** <code>/<span class="url-param">token ID</span>/<span class="url-param">status code</span></code> <br>
-***any method*** <code>/<span class="url-param">token ID</span>/<span class="url-param">anything</span></code> <br>
+* <code>https://webhook.site/<span class="url-param">tokenId</span></code>
+* <code>https://webhook.site/<span class="url-param">tokenId</span>/<span class="url-param">statusCode</span></code>
+* <code>https://<span class="url-param">tokenId</span>.webhook.site</code>
+* <code><span class="url-param">tokenId</span>@emailhook.site</code> (Email)
+* <code><span class="url-param">tokenId</span>.dnshook.site</code> (DNSHook)
+
+Any HTTP method (GET, POST, PUT, etc.) can be used.
+
+Any sub-path, e.g. <code>https://webhook.site/<span class="url-param">tokenId</span>/api/v1/example</code>, will also be captured.
+
+For DNSHooks, all sub-domains, e.g. <code>example.<span class="url-param">tokenId</span>.dnshook.site</code>, are captured.
 
 If `statusCode` is valid (e.g. 404), that HTTP status will be used in the response (instead of the default.)
 
-Instead of `tokenId`, the alias of the token can also be supplied. Multiple subpaths, e.g. `/:tokenId/api/v1/users`, will also be captured.
+Instead of `tokenId`, the alias of the token can also be supplied. 
 
-The token ID or alias can also be used as a subdomain, e.g. <br><code>http(s)://<span class="url-param">token ID</span>.webhook.site</code>.
-
-Note: This is the only endpoint on this page that does not begin with `/token/`.
+The token ID or alias can also be used as a subdomain, e.g. <br><code>http(s)://<span class="url-param">tokenId</span>.webhook.site</code>.
 
 If the Token has a `timeout` value, there is a dynamic rate limit of `100 ÷ timeout` requests per minute, e.g. a timeout of 30 allows for 3 requests per minute, and 1 second allows for 100 requests per minute.
 
@@ -24,16 +30,12 @@ The default response (or a response set with e.g. the Modify Response Custom Act
 
 ## Get requests
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 * Rate limit: 120 requests per minute.
 
-**GET** <code>/token/<span class="url-param">token ID</span>/requests</code>
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/requests</code>
 
-Lists all request sent to a token. 
-
-!!! note
-
-    Can't get the API to work? Many users forget to add the `/token/` part of the URL, make sure it's there!
+Lists all requests, emails and DNSHooks sent to a token.
 
 #### Query string parameters
 
@@ -153,10 +155,10 @@ If you're in doubt about where these parameters go in an API request, take a loo
 
 ## Export requests to CSV
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 * Rate limit: 3 requests per minute.
 
-**GET** <code>/token/<span class="url-param">token ID</span>/requests/export</code>
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/requests/export</code>
 
 Returns a CSV file with all requests (maximum 10000.) The amount of columns of the CSV vary depending on the request data headers, query strings, form fields, files, etc.
 
@@ -174,11 +176,11 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 
 ## Get single/latest request
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**GET** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span></code>
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/<span class="url-param">requestId</span></code>
 
-**GET** <code>/token/<span class="url-param">token ID</span>/request/latest</code> - retrieves the latest request sent to the URL
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/latest</code> - retrieves the latest request sent to the URL
 
 #### Response
 
@@ -219,11 +221,11 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 
 ## Get raw request content
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**GET** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span>/raw</code>
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/<span class="url-param">requestId</span>/raw</code>
 
-**GET** <code>/token/<span class="url-param">token ID</span>/request/latest/raw</code> - retrieves the latest request sent to the URL
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/latest/raw</code> - retrieves the latest request sent to the URL
 
 Returns the request as a response (body, content-type.)
 
@@ -233,9 +235,9 @@ Returns the request as a response (body, content-type.)
 
 ## Update request
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**PUT** <code>/token/<span class="url-param">token ID</span>/requests/<span class="url-param">request ID</span></code>
+**PUT** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/requests/<span class="url-param">requestId</span></code>
 
 Currently only the `note` field can be updated (max 10.000 characeters).
 
@@ -254,9 +256,9 @@ Currently only the `note` field can be updated (max 10.000 characeters).
 
 ## Set Response
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**PUT** <code>/token/<span class="url-param">token ID</span>/requests/<span class="url-param">request ID</span>/response</code>
+**PUT** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/requests/<span class="url-param">requestId</span>/response</code>
 
 Dynamically sets a response for a specific Webhook.site URL request when the Token has a `listen` property greater than `0`. Used for Webhook.site CLI dynamic response forwarding.
 
@@ -286,9 +288,9 @@ The data of the `content` parameter must be base64-encoded.
 
 ## Download request file
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**GET** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span>/download/<span class="url-param">file ID</span></code>
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/<span class="url-param">requestId</span>/download/<span class="url-param">file ID</span></code>
 
 Files that are included in a request or as email attachments are available to download using this endpoint.
 
@@ -298,9 +300,9 @@ Files that are included in a request or as email attachments are available to do
 
 ## Delete request
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**DELETE** <code>/token/<span class="url-param">token ID</span>/request/<span class="url-param">request ID</span></code>
+**DELETE** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/<span class="url-param">requestId</span></code>
 
 Deletes a request. 
 
@@ -310,10 +312,10 @@ Deletes a request.
 
 ## Delete multiple requests
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 * Rate limit: 10 requests per minute.
 
-**DELETE** <code>/token/<span class="url-param">token ID</span>/request</code>
+**DELETE** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request</code>
 
 Deletes all requests associated with the token, or if `query`, `date_from` and/or `date_to` is specified, only that subset of requests is deleted.
 

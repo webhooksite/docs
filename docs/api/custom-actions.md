@@ -8,9 +8,9 @@ The Custom Actions API allows you to manage the Custom Actions associated with a
 
 ### Create Custom Action
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**POST** `/token/:token_id/actions`
+**POST** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/actions</code>
 
 * `type` (string) is the name of an [Action Type](action-types.md).
 * `order` (int) specified which order the action is executed in.
@@ -99,9 +99,9 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
 
 ### Get Custom Actions
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**GET** `/token/:token_id/actions`
+**GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/actions</code>
 
 #### Response
 
@@ -142,9 +142,9 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
 
 ### Update Custom Action
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**PUT** `/token/:token_id/actions/:action_id`
+**PUT** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/actions/<span class="url-param">actionId</span></code>
 
 #### Request
 
@@ -156,11 +156,11 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
 
 ### Test Custom Action
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
 #### Request
 
-**POST** `/token/:token_id/test-action`
+**POST** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/test-action</code>
 
 ##### Query string parameters
 
@@ -224,9 +224,9 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
 
 ### Execute Custom Actions
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**POST** `/token/:token_id/request/:request_id/execute`
+**POST** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/<span class="url-param">requestId</span>/execute</code>
 
 Runs all Custom Actions for a specific token and request and returns the output. 
 
@@ -238,6 +238,6 @@ Runs all Custom Actions for a specific token and request and returns the output.
 
 ### Delete Custom Action
 
-* Can require authentication.
+* Can require [authentication](/api/about.html#api-key).
 
-**DELETE** `/token/:token_id/actions/:action_id`
+**DELETE** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/actions/<span class="url-param">actionId</span></code>

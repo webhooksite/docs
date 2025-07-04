@@ -21,7 +21,7 @@ You must set the [`Api-Key`](#api-key) header if you have a Webhook.site account
 
 ## Things to Note
 
-* In this API documentation, URL parameters are prefixed with `:` (colon) to show which parameters must be changed by the user. You must *not* include this character in the URL.
+* In this documentation, replaceable URL parameters are highlighted.<br> For example, <code><span class="url-param">tokenId</span></code> indicates a parameter that *must* be replaced with a token ID.
 * A *Token ID* refers to the ID of the Webhook.site URL/e-mail address, i.e., when your Webhook.site URL is `https://webhook.site/00000000-0000-0000-0000-000000000000`, the Token ID is then `00000000-0000-0000-0000-000000000000`.
 * In API URLs, you *cannot* use Token Aliases in place of the Token ID.
 * Webhook.site API Keys *must* be specified using the `Api-Key` HTTP header.
