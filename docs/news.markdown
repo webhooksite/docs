@@ -24,6 +24,22 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 5 August 2025
+
+* Added Open In function to view requests in RapidAPI and Postman clients
+* Copy As: Now added copying a request as API URL
+* Replay: Fixed an issue where requests would be skipped
+* Log action: It is now possible to mark a Log action as an error
+* HTTP action: Added Bearer Token authentication method
+* JavaScript action: Maximum runtime when marked as Queued increased to 120 seconds
+* Fixed an issue where expiry would not be set when creating it via the New URL dialog
+* Fixed bad error messages when creating URLs via the New URL dialog
+* Fixed an issue where Member users could not create URLs when they're in a group
+* Fixed an issue where binary data would prevent a Queued action from being run
+* In request details, form values are now being sorted by name
+* Fixed Total count in Control Panel
+* SAML SSO: Fixed an issue where login wouldn't work for some Entra users
+
 ## 30 May 2025
 
 * New Action: [Validate JSON](/custom-actions/action-types.html#validate-json), a quick way to validate JSON – optionally against a JSON Schema.
