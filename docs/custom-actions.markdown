@@ -8,11 +8,11 @@ nav_order: 400
 <a href="/images/custom-actions.png">
     ![Custom Actions editor screenshot](/images/custom-actions.png)</a>
 
-With Custom Actions, it is possible to create a workflow out of a set of actions that are executed whenever a Webhook.site URL receives a request or email.
+With Custom Actions, it is possible to create a workflow out of a set of actions that are executed whenever a Webhook.site URL receives a request or email. Custom Actions run on the Webhook.site Cloud.
 
 Using this functionality, you can connect APIs that aren't compatible, convert a HTTP request to an email or vice versa, build workflows that would otherwise require a developer, and much, much more.
 
-The general principle of Custom Actions is that they are always executed in a chain. As they run, [Variables](/custom-actions/variables.html) are exchanged between them. 
+The general principle of Custom Actions is that they are always executed in a chain. As they run, [Variables](/custom-actions/variables.html) are exchanged between them.
 
 Additionally, the [Conditions](/custom-actions/action-types.html#conditions) action can define certain conditions that are used to decide whether specific actions run or not. 
 
@@ -21,7 +21,7 @@ Even though actions are run in a chain, it's still possible to branch out and ru
 On each request, the output for all the different actions is collected so you can go back and see what happened. If the action sends HTTP Requests, both the request and response details are shown.
 
 <figure markdown="span">
-  ![Extract JSON in action](/images/kCuUKnGNu1NNGv4j7Y3UXTyV.png){ width="300" }
+  ![Extract JSON in action](/images/kCuUKnGNu1NNGv4j7Y3UXTyV.png){ width="700" }
   <figcaption>Action output shown on individual requests along with HTTP Request data</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ If actions fail, the request they ran on is marked. It is possible to set up [no
 With [Replay](/custom-actions.html#replay), it's possible to run the actions again, e.g. for actions that failed previously.
 
 <figure markdown="span">
-  ![Extract JSON in action](/images/ZxJHuOqDle5GG5kzDyc2WyPt.png){ width="300" }
+  ![Extract JSON in action](/images/ZxJHuOqDle5GG5kzDyc2WyPt.png){ width="700" }
   <figcaption>Error Log is a convenient way to monitor Schedules and Custom Actions</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ You can then use this template by creating an *Import Template* action.
 
 ### Creating a Template
 
-To create a Template, click the *Create Template* button at the bottom of the Custom Actions overlay. Then enter a name for the template and select which actions should be copied to the template. If your template actions e.g. depend on variables pre-existing, like configuration data, you can add one or more Predefined Variables. These are available to the actions in the Template, but also to any subsequent actions coming after the Import Template action.
+To create a Template, click the *Create Template* button in the Custom Actions editor. Then enter a name for the template and select which actions should be copied to the template. If your template actions e.g. depend on variables pre-existing, like configuration data, you can add one or more Predefined Variables. These are available to the actions in the Template, but also to any subsequent actions coming after the Import Template action.
 
 Predefined Variables can be updated in the Control Panel.
 

@@ -5,25 +5,27 @@ nav_order: 50
 
 # Webhook.site Frequently Asked Questions
 
-## What is a "webhook"?
+## What is a webhook?
 
-The term '[webhook](https://en.wikipedia.org/wiki/Webhook)' refers to the general technology of how Web-based systems talk to each other. 
+The term '[webhook](https://en.wikipedia.org/wiki/Webhook)' refers to a general method of how Web-based systems talk to each other. 
 
-In short, many systems (for example, a payment platform and a customer management system) communicate with each other by sending Web requests back and forth, for example, from `https://paymentsys.example` to  `https://customersys.example/register-payment` and vice-versa.
+In short, many systems (for example, a payment platform and a customer management system) communicate with each other by sending Web requests back and forth, for example, from `https://paymentsys.com` to  `https://customersys.com/order-created` and vice-versa.
 
-[More about webhooks](https://simonfredsted.com/1583).
+[In-depth article about webhooks](https://simonfredsted.com/1583).
 
 ## What is Webhook.site?
 
 Webhook.site is a tool for building software that not only use webhooks but other types of communication, either by allowing developers to inspect the data that's being sent via a webhook, but also helps users create workflows that respond to and interact with webhooks from various systems.
 
-When visiting [Webhook.site](https://webhook.site), users instantly get a free, unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this, users can test and debug Webhooks and HTTP requests, as well as create workflows using the [Custom Actions](/custom-actions.html) graphical builder or [WebhookScript](/webhookscript.html), a simple scripting language, to transform, validate and process HTTP requests in a variety of ways – without setting up and maintaining your own infrastructure.
+When visiting [Webhook.site](https://webhook.site), users instantly get a free, unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this address, users can test and debug webhooks and HTTP requests.
 
-Webhook.site is a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) in Denmark since August 2020.
+Additionally, a Webhook.site subscription comes with a [suite of cloud services](https://webhook.site/register) for building Web-based workflows and automations, including Custom Actions, an advanced workflow builder that lets you automate, transform and forward data visually or via scripting languages.
+
+Webhook.site is operated by Webhook ApS, a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) in Denmark since August 2020.
 
 ### Company information
 
-Webhook.site company stats as of Feburary 2025:
+Webhook.site company stats as of Feburary 2025: 
 
 - 300.000+ monthly unique users
 - 2300+ subscribed customers
@@ -88,6 +90,48 @@ For free users of Webhook.site (URLs not associated with an upgraded account), t
 For subscribed customers, URLs associated with an account never automatically expire, but data is automatically purged after a maximum of 365 days.
 
 For free users, the URL – and its data – is automatically removed after 7 days.
+
+## How do I export the data stored on Webhook.site?
+
+With a [Webhook.site subscription](pro.markdown), there's a variety of different ways to export data sent to your URL or email address.
+
+1. Custom Actions can be used in a variety of ways to export data. Below are listed a few examples of actions that could be used. [More info here](/custom-actions/action-types.html).
+     * [Database Query](/custom-actions/action-types.html#database-query)
+     * [HTTP Request](/custom-actions/action-types.html#http-request)
+     * [Run SSH Command](/custom-actions/action-types.html#run-ssh-command)
+     * [Amazon Web Services S3](/custom-actions/action-types.html#s3)
+     * [Dropbox](/custom-actions/action-types.html#dropbox)
+
+1. Webhook.site provides a CSV Export functionality, simply click the button in the menu to download all data as a CSV file.
+
+    ![CSV Export](/images/csv-export.png)
+
+2. Data can be retrieved and saved using the [Webhook.site API](api/tokens.md#get-requests) using any programming language.
+
+3. With the Webhook.site CLI (Command-Line Interface), requests can be forwarded directly from Webhook.site to a local workstation or server. [More info here](cli.md) 
+
+## How do I forward webhook requests?
+
+To forward incoming requests to another address, use Webhook.site [Custom Actions](/custom-actions.html) to create a *HTTP Request* action. Running on the Webhook.site Cloud, when set to the *forward* mode, all data is automatically forwarded to the specified URL. 
+
+## How do I send data to my computer/localhost?
+
+There's several ways to accomplish this depending on your needs.
+
+1. You can periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests)
+
+2. Requests can also be streamed to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
+
+3. Webhook.site also supports the XHR Redirect feature, which uses your browser in order to forward the requests. The endpoint will need to respond with CORS headers in all requests so that the browser will be able to send requests to it. The forwarding will only work as long as the browser window is open.
+
+The following CORS headers should allow Webhook.site to forward requests to your local endpoint via XHR Redirect:
+
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Headers: *
+Access-Control-Expose-Headers: Content-Length,Content-Range
+```
 
 ## How can I automatically remove data from Webhook.site?
 
@@ -234,44 +278,6 @@ After, with the JSON Escape Variable Modifier:
 {
   "message": "$request.query.message.json$"
 }
-```
-
-## How do I export the data stored on Webhook.site?
-
-With a [Webhook.site subscription](pro.markdown), there's a variety of different ways to export data sent to your URL or email address.
-
-1. Custom Actions can be used in a variety of ways to export data. Below are listed a few examples of actions that could be used. [More info here](/custom-actions/action-types.html).
-     * [Database Query](/custom-actions/action-types.html#database-query)
-     * [HTTP Request](/custom-actions/action-types.html#http-request)
-     * [Run SSH Command](/custom-actions/action-types.html#run-ssh-command)
-     * [Amazon Web Services S3](/custom-actions/action-types.html#s3)
-     * [Dropbox](/custom-actions/action-types.html#dropbox)
-
-1. Webhook.site provides a CSV Export functionality, simply click the button in the menu to download all data as a CSV file.
-
-    ![CSV Export](/images/csv-export.png)
-
-2. Data can be retrieved and saved using the [Webhook.site API](api/tokens.md#get-requests) using any programming language.
-
-3. With the Webhook.site CLI (Command-Line Interface), requests can be forwarded directly from Webhook.site to a local workstation or server. [More info here](cli.md) 
-
-## How do I send data to my computer/localhost?
-
-There's several ways to accomplish this depending on your needs.
-
-1. You can periodically fetch the data using the [Webhook.site API](api/tokens.md#get-requests)
-
-2. Requests can also be streamed to a local URL using the [Webhook.site CLI](cli.md), in a similar fashion to e.g. ngrok.
-
-3. Webhook.site also supports the XHR Redirect feature, which uses your browser in order to forward the requests. The endpoint will need to respond with CORS headers in all requests so that the browser will be able to send requests to it. The forwarding will only work as long as the browser window is open.
-
-The following CORS headers should allow Webhook.site to forward requests to your local endpoint via XHR Redirect:
-
-```
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: *
-Access-Control-Allow-Headers: *
-Access-Control-Expose-Headers: Content-Length,Content-Range
 ```
 
 ## How can I test an IPv6-only request?
