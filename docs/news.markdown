@@ -24,6 +24,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 22 September
+
+* Added `$error.[action]$` variable that is automatically created whenever an action result in an error.
+* Email notifications should now support dark mode in Apple Mail on iOS.
+
 ## 5 August 2025
 
 * Added Open In function to view requests in RapidAPI and Postman clients

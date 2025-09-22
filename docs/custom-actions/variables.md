@@ -70,6 +70,7 @@ These variables are automatically available for each request or email. Different
 | request.html_content              | Email         | Parsed HTML content                                                                                    |
 | request.destinations              | Email         | Comma separated list of recipients.                                                                    |
 | request.checks.[name]             | Email         | True or false for email checks (DKIM, SPF, etc.)                                                       |
+| error.[number]                    | All           | Created for all actions that result in an error, where `number` is the order of the action.            |
 
 ### Variable Modifiers
 
