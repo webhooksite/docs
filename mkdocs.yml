@@ -92,9 +92,9 @@ nav:
     - WebSocket: api/websocket.md
     - Tokens (URLs): api/tokens.md
     - Requests: api/requests.md
-    - Groups: api/groups.md
     - Custom Actions: api/custom-actions.md
+    - Global Variables: api/global-variables.md
     - Templates: api/templates.md
     - Schedules: api/schedules.md
-    - Global Variables: api/global-variables.md
-
+    - Users: api/users.md
+    - Groups: api/groups.md

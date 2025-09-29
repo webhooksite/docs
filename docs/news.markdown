@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 September
+
+* Added [Users API](/api/users.html) for inviting and managing users.
+
 ## 22 September
 
 * Added `$error.[action]$` variable that is automatically created whenever an action result in an error.
