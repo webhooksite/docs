@@ -63,6 +63,7 @@ nav:
     - Open Source: open-source.markdown
     - Basic, Pro & Enterprise: pro.markdown  
     - CLI: cli.md
+    - Databases: database.md
     - Schedules: schedules.md
     - DNSHook: dnshook.md
     - Form Builder: form-builder.md
@@ -96,5 +97,6 @@ nav:
     - Global Variables: api/global-variables.md
     - Templates: api/templates.md
     - Schedules: api/schedules.md
+    - Databases: api/databases.md
     - Users: api/users.md
     - Groups: api/groups.md

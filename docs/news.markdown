@@ -24,7 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
-## 29 September
+## 1 October 2025
+
+* **Webhook.site Databases**, our new built-in database service hosted on the Webhook.site Cloud, is released to all users, and as an introductory offer, all Webhook.site Subscribers can create 1 DB-S instance for free. [More info here](/databases.html). <br> Create your Database now in Control Panel &rarr; [Databases](https://webhook.site/control-panel/databases).
+
+
+## 29 September 2025
 
 * Added [Users API](/api/users.html) for inviting and managing users.
 
