@@ -11,6 +11,16 @@ With Webhook.site Custom Actions, you can interact with your Database to store, 
 
 Additionally, with Webhook.site's simple API, you can manage your Database, including running SQL queries.
 
+<figure markdown="span">
+  ![Webhook.site Database Console](/images/database_console.png){ width="500" }
+  <figcaption>Webhook.site Database Console</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Webhook.site Database in Custom Action editor](/images/database_action_editor.png){ width="500" }
+  <figcaption>Webhook.site Database in Custom Action editor</figcaption>
+</figure>
+
 ## Under the hood
 
 Webhook.site Databases are powered by CockroachDB, providing a fault-tolerant, secure and highly available PostgreSQL-compatible environment for your data. With Webhook.site Databases, you don't have to worry about maintenance, uptime, backups as Webhook.site Cloud continually manages and scales the database clusters upon demand to ensure performance.
