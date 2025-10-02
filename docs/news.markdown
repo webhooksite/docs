@@ -26,7 +26,9 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 1 October 2025
 
-* **Webhook.site Databases**, our new built-in database service hosted on the Webhook.site Cloud, is released to all users, and as an introductory offer, all Webhook.site Subscribers can create 1 DB-S instance for free. [More info here](/databases.html). <br> Create your Database now in Control Panel &rarr; [Databases](https://webhook.site/control-panel/databases).
+* New Feature: **Webhook.site Databases**, our new built-in database service hosted on the Webhook.site Cloud, is released to all users, and as an introductory offer, all Webhook.site Subscribers can create 1 DB-S instance for free. [More info here](/databases.html). <br> Create your Database now in Control Panel &rarr; [Databases](https://webhook.site/control-panel/databases).
+* Added [Database API](/api/databases.html) for managing Webhook.site Databases.
+* Added autocomplete for Database action. For Webhook.site Databases, the editor autocompletes tables and columns as well.
 
 
 ## 29 September 2025
