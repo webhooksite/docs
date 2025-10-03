@@ -64,6 +64,7 @@ The following video is a quick demo of Webhook.site Custom Actions is used to se
 * Unlimited e-mail support
 * Features like Custom Actions, CSV Export and Schedules
 * Higher rate limits on API endpoints
+* Create Share Links to share data sent to Webhook.site URLs with an unbranded, whitelabel version of Webhook.site
 
 [Click here to create a Webhook.site subscription](https://webhook.site/register).
 
