@@ -7,6 +7,10 @@ nav_order: 390
 
 Store and process data in the Webhook.site Cloud using Databases. Built right in to Webhook.site, Databases provide a fully-featured PostgreSQL-compatible database. You can create and remove tables, create columns and run queries in the Console. 
 
+<div class="center">
+<a href="https://webhook.site/control-panel/databases" class="md-button md-button--default no-underline">Create Database</a>
+</div>
+
 With Webhook.site Custom Actions, you can interact with your Database to store, update, retrieve and remove data by SQL Query whenever a Webhook.site URL or E-mail Address receives a hit.
 
 Additionally, with Webhook.site's simple API, you can manage your Database, including running SQL queries.

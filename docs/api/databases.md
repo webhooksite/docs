@@ -8,18 +8,43 @@
 
 **POST** <code>https://webhook.site/database/<span class="url-param">databaseId</span>/query</code>
 
-* `query`: The SQL query to execute.
+* `query`: (string, required) The SQL query to execute.
+* `params`: (array|object) A list or dictionary of parameters. Can be left out if query has no parameters.
+
+A maximum of 1000 results can be returned.
 
 ```json
 {
-  "query": "select * from mytable;"
+  "query": "select * from users where email like concat('%', :domain)",
+  "params": {
+    "domain": "@example.com"
+  }
+}
+```
+
+It is also possible to use a list of parameters:
+
+```json
+{
+  "query": "select * from users where email like concat('%', ?)",
+  "params": [
+    "@example.com"
+  ]
+}
+```
+
+`params` can be left out if not needed:
+
+```json
+{
+  "query": "select * from users where email = 'jack@example.com'"
 }
 ```
 
 #### Response
 
 * `result`: (array) The returned data.
-* `error`: (string) If the query results in an error, the error is represented here.
+* `error`: (string) If the query results in an error, the error is represented here, otherwise `null`.
 * `time`: (float) Query execution time in milliseconds.
 
 ```json
@@ -27,12 +52,14 @@
   "result": [
     {
       "id": 1,
-      "value": "hello world"
+      "name": "Jack Daniels",
+      "email": "jack@example.com"
     },
     {
       "id": 2,
-      "value": "it's a great day to be a query"
-    }
+      "name": "Elijah Craig",
+      "email": "eli@example.com"
+    },
   ],
   "error": null,
   "time": 0

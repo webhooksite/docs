@@ -24,6 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 8 October 2025
+
+* Added support for [Webhook.site Databases](/databases.html) in WebhookScript. [More info here](/webhookscript/functions/database.html).
+* Added `params` to the [Database Query API](/api/databases.html#run-query).
+* Increased maximum row count in Database actions to 1000.
+
 ## 1 October 2025
 
 * New Feature: **Webhook.site Databases**, our new built-in database service hosted on the Webhook.site Cloud, is released to all users, and as an introductory offer, all Webhook.site Subscribers can create 1 DB-S instance for free. [More info here](/databases.html). <br> Create your Database now in Control Panel &rarr; [Databases](https://webhook.site/control-panel/databases).
