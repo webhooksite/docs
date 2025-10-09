@@ -616,6 +616,20 @@ With the JavaScript action, you can execute JavaScript code using a Node.js sand
 
 <code>console.log(*line*)</code> / <code>echo(*line*)</code> - log a string to Action output
 
+<code>stop()</code> - stops action execution and return response
+
+<code>dont_save()</code> - marks current requests as [*Don't Save*](#dont-save), so it won't be stored or shown in the Webhook.site requests list
+
+<code>respond(*content*, *status*, *headers*)</code> - stops action execution and return response
+
+``` javascript
+respond('OK', 200, ['Content-Type: text/plain'])
+```
+
+<code>set_response(*content*, *status*, *headers*)</code> - sets response, but doesn't stop action execution
+
+#### Webhook.site Variables Functions
+
 <code>set(*variable_name*, *value*)</code> - sets a Webhook.site variable for use in downstream actions
 
 The following code would set the variable $myvar$ to `value`:
@@ -636,17 +650,47 @@ echo(await global('my-variable'))
 
 <code>store(*variable_name*, *value*)</code> - stores the value of a Webhook.site Global Variable. Must be used async.
 
-<code>stop()</code> - stops action execution and return response
+#### Webhook.site Database Functions
 
-<code>dont_save()</code> - marks current requests as [*Don't Save*](#dont-save), so it won't be stored or shown in the Webhook.site requests list
+<code>db(*database_id*)</code> - interact with a [Webhook.site Database](/databases.html) instance. Returns a database connection in the form of a function that takes `query` and `params` arguments.
 
-<code>respond(*content*, *status*, *headers*)</code> - stops action execution and return response
+```javascript
+mydb = await db('example_db')
 
-``` javascript
-respond('OK', 200, ['Content-Type: text/plain'])
+users = await mydb('select * from users');
+console.log(users)
+// {
+//   "result": [
+//     {
+//       "id": 1,
+//       "name": "Jack Daniels"
+//     },
+//     {
+//       "id": 2,
+//       "name": "Elijah Craig"
+//     }
+//   ],
+//   "error": null,
+//   "rows": 2,
+//   "time": 0
+// }
+
+
+for (user of users['result']) {
+    console.log(user['name'])
+}
+// Jack Daniels
+// Elijah Craig
+
+resp = await mydb(
+  'insert into users (name) values (:name)', 
+  {
+    "name": "Jim Beam"
+  }
+)
+console.log(resp)
+// {"result":[[]],"error":null,"rows":1,"time":0}
 ```
-
-<code>set_response(*content*, *status*, *headers*)</code> - sets response, but doesn't stop action execution
 
 #### Utility Modules
 

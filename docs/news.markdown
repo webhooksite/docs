@@ -24,6 +24,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 9 October 2025
+
+* Added support for [Webhook.site Databases](/databases.html) in JavaScript. [More info here](/custom-actions/action-types.html#webhooksite-database-functions).
+* Fixed an error when adding invalid header data to the Modify Response action.
+
 ## 8 October 2025
 
 * Added support for [Webhook.site Databases](/databases.html) in WebhookScript. [More info here](/webhookscript/functions/database.html).

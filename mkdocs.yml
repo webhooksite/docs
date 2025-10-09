@@ -84,7 +84,7 @@ nav:
         - Flow Control and Responses: webhookscript/functions/flow.md
         - Math and Numbers: webhookscript/functions/math.md
         - Network and HTTP: webhookscript/functions/network.md
-        - Databases: webhookscript/functions/database.html
+        - Databases: webhookscript/functions/database.md
         - Strings: webhookscript/functions/string.md
         - Custom Action Variables: webhookscript/functions/variables.md
     - Examples: custom-actions/examples.markdown
