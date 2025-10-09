@@ -28,6 +28,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 * Added support for [Webhook.site Databases](/databases.html) in JavaScript. [More info here](/custom-actions/action-types.html#webhooksite-database-functions).
 * Fixed an error when adding invalid header data to the Modify Response action.
+* Fix Docs navigation/sidebar on Mobile.
 
 ## 8 October 2025
 
