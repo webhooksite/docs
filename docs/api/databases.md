@@ -6,7 +6,7 @@
 
 #### Request
 
-**POST** <code>https://webhook.site/database/<span class="url-param">databaseId</span>/query</code>
+**POST** <code>https://webhook.site/databases/<span class="url-param">databaseId</span>/query</code>
 
 * `query`: (string, required) The SQL query to execute.
 * `params`: (array|object) A list or dictionary of parameters. Can be left out if query has no parameters.
@@ -206,7 +206,7 @@ Or, for an error:
 
 #### Request
 
-**DELETE** <code>https://webhook.site/database/<span class="url-param">databaseId</span></code>
+**DELETE** <code>https://webhook.site/databases/<span class="url-param">databaseId</span></code>
 
 #### Response
 
