@@ -228,6 +228,10 @@ r = requests.post('https://webhook.site/token/7d63959e-4fec-49bd-90dc-a461572282
 
 **POST** <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request/<span class="url-param">requestId</span>/execute</code>
 
+##### Query string parameters
+
+* `error_notifications`: (bool) Whether to send email notifications if an error occurs. Defaults to `false`.
+
 Runs all Custom Actions for a specific token and request and returns the output. 
 
 #### Response
