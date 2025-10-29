@@ -24,6 +24,17 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 29 October 2025
+
+* As part of our path to [deprecating token passwords](#30-september-2024) in favor of Share Links, setting passwords has been removed from the UI. API support is still available.
+* Added automatic JSON syntax highlighting
+* Added Location details (city, region country) for each incoming request.
+* Conditions action: Added is null/is not null operators
+* Send Email (SMTP): Now uses 8bit encoding instead of base64, which is not widely supported.
+* Variables list now shows proper values for null, false, etc.
+* Time to token expiry is now shown in menu bar.
+* Action API: Add `error_notifications` option on [Execute](/api/custom-actions.html#execute-custom-actions) endpoint.
+
 ## 9 October 2025
 
 * Added support for [Webhook.site Databases](/databases.html) in JavaScript. [More info here](/custom-actions/action-types.html#webhooksite-database-functions).
