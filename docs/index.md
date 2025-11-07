@@ -11,33 +11,33 @@ The term '[webhook](https://en.wikipedia.org/wiki/Webhook)' refers to a general 
 
 In short, many systems (for example, a payment platform and a customer management system) communicate with each other by sending Web requests back and forth, for example, from `https://paymentsys.com` to  `https://customersys.com/order-created` and vice-versa.
 
+This is exactly the same as when you enter "webhook.site" in your Internet browser's address bar, and almost all systems can communicate via this method - also called HTTP - by sending messages ("requests") to Web addresses. 
+
 [In-depth article about webhooks](https://simonfredsted.com/1583).
 
 ## What is Webhook.site?
 
-Webhook.site is a tool for building software that not only use webhooks but other types of communication, either by allowing developers to inspect the data that's being sent via a webhook, but also helps users create workflows that respond to and interact with webhooks from various systems.
+Webhook.site is a tool for building software that not only use webhooks but other types of Internet-based communication, either by allowing developers to inspect the data that's being sent via webhook requests, but also helps create workflows that respond to and interact with webhooks.
 
-When visiting [Webhook.site](https://webhook.site), users instantly get a free, unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this address, users can test and debug webhooks and HTTP requests.
+When visiting [Webhook.site](https://webhook.site), users instantly get a free, unique, random URL and e-mail address. Everything that's sent to these addresses are shown instantly. With this address, users can test and debug webhooks and HTTP requests. It's what most users know Webhook.site for.
 
-Additionally, a Webhook.site subscription comes with a [suite of cloud services](https://webhook.site/register) for building Web-based workflows and automations, including Custom Actions, an advanced workflow builder that lets you automate, transform and forward data visually or via scripting languages.
+Additionally, Webhook.site sells subscriptions to Basic, Pro and Enterprise packages that come with a [suite of cloud services](https://webhook.site/register) for building Web-based workflows and automations, including [Custom Actions](/custom-actions.html) (workflow builder that lets you automate, transform and forward data visually or via scripting languages), [Schedules](/schedules.html) and [Databases](/database.html).
 
-Webhook.site is operated by Webhook ApS, a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) in Denmark since August 2020.
+Statistics as of November 2025: 
+
+- 400.000 monthly unique users
+- 3000 subscribed customers
+- 700 million HTTP requests/day
+- 150.000 Custom Actions workflow automations created
 
 ### Company information
 
-Webhook.site company stats as of Feburary 2025: 
+Webhook.site is operated by Webhook ApS, a [registered corporation](https://datacvr.virk.dk/enhed/virksomhed/41561718) in Denmark since August 2020.
 
-- 300.000+ monthly unique users
-- 2300+ subscribed customers
-- 460 million HTTP requests per day
-
-Webhook.site is operated by Webhook ApS (VAT ID: DK41561718).
-
-Address: Skibsbyggerstræde 20 5. th, 5000 Odense, Denmark.
-
-Company director: [Simon Fredsted](https://simonfredsted.com).
-
-[Contact information](https://support.webhook.site).
+* Address: Skibsbyggerstræde 20 5. th, 5000 Odense, Denmark.
+* VAT number: DK 41561718.
+* Company owner & CEO: [Simon Fredsted](https://x.com/fredsted). 
+* Contact us via support@webhook.site or via the [support portal](https://support.webhook.site).
 
 ## What are some common uses for Webhook.site?
 
