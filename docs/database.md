@@ -38,7 +38,7 @@ Webhook.site Databases are powered by CockroachDB, providing a fault-tolerant, s
 
 |         | `DB-S` Small | `DB-M` Medium      | `DB-L` Large       | `DB-X` Custom   |
 |---------|--------------|--------------------|--------------------|-----------------|
-| Storage | 100 mb       | 5 gb               | 20 gb              | Custom          |
+| Storage | 100 mb       | 1 gb               | 5 gb               | Custom          |
 | Tables  | 1            | 3                  | 10                 | Custom          |
 | Pricing | $0/mo        | $10/mo ($100/year) | $25/mo ($250/year) | Contact [Support](https://support.webhook.site) |
 
