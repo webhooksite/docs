@@ -24,6 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 26 November 2025
+
+* HTTP Request action: Added "Import from cURL command" button. 
+* HTTP Request action: Fixed "JSON Format" button.
+* Extract XPath action: Friendlier errors, added default variable name. 
+
 ## 29 October 2025
 
 * As part of our path to [deprecating token passwords](#30-september-2024) in favor of Share Links, setting passwords has been removed from the UI. API support is still available.
