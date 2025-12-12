@@ -239,14 +239,31 @@ Click the "Add VAT Number" button:
   <figcaption>Adding VAT number during checkout</figcaption>
 </figure>
 
-## How do I add my company name and details to my invoice?
+## How do I add or change my company name and details for my invoice?
 
-Go to [Control Panel -> Billing](https://webhook.site/control-panel), then click View next to an invoice and finally click [the "Add Address & VAT Number" link](https://sf.gl/share/1708090417.png). Once the data is entered, it will automatically be used for all forthcoming invoices.
+If your Webhook.site subscription dates from before March 21, 2025, you use *Paddle Classic*. Some details can't be changed manually, however, and in that case you must reach out to [Webhook.site Support](https://support.webhook.site).
 
-<figure markdown="span">
-  ![Adding company information to invoices](/images/invoice-company-details.png){ width="300" }
-  <figcaption>Adding company information to invoices</figcaption>
-</figure>
+### For customers using Paddle Classic
+
+If you have Paddle Classic, you will have a list of invoices on the [Billing page](https://webhook.site/payment).
+
+1. Go to the [Billing page](https://webhook.site/payment)
+2. Click View next to the latest invoice
+3. Finally click [the "Add Address & VAT Number" link](https://sf.gl/share/1708090417.png). 
+4. Once the data is entered, it will automatically be used for all forthcoming invoices.
+
+### For customers using Paddle Billing
+
+If you have Paddle Billing, you will see a button with the label *Manage Subscription & Invoices* on the [Billing page](https://webhook.site/payment).
+
+1. Go to the [Billing page](https://webhook.site/paddle2/manage)
+2. Click *Manage Subscription & Invoices*
+3. Click on *Payments* in the sidebar
+4. Click on the latest invoice
+5. Click *Update Invoice*
+6. Enter your invoice details
+7. You can now download the new invoice using the *View Invoice* button
+8. Once the data is entered, it will automatically be used for all forthcoming invoices.
 
 ## How can I see the pricing in my currency?
 
