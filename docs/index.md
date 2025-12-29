@@ -303,12 +303,6 @@ After, with the JSON Escape Variable Modifier:
 }
 ```
 
-## How can I test an IPv6-only request?
-
-If you access Webhook.site with the hostname [https://ipv6.webhook.site](https://ipv6.webhook.site), your URL will only work with IPv6.
-
-To use it with a URL, simply replace the `webhook.site` hostname with `ipv6.webhook.site`.
-
 ## I'm getting a 404 Not Found, what's wrong? / When does Webhook.site URLs expire?
 
 Using the free version of Webhook.site, URLs automatically expire in 7 days. After that, the URL is no longer available and data is deleted.
