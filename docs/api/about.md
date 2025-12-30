@@ -26,6 +26,7 @@ You must set the [`Api-Key`](#api-key) header if you have a Webhook.site account
 * In API URLs, you *cannot* use Token Aliases in place of the Token ID.
 * Webhook.site API Keys *must* be specified using the `Api-Key` HTTP header.
 * Fair use guidelines, rate limits, and other limitations apply as described by the [Terms of Service](https://webhook.site/terms).
+* If you're interacting with Tokens or Requests, make sure you keep the `/token/` part! (Otherwise Webhook.site won't recognize it as an API URL.)
 
 ## API Key
 

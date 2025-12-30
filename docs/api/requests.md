@@ -321,15 +321,15 @@ Deletes all requests associated with the token, or if `query`, `date_from` and/o
 
 ### Query string parameters
 
-* `date_from`, `date_to` - filter requests by date, format `yyyy-MM-dd HH:mm:ss`
-* `query` - filter requests by a query string search. [See here for examples](#search-query-examples).
+* `date_from`, `date_to` - filter requests by date (format `yyyy-MM-dd HH:mm:ss`) or [date expressions](/api/date-expressions.html).
+* `query` - filter requests by a Search Query. [See here for examples](#search-query-examples).
 
 
 ### Full URL Example
 
-A request to the following URL will delete all requests on a Token older than 14 days, due to the `query` parameter being `created_at:[* TO now-14d]`. You could use this in a [Webhook.site Schedule](/schedules.html) to delete old requests from a URL periodically.
+A request to the following URL will delete all requests on a Token older than 7 days, due to the `date_to` parameter being `now-7d`. You could use this in a [Webhook.site Schedule](/schedules.html) to delete old requests from a URL periodically.
 
-`https://webhook.site/token/00000000-0000-0000-0000-000000000000/request?query=created_at:[* TO now-14d]`
+<code>https://webhook.site/token/<span class="url-param">tokenId</span>/request?date_to=<span class="url-param">now-7d</span></code>
 
 ### Response
 

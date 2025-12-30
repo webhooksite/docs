@@ -152,15 +152,16 @@ Using the Webhook.site API (specifically, the [Delete Multiple Requests endpoint
 
 To set it up, first, [create an API Key](https://webhook.site/api-keys). 
 
-Then create a Schedule like the following screenshot. 
+Then [create a Schedule](https://webhook.site/control-panel/schedules/create) like the following screenshot. 
 
-In this example, Webhook.site will remove data older than 14 days every 24 hours. `now-12h` would be 12 hours. [More date format examples](/api/date-expressions.html).
+In this example, Webhook.site will remove data older than 7 days every 24 hours. (`now-12h` would be 12 hours. [More date format examples](/api/date-expressions.html)).
 
-Remember to click the URL Encode button before saving.
-
-* URL: `https://webhook.site/token/00000000-0000-0000-000000000/request?query=created_at:[* TO now-14d]` - replace `00000000-0000-0000-000000000` with the URL/Token ID.
+* URL: <code>https://webhook.site/token/<span class="url-param">tokenId</span>/request?date_to=now-7d</code>
+    * Replace `tokenId` with the URL/Token ID. Make sure to keep the `/token/` part, though!
+    * Make sure to click the *URL Encode* button after entering the URL.
 * Method: `DELETE`
-* Headers: `Api-Key: 00000000-0000-0000-000000000` - replace `00000000-0000-0000-000000000` with your API key.
+* Headers: `Api-Key: 00000000-0000-0000-000000000`
+    * Replace `00000000-0000-0000-000000000` with your API key.
 
 <figure markdown="span">
   ![Automatically remove requests with Schedules](/images/schedule-autodelete.png){ width="300" }
@@ -169,7 +170,7 @@ Remember to click the URL Encode button before saving.
 
 ## What's a Webhook.site "Token"?
 
-A *Token* is how a Webhook.site URL is referred to in our API, it's the technical name for it. A *Token* corresponds to a unique UUID, which is also the Web address, email address and DNSHook address. A Token acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
+A *Token* is how a Webhook.site URL is referred to in our API, it's the technical name for it. A *Token* corresponds to a unique [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier), which is also the Web address, email address and DNSHook address. A Token acts as a container for requests, emails and DNS queries. [More about Tokens](/api/tokens.html)
 
 ## How do I transfer my Webhook.site account and data?
 
