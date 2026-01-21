@@ -165,8 +165,7 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 #### Query string parameters
 
 * `sorting` (string) - either `newest` or `oldest` (default)
-* `per_page` (int) - amount of requests returned, defaults to 10000 (max 10000)
-* `page` (int) -  page number to retrieve (default 1)
+* `per_page` (int) - amount of requests returned, defaults to `request_limit` of Token (max 100000)
 * `date_from`, `date_to` (date string) - filter requests by date, format `yyyy-MM-dd HH:mm:ss`
 * `query` (string) - filter requests by a query string search (see [here](#search-query-examples) for examples)
 

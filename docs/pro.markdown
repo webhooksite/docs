@@ -36,11 +36,11 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 | Free Email Support                                              | ❌      | ✅                           | ✅                            | ✅                             |
 | Custom Domain                                                   | ❌      | ❌                           | ❌                            | ✅                             |
 | Multi-User Support & SAML SSO                                   | ❌      | ❌                           | ❌                            | ✅                             |
-| Max Requests per URL                                            | 100      | Unlimited                    | Unlimited                     | Unlimited                      |
-| Request History per URL                                         | 100     | 10.000<sup>2</sup>            | 10.000<sup>2</sup>            | 10.000<sup>2</sup>                     |
+| Max Requests per URL                                            | 50      | Unlimited                    | Unlimited                      | Unlimited                      |
+| Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>3</sup>                     |
 | URL/Email Address expiry                                        | 7 days<sup>1</sup> | Never expires                | Never expires       | Never expires                  |
 | Data storage duration                                           | 7 days<sup>1</sup> | 365 days                     | 365 days            | 365 days                       |
-| Pricing<sup>3</sup>                                             |         | $9/month $90/year (save 20%) | $18/month $180/year (save 20%) | $69/month $699/year (save 20%) |
+| Pricing<sup>4</sup>                                             |         | $9/month $90/year (save 20%) | $18/month $180/year (save 20%) | $69/month $699/year (save 20%) |
 
 
 <div class="center">
@@ -48,7 +48,8 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 </div>
 
 1. Free URLs and email addresses automatically expire and are permanently deleted after 7 days.
-2. Pro and Enterprise URLs accept an unlimited amount of requests or emails, but only the latest 10.000 are available. Older requests are removed periodically.
+2. Pro and Enterprise URLs accept an unlimited amount of requests or emails, but only the latest this amount is available for each URL. For Basic, the limit is 1000. Older requests are removed from our datastore periodically.
+3. On URLs created on Enterprise accounts, the request history can be raised to 100.000 on individual URLs, but defaults to 10.000.
 3. All pricing in USD and excluding VAT. Local currency can be used at checkout.
 
 

@@ -24,6 +24,17 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 21 January 2026
+
+* Webhook.site Enterprise subscribers can now configure a request limit for URLs up to 100.000. The default remains at 10.000.
+* HTTP Request action timeout raised to 120 seconds when the action has Queue mode enabled.
+* XHR Redirect functionality has been added to Share links.
+* Fixed an bug when using Extract JSON in repeat mode where all items wouldn't be included in the loop.
+* Action Replay: Internal server errors are now shown in the replay log.
+* Action AI: Now knows all operators in Conditions action. 
+* Action AI: Updated to latest model.
+* Modify Response action: Added logging.
+
 ## 26 November 2025
 
 * HTTP Request action: Added "Import from cURL command" button. 
