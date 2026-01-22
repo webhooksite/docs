@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 22 January 2026
+
+* For Webhook.site Enterprise subscribers, the maximum timeout for [Queued Actions](/custom-actions.html#queued-actions) has been raised to 300 seconds.
+
 ## 21 January 2026
 
 * Webhook.site Enterprise subscribers can now [configure a request limit for URLs up to 100.000](https://simonfredsted.com/share/shared-image-2026-01-21-18-16-45-5toeI.png). The default remains at 10.000.

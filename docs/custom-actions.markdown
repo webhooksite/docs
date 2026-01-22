@@ -105,7 +105,7 @@ By checking the *Queued* checkbox when creating a Custom Action, Webhook.site wi
 This is useful when:
 
 * a Webhook.site URL should respond quickly, but a Custom Actions flow takes a long time to run. For example, if a Webhook.site URL should respond in 5 seconds, but an endpoint with a HTTP Request action that responds in 10 seconds is called, you can queue the HTTP Request action so it's run in the background queue.
-* a Custom Actions flow takes longer than 30 seconds to run. As Webhook.site's timeout for Webhook.site URLs is 30 seconds, to run flows longer than that, you can mark the action as Queued to let it run for up to 120 seconds.
+* a Custom Actions flow takes longer than 30 seconds to run. As Webhook.site's timeout for Webhook.site URLs is 30 seconds, to run flows longer than that, you can mark the action as Queued to let it run for up to 120 seconds, or 300 seconds for Enterprise subscribers.
 
 Additionally, you can specify an amount of seconds to wait until the action is executed. To do this, enter an amount of seconds in the Seconds textbox next to the Queue checkbox.
 
@@ -115,7 +115,7 @@ As the queued action will inherit the execution scope *up until* the action, the
 * Variables defined in non-queued actions ordered *before* the queued action will be available to the action.
 * If several consecutive actions are marked as queued, and their delay is identical, they are considered a group and will pass variables and execute in order.
 * The amount of time until the queued actions are executed can vary by a few seconds.
-* Groups of queued actions have a total timeout of 120 seconds, at which the execution will be terminated.
+* Groups of queued actions have a total timeout of 120 seconds (300 seconds for Enterprise subscribers), at which the execution will be terminated.
 
 ## Replay
 
