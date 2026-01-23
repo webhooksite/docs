@@ -364,6 +364,9 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `stop`
 *No parameters for `stop`.*
 
+### `sleep`
+- `delay`: **required**, string
+
 ### `store_global_variable`
 - `name`: **required**, string
 - `value`: nullable, string

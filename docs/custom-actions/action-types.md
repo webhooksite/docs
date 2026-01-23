@@ -489,6 +489,13 @@ If the IP is rate limited, the URL will respond with a `HTTP 429`, action execut
 
 Immediately stops Custom Action execution and returns the default response.
 
+### Sleep
+
+Sleeps or pauses action execution for the specified amount of seconds. Decimals allowed. Maximum 30 seconds.
+
+!!! warning
+    Like the Timeout option for Tokens, this action has a dynamic rate limit of `100 ÷ delay` requests per minute, e.g. a delay of 30 allows for 3 requests per minute, and 1 second allows for 100 requests per minute. If the rate limit is met, Sleep has no effect. This is to prevent abuse. If you can, we recommend using the [Queue option](/custom-actions.html#queued-actions). 
+
 ### Basic Auth
 
 With this action, the URL is protected with Basic Authentication. If the username and password combination is wrong, the request is automatically marked as *Don't Save*, action execution is stopped, and the response status is HTTP 401. The action has no effect for emails or DNSHooks.

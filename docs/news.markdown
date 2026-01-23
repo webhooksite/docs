@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 23 January 2026
+
+* Added Sleep action. [More info here](/custom-actions/action-types.html#sleep)
+
 ## 22 January 2026
 
 * For Webhook.site Enterprise subscribers, the maximum timeout for [Queued Actions](/custom-actions.html#queued-actions) has been raised to 300 seconds.
