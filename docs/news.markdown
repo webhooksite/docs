@@ -24,6 +24,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 11 Feburary 2026
+
+* Added toggle for showing the subdomain form of the URL
+* Added button to disassociate a Webhook.site URL from an account (in the More dropdown)
+
 ## 23 January 2026
 
 * Added Sleep action. [More info here](/custom-actions/action-types.html#sleep)
