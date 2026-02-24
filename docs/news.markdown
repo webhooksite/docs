@@ -24,6 +24,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 24 Feburary 2026
+
+* New Feature: Alternate Domain - is `webhook.site` blocked on your network? Try the alternate domain toggle, which uses a different IP address and hostname.
+  ![](/images/Mswm5.png)
+
 ## 11 Feburary 2026
 
 * Added toggle for showing the subdomain form of the URL
