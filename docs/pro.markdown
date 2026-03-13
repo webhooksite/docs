@@ -27,6 +27,8 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 |-----------------------------------------------------------------|---------|------------------------------|--------------------------------|--------------------------------|
 | URLs                                                            | n/a     | 1                            | Unlimited                      | Unlimited                      |
 | Schedules                                                       | n/a     | 1                            | Unlimited                      | Unlimited                      |
+| Max Requests per URL                                            | 50      | Unlimited                    | Unlimited                      | Unlimited                      |
+| Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>2</sup>                     |
 | [Custom Actions](https://docs.webhook.site/custom-actions.html) | ❌      | ✅                           | ✅                            | ✅                             |
 | [Schedules](https://docs.webhook.site/schedules.html)           | ❌      | ✅                           | ✅                            | ✅                             |
 | Custom Addresses                                                | ❌      | ✅                           | ✅                            | ✅                             |
@@ -36,8 +38,6 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 | Free Email Support                                              | ❌      | ✅                           | ✅                            | ✅                             |
 | Custom Domain                                                   | ❌      | ❌                           | ❌                            | ✅                             |
 | Multi-User Support & SAML SSO                                   | ❌      | ❌                           | ❌                            | ✅                             |
-| Max Requests per URL                                            | 50      | Unlimited                    | Unlimited                      | Unlimited                      |
-| Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>2</sup>                     |
 | URL/Email Address expiry                                        | 7 days<sup>1</sup> | Never expires                | Never expires       | Never expires                  |
 | Data storage duration                                           | 7 days<sup>1</sup> | 365 days                     | 365 days            | 365 days                       |
 | Pricing<sup>3</sup>                                             |         | $9/month $90/year <sup>(20% off)</sup> | $18/month $180/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
