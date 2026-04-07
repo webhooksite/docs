@@ -597,3 +597,187 @@ respond('
     </p>
 '.format(json_encode(array), url))
 ```
+
+## Converting all JSON data sent to a Webhook.site URL to a CSV file
+
+This script has several moving parts:
+
+* It remembers each time the export runs and only exports the requests that come after the last time the export was invoked
+* It uses the Webhook.site API to fetch all requests sent to a Webhook.site URL
+* It flattens the JSON data so that each field can become a header/column in the resulting CSV
+* If the JSON data has a variable amount of fields ("columns"), this is handled automatically
+* The resulting `$csv$` variable can be used directly after, as an attachment, in e.g. a [Send Email](/custom-actions/action-types.html#send-email) action
+
+As an example, the following JSON data structure:
+
+```json title="JSON input data example"
+{
+  "name": "Jack Daniels",
+  "interests": ["programming", "reading"],
+  "job": {
+    "title": "Software Developer",
+    "company": "Acme Corp"
+  }
+}
+```
+...becomes:
+```csv title="CSV output example"
+name,interests.0,interests.1,job.title,job.company
+"Jack Daniels","programming","reading","Software Developer","Acme Corp"
+```
+
+
+<br>
+
+```javascript
+set('api_key', '00000000-0000-0000-0000-000000000000');
+set('token_id', '10000000-0000-0000-0000-000000000000');
+
+// Should run the export from last date + 1 second (to avoid duplicates)
+set('from', date_format(get('tracking-export-latest', '1990-01-01 00:00:00') + ' +1 second', 'YYYY-MM-DD HH:mm:ss'))
+set('now', date_format('now', 'YYYY-MM-DD HH:mm:ss') )
+
+json_data = []
+is_last_page = false
+current_page = 1
+count = 0
+
+while(!is_last_page and current_page < 100) {
+    echo('Current page: %d'.format(current_page))
+
+    api_url = string_format(
+        'https://webhook.site/token/{}/requests?query=method:POST AND created_at:["{}" TO *]&sorting=oldest&per_page=50&page={}',
+        get('token_id'),
+        get('from'),
+        current_page
+    );
+
+    res = http(
+        api_url,
+    [
+        'method': 'GET',
+        'headers': ['Api-Key: ' + get('api_key')]
+    ])
+    
+    echo('HTTP Status: %s'.format(res['status']))
+    
+    data = res['content'].json_decode();
+    
+    if (is_null(data)) {
+        echo('Could not parse json!');
+        stop();
+        break;
+    }
+    
+    echo('Total: %s'.format(data['total']))
+    
+    is_last_page = data['is_last_page']
+    current_page = current_page + 1
+    
+    for (item in data['data']) {
+        // Collect latest date
+        latest = item['created_at'];
+
+        item_data = item['content'].json_decode();
+        
+        if (is_null(item_data)) {
+            echo('Could not parse JSON!')
+            stop()
+            break;
+        }
+        
+        json_data.push(item_data)
+    }
+}
+
+// Handle empty strings, commas and escape quotes - used in next for loop
+function csv_escape(input) {
+    if (input.is_null()) { return ''; }
+    return '"' + string_replace(input.to_string(), '"', '""') + '"';
+}
+
+// Calculate columns
+// Not all JSON documents have all columns. Some have a variable amount,
+// so we need to loop over the rows once to get the complete set 
+// of column header names.
+
+csv_columns = []
+csv_values = [];
+
+for (row in json_data) {
+    csv_row = [];
+    
+    // Flatten JSON structure using Extract JSON action
+    extract = action('auto_json', ['source': json_encode(row)])
+    
+    // Collect all flattened names for use in header
+    // + all rows with correct flattened names as keys
+    for (var_name in extract.keys()) {
+        if (var_name.contains('json.')) {
+            var_name_pretty = var_name.replace('json.', '')
+            csv_columns[var_name_pretty] = true;
+            csv_row[var_name_pretty] = csv_escape(extract[var_name])
+        }
+    }
+    
+    csv_values.push(csv_row)
+}
+
+// Sort column headers and insert first header line
+csv_columns = csv_columns.keys().sort();
+csv = csv_columns.join(',')
+
+// Insert rows, but use empty value if the column don't exist
+for (csv_val in csv_values) {
+    csv_row = [];
+    for (csv_column_name in csv_columns) {
+        if (csv_val.has(csv_column_name)) {
+            csv_row[csv_column_name] = csv_val[csv_column_name];    
+        } else {
+            csv_row[csv_column_name] = '';
+        }
+        
+    }
+    
+    // Append row to CSV
+    csv = csv + "\n" + csv_row.join(',')
+    
+    count = count + 1;
+}
+
+if (count == 0) {
+    echo('Nothing processed. Stopping.')
+    stop()
+}
+
+echo('Created CSV contents (%d rows)'.format(count))
+
+// $csv$ and $count$ can be used in downstream actions, e.g. Send Email
+set('csv', csv)
+set('count', count)
+
+// Store latest seen date for use next time
+store('tracking-export-latest', latest)
+```
+
+<br>
+
+Additionally, you can use the following script to clean up/delete the data that was converted to CSV - we'd recommend adding it as a separate Script action and gate it with a Condition (for example with a query string comparison, `?delete=yes`) so no data is lost by accident.
+
+```javascript
+// Delete CSV-processed data
+api_url = string_format(
+  'https://webhook.site/token/{}/requests?query=method:POST AND created_at:["{}" TO "{}"]',
+  get('token_id'),
+  get('from'),
+  get('now')
+)
+
+res = http(
+  api_url,
+  [
+    'method': 'DELETE',
+    'headers': ['Api-Key: ' + get('api_key')]
+  ]
+)
+```

@@ -24,6 +24,30 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 April 2026
+
+* It's now possible to mouseover almost any request data (headers, form data, query strings, etc.) and search for the value instantly. 
+
+<figure markdown="span">
+    ![Value Search](https://sf.gl/s/0oX7X.png){ width="700" }
+</figure>
+
+* New Database Manager for [Webhook.site Databases](/database.html) that lets you create, modify and delete tables, the table structure, and individual rows.
+  
+<figure markdown="span">
+    ![Database Manager](https://sf.gl/s/MyGw6.png){ width="700" }
+</figure>
+  
+* Added JavaScript AI for easily creating and modifying JavaScript snippets.
+
+<figure markdown="span">
+    ![JavaScript AI](https://sf.gl/s/iONbH.png){ width="700" }
+</figure>
+
+* Browser notifications have been improved to show more details about emails and DNSHooks.
+* Added `$request.sorting$` variable, a precise timestamp for filtering and sorting.
+
+
 ## 24 Feburary 2026
 
 * New Feature: Alternate Domain - is `webhook.site` blocked on your network? Try the alternate domain toggle, which uses a different IP address and hostname.
