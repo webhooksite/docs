@@ -117,6 +117,8 @@ As the queued action will inherit the execution scope *up until* the action, the
 * The amount of time until the queued actions are executed can vary by a few seconds.
 * Groups of queued actions have a total timeout of 120 seconds (300 seconds for Enterprise subscribers), at which the execution will be terminated.
 
+For Webhook.site Enterprise subscribters, additional, separate, queue compute is available to run compute queued jobs faster and with less delay.
+
 ## Replay
 
 With Replay, you can easily run Custom Actions again for either all or a subset of incoming requests. 
