@@ -5,7 +5,7 @@
 * Requires [authentication](/api/about.html#api-key)
 * Requires Administrator user type
 
-If part of a SSO-enabled Webhook.site Team, the user is sent a login URL where they can log in immediately. Otherwise, they are sent a link to a page where they can set up their profile and password.
+If part of a [SSO-enabled](https://webhook.site/saml/setup) Webhook.site Team, the user is sent a login URL where they can log in immediately. Otherwise, they are sent a link to a page where they can set up their profile and password.
 
 #### Request
 

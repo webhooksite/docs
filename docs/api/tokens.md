@@ -98,7 +98,6 @@ Returns a list of all Tokens associated with an account.
       "timeout": 0,
       "premium": true,
       "user_id": null,
-      "password": true,
       "ip": "127.0.0.1",
       "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/14.0.3 Safari\/605.1.15",
       "default_content": "",

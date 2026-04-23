@@ -16,7 +16,7 @@ Any sub-path, e.g. <code>https://webhook.site/<span class="url-param">tokenId</s
 
 For DNSHooks, all sub-domains, e.g. <code>example.<span class="url-param">tokenId</span>.dnshook.site</code>, are captured.
 
-If `statusCode` is valid (e.g. 404), that HTTP status will be used in the response (instead of the default.)
+If `statusCode` is valid (e.g. 404), this HTTP status will be used in the response (instead of the default) to test e.g. retry logic.
 
 Instead of `tokenId`, the alias of the token can also be supplied. 
 
