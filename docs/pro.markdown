@@ -25,10 +25,10 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
   </style>
 |                                                                 | Free    | Basic                        | Pro                            | Enterprise                     |
 |-----------------------------------------------------------------|---------|------------------------------|--------------------------------|--------------------------------|
-| URLs                                                            | n/a     | 1                            | Unlimited                      | Unlimited                      |
-| Schedules                                                       | n/a     | 1                            | Unlimited                      | Unlimited                      |
+| URLs                                                            | n/a     | 1                            | 50                             | Unlimited                      |
+| Schedules                                                       | n/a     | 1                            | 5                              | Unlimited                      |
 | Max Requests per URL                                            | 50      | Unlimited                    | Unlimited                      | Unlimited                      |
-| Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>2</sup>                     |
+| Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>2</sup>             |
 | [Custom Actions](https://docs.webhook.site/custom-actions.html) | ❌      | ✅                           | ✅                            | ✅                             |
 | [Schedules](https://docs.webhook.site/schedules.html)           | ❌      | ✅                           | ✅                            | ✅                             |
 | Custom Addresses                                                | ❌      | ✅                           | ✅                            | ✅                             |
