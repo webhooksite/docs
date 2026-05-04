@@ -473,6 +473,8 @@ Marks the request so it is not saved in Webhook.site, which is useful (especiall
 
 Adds a custom log entry to the Request's action output.
 
+If you select *Markdown* as the Display Mode, the log message will render any markdown when viewing the requests action output.
+
 ### Modify Response
 
 This action can be used to modify the response of the Webhook.site URL based on the input.

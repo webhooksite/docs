@@ -204,6 +204,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `log`
 - `text`: **required**, string
+- `mode`: nullable, in:text,markdown
 
 ### `microsoft_drive_download`
 - `provider_id`: **required**, string
