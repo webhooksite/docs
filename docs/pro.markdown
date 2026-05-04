@@ -42,7 +42,7 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
 | Dedicated Queue Compute                                         | ❌      | ❌                           | ❌                            | ✅                             |
 | URL/Email Address expiry                                        | 7 days<sup>1</sup> | Never expires                | Never expires       | Never expires                  |
 | Data storage duration                                           | 7 days<sup>1</sup> | 365 days                     | 365 days            | 365 days                       |
-| Pricing<sup>3</sup>                                             |         | $9/month $90/year <sup>(20% off)</sup> | $18/month $180/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
+| Pricing<sup>3</sup>                                             |         | $9/month $90/year <sup>(20% off)</sup> | $27/month $270/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
 
 
 <div class="center">
