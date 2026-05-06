@@ -48,7 +48,7 @@ After creating a token, HTTP requests, emails and DNSHooks can be [captured](/ap
 
 ```json
 {
-  "uuid": "9981f9f4-657a-4ebf-be7c-1915bedd4775",
+  "uuid": "042E0433526B80021226043498311837DD37087DEDA01659",
   "redirect": false,
   "alias": null,
   "timeout": 0,
