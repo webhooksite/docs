@@ -25,7 +25,7 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
   </style>
 |                                                                 | Free    | Basic                        | Pro                            | Enterprise                     |
 |-----------------------------------------------------------------|---------|------------------------------|--------------------------------|--------------------------------|
-| URLs                                                            | n/a     | 1                            | 50                             | Unlimited                      |
+| URLs                                                            | n/a     | 3                            | 50                             | Unlimited                      |
 | Schedules                                                       | n/a     | 1                            | 5                              | Unlimited                      |
 | Max Requests per URL                                            | 50      | Unlimited                    | Unlimited                      | Unlimited                      |
 | Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>2</sup>             |
