@@ -110,6 +110,18 @@ If you're in doubt about where these parameters go in an API request, take a loo
     {
       "uuid": "a2a6a4ae-4130-4063-953a-84fa29d81d43",
       "token_id": "a94a7294-c4aa-4074-ab77-c4cf86fd53b1",
+      "sender": "user@example.com",
+      "message_id": "ooakjfgfp172vq3j7n5rinmgda5ij9a7q9nftg01",
+      "destinations": [
+          "a2a6a4ae-4130-4063-953a-84fa29d81d43@emailhook.site"
+      ],
+      "checks": {
+          "spam": true,
+          "virus": true,
+          "spf": true,
+          "dkim": true,
+          "dmarc": true
+      },
       "ip": "127.0.0.1",
       "country": "Denmark",
       "country_code": "DK",
@@ -145,10 +157,16 @@ If you're in doubt about where these parameters go in an API request, take a loo
         ]
       },
       "url": "https:\/\/webhook.site\/a94a7294-c4aa-4074-ab77-c4cf86fd53b1\/201?",
-      "size": 0,
-      "custom_action_output": [],
-      "custom_action_errors": [],
-      "time": 0.0015230178833007812
+      "size": 420925,
+      "custom_action_output": {
+          "2998fec5-ffb6-4a47-8ef4-425516f44201": [
+              "Hello World"
+          ]
+      },
+      "custom_action_errors": [
+        "2998fec5-ffb6-4a47-8ef4-425516f44201"
+      ],
+      "time": 0.0015230178833007812,
       "created_at": "2019-10-03 19:06:35",
       "updated_at": "2019-10-03 19:06:35",
       "sorting": 1778164375611988
@@ -193,18 +211,59 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 
 #### Response
 
+* `type` can be `web`, `email`, `dns`
+* `country`, `country_code`, `region`, `city` is the geo-lookup info for the IP address
+* `query` is a key-value object of all query strings in the URL
+* `request` contains form data, like multipart or query-string-encoded
+* `files` is an object for each attached file (e.g. via multipart), where the key is the form field name
+* `size` is the total POST data size in bytes
+* `custom_action_output` is an object where the key is the action ID and the value is an array of output lines
+* `custom_action_errors` contains an array of action IDs marked as erroneous
+* `time` the total execution time (including Custom Actions) in seconds
+* `sorting` is the created_at date as a millisecond timestamp
+* `sender` email sender
+* `message_id` email message ID
+* `checks` an object containing email-related checks, including DKIM, SPF, virus-scanning results. `true` means the check passed successfully.
+
 ```json
 {
   "uuid": "a2a6a4ae-4130-4063-953a-84fa29d81d43",
+  "type": "web",
   "token_id": "a94a7294-c4aa-4074-ab77-c4cf86fd53b1",
+  "sender": "user@example.com",
+  "message_id": "ooakjfgfp172vq3j7n5rinmgda5ij9a7q9nftg01",
+  "destinations": [
+      "a2a6a4ae-4130-4063-953a-84fa29d81d43@emailhook.site"
+  ],
+  "checks": {
+      "spam": true,
+      "virus": true,
+      "spf": true,
+      "dkim": true,
+      "dmarc": true
+  },
   "ip": "127.0.0.1",
+  "country": "Denmark",
+  "country_code": "DK",
+  "region": "Hovedstaden",
+  "city": "Copenhagen",
   "hostname": "webhook.site",
   "method": "POST",
   "user_agent": "Paw\/3.1.8 (Macintosh; OS X\/10.14.6) GCDHTTPRequest",
   "content": "{\"first_name\":\"Arch\",\"last_name\":\"Weber\"}",
-  "note": null,
   "query": {
     "action": "create"
+  },
+  "request": {
+    "status": "example"
+  },
+  "files": {
+    "file": {
+       "id": "98bf4c25-58ab-4c5d-ba91-fb6f709ea78d",
+       "filename": "example.png",
+       "size": 420915,
+       "content_type": "image/png"
+    }
   },
   "headers": {
     "content-length": [
@@ -212,19 +271,26 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
     ],
     "user-agent": [
       "Paw\/3.1.8 (Macintosh; OS X\/10.14.6) GCDHTTPRequest"
+    ],
+    "request-id": [
+      "37856131"
     ]
   },
-  "files": {
-    "foo": {
-      "id": "65d6e0ce-a840-47bc-b6b6-ff1ff38c34ca",
-      "filename": "example.json",
-      "size": 5132873,
-      "content_type": "text/plain"
-    }
-  },
   "url": "https:\/\/webhook.site\/a94a7294-c4aa-4074-ab77-c4cf86fd53b1\/201?",
+  "size": 420925,
+  "custom_action_output": {
+      "2998fec5-ffb6-4a47-8ef4-425516f44201": [
+          "Hello World"
+      ]
+  },
+  "custom_action_errors": [
+    "2998fec5-ffb6-4a47-8ef4-425516f44201"
+  ],
+  "note": null,
+  "time": 0.0015230178833007812,
   "created_at": "2019-10-03 19:06:35",
-  "updated_at": "2019-10-03 19:06:35"
+  "updated_at": "2019-10-03 19:06:35",
+  "sorting": 1778164375611988
 }
 ```
 
