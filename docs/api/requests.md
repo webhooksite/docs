@@ -45,7 +45,7 @@ Lists all requests, emails and DNSHooks sent to a token.
 * `date_from`, `date_to` (date string) - filter requests by date, format `yyyy-MM-dd HH:mm:ss`
 * `query` (string) - filter requests by a query string search (see below for examples)
 
-#### Search query examples
+#### List of search query fields
 
 The following fields can be used to filter via the `query` parameter:
 
@@ -59,6 +59,7 @@ The following fields can be used to filter via the `query` parameter:
 * `time`
 * `created_at`
 * `updated_at`
+* `sorting`
 * `custom_action_output`
 * `custom_action_errors`
 * `note`
@@ -67,7 +68,8 @@ The following fields can be used to filter via the `query` parameter:
 * `method` - type `web` only
 * `user_agent` - type `web` only
 * `url` - type `web` only
-* `ip` - type `web` only
+* `ip` - type `web`, `dns` only
+* `country`, `country_code`, `region`, `city`
 * `query.[field]` - type `web` only
 * `request.[field]` - type `web`only (form fields)
 * `sender` - type `email` only
@@ -76,7 +78,7 @@ The following fields can be used to filter via the `query` parameter:
 * `checks.[type]` - type `email` only
 * `destinations]` - type `email` only
 
-You can filter requests by the following syntax:
+#### Search query examples
 
 * `foobar` - if no field is specified, `content` is searched (equivalent to `content:foobar`)
 * `content:foobar` - returns requests or emails with body contents containing the word `foobar`
@@ -109,6 +111,10 @@ If you're in doubt about where these parameters go in an API request, take a loo
       "uuid": "a2a6a4ae-4130-4063-953a-84fa29d81d43",
       "token_id": "a94a7294-c4aa-4074-ab77-c4cf86fd53b1",
       "ip": "127.0.0.1",
+      "country": "Denmark",
+      "country_code": "DK",
+      "region": "Hovedstaden",
+      "city": "Copenhagen",
       "hostname": "webhook.site",
       "method": "POST",
       "user_agent": "Paw\/3.1.8 (Macintosh; OS X\/10.14.6) GCDHTTPRequest",
@@ -139,9 +145,13 @@ If you're in doubt about where these parameters go in an API request, take a loo
         ]
       },
       "url": "https:\/\/webhook.site\/a94a7294-c4aa-4074-ab77-c4cf86fd53b1\/201?",
+      "size": 0,
+      "custom_action_output": [],
+      "custom_action_errors": [],
+      "time": 0.0015230178833007812
       "created_at": "2019-10-03 19:06:35",
       "updated_at": "2019-10-03 19:06:35",
-      "custom_action_output": []
+      "sorting": 1778164375611988
     }
   ],
   "total": 1,
