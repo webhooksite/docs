@@ -213,6 +213,7 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 
 * `type` can be `web`, `email`, `dns`
 * `country`, `country_code`, `region`, `city` is the geo-lookup info for the IP address
+* `content` contains the request body (web) or raw EML data (email)
 * `query` is a key-value object of all query strings in the URL
 * `request` contains form data, like multipart or query-string-encoded
 * `files` is an object for each attached file (e.g. via multipart), where the key is the form field name
@@ -221,9 +222,11 @@ Returns a CSV file with all requests (maximum 10000.) The amount of columns of t
 * `custom_action_errors` contains an array of action IDs marked as erroneous
 * `time` the total execution time (including Custom Actions) in seconds
 * `sorting` is the created_at date as a millisecond timestamp
-* `sender` email sender
-* `message_id` email message ID
-* `checks` an object containing email-related checks, including DKIM, SPF, virus-scanning results. `true` means the check passed successfully.
+* `text_content` (email only) either plain text or HTML text data stripped of HTML and converted to markdown
+* `html_content` (email only) HTML text
+* `sender` (email only) envelope-from sender
+* `message_id` (email only) email message ID
+* `checks` (email only) an object containing email-related checks, including DKIM, SPF, virus-scanning results. `true` means the check passed successfully.
 
 ```json
 {
