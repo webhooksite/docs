@@ -11,7 +11,7 @@ The term '[webhook](https://en.wikipedia.org/wiki/Webhook)' refers to a general 
 
 In short, many systems (for example, a payment platform and a customer management system) communicate with each other by sending Web requests back and forth, for example, from `https://paymentsys.com` to  `https://customersys.com/order-created` and vice-versa.
 
-This is exactly the same as when you enter "webhook.site" in your Internet browser's address bar, and almost all systems can communicate via this method - also called HTTP - by sending messages ("requests") to Web addresses. 
+This is exactly the same as when you enter "webhook.site" in your Internet browser's address bar, and almost all systems can communicate via this method - called *HTTP* - by sending messages (called *requests*) to Web addresses. 
 
 [In-depth article about webhooks](https://simonfredsted.com/1583).
 

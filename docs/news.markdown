@@ -24,6 +24,14 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 31 May 2026
+
+* HTTP/2.0 is now supported.
+* HTTP version is now displayed.
+* A lot of old JavaScript bugs have been fixed.
+* Front page is a little easier on the eyes in Dark Mode.
+* WebhookScript: Added [`note`](/webhookscript/functions/flow.html#notestring-note) function.
+
 ## 7 April 2026
 
 * It's now possible to mouseover almost any request data (headers, form data, query strings, etc.) and search for the value instantly. 

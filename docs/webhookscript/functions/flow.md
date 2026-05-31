@@ -89,6 +89,10 @@ The maximum amount of seconds allowed is 604800 (7 days).
 
 Marks the request so it is not saved in Webhook.site, which is useful when receiving a large amount of requests. The request can still be seen when it comes in, but will not be available through through the app later, or through the API. The action is useful in cases where e.g. a URL receive a large amount of requests.
 
+### note(***string*** note)
+
+Sets the request `note` field, visible in the frontend. Useful for storing status or debug information that should also be able to be retrieved quickly using the [Get Requests](/api/requests.html) API.
+
 ### exec(***string*** code) : ***any***
 
 Executes code in `code` and returns the result. The code will inherit the execution scope.
