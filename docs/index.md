@@ -106,6 +106,8 @@ With a [Webhook.site subscription](pro.markdown), there's a variety of different
 1. Webhook.site provides a CSV Export functionality, simply click the button in the menu to download all data as a CSV file.
 
     ![CSV Export](/images/csv-export.png)
+    
+    *If you use Microsoft Excel, use the [Text Import Wizard](https://support.microsoft.com/en-us/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to open the CSV file.*
 
 2. Data can be retrieved and saved using the [Webhook.site API](api/tokens.md#get-requests) using any programming language.
 
