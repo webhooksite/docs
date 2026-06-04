@@ -31,6 +31,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 * A lot of old JavaScript bugs have been fixed.
 * Front page is a little easier on the eyes in Dark Mode.
 * WebhookScript: Added [`note`](/webhookscript/functions/flow.html#notestring-note) function.
+* The feature *Require login to view URLs* has been removed entirely for a small number of customers that had it disabled. It's been replaced by [Share Links](https://docs.webhook.site/news.html#30-september-2024).
 
 ## 7 April 2026
 
