@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 13 June 2026
+
+* New Action: **Webhook.site: Get Requests**, allowing for the retrieval and processing of requests sent to a Webhook.site URL. [More info here](/custom-actions/action-types.html#get-requests).
+
 ## 31 May 2026
 
 * HTTP/2.0 is now supported.

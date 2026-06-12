@@ -397,3 +397,11 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `twitter_tweet`
 - `provider_id`: **required**, string
 - `tweet`: **required**, string
+
+### `webhook_get_requests`
+- `variable_name`: string, default:req
+- `repeat`: boolean
+- `token_id`: **required**, string
+- `sorting`: string
+- `query`: string
+- `max`: int, default:100, max:1000

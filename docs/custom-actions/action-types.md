@@ -807,6 +807,22 @@ Executes custom scripts using a scripting language that's very similar to JavaSc
 
 For more information about WebhookScript, see the [dedicated page](/webhookscript/index.html).
 
+## Webhook.site
+
+Interact with resources from your Webhook.site account with the following actions.
+
+### Get Requests
+
+With the Get Requests action, it is possible to either retrieve or loop over requests sent to a Webhook.site URL, so you can use a URL as e.g. a data store, queue or lookup table.
+
+Furthermore, you can query the requests to be returned using the Webhook.site [Requests API Query Language](https://docs.webhook.site/api/requests.html#search-query-examples), to filter for requests in a detailed manner.
+
+For example, if Repeat mode is on and the Variable Name Prefix is set to $req$, variables like $req.uuid$, $req.method$, $req.content$, $req.created_at$, etc. are created for each Repeat cycle. 
+
+Otherwise, when Repeat is off, variables are created for each request that is returned, e.g. $req.0.uuid$, $req.1.uuid$, etc.
+
+A maximum of 1000 Requests can be processed per action. Only Webhook.site URLs in the same or no group can be used. 
+
 ## Multimedia
 
 ### Generate PDF
