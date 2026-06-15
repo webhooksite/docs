@@ -32,7 +32,7 @@ Webhook.site Databases are powered by CockroachDB, providing a fault-tolerant, s
 ## Pricing and availability
 
 !!! news
-    As an introductory offer, each Webhook.site Pro & Enterprise subscription automatically comes with a `DB-S` Webhook.site Database instance included. Additional databases can be ordered by contacting Support.
+    As an introductory offer, all Webhook.site subscriptions include 1 free `DB-S` Webhook.site Database instance.
 
 ### Pricing Table
 

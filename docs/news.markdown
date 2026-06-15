@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 15 June 2026
+
+* Webhook.site Basic subscriptions now also include 1 free DB-S database instance.
+
 ## 13 June 2026
 
 * New Action: **Webhook.site: Get Requests**, allowing for the retrieval and processing of requests sent to a Webhook.site URL. [More info here](/custom-actions/action-types.html#get-requests).

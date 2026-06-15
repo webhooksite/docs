@@ -5,7 +5,8 @@ nav_order: 390
 
 # Webhook.site Basic, Pro and Enterprise
 
-With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get more features that allows you to do more with your URL, as well as keep the data contained private and secure.
+With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get more features that allows you to do more
+with your URL, as well as keep the data contained private and secure.
 
 
 <style>
@@ -23,99 +24,129 @@ With Webhook.site Basic, Pro and Webhook.site Enterprise subscriptions, you get 
         text-decoration: none;
       }
   </style>
-|                                                                 | Free    | Basic                        | Pro                            | Enterprise                     |
-|-----------------------------------------------------------------|---------|------------------------------|--------------------------------|--------------------------------|
-| URLs                                                            | n/a     | 3                            | 50                             | Unlimited                      |
-| Schedules                                                       | n/a     | 1                            | 5                              | Unlimited                      |
-| Max Requests per URL                                            | 50      | Unlimited                    | Unlimited                      | Unlimited                      |
-| Request History per URL                                         | 50      | 10000<sup>2</sup>            | 10.000<sup>2</sup>            | 100.000<sup>2</sup>             |
-| [Custom Actions](https://docs.webhook.site/custom-actions.html) | ❌      | ✅                           | ✅                            | ✅                             |
-| [Schedules](https://docs.webhook.site/schedules.html)           | ❌      | ✅                           | ✅                            | ✅                             |
-| Custom Addresses                                                | ❌      | ✅                           | ✅                            | ✅                             |
-| Secure Data                                                     | ❌      | ✅                           | ✅                            | ✅                             |
-| Permanent URLs                                                  | ❌      | ✅                           | ✅                            | ✅                             |
-| CSV Export                                                      | ❌      | ✅                           | ✅                            | ✅                             |
-| Free Email Support                                              | ❌      | ✅                           | ✅                            | ✅                             |
-| Custom Domain                                                   | ❌      | ❌                           | ❌                            | ✅                             |
-| Multi-User Support & SAML SSO                                   | ❌      | ❌                           | ❌                            | ✅                             |
-| Priority Email Support                                          | ❌      | ❌                           | ❌                            | ✅                             |
-| Dedicated Queue Compute                                         | ❌      | ❌                           | ❌                            | ✅                             |
-| URL/Email Address expiry                                        | 7 days<sup>1</sup> | Never expires                | Never expires       | Never expires                  |
-| Data storage duration                                           | 7 days<sup>1</sup> | 365 days                     | 365 days            | 365 days                       |
-| Pricing<sup>3</sup>                                             |         | $9/month $90/year <sup>(20% off)</sup> | $27/month $270/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
 
+|                                                                 | Free                                   | Basic                                 | Pro                                     | Enterprise                              |
+|-----------------------------------------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|-----------------------------------------|
+| URLs                                                            | n/a                                    | 3                                     | 50                                      | Unlimited                               |
+| Schedules                                                       | n/a                                    | 1                                     | 5                                       | Unlimited                               |
+| Databases<a href="#note"><sup>4</sup></a>                       | n/a                                    | 1                                     | 1                                       | 1                                       |
+| Max Requests per URL                                            | 50                                     | Unlimited                             | Unlimited                               | Unlimited                               |
+| Request History per URL                                         | 50                                     | 1000<a href="#note"><sup>2</sup></a>  | 10.000<a href="#note"><sup>2</sup></a>  | 100.000<a href="#note"><sup>2</sup></a> |
+| [Custom Actions](https://docs.webhook.site/custom-actions.html) | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| [Schedules](https://docs.webhook.site/schedules.html)           | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| Custom Addresses                                                | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| Data secured & protected in account                             | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| Permanent URLs                                                  | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| CSV Export                                                      | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| Free Email Support                                              | ❌                                      | ✅                                     | ✅                                       | ✅                                       |
+| Custom Domain                                                   | ❌                                      | ❌                                     | ❌                                       | ✅                                       |
+| Multi-User Support & SAML SSO                                   | ❌                                      | ❌                                     | ❌                                       | ✅                                       |
+| Priority Email Support                                          | ❌                                      | ❌                                     | ❌                                       | ✅                                       |
+| Dedicated Queue Compute                                         | ❌                                      | ❌                                     | ❌                                       | ✅                                       |
+| URL/Email Address expiry                                        | 7 days<a href="#note"><sup>1</sup></a> | Never expires                         | Never expires                           | Never expires                           |
+| Data storage duration                                           | 7 days<a href="#note"><sup>1</sup></a> | 365 days                              | 365 days                                | 365 days                                |
+| Pricing<a href="#note"><sup>3</sup></a>                         |                                        | $9/month $90/year <sup>(20% off)</sup> | $27/month $270/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
 
 <div class="center">
-<a href="https://webhook.site/register" class="md-button md-button--default no-underline">Subscribe Now</a>
+<a href="https://webhook.site/register?r=docs-1" class="md-button md-button--default">Click here to Subscribe</a>
 </div>
 
+<a id="note"></a>
+
 1. Free URLs and email addresses automatically expire and are permanently deleted after 7 days.
-2. Pro and Enterprise URLs accept an unlimited amount of requests or emails, older requests are removed from our datastore periodically. The amount specifies the maximum amount of requests available to be seen via the interface or API.
+2. Pro and Enterprise URLs accept an unlimited amount of requests or emails, older requests are removed from our
+   datastore periodically. The amount specifies the maximum amount of requests available to be seen via the interface or
+   API.
 3. All pricing in USD and excluding VAT. Local currency can be used at checkout.
+4. All subscriptions include 1 free DB-S database instance.
 
-
-
-## Pro features
+## Basic & Pro features
 
 ### Create workflows with Custom Actions
-Extract data, send emails and HTTP requests, upload files, run scripts and much more with Custom Actions that are run on each incoming request or email, with the Webhook.site Custom Actions builder. 
 
-Native integrations for AWS, Google Sheets, Slack, Dropbox, MySQL and others. 
+Extract data, send emails and HTTP requests, upload files, run scripts and much more with Custom Actions that are run on
+each incoming request or email, with the Webhook.site Custom Actions builder.
+
+Native integrations for AWS, Google Sheets, Slack, Dropbox, MySQL and others.
 
 [Read more](https://docs.webhook.site/custom-actions.html)
 
-### Schedules 
-Use Schedules by Webhook.site to send requests any URL or run your Custom Actions automatically on an interval. Use it for monitoring your Web site, clearing caches, and much more. Supports `cron` syntax, in addition to predefined intervals.
+### Schedules
+
+Use Schedules by Webhook.site to send requests any URL or run your Custom Actions automatically on an interval. Use it
+for monitoring your Web site, clearing caches, and much more. Supports `cron` syntax, in addition to predefined
+intervals.
 
 [Read more](https://docs.webhook.site/schedules.html)
 
-### Custom URLs and Emails 
+### Custom URLs and Emails
+
 Get an address that's easy to remember:
 
 `webhook.site/my-alias`
 
 `my-alias@email.webhook.site`
 
-(With [Webhook.site Enterprise](#enterprise-features), you can even use your own domain name.)
+(With [Webhook.site Enterprise](#enterprise-features), you can even use your [own domain name](#custom-domain).)
 
-### Security 
-Your data is secured in your account, and can be accessed by API Key or login. With the free version of Webhook.site, others can freely view the requests sent to your URL.
+### Security
 
-### Permanent URLs 
+Your data is secured in your account, and can be accessed by API Key or login. With the free version of Webhook.site,
+others can freely view the requests sent to your URL.
+
+### Permanent URLs
+
 The URLs stay in your account forever, the 7-day auto expiration of the free version is removed.
 
-### Store more than 100 requests or emails 
-With the free version, URLs stop taking in new requests or emails after the 100 request limit is reached. With Pro, the limit of max 100 requests or emails per URL is removed and raised to 10.000 requests or emails, which are then rotated automatically.
+### Store more than 100 requests or emails
 
-### Unlimited URLs 
+With the free version, URLs stop taking in new requests or emails after the 100 request limit is reached. With Pro, the
+limit of max 100 requests or emails per URL is removed and raised to 10.000 requests or emails, which are then rotated
+automatically.
+
+### Unlimited URLs
+
 Create as many upgraded URLs or email addresses as you need at no extra cost.
 
-### CSV Export 
+### CSV Export
+
 Export all requests and emails to a CSV file.
 
 ### Localhost Forwarding
+
 Forward requests to your Webhook.site URL to your local network via [Webhook.site CLI](/cli.html).
 
-### Email Support 
-We’ll help you troubleshoot and set up your Custom Actions and workflows.
+### Email Support
 
+We’ll help you troubleshoot and set up your Custom Actions and workflows.
 
 ## Enterprise features
 
 In addition to all Pro features, Enterprise also contains the following features:
 
+### Custom Domain
 
-### Custom Domain 
-Use a your own (sub)domain for URLs and emails: 
+Use a your own (sub)domain for URLs and emails:
 
 `mydomain.com/my-alias`
 
 `my-alias@email.mydomain.com`
 
-Additionally, Webhook.site provides an SSL certificate which is included free of charge with your Enterprise subscription.
+Additionally, Webhook.site provides an SSL certificate which is included free of charge with your Enterprise
+subscription.
 
-### Multi-User Support 
-Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure individual users' access with User Types like Administrator, Member and Viewer as well as with Roles, giving users access to specific groups of URLs so they can see and interact with exactly the data they need.
+### Multi-User Support
+
+Ideal for larger organizations, share URLs, schedules, and other data with the rest of the organization. Configure
+individual users' access with User Types like Administrator, Member and Viewer as well as with Roles, giving users
+access to specific groups of URLs so they can see and interact with exactly the data they need.
 
 ### SAML 2.0 Single Sign-On
-Webhook.site supports SSO for providers like Google Workspace, Microsoft Entra and any other provider that supports SAML 2.0 SSO.
+
+Webhook.site supports SSO for providers like Google Workspace, Microsoft Entra and any other provider that supports SAML
+2.0 SSO.
+
+<div class="center">
+<a href="https://webhook.site/register?r=docs-2" class="md-button md-button--default no-underline">Sign up</a>
+<a href="https://webhook.site/register?r=docs-cr#testimonials" class="md-button md-button--default no-underline">Customer Reviews</a>
+</div>
