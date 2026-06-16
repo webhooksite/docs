@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 16 June 2026
+
+* **Database** action now supports Repeat mode. 
+
 ## 15 June 2026
 
 * Webhook.site Basic subscriptions now also include 1 free DB-S database instance.
