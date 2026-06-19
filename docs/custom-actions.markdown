@@ -43,6 +43,18 @@ The following shortcut keys can be used in the Custom Actions editor.
 
 ## Demos
 
+### Using Databases in your Custom Action workflows and automations
+
+A quick demo of how to setup and manage a Webhook.site Database as well as run queries to retrieve or store data using either the Database Custom Action or WebhookScript/JavaScript actions.
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/76dRU4zH5Kg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+### Get Requests action & Repeat
+
+It's nice to be able to interact with the data that a Webhook.site URL has received - the new Get Requests action does exactly this. In this example, we use 1 URL for collecting newsletter signups and another "runner" URL for sending a newsletter to each of the subscribers collected. 
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/TinUURtIBrg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
 ### JavaScript, X and Schedules
 
 In this video I'm doing a quick demo of how I used Webhook.site to set up a workflow to post updates from my news page automatically to my X/Twitter account. I used the actions JavaScript, Conditions, X Post, and Store Global Variable. 
