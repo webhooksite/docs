@@ -24,6 +24,11 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 24 June 2026
+
+* Replay now supports processing more than 10.000 requests at once.
+* It's now possible to instantly search for a Custom Actions output line by mousing over it.
+
 ## 16 June 2026
 
 * **Database** action now supports Repeat mode. 
