@@ -71,6 +71,9 @@ nav:
     - About Custom Actions: custom-actions.markdown
     - Variables: custom-actions/variables.md
     - Action Types: custom-actions/action-types.md
+    - Queued Actions: custom-actions.html#queued-actions
+    - Queue Profiles & Rate Limits: custom-actions.html#queue-profiles
+    - Replay: custom-actions.html#replay
     - WebhookScript:
       - About WebhookScript: webhookscript/index.markdown
       - Examples: webhookscript/examples.markdown

@@ -24,9 +24,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 1 July 2026
+
+* New Feature: Queue Profiles, allowing you to easily group and rate limit queued Custom Actions.
+* Replay now supports guaranteed ordering - albeit at the cost of slower execution - and changing the default ordering.
+* Sleep action is no longer rate limited when running in Queue mode.
+
 ## 24 June 2026
 
-* Replay now supports processing more than 10.000 requests at once.
+* Replay now supports processing more than 10.000 - and up to 100.000 for Enterprise customers - requests at once.
 * It's now possible to instantly search for a Custom Actions output line by mousing over it.
 
 ## 16 June 2026
