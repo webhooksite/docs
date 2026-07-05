@@ -79,6 +79,12 @@ The [Mock](/custom-actions/action-types.html#mock) action lets you upload an Ope
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/QIEzn4i_P-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+### Using Queue Profiles to rate limit and control Custom Actions execution
+
+In this video, we're going to see how you can use the new Queue Profiles features to control the flow of your Custom Actions automations & workflows, a useful feature when sending data to an API or service that's rate limited, and you have more data than it can accept. 
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/clp4am_o6a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
 ## Templates
 
 If you use the same set of Custom Actions often, you can create a Template that contains a copy of one or more Custom Actions, along with a set of Predefined Variables. 
@@ -136,6 +142,8 @@ For Webhook.site Enterprise subscribers, additional, separate, queue compute is 
 Per default, Custom Actions marked as Queued are run in a default queue - on a best-effort basis - with no limit on how many Custom Actions can run in a given time period. 
 
 Queue Profiles allows you to use a shared configuration and control exactly how many jobs can run in a given period. This can useful when, for example, running actions that interact with APIs that have rate limits. 
+
+<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/clp4am_o6a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Actions that can't run due to the rate limit are retried automatically until their expiry.
 
