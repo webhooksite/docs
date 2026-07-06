@@ -24,6 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 6 July 2026
+
+* Emailhooks: Fixed an issue where only 1 email would be delivered when sending emails to multiple different Webhook.site `@emailhook.site` addresses per email.
+* Frontend: When using a search query, less warnings about incoming requests being filtered are shown
+* Tokens API: When updating a Token, and setting the `alias` property to `null`, the alias is now removed.
+
 ## 1 July 2026
 
 * New Feature: Queue Profiles, allowing you to easily group and rate limit queued Custom Actions.
