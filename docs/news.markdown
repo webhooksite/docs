@@ -24,6 +24,15 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 17 July 2026
+
+* Added a automatic Variables typeahead on most input fields in Custom Actions editor
+  ![](https://simonfredsted.com/share/MbAQN.gif)
+
+## 8 July 2026
+
+* Control Panel: The number of unread Error Log entries is now shown in the sidebar
+
 ## 6 July 2026
 
 * Emailhooks: Fixed an issue where only 1 email would be delivered when sending emails to multiple different Webhook.site `@emailhook.site` addresses per email.
