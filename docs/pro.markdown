@@ -27,7 +27,7 @@ with your URL, as well as keep the data contained private and secure.
 
 |                                                                 | Free                                   | Basic                                 | Pro                                     | Enterprise                              |
 |-----------------------------------------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|-----------------------------------------|
-| URLs                                                            | n/a                                    | 3                                     | 50                                      | Unlimited                               |
+| URLs                                                            | n/a                                    | 1                                     | 50                                      | Unlimited                               |
 | Schedules                                                       | n/a                                    | 1                                     | 5                                       | Unlimited                               |
 | Databases<a href="#note"><sup>4</sup></a>                       | n/a                                    | 1                                     | 1                                       | 1                                       |
 | Max Requests per URL                                            | 50                                     | Unlimited                             | Unlimited                               | Unlimited                               |
