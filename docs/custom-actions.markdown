@@ -79,7 +79,7 @@ The [Mock](/custom-actions/action-types.html#mock) action lets you upload an Ope
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/QIEzn4i_P-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-### Using Queue Profiles to rate limit and control Custom Actions execution
+### Using Queue Profiles to throttle and control Custom Actions execution
 
 In this video, we're going to see how you can use the new Queue Profiles features to control the flow of your Custom Actions automations & workflows, a useful feature when sending data to an API or service that's rate limited, and you have more data than it can accept. 
 
@@ -139,9 +139,9 @@ For Webhook.site Enterprise subscribers, additional, separate, queue compute is 
 
 ### Queue Profiles
 
-Per default, Custom Actions marked as Queued are run in a default queue - on a best-effort basis - with no limit on how many Custom Actions can run in a given time period. 
+Per default, Custom Actions marked as Queued are run in a default queue – on a best-effort basis – with no limit on how many Custom Actions can run in a given time period. 
 
-Queue Profiles allows you to use a shared configuration and control exactly how many jobs can run in a given period. This can useful when, for example, running actions that interact with APIs that have rate limits. 
+Queue Profiles allow you to use a shared configuration and control or throttle exactly how many jobs can run in a given period. This can be useful when, for example, running actions that interact with APIs that have rate limits. 
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/clp4am_o6a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
@@ -156,11 +156,11 @@ Queue Profiles are available for Pro and Enterprise customers.
 
 Here's what the configuration fields mean when setting up a Queue Profile:
 
-* **Initial Delay:** This waits a specified amount of seconds before the Action is executed the first time. This can be used, for example, to wait for a data source to consolidate. Unless there's a specific reason to wait, this should be set to zero seconds.
-* **Rate Limit:** Specify the maximum amount of jobs that can be run in a given period. For example, if the actions are running against an API that has a rate limit of 100 requests per minute, this can be set to *`100` jobs every `1` minute*. This makes sure that no more than 100 jobs will be executed per 60 seconds. If there are more jobs, they are retried continuously.
-* **Job Lifetime**: Measured from when the job is first run, this sets the maximum period the job is retried until it is deleted and fails. For example, if there's a million jobs with the aforementioned *100 per minute* rate limit, it would take days to execute them all. To prevent jobs staying in the queue indefinitely, the maximum Job Lifetime is 1 day or 7 days for Enterprise subscribers.
+* **Initial Delay:** This waits a specified number of seconds before the Action is executed the first time. This can be used, for example, to wait for a data source to consolidate. Unless there's a specific reason to wait, this should be set to zero seconds.
+* **Rate Limit:** Specify the maximum number of jobs that can be run in a given period. For example, if the actions are running against an API that has a rate limit of 100 requests per minute, this can be set to *`100` jobs every `1` minute*. This makes sure that no more than 100 jobs will be executed per 60 seconds. If there are more jobs, they are retried continuously.
+* **Job Lifetime**: Measured from when the job is first run, this sets the maximum period the job is retried until it is deleted and fails. For example, if there were a million jobs with the aforementioned *100 per minute* rate limit, it would take days to execute them all. To prevent jobs staying in the queue indefinitely, the maximum Job Lifetime is 1 day or 7 days for Enterprise subscribers.
 
-Actions that fail due to job lifetime expiry are marked as such, and shown in [Error Log](#error-log).
+Actions that fail due to job lifetime expiry are marked as such and shown in [Error Log](#error-log).
 
 The accuracy of the rate limit can depend on various factors, including other customer activity and the execution time of the actions, causing actions to run a few seconds later than the mathematical optimum. However, the maximum limit is never exceeded. For example, if the Queue Profile is configured to *`100` jobs every `1` minute*, only 99 jobs may run in practice, but never 101.
 
@@ -168,7 +168,7 @@ The accuracy of the rate limit can depend on various factors, including other cu
 
 With Replay, you can easily run Custom Actions again for either all or a subset of incoming requests. 
 
-For example, if you've made changes to your flow, want to import data again, fixed an error – there's a lot of reasons you might want to run your flow again for the requests on your Webhook.site URL, and now you can do it in Webhook.site with a few easy clicks. 
+For example, if you've made changes to your flow, want to import data again, fixed an error – there are a lot of reasons you might want to run your flow again for the requests on your Webhook.site URL. Now you can do it in Webhook.site with a few easy clicks. 
 
 If the filter matches more than 50 requests, a warning will be shown.
 
