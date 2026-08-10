@@ -394,6 +394,16 @@ The following is a list of the API names for Action Types, along with a list of 
 - `variable_name`: string
 - `repeat`: boolean
 
+### `text_encrypt`
+- `source`: **required**, string
+- `password`: **required**, string
+- `variable_name`: string, default:text_encrypt
+
+### `text_decrypt`
+- `source`: **required**, string
+- `password`: **required**, string
+- `variable_name`: string, default:text_decrypt
+
 ### `twitter_tweet`
 - `provider_id`: **required**, string
 - `tweet`: **required**, string

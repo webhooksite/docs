@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 10 August 2026
+
+* Added Encrypt Text and Decrypt Text actions. [More info here](/custom-actions/action-types.html#encrypt-text)
+
 ## 17 July 2026
 
 * Added a automatic Variables typeahead on most input fields in Custom Actions editor

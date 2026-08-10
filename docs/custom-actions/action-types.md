@@ -284,6 +284,16 @@ If we set Source to `John`, Operator to `ends with`, Variable Name to `$user_id$
 
 If the Source had been `Jack`, `$user_id$` would have been set to `unknown.`
 
+### Encrypt Text
+
+Encrypts text with a specified password and outputs the encrypted string as a variable.
+
+Uses military-grade, industry standard encryption with the XSalsa20 stream cipher and Poly1305 MAC for authentication.
+
+### Decrypt Text
+
+Reverses encryption by *Encrypt Text* action.
+
 ## Network
 
 ### HTTP Request
