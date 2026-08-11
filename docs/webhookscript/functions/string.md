@@ -229,6 +229,27 @@ Returns a cryptographic digest of `value` using `algo`. Returns `false` on failu
 
 Verifies `value` using `signature`, `public_key` and `algo`
 
+## Encryption
+
+### encrypt(***string*** value, ***string*** password) : *string*
+
+Encrypts `value` using `password`. Uses military-grade, industry standard encryption with the XSalsa20 stream cipher and Poly1305 MAC for authentication.
+
+```javascript
+enc = encrypt('very secret', 'abc123')
+echo(enc)
+// O37/6KgigBGqX/w7/7QkvYMt89TDQj6j61VZ05G3ZHmEEn8/L/BfxZIogngW7cjaUFH2g0OWvtVf3dzrfdxVECSXUQ==
+
+dec = decrypt(enc, 'abc123')
+echo(dec)
+// very secret
+```
+
+### decrypt(***string*** value, ***string*** password) : *string*
+
+Decrypts a value encrypted by the `encrypt()` function.
+
+
 ## HTML and Markdown
 
 ### html_strip_tags(***string*** string) : string

@@ -27,6 +27,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 ## 10 August 2026
 
 * Added Encrypt Text and Decrypt Text actions. [More info here](/custom-actions/action-types.html#encrypt-text)
+* WebhookScript: Added `encrypt()` and `decrypt()` actions. [More info here](/webhookscript/functions/string.html#encryption)
 
 ## 17 July 2026
 
