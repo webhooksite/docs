@@ -235,6 +235,8 @@ Verifies `value` using `signature`, `public_key` and `algo`
 
 Encrypts `value` using `password`. Uses military-grade, industry standard encryption with the XSalsa20 stream cipher and Poly1305 MAC for authentication.
 
+This function is equivalent to the [Encrypt Text](/custom-actions/action-types.html#encrypt-text) action.
+
 ```javascript
 enc = encrypt('very secret', 'abc123')
 echo(enc)
@@ -248,6 +250,8 @@ echo(dec)
 ### decrypt(***string*** value, ***string*** password) : *string*
 
 Decrypts a value encrypted by the `encrypt()` function.
+
+This function is equivalent to the [Decrypt Text](/custom-actions/action-types.html#decrypt-text) action.
 
 
 ## HTML and Markdown
