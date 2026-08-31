@@ -198,14 +198,17 @@ Alternatively, contact [Webhook.site Support](https://support.webhook.site) for 
 
 ## I want to whitelist Webhook.site in our firewall, which IPs do you use?
 
-You'll need to whitelist the following IPs:
+You'll need to whitelist the following IPs. Both inbound and outbound originate and destinate at these IP addresses.
 
 * `178.63.67.106`
 * `178.63.67.153` 
 * `2a01:4f8:121:114d::/64` (IPv6)
 * `2a01:4f8:121:11a5::/64` (IPv6)
 
-Both inbound and outbound originate and destinate at these IP addresses.
+The following IPs are used for our WebSocket cluster at `ws.webhook.site`:
+
+* `178.104.70.90` (Websocket only)
+* `2a01:4f8:1c1c:4c37::/64` (Websocket only, IPv6)
 
 Note that this may change in the future, so sign up for the [newsletter](news.markdown) to be notified of changes.
 
