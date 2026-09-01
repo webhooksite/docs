@@ -19,6 +19,13 @@ You must set the [`Api-Key`](#api-key) header if you have a Webhook.site account
 * [Create a Webhook.site URL](/api/tokens.html#create-token)
 * [Fetch or search data sent to a Webhook.site URL](/api/requests.html#get-requests)
 
+## MCP Servers
+
+If you'd like to make it easier for your AI to interact with Webhook.site, the following user-contributed MCP Servers are available. Note that Webhook.site is not responsible for 3rd party software.
+
+* Webhook.site FastMCP by @js-cohn: https://github.com/js-cohn/Webhook.site-FastMCP
+* Webhook.site MCP Server by @zebbern: https://github.com/zebbern/webhook-mcp-server
+
 ## Things to Note
 
 * In this documentation, replaceable URL parameters are highlighted.<br> For example, <code><span class="url-param">tokenId</span></code> indicates a parameter that *must* be replaced with a token ID.
