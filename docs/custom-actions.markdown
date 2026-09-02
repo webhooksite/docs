@@ -85,6 +85,13 @@ In this video, we're going to see how you can use the new Queue Profiles feature
 
 <center><iframe width="100%" height="315" src="https://www.youtube.com/embed/clp4am_o6a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+
+## Action AI
+
+With Action AI, you can generate and iterate Custom Actions workflows using our built-in AI.
+
+![](/images/action-ai-2.0.png)
+
 ## Templates
 
 If you use the same set of Custom Actions often, you can create a Template that contains a copy of one or more Custom Actions, along with a set of Predefined Variables. 

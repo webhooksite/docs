@@ -26,6 +26,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 2 September 2026
 
+<figure markdown="span">
+    ![Value Search](/images/action-ai-2.0.png){ width="700" }
+</figure>
+
 * Updates to Action AI:
     * Action AI is now a classic chat window so it's possible to modify generated actions by chatting
     * Added a preview for generated actions
