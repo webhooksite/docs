@@ -24,6 +24,19 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 2 September 2026
+
+* Updates to Action AI:
+    * Action AI is now a classic chat window so it's possible to modify generated actions by chatting
+    * Added a preview for generated actions
+    * Added HTML preview so you can see how a URL responds while testing
+    * The AI model has been upgraded to a newer version, ensuring quicker responses and better Custom Actions workflows
+    * The AI now knows more about how Custom Actions work so they can be better applied
+* In addition to searching for values like headers and Custom Actions output, it is now also possible to exclude a value from the search
+* Fixed an issue where escaped variables (e.g. `\$myvar\$`) wouldn't render correctly
+* Increased threshold for when incoming emails get marked as truncated to 100kb
+* Response Preview now shows the full HTML, and not a sanitized, unstyled version
+
 ## 10 August 2026
 
 * Added Encrypt Text and Decrypt Text actions. [More info here](/custom-actions/action-types.html#encrypt-text)
