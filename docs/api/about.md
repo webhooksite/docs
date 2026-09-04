@@ -23,8 +23,15 @@ You must set the [`Api-Key`](#api-key) header if you have a Webhook.site account
 
 If you'd like to make it easier for your AI to interact with Webhook.site, the following user-contributed MCP Servers are available. Note that Webhook.site is not responsible for 3rd party software.
 
-* Webhook.site FastMCP by @js-cohn: https://github.com/js-cohn/Webhook.site-FastMCP
-* Webhook.site MCP Server by @zebbern: https://github.com/zebbern/webhook-mcp-server
+* [Webhook.site FastMCP](https://github.com/js-cohn/Webhook.site-FastMCP) by @js-cohn
+* [Webhook.site MCP Server by @zebbern](https://github.com/zebbern/webhook-mcp-server) @zebbern
+
+## Libraries
+
+Note that Webhook.site is not responsible for 3rd party software.
+
+* [Webhook.site API Client for Python](https://github.com/cvcvka5/pywhook) by @cvcvka5
+* [Webhook.site API Client for Node.js](https://github.com/webhooksite/cli/blob/master/commands/lib/api.js) by Webhook.site
 
 ## Things to Note
 
