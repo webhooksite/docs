@@ -24,6 +24,20 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 6 September 2026
+
+* Webhook.site CLI: Fixes an issue where responses without headers wouldn't be tunnelled
+* Templates: Add `queue_id` and `queue` properties
+* Templates: Fixes an issue where Database and Get Requests actions couldn't be added to templates
+* Templates: Fixes an issue where templates without actions couldn't be created
+* Send Email (SMTP): Fixes an issue where the encryption property couldn't be omitted
+* Set Variable: Adds an error when `mode` is invalid
+* Get Requests: Added defaults for `sorting` and `max` properties
+* SSH/SFTP: Adds an error when required `provider_id` isn't added
+* Condition: Adds default value for `value` property
+* Tokens: Added validation for `default_content_type` property
+
+
 ## 2 September 2026
 
 <figure markdown="span">
