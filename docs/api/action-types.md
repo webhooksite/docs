@@ -1,59 +1,78 @@
 The following is a list of the API names for Action Types, along with a list of parameters, and their validation requirements.
 
-### `auth_basic`
-- `username`: string
-- `password`: **required**, string
+## Text
 
-### `auto_json`
+### `auto_json` – Extract JSON
+
+Given the source {"value": "example"}, jsonpath set to a blank string or $, and the variable_name 'output', the following variable will be generated: $output.0.value$ which will equal 'example'. There will always be an index in the variable name!
+
 - `source`: string
 - `jsonpath`: string
 - `variable_name`: string
 - `repeat`: boolean
 
-### `aws_cf_invalidate`
-- `provider_id`: **required**, int
-- `distribution_id`: **required**, string
-- `paths`: **required**, string
+### `extract_regex` – Extract Regex
 
-### `aws_s3_create_bucket`
-- `provider_id`: string, **required**
-- `region`: string, **required**
-- `bucket_name`: string, **required**
-- `canned_acl`: string, in:private,public-read,public-read-write,authenticated-read
+- `regex`: **required**, string
+- `variable_name`: **required**, string
+- `source`: string
+- `default`: string
+- `repeat`: boolean
 
-### `aws_s3_delete_object`
-- `provider_id`: string, **required**
-- `region`: string
-- `bucket_name`: string, **required**
-- `object_key`: string, **required**
+### `extract_xpath` – Extract XPath
 
-### `aws_s3_get_object`
-- `provider_id`: string, **required**
-- `region`: string
-- `bucket_name`: string, **required**
-- `object_key`: string, **required**
-- `variable_name`: string, **required**, min:1
+- `xpath`: **required**, string
+- `variable_name`: string
+- `source`: string
+- `default`: string
 
-### `aws_s3_put_object`
-- `provider_id`: string, **required**
-- `region`: string
-- `bucket_name`: string
-- `object_key`: string, **required**
-- `body`: string, **required**
-- `canned_acl`: string, in:private,public-read,public-read-write,authenticated-read
+### `text_decrypt` – Decrypt Text
 
-### `condition`
-- `input`: string
+- `source`: **required**, string
+- `password`: **required**, string
+- `variable_name`: string
+
+### `text_encrypt` – Encrypt Text
+
+- `source`: **required**, string
+- `password`: **required**, string
+- `variable_name`: string
+
+### `text_map` – Map/Translate Text
+
+Acts as a translator, e.g. if X is Y then set variable to A, a comparison on a string. variable_name is the result variable. If there is no match, the default value is set to the variable_name variable.
+
+- `source`: string
 - `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte
-- `value`: string
-- `action`: **required**, string, in:stop,continue,noop
+- `variable_name`: string
+- `default`: **required**, string
+- `mappings`: **required**, array
+- `mappings.*.from`: **required**_with:mappings, string
+- `mappings.*.to`: **required**_with:mappings, string
 
-### `conditions`
-- `conditions`: **required**, array
-- `mode`: **required**, string, in:one,all,none
-- `action`: **required**, string, in:stop,continue,noop
+### `text_replace` – Replace Text
 
-### `database`
+- `source`: **required**, string
+- `variable_name`: **required**, string
+- `replacements`: **required**, array
+
+### `text_split` – Split Text
+
+- `delimiter`: min:1, string
+- `source`: **required**, string
+- `variable_name`: string
+- `repeat`: boolean
+
+### `validate_json` – Validate JSON
+
+- `source`: string
+- `schema`: string
+- `variable_name`: string
+
+## Network
+
+### `database` – Database Query
+
 - `variable_name`: string, default:db
 - `repeat`: boolean, default:false
 - `type`: **required**, in:mysql,pgsql,sqlsrv,whdb
@@ -67,64 +86,8 @@ The following is a list of the API names for Action Types, along with a list of 
 - `params`: array
 - `charset`: string
 
-### `discord_send_message`
-- `provider_id`: **required**, string
-- `content`: **required**, string
-- `username`: string
-- `avatar_url`: url
-- `embed_type`: string, in:link,image,video
-- `embed_url`: url
+### `ftp_download` – FTP(S) Download
 
-### `dont_save`
-*No parameters for `dont_save`.*
-
-### `dropbox_create_folder`
-- `provider_id`: string, **required**
-- `path`: string, **required**
-
-### `dropbox_delete`
-- `provider_id`: string, **required**
-- `path`: string, **required**
-
-### `dropbox_download_file`
-- `provider_id`: string, **required**
-- `path`: string, **required**
-- `variable_name`: string, **required**
-
-### `dropbox_get_link`
-- `provider_id`: string, **required**
-- `path`: string, **required**
-- `variable_name`: string
-- `type`: string, in:share_link,temporary
-- `share_audience`: string, in:public,team,no_one
-
-### `dropbox_upload_file`
-- `provider_id`: string, **required**
-- `path`: string, **required**
-- `body`: string, **required**
-- `mode`: string, **required**, in:add,overwrite,update
-
-### `extract_jsonpath`
-- `jsonpath`: **required**, string
-- `variable_name`: string
-- `source`: string
-- `default`: string
-- `repeat`: boolean
-
-### `extract_regex`
-- `regex`: **required**, string
-- `variable_name`: **required**, string
-- `source`: string
-- `default`: string
-- `repeat`: boolean
-
-### `extract_xpath`
-- `xpath`: **required**, string
-- `variable_name`: string
-- `source`: string
-- `default`: string
-
-### `ftp_download`
 - `host`: **required**, string
 - `port`: int, min:1, max:65535
 - `password`: **required**, string
@@ -134,7 +97,8 @@ The following is a list of the API names for Action Types, along with a list of 
 - `passive`: bool
 - `variable_name`: string
 
-### `ftp_upload`
+### `ftp_upload` – FTP(S) Upload
+
 - `host`: **required**, string
 - `port`: int, min:1, max:65535
 - `password`: **required**, string
@@ -144,27 +108,10 @@ The following is a list of the API names for Action Types, along with a list of 
 - `ssl`: bool
 - `passive`: bool
 
-### `google_sheets_add_row`
-- `provider_id`: string, **required**
-- `spreadsheet_id`: string, **required**
-- `range`: string, **required**
-- `values`: string, **required**
-- `formula_mode`: bool
+### `http` – HTTP Request
 
-### `google_sheets_get_values`
-- `provider_id`: string, **required**
-- `spreadsheet_id`: string, **required**
-- `range`: string, **required**
-- `variable_name`: **required**, string
+Sends a HTTP request and generates variables $http.content$, $http.status$, $http.header.[header_name]$, $http.error$
 
-### `google_sheets_update_row`
-- `provider_id`: string, **required**
-- `spreadsheet_id`: string, **required**
-- `range`: string, **required**
-- `values`: string, **required**
-- `formula_mode`: bool
-
-### `http`
 - `url`: **required**, string
 - `content`: nullable, string
 - `method`: nullable, in:POST,GET,OPTIONS,PUT,DELETE,PATCH,TRACE
@@ -191,115 +138,8 @@ The following is a list of the API names for Action Types, along with a list of 
 - `retry.delay`: nullable, numeric, min:0, max:10
 - `retry.require_status`: nullable, string
 
-### `hubspot_create_contact`
-- `provider_id`: **required**, string
-- `properties`: **required**, array
+### `send_email` – Send Email
 
-### `image_resize`
-- `source`: string, **required**
-- `width`: string, **required**_without:height
-- `height`: string, **required**_without:width
-- `aspect_ratio`: bool, **required**
-- `variable_name`: string
-
-### `javascript`
-- `script`: **required**, string
-
-### `log`
-- `text`: **required**, string
-- `mode`: nullable, string, in:text,markdown
-- `error`: boolean
-
-### `microsoft_drive_download`
-- `provider_id`: **required**, string
-- `path`: **required**, string
-- `variable_name`: **required**, string
-
-### `microsoft_drive_upload`
-- `provider_id`: **required**, string
-- `path`: **required**, string
-- `content_type`: string
-- `content`: string
-- `variable_name`: string
-
-### `microsoft_excel_add_rows`
-- `provider_id`: **required**, string
-- `path`: string
-- `table`: string
-- `index`: int
-- `values`: **required**, array
-
-### `microsoft_excel_get_values`
-- `provider_id`: **required**, string
-- `path`: **required**, string
-- `worksheet`: **required**, string
-- `range`: **required**, string
-- `variable_name`: **required**, string
-
-### `mock`
-- `source`: **required**, string
-- `path`: string
-- `method`: string
-- `status`: string
-- `content_type`: string
-
-### `modify_response`
-- `content`: string
-- `status`: string
-- `headers`: string
-- `stop`: bool
-
-### `ntfy`
-- `topic`: string, **required**
-- `title`: string
-- `icon`: string
-- `link`: string
-- `message`: string, **required**
-
-### `pdf_generate`
-- `content`: string
-- `mode`: string, in:html,markdown
-- `paper`: string, in:a4,letter
-- `orientation`: string, in:portrait,landscape
-- `variable_name`: string
-
-### `pushed_send`
-- `app_key`: string, **required**
-- `app_secret`: string, **required**
-- `target_type`: string, **required**
-- `target`: string, **required**
-- `message`: string, **required**
-
-### `rabbitmq_get`
-- `host`: string, **required**
-- `port`: int
-- `username`: string, **required**
-- `password`: string, **required**
-- `vhost`: string
-- `queue`: string, **required**
-- `ssl`: boolean
-- `variable_name`: string
-
-### `rabbitmq_publish`
-- `host`: string, **required**
-- `port`: int
-- `username`: string, **required**
-- `password`: string, **required**
-- `vhost`: string
-- `queue`: string, **required**
-- `ssl`: boolean
-- `message`: string, **required**
-- `properties`: array
-
-### `rate_limit`
-- `period`: **required**, int
-- `count`: **required**, int
-- `key`: string
-
-### `script`
-- `script`: **required**, string
-
-### `send_email`
 - `sender`: string
 - `recipient`: **required**, string
 - `content`: string
@@ -307,7 +147,8 @@ The following is a list of the API names for Action Types, along with a list of 
 - `subject`: **required**, string
 - `attachments`: array
 
-### `send_email_smtp`
+### `send_email_smtp` – Send Email (SMTP)
+
 - `sender_name`: string
 - `sender_email`: string
 - `recipient`: **required**, string
@@ -321,16 +162,103 @@ The following is a list of the API names for Action Types, along with a list of 
 - `host`: string, **required**
 - `attachments`: array
 
-### `send_request`
-- `url`: **required**, string
-- `content`: nullable, string
-- `method`: nullable, in:POST,GET,OPTIONS,PUT,DELETE
-- `headers`: nullable, string
-- `skip_ssl_verification`: nullable, bool
-- `variable_name`: string
-- `timeout`: nullable, numeric, max:30
+### `sftp_download` – SFTP Download
 
-### `set_variable`
+- `provider_id`: string
+- `host`: **required**, string
+- `port`: int, min:1, max:65535
+- `username`: **required**, string
+- `password`: string
+- `path`: **required**, string
+- `variable_name`: string
+
+### `sftp_upload` – SFTP Upload
+
+- `provider_id`: string
+- `host`: **required**, string
+- `port`: int, min:1, max:65535
+- `username`: **required**, string
+- `password`: string
+- `path`: **required**, string
+- `content`: **required**, string
+
+### `ssh_run_command` – Run SSH Command
+
+- `provider_id`: string
+- `host`: **required**, string
+- `port`: int, min:1, max:65535
+- `username`: **required**, string
+- `password`: string
+- `command`: **required**, string
+- `variable_name`: string
+
+## Behavior
+
+### `auth_basic` – Basic Auth
+
+- `username`: string
+- `password`: **required**, string
+
+### `dont_save` – Don't Save
+
+*No parameters for `dont_save`.*
+
+### `log` – Log
+
+Adds a log message for the user to see. If mode is markdown, it is presented as markdown for the user
+
+- `text`: **required**, string
+- `mode`: nullable, string, in:text,markdown
+- `error`: boolean
+
+### `modify_response` – Modify Response
+
+Sets the response content of the Webhook.site URL
+
+- `content`: string
+- `status`: string
+- `headers`: string
+- `stop`: bool
+
+### `rate_limit` – Rate Limit
+
+- `period`: **required**, int
+- `count`: **required**, int
+- `key`: string
+
+### `sleep` – Sleep
+
+- `delay`: **required**
+
+### `stop` – Stop
+
+*No parameters for `stop`.*
+
+### `template` – Include Template
+
+- `template_id`: **required**, int
+- `variables`: array
+
+## Mock
+
+### `mock` – Mock OpenAPI/Swagger
+
+- `source`: **required**, string
+- `path`: string
+- `method`: string
+- `status`: string
+- `content_type`: string
+
+## Logic
+
+### `conditions` – Conditions
+
+- `conditions`: **required**, array
+- `mode`: **required**, string, in:one,all,none
+- `action`: **required**, string, in:stop,continue,noop
+
+### `set_variable` – Set Variable
+
 - `name`: string
 - `value`: nullable, string
 - `mode`: nullable, in:text,random,date,math
@@ -347,96 +275,260 @@ The following is a list of the API names for Action Types, along with a list of 
 - `date.format`: string, in:iso8601,mysql,unix,unixmicro,user
 - `date.user_format`: string
 
-### `sftp_download`
-- `provider_id`: string
-- `host`: **required**, string
-- `port`: int, min:1, max:65535
-- `username`: **required**, string
-- `password`: string
-- `path`: **required**, string
-- `variable_name`: string
+### `store_global_variable` – Store Global Variable
 
-### `sftp_upload`
-- `provider_id`: string
-- `host`: **required**, string
-- `port`: int, min:1, max:65535
-- `username`: **required**, string
-- `password`: string
-- `path`: **required**, string
-- `content`: **required**, string
-
-### `slack_send_message`
-- `webhook_url`: **required**, url
-- `raw`: bool
-- `content`: **required**, string
-
-### `sleep`
-- `delay`: **required**
-
-### `ssh_run_command`
-- `provider_id`: string
-- `host`: **required**, string
-- `port`: int, min:1, max:65535
-- `username`: **required**, string
-- `password`: string
-- `command`: **required**, string
-- `variable_name`: string
-
-### `stop`
-*No parameters for `stop`.*
-
-### `store_global_variable`
 - `name`: **required**, string
 - `value`: nullable, string
 
-### `template`
-- `template_id`: **required**, int
-- `variables`: array
+## Scripting
 
-### `text_decrypt`
-- `source`: **required**, string
-- `password`: **required**, string
+### `javascript` – JavaScript
+
+Runs JavaScript script in Node.js sandbox. Can interact with Variables using e.g. get('request.content') or set('varname', value). Global Variables retrieved using global('varname') and store('varname', value). The following libraries can be included via require(): axios, lodash, dayjs, cheerio, jsonpath, crypto, faker, nats, supabase, moment, form-data, fetch
+
+- `script`: **required**, string
+
+### `script` – WebhookScript
+
+- `script`: **required**, string
+
+## Multimedia
+
+### `image_resize` – Resize Image
+
+- `source`: string, **required**
+- `width`: string, **required**_without:height
+- `height`: string, **required**_without:width
+- `aspect_ratio`: bool, **required**
 - `variable_name`: string
 
-### `text_encrypt`
-- `source`: **required**, string
-- `password`: **required**, string
+### `pdf_generate` – Generate PDF
+
+- `content`: string
+- `mode`: string, in:html,markdown
+- `paper`: string, in:a4,letter
+- `orientation`: string, in:portrait,landscape
 - `variable_name`: string
 
-### `text_map`
-- `source`: string
-- `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte
-- `variable_name`: string
-- `default`: **required**, string
-- `mappings`: **required**, array
-- `mappings.*.from`: **required**_with:mappings, string
-- `mappings.*.to`: **required**_with:mappings, string
+## Webhook.site
 
-### `text_replace`
-- `source`: **required**, string
-- `variable_name`: **required**, string
-- `replacements`: **required**, array
+### `webhook_get_requests` – Get Requests
 
-### `text_split`
-- `delimiter`: min:1, string
-- `source`: **required**, string
-- `variable_name`: string
-- `repeat`: boolean
-
-### `twitter_tweet`
-- `provider_id`: **required**, string
-- `tweet`: **required**, string
-
-### `validate_json`
-- `source`: string
-- `schema`: string
-- `variable_name`: string
-
-### `webhook_get_requests`
 - `variable_name`: string, default:req
 - `repeat`: boolean
 - `token_id`: **required**, string
 - `sorting`: string
 - `query`: string
 - `max`: int, default:100
+
+## Google Sheets
+
+### `google_sheets_add_row` – Add Row
+
+- `provider_id`: string, **required**
+- `spreadsheet_id`: string, **required**
+- `range`: string, **required**
+- `values`: string, **required**
+- `formula_mode`: bool
+
+### `google_sheets_get_values` – Get Values
+
+- `provider_id`: string, **required**
+- `spreadsheet_id`: string, **required**
+- `range`: string, **required**
+- `variable_name`: **required**, string
+
+### `google_sheets_update_row` – Update Row
+
+- `provider_id`: string, **required**
+- `spreadsheet_id`: string, **required**
+- `range`: string, **required**
+- `values`: string, **required**
+- `formula_mode`: bool
+
+## Microsoft Excel
+
+### `microsoft_excel_add_rows` – Add Rows
+
+- `provider_id`: **required**, string
+- `path`: string
+- `table`: string
+- `index`: int
+- `values`: **required**, array
+
+### `microsoft_excel_get_values` – Get Values
+
+- `provider_id`: **required**, string
+- `path`: **required**, string
+- `worksheet`: **required**, string
+- `range`: **required**, string
+- `variable_name`: **required**, string
+
+## Microsoft OneDrive
+
+### `microsoft_drive_download` – Download File
+
+- `provider_id`: **required**, string
+- `path`: **required**, string
+- `variable_name`: **required**, string
+
+### `microsoft_drive_upload` – Upload File
+
+- `provider_id`: **required**, string
+- `path`: **required**, string
+- `content_type`: string
+- `content`: string
+- `variable_name`: string
+
+## AWS S3 & Compatible
+
+### `aws_s3_create_bucket` – Create Bucket
+
+- `provider_id`: string, **required**
+- `region`: string, **required**
+- `bucket_name`: string, **required**
+- `canned_acl`: string, in:private,public-read,public-read-write,authenticated-read
+
+### `aws_s3_delete_object` – Delete Object
+
+- `provider_id`: string, **required**
+- `region`: string
+- `bucket_name`: string, **required**
+- `object_key`: string, **required**
+
+### `aws_s3_get_object` – Get Object
+
+- `provider_id`: string, **required**
+- `region`: string
+- `bucket_name`: string, **required**
+- `object_key`: string, **required**
+- `variable_name`: string, **required**, min:1
+
+### `aws_s3_put_object` – Create Object
+
+- `provider_id`: string, **required**
+- `region`: string
+- `bucket_name`: string
+- `object_key`: string, **required**
+- `body`: string, **required**
+- `canned_acl`: string, in:private,public-read,public-read-write,authenticated-read
+
+## AWS CloudFront
+
+### `aws_cf_invalidate` – Create Invalidation
+
+- `provider_id`: **required**, int
+- `distribution_id`: **required**, string
+- `paths`: **required**, string
+
+## Discord
+
+### `discord_send_message` – Send Message
+
+- `provider_id`: **required**, string
+- `content`: **required**, string
+- `username`: string
+- `avatar_url`: url
+- `embed_type`: string, in:link,image,video
+- `embed_url`: url
+
+## Slack
+
+### `slack_send_message` – Send Message
+
+- `webhook_url`: **required**, url
+- `raw`: bool
+- `content`: **required**, string
+
+## Dropbox
+
+### `dropbox_create_folder` – Create Folder
+
+- `provider_id`: string, **required**
+- `path`: string, **required**
+
+### `dropbox_delete` – Delete
+
+- `provider_id`: string, **required**
+- `path`: string, **required**
+
+### `dropbox_download_file` – Download
+
+- `provider_id`: string, **required**
+- `path`: string, **required**
+- `variable_name`: string, **required**
+
+### `dropbox_get_link` – Get Link
+
+- `provider_id`: string, **required**
+- `path`: string, **required**
+- `variable_name`: string
+- `type`: string, in:share_link,temporary
+- `share_audience`: string, in:public,team,no_one
+
+### `dropbox_upload_file` – Upload
+
+- `provider_id`: string, **required**
+- `path`: string, **required**
+- `body`: string, **required**
+- `mode`: string, **required**, in:add,overwrite,update
+
+## HubSpot
+
+### `hubspot_create_contact` – Create Contact
+
+- `provider_id`: **required**, string
+- `properties`: **required**, array
+
+## X/Twitter
+
+### `twitter_tweet` – Post Tweet
+
+- `provider_id`: **required**, string
+- `tweet`: **required**, string
+
+## Pushed
+
+### `pushed_send` – Send Push Notification
+
+- `app_key`: string, **required**
+- `app_secret`: string, **required**
+- `target_type`: string, **required**
+- `target`: string, **required**
+- `message`: string, **required**
+
+## ntfy.sh
+
+### `ntfy` – Send Push Notification
+
+- `topic`: string, **required**
+- `title`: string
+- `icon`: string
+- `link`: string
+- `message`: string, **required**
+
+## RabbitMQ
+
+### `rabbitmq_get` – Get Message
+
+- `host`: string, **required**
+- `port`: int
+- `username`: string, **required**
+- `password`: string, **required**
+- `vhost`: string
+- `queue`: string, **required**
+- `ssl`: boolean
+- `variable_name`: string
+
+### `rabbitmq_publish` – Publish Message
+
+- `host`: string, **required**
+- `port`: int
+- `username`: string, **required**
+- `password`: string, **required**
+- `vhost`: string
+- `queue`: string, **required**
+- `ssl`: boolean
+- `message`: string, **required**
+- `properties`: array
 
