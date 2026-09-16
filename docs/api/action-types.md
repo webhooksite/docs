@@ -8,6 +8,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `source`: string
 - `jsonpath`: string
 - `variable_name`: string
+- `repeat`: boolean
 
 ### `aws_cf_invalidate`
 - `provider_id`: **required**, int
@@ -35,7 +36,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `aws_s3_put_object`
 - `provider_id`: string, **required**
-- `region`: string, **required**
+- `region`: string
 - `bucket_name`: string
 - `object_key`: string, **required**
 - `body`: string, **required**
@@ -43,7 +44,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `condition`
 - `input`: string
-- `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte,ex,false,true,num,int,float,json,email,domain,url
+- `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte
 - `value`: string
 - `action`: **required**, string, in:stop,continue,noop
 
@@ -53,15 +54,17 @@ The following is a list of the API names for Action Types, along with a list of 
 - `action`: **required**, string, in:stop,continue,noop
 
 ### `database`
-- `type`: **required**, in:mysql,pgsql,sqlsrv
-- `host`: **required**, string
-- `port`: number, min:1, max:65535
-- `database`: **required**, string
-- `password`: string
-- `username`: **required**, string
+- `variable_name`: string, default:db
+- `repeat`: boolean, default:false
+- `type`: **required**, in:mysql,pgsql,sqlsrv,whdb
+- `db_id`: **required**_if:type,whdb, string
+- `host`: **required**_unless:type,whdb, string
+- `port`: integer, min:1, max:65535
+- `database`: **required**_unless:type,whdb, string
+- `password`: **required**_unless:type,whdb, string
+- `username`: **required**_unless:type,whdb, string
 - `statement`: **required**, string
 - `params`: array
-- `variable_name`: string
 - `charset`: string
 
 ### `discord_send_message`
@@ -103,7 +106,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `extract_jsonpath`
 - `jsonpath`: **required**, string
-- `variable_name`: **required**, string
+- `variable_name`: string
 - `source`: string
 - `default`: string
 - `repeat`: boolean
@@ -117,13 +120,13 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `extract_xpath`
 - `xpath`: **required**, string
-- `variable_name`: **required**, string
+- `variable_name`: string
 - `source`: string
 - `default`: string
 
 ### `ftp_download`
 - `host`: **required**, string
-- `port`: number, min:1, max:65535
+- `port`: int, min:1, max:65535
 - `password`: **required**, string
 - `username`: **required**, string
 - `path`: **required**, string
@@ -133,7 +136,7 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `ftp_upload`
 - `host`: **required**, string
-- `port`: number, min:1, max:65535
+- `port`: int, min:1, max:65535
 - `password`: **required**, string
 - `username`: **required**, string
 - `path`: **required**, string
@@ -167,7 +170,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `method`: nullable, in:POST,GET,OPTIONS,PUT,DELETE,PATCH,TRACE
 - `mode`: nullable, in:text,json,multipart,urlencoded,forward
 - `auth`: nullable, array
-- `auth.mode`: nullable, string, in:basic,digest,ntlm
+- `auth.mode`: nullable, string, in:basic,digest,ntlm,bearer
 - `auth.username`: string
 - `auth.password`: string
 - `multipart`: array, **required**_if:mode,multipart
@@ -181,7 +184,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `headers`: nullable, string
 - `skip_ssl_verification`: nullable, bool
 - `variable_name`: string
-- `timeout`: nullable, numeric, max:15
+- `timeout`: nullable, numeric, max:60
 - `retry`: array
 - `retry.enabled`: nullable, bool
 - `retry.retries`: nullable, numeric, min:1, max:10
@@ -204,12 +207,13 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `log`
 - `text`: **required**, string
-- `mode`: nullable, in:text,markdown
+- `mode`: nullable, string, in:text,markdown
+- `error`: boolean
 
 ### `microsoft_drive_download`
 - `provider_id`: **required**, string
 - `path`: **required**, string
-- `variable_name`: string
+- `variable_name`: **required**, string
 
 ### `microsoft_drive_upload`
 - `provider_id`: **required**, string
@@ -232,6 +236,13 @@ The following is a list of the API names for Action Types, along with a list of 
 - `range`: **required**, string
 - `variable_name`: **required**, string
 
+### `mock`
+- `source`: **required**, string
+- `path`: string
+- `method`: string
+- `status`: string
+- `content_type`: string
+
 ### `modify_response`
 - `content`: string
 - `status`: string
@@ -242,6 +253,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `topic`: string, **required**
 - `title`: string
 - `icon`: string
+- `link`: string
 - `message`: string, **required**
 
 ### `pdf_generate`
@@ -277,6 +289,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `queue`: string, **required**
 - `ssl`: boolean
 - `message`: string, **required**
+- `properties`: array
 
 ### `rate_limit`
 - `period`: **required**, int
@@ -305,7 +318,7 @@ The following is a list of the API names for Action Types, along with a list of 
 - `port`: int
 - `username`: string, **required**
 - `password`: string, **required**
-- `host`: string_**required**
+- `host`: string, **required**
 - `attachments`: array
 
 ### `send_request`
@@ -318,22 +331,26 @@ The following is a list of the API names for Action Types, along with a list of 
 - `timeout`: nullable, numeric, max:30
 
 ### `set_variable`
-- `name`: **required**, string
+- `name`: string
 - `value`: nullable, string
-- `mode`: nullable, in:text,random,date
+- `mode`: nullable, in:text,random,date,math
 - `random`: array
-- `random.*.length`: int, max:10000, **required**_if:mode,random
-- `random.*.characters`: array, in:lowercase,uppercase,digits,symbols,user
-- `random.*.alphabet`: string
+- `random.length`: int, max:10000, **required**_if:mode,random
+- `random.characters`: array, in:lowercase,uppercase,digits,symbols,user
+- `random.alphabet`: string
+- `random_number`: array
+- `random_number.from`: int
+- `random_number.to`: int
 - `date`: array
-- `date.*.input`: string
-- `date.*.format`: string, in:iso8601,mysql,unix,unixmicro,user
-- `date.*.user_format`: string
+- `date.input`: string
+- `date.timezone`: string
+- `date.format`: string, in:iso8601,mysql,unix,unixmicro,user
+- `date.user_format`: string
 
 ### `sftp_download`
 - `provider_id`: string
 - `host`: **required**, string
-- `port`: number, min:1, max:65535
+- `port`: int, min:1, max:65535
 - `username`: **required**, string
 - `password`: string
 - `path`: **required**, string
@@ -342,7 +359,7 @@ The following is a list of the API names for Action Types, along with a list of 
 ### `sftp_upload`
 - `provider_id`: string
 - `host`: **required**, string
-- `port`: number, min:1, max:65535
+- `port`: int, min:1, max:65535
 - `username`: **required**, string
 - `password`: string
 - `path`: **required**, string
@@ -353,10 +370,13 @@ The following is a list of the API names for Action Types, along with a list of 
 - `raw`: bool
 - `content`: **required**, string
 
+### `sleep`
+- `delay`: **required**
+
 ### `ssh_run_command`
 - `provider_id`: string
 - `host`: **required**, string
-- `port`: number, min:1, max:65535
+- `port`: int, min:1, max:65535
 - `username`: **required**, string
 - `password`: string
 - `command`: **required**, string
@@ -364,9 +384,6 @@ The following is a list of the API names for Action Types, along with a list of 
 
 ### `stop`
 *No parameters for `stop`.*
-
-### `sleep`
-- `delay`: **required**, string
 
 ### `store_global_variable`
 - `name`: **required**, string
@@ -376,12 +393,24 @@ The following is a list of the API names for Action Types, along with a list of 
 - `template_id`: **required**, int
 - `variables`: array
 
-### `text_map`
+### `text_decrypt`
 - `source`: **required**, string
-- `operator`: **required**, string
-- `variable_name`: **required**, string
+- `password`: **required**, string
+- `variable_name`: string
+
+### `text_encrypt`
+- `source`: **required**, string
+- `password`: **required**, string
+- `variable_name`: string
+
+### `text_map`
+- `source`: string
+- `operator`: **required**, string, in:eq,neq,sw,ew,ct,nct,gt,gte,lt,lte
+- `variable_name`: string
 - `default`: **required**, string
 - `mappings`: **required**, array
+- `mappings.*.from`: **required**_with:mappings, string
+- `mappings.*.to`: **required**_with:mappings, string
 
 ### `text_replace`
 - `source`: **required**, string
@@ -389,24 +418,19 @@ The following is a list of the API names for Action Types, along with a list of 
 - `replacements`: **required**, array
 
 ### `text_split`
-- `delimiter`: **required**, string
+- `delimiter`: min:1, string
 - `source`: **required**, string
 - `variable_name`: string
 - `repeat`: boolean
 
-### `text_encrypt`
-- `source`: **required**, string
-- `password`: **required**, string
-- `variable_name`: string, default:text_encrypt
-
-### `text_decrypt`
-- `source`: **required**, string
-- `password`: **required**, string
-- `variable_name`: string, default:text_decrypt
-
 ### `twitter_tweet`
 - `provider_id`: **required**, string
 - `tweet`: **required**, string
+
+### `validate_json`
+- `source`: string
+- `schema`: string
+- `variable_name`: string
 
 ### `webhook_get_requests`
 - `variable_name`: string, default:req
@@ -414,4 +438,5 @@ The following is a list of the API names for Action Types, along with a list of 
 - `token_id`: **required**, string
 - `sorting`: string
 - `query`: string
-- `max`: int, default:100, max:1000
+- `max`: int, default:100
+
