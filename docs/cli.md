@@ -64,6 +64,7 @@ The `forward` commands acts as a bidirectional proxy, listening to incoming traf
 | `--api-key=`         | `WH_API_KEY`         | An [API key](/api/about.html#api-key), required when using a Token that belongs to a Webhook.site account                                                                    |
 | `--target=`          | `WH_TARGET`          | Specifies URL where traffic should be forwarded.<br>Default: `https://localhost`                                                                                  |
 | `--listen-timeout=`  | `WH_LISTEN_TIMEOUT`  | Amount of seconds to wait for a response from the Target URL to send back as a response for the Webhook.site URL.<br>Set to `0` to disable bidirectional forwarding.<br>Default `5`. Max `10`. |
+| `--rewrite`          | `WH_REWRITE`         | When bidirectional forwarding is enabled, this automatically rewrites HTML content to match the path of your Webhook.site URL                                     |
 | `--keep-url`         |                      | When specified, disables URL merging (see below.)                                                                                                                 |
 | `--query   `         | `WH_QUERY`           | Forwards previously sent requests, filtered by a search query. When left blank, only requests sent after the command runs are forwarded.
 
@@ -77,11 +78,11 @@ whcli forward \
   --target=https://localhost:8080
 ```
 
-#### Bidirectional forwarding
+#### Bidirectional forwarding and Rewriting
 
 Per default, Webhook.site CLI waits for 5 seconds for a response from the target and forwards it to the Webhook.site URL as a response. 
 
-If you have a Web application that uses absolute paths, you should use your Webhook.site URL as a subdomain rather than a path, e.g. `https://1e25c1cb-e4d4-4399-a267-cd2cf1a6c864.webhook.site` rather than `https://webhook.site/1e25c1cb-e4d4-4399-a267-cd2cf1a6c864`.
+If you have a Web application that uses absolute paths, you can either use the `--rewrite` option, which enables automatic HTML rewriting which matches your Webhook.site URL, or use your Webhook.site URL as a subdomain rather than a path, e.g. `https://1e25c1cb-e4d4-4399-a267-cd2cf1a6c864.webhook.site` rather than `https://webhook.site/1e25c1cb-e4d4-4399-a267-cd2cf1a6c864`.
 
 To disable bidirectional forwarding, add parameter `--listen-timeout=0`.
 

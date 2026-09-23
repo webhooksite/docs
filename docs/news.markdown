@@ -24,9 +24,14 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 23 September 2026
+
+* Webhook.site CLI 0.3.4: New `--rewrite` option replaces paths in forwarded HTML pages so your local site works through your Webhook.site URL, with styles, images and links intact.
+* Responses forwarded through Webhook.site CLI are now shown in the UI.
+
 ## 6 September 2026
 
-* Webhook.site CLI: Fixes an issue where responses without headers wouldn't be tunnelled
+* Webhook.site CLI 0.3.3: Fixes an issue where responses without headers wouldn't be tunnelled
 * Templates: Add `queue_id` and `queue` properties
 * Templates: Fixes an issue where Database and Get Requests actions couldn't be added to templates
 * Templates: Fixes an issue where templates without actions couldn't be created
