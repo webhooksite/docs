@@ -33,8 +33,8 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </figure>
 
 * Custom Actions: Conditions actions are now denoted by an icon. The Condition number is now shown on actions that are subject to one. Mouseover to view the name and title.
-* Custom Actions: When testing a new action, the any Condition that's selected is now taken into account. 
-* Custom Actions: It's now no longer possible to select a Condition that comes *after* the action.
+* Custom Actions: When testing a new action, the Condition that's selected is now taken into account. 
+* Custom Actions: It's now no longer possible to select an invalid Condition; e.g. ones that come *after* the action.
 
 <figure markdown="span">
     ![Select to search Request Content](/images/uhk0y.png){ width="200" }
