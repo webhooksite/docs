@@ -24,6 +24,34 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 30 September 2026
+
+* Browser Notifications: A Service Worker is now used when possible. Webhook.site will only prompt for permission once, otherwise browser notifications can be toggled in the *More* menu.
+
+<figure markdown="span">
+    ![Conditions Action Icon](/images/7kmrA.png){ width="200" }
+</figure>
+
+* Custom Actions: Conditions actions are now denoted by an icon. The Condition number is now shown on actions that are subject to one. Mouseover to view the name and title.
+* Custom Actions: When testing a new action, the any Condition that's selected is now taken into account. 
+* Custom Actions: It's now no longer possible to select a Condition that comes *after* the action.
+
+<figure markdown="span">
+    ![Select to search Request Content](/images/uhk0y.png){ width="200" }
+</figure>
+
+<figure markdown="span">
+    ![Search Typeahead](/images/27uNu.png){ width="200" }
+</figure>
+
+* Search: Clear Search button now actually clears the search.
+* Search: Show a loading icon when searching.
+* Search: When a search query is active, a more reliable poll timer is used when periodically polling requests that match the search.
+* Search: The search field now automatically expands in size to match larger queries.
+* Search: A new typeahead is added to show which search terms are possible.
+* Search: When selecting text in Request Content, search and copy buttons are now shown next to the selected text.
+
+
 ## 23 September 2026
 
 * Webhook.site CLI 0.3.4: New `--rewrite` option replaces paths in forwarded HTML pages so your local site works through your Webhook.site URL, with styles, images and links intact.
