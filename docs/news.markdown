@@ -24,6 +24,12 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 13 October 2026
+
+* Form Builder: Added Themes, with non-conflicting CSS, copied along with the form.
+* Form Builder: Added a Preview panel so it's possible to preview your form immediately.
+* Form Builder: Fixed issues with form HTML not updating. Fixed an issue with URL validation. 
+
 ## 30 September 2026
 
 * Browser Notifications: A Service Worker is now used when possible. Webhook.site will only prompt for permission once, otherwise browser notifications can be toggled in the *More* menu.
