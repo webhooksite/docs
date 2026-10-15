@@ -45,7 +45,7 @@ with your URL, as well as keep the data contained private and secure.
 | Dedicated Queue Compute                                         | ❌                                      | ❌                                     | ❌                                       | ✅                                       |
 | URL/Email Address expiry                                        | 7 days<a href="#note"><sup>1</sup></a> | Never expires                         | Never expires                           | Never expires                           |
 | Data storage duration                                           | 7 days<a href="#note"><sup>1</sup></a> | 365 days                              | 365 days                                | 365 days                                |
-| Pricing<a href="#note"><sup>3</sup></a>                         |                                        | $9/month $90/year <sup>(20% off)</sup> | $27/month $270/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
+| Pricing<a href="#note"><sup>3</sup></a>                         |                                        | $9/month $90/year <sup>(20% off)</sup> | $19/month $190/year <sup>(20% off)</sup> | $69/month $699/year <sup>(20% off)</sup> |
 
 <div class="center">
 <a href="https://webhook.site/register?r=docs-1" class="md-button md-button--default">Click here to Subscribe</a>
