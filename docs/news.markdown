@@ -24,6 +24,23 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 16 October 2026
+
+<figure markdown="span">
+    ![JavaScript action editor updates](/images/c8L5f.png){ width="200" }
+</figure>
+
+* Updates to the JavaScript action editor
+    * Now autocompletes built-ins like `get()`, `global()`, `set_response()`
+    * Webhook.site Variables now autocomplete to a `get()` call
+    * Built-in libraries available via `require()` are autocompleted
+    * Added autocomplete snippets for common structures and functions
+    
+* Updates to the WebhookScript action editor
+    * All built-in functions are now autocompleted
+    * Webhook.site Variables now autocomplete to a `var()` call
+    * Added autocomplete snippets for common structures and functions
+
 ## 13 October 2026
 
 * Form Builder: Added Themes, with non-conflicting CSS, copied along with the form.
