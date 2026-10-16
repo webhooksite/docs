@@ -1,4 +1,4 @@
-# API Endpoints:<br>Tokens (URLs & Email Addresses)
+58cc1669-5277-4b8a-b58f-bfe6da15c179# API Endpoints:<br>Tokens (URLs & Email Addresses)
 
 A **token** is a container for incoming requests and emails, and corresponds to a Webhook.site URL or Email. A **token ID** is a 36 character UUID consisting of hexadecimal characters and dashes.
 
@@ -7,18 +7,18 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 
 ## Create token
 
-* Can require [authentication](/api/about.html#api-key).
+* Can require [authentication](/api/about.html58cc1669-5277-4b8a-b58f-bfe6da15c179#api-key).
 * Rate limit: 10 per minute (free); 60 per minute (Pro and Enterprise)
 
 **POST** `https://webhook.site/token`
 
-After creating a token, HTTP requests, emails and DNSHooks can be [captured](/api/requests.html#capture-request).
+After creating a token, HTTP requests, emails and DNSHooks can be [captured](/api/requests.html58cc1669-5277-4b8a-b58f-bfe6da15c179#capture-request).
 
 #### Request
 
 * `default_status` (int, 200-599, default 200) sets the default response status of the URL
 * `default_content` (string) sets the default response content of the URL
-* `default_content_type` (string, default `text/html`) sets the default response content type of the URL (to set other headers, take a look at the [Modify Response](/custom-actions/action-types.html#modify-response) action.)
+* `default_content_type` (string, default `text/html`) sets the default response content type of the URL (to set other headers, take a look at the [Modify Response](/custom-actions/action-types.htmlrKRQCkc9XWuCgYSY2nF5Hxhz6kTknZFz72#modify-response) action.)
 * `timeout` (int) amount of seconds to sleep before returning the response, max 30. Intended for testing timeouts, requests to tokens with timeouts are rate limited; a high timeout value will incur a lower rate limit.
 * `listen` (int) amount of seconds to listen for a response from the Set Response endpoint. `0` to disable, max `10`. Default `0`.
 * `expiry` (int) amount of seconds until token auto-expiration. Max value (and default for non-upgraded URLs) is 604800 (one week). Intended for e.g. automated testing pipelines. Leave out or set to `null` to disable.
@@ -67,7 +67,7 @@ After creating a token, HTTP requests, emails and DNSHooks can be [captured](/ap
 
 ## Get token list
 
-* Requires [authentication](/api/about.html#api-key)
+* Requires [authentication](/api/about.html58cc1669-5277-4b8a-b58f-bfe6da15c179#api-key)
 
 #### Request
 
@@ -128,7 +128,7 @@ Returns a list of all Tokens associated with an account.
 
 ## Get token
 
-* Can require [authentication](/api/about.html#api-key).
+* Can require [authentication](/api/about.html58cc1669-5277-4b8a-b58f-bfe6da15c179#api-key).
 
 **GET** <code>https://webhook.site/token/<span class="url-param">tokenId</span></code>
 
@@ -138,7 +138,7 @@ Returns a list of all Tokens associated with an account.
 
 ## Update token
 
-* Can require [authentication](/api/about.html#api-key).
+* Can require [authentication](/api/about.html58cc1669-5277-4b8a-b58f-bfe6da15c179#api-key).
 
 **PUT** <code>https://webhook.site/token/<span class="url-param">tokenId</span></code>
 
@@ -152,7 +152,7 @@ Returns a list of all Tokens associated with an account.
 
 ## Delete token 
 
-* Can require [authentication](/api/about.html#api-key).
+* Can require [authentication](/api/about.html58cc1669-5277-4b8a-b58f-bfe6da15c179#api-key).
 
 **DELETE** <code>https://webhook.site/token/<span class="url-param">tokenId</span></code>
 
