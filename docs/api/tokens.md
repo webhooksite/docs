@@ -8,7 +8,7 @@ Simply, the token ID is the part after `https://webhook.site/` in the URL, or be
 ## Create token
 
 * Can require [authentication](/api/about.html#api-key).
-* Rate limit: 10 per minute (free); 60 per minute (Pro and Enterprise)
+* Rate limit: 1 per minute (free); 60 per minute (Basic, Pro and Enterprise)
 
 **POST** `https://webhook.site/token`
 
