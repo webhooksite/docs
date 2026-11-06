@@ -72,6 +72,7 @@ These variables are automatically available for each request or email. Different
 | request.checks.[name]             | Email         | True or false for email checks (DKIM, SPF, etc.)                                                       |
 | error.[number]                    | All           | Created for all actions that result in an error, where `number` is the order of the action.            |
 
+
 ### Variable Modifiers
 
 Adding specific suffixes to variable names will let you process the value in the following ways:
@@ -91,5 +92,10 @@ Adding specific suffixes to variable names will let you process the value in the
 | $example.upper$         | `Hello World`                          | `HELLO WORLD`                          | Uppercases a string                                                                                                                   |
 | $example.lower$         | `Hello World`                          | `hello world`                          | Lowercases a string                                                                                                                   |
 
+### Variable Functions
 
+The following functions can be appended to Variables:
 
+#### jsonpath()
+
+For example, if `$request.content$` contains `{"json": "value"}`, `$request.content.jsonpath(".json")$` would return `value`.

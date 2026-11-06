@@ -24,6 +24,17 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 6 November 2026
+
+* API: We've lowered the rate limit for the Create Token endpoint for free/anonymous users to 1 request per minute per IP address due to abuse. When using a Webhook.site account and [API Key](/api/about.html#api-key), the limit remains at 60 per minute. If you have a use case that requires custom rate limits, simply [Support](https://support.webhook.site) for more information.
+* API: Added an Expiry option when creating API Keys.
+* Frontend: AS Number and ISP name is now shown for incoming requests, emails and DNSHooks, and is available through the [API](/api/requests.html) as well.
+* Frontend: Email Checks are now shown in the Request Details table.
+* Frontend: Create & Edit URLs modals: Content field now autocompletes Variables.
+* Frontend: Create & Edit URLs modals: The modal now fills the right side of screen to allow easily inserting content. Added presets for content and webhook verification. 
+* Email: Webhook.site now uses its own incoming email infrastructure dubbed `incoming`. Incoming emails should continue to work exactly as before.
+* Control Panel: Added sorting dropdown for Global Variables list.
+
 ## 16 October 2026
 
 <figure markdown="span">

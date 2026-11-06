@@ -70,6 +70,7 @@ The following fields can be used to filter via the `query` parameter:
 * `url` - type `web` only
 * `ip` - type `web`, `dns` only
 * `country`, `country_code`, `region`, `city`
+* `as_name`, `as_number`
 * `query.[field]` - type `web` only
 * `request.[field]` - type `web`only (form fields)
 * `sender` - type `email` only
@@ -123,6 +124,8 @@ If you're in doubt about where these parameters go in an API request, take a loo
           "dmarc": true
       },
       "ip": "127.0.0.1",
+      "as_name": "Google",
+      "as_number": 12345,
       "country": "Denmark",
       "country_code": "DK",
       "region": "Hovedstaden",
