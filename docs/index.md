@@ -212,6 +212,10 @@ The following IPs are used for our WebSocket cluster at `ws.webhook.site`:
 
 Note that this may change in the future, so sign up for the [newsletter](news.markdown) to be notified of changes.
 
+## How can I test IPv4 or IPv6 connectivity with Webhook.site?
+
+The special domains `ipv4.webhook.site` and `ipv6.webhook.site` only respond to hosts using IPv4 and IPv6, respectively.
+
 ## How do I add authentication to my URL?
 
 **Basic Auth**

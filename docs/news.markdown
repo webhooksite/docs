@@ -24,6 +24,10 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 </form>
 </div>
 
+## 7 November 2026
+
+* The special domains `ipv4.webhook.site` and `ipv6.webhook.site`, which only work on IPv4 and IPv6, have been reintroduced.
+
 ## 6 November 2026
 
 * API: We've lowered the rate limit for the Create Token endpoint for free/anonymous users to 1 request per minute per IP address due to abuse. When using a Webhook.site account and [API Key](/api/about.html#api-key), the limit remains at 60 per minute. If you have a use case that requires custom rate limits, simply [Support](https://support.webhook.site) for more information.
