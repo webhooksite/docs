@@ -26,7 +26,7 @@ Subscribe below to receive updates about improvements and new features on Webhoo
 
 ## 7 November 2026
 
-* The special domains `ipv4.webhook.site` and `ipv6.webhook.site`, which only work on IPv4 and IPv6, have been reintroduced.
+* The special domains `ipv4.webhook.site` and `ipv6.webhook.site`, which respectively only works on IPv4 and IPv6, have been reintroduced.
 
 ## 6 November 2026
 
